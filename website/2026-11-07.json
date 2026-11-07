@@ -19,11 +19,12 @@
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/anonymous-users-in-meetings.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/anonymous-users-in-meetings.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Anonymous event guidance now uses updated policy setting names",
+        "summary": "The article replaces references to “Who can attend webinars” and “Who can attend town halls” with “Who can attend events up to 1k attendees” and “Who can attend events optimized for a large audience,” including updated configuration steps.",
+        "adminImpact": "Use the updated policy names when configuring which organizers can host events with anonymous participants.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -44,11 +45,12 @@
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/manage-event-chat.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/manage-event-chat.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Event chat setting label updated",
+        "summary": "The dropdown label changed from “Town hall chat experience” to “Events optimized for a large audience chat experience.” The options remain Optimized (default) and None.",
+        "adminImpact": "Administrators may need to update references to the previous setting name.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -69,11 +71,12 @@
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/manage-registration-form-events.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/manage-registration-form-events.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Registration form setting name updated",
+        "summary": "The documentation now refers to the setting as **Events registration form questions** instead of **Webinar registration form questions**. The page metadata was also updated.",
+        "adminImpact": "Administrators should use the updated setting name when following the documented configuration steps; no action is required unless updating internal guidance.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -94,11 +97,12 @@
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/manage-vod-publishing.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/manage-vod-publishing.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Updated recording-publishing dropdown labels",
+        "summary": "The setup steps now use revised names for webinar and town hall recording-publishing dropdowns, including audience-size descriptions.",
+        "adminImpact": "Admins following the guide should look for the updated dropdown labels; no required action is stated.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -118,12 +122,13 @@
       "firstSeenAt": "2026-11-07T02:10:22.000Z",
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/meeting-recording.md",
       "englishSummary": {
-        "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/meeting-recording.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "category": "Feature update",
+        "headline": "Event recording settings are updated",
+        "summary": "The article now groups webinars and town halls under events and documents the settings for recording events with up to 1,000 attendees or for large audiences. Policy assignment instructions were also clarified.",
+        "adminImpact": "Use the updated event terminology and setting names when configuring or troubleshooting recording policies. No administrator action is required.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -144,11 +149,12 @@
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/meeting-transcription-captions.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/meeting-transcription-captions.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Event transcription policy labels updated",
+        "summary": "The documentation replaces the webinar and town hall toggle names with attendee-based labels and clarifies policy-assignment steps. Both settings remain On by default.",
+        "adminImpact": "Administrators should use the updated toggle names when configuring policies; no configuration change is required.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -169,11 +175,12 @@
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/set-up-events.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/set-up-events.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Event policy labels updated for clarity",
+        "summary": "The setup guide now uses capability-based labels such as “Events up to 1k attendees” and “Events optimized for a large audience” throughout its policy tables and instructions. The associated policy names and commands remain the same.",
+        "adminImpact": "Use the updated labels when configuring or documenting event policies. No administrator action is required.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -194,11 +201,12 @@
       "eventId": "teams-docs:6977b094d470f8a13d4b00a2ea64056a07c76d5d:modified:Teams/settings-policies-reference.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 8 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Teams event policy names updated",
+        "summary": "The reference now uses broader labels such as “Events up to 1k attendees” and “Events optimized for a large audience” instead of webinar and town hall terminology across related settings.",
+        "adminImpact": "Administrators should use the updated policy names when consulting the reference. No administrator action is required.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     }
   ],
@@ -217,7 +225,7 @@
       {
         "category": "Doc update",
         "title": "Microsoft Teams",
-        "summary": "Updated Microsoft Teams documentation in Teams/anonymous-users-in-meetings.md. Updated Microsoft Teams documentation in Teams/manage-event-chat.md. Updated Microsoft Teams documentation in Teams/manage-registration-form-events.md. Updated Microsoft Teams documentation in Teams/manage-vod-publishing.md. Updated Microsoft Teams documentation in Teams/meeting-recording.md. Updated Microsoft Teams documentation in Teams/meeting-transcription-captions.md. Updated Microsoft Teams documentation in Teams/set-up-events.md. Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
+        "summary": "The article replaces references to “Who can attend webinars” and “Who can attend town halls” with “Who can attend events up to 1k attendees” and “Who can attend events optimized for a large audience,” including updated configuration steps. The dropdown label changed from “Town hall chat experience” to “Events optimized for a large audience chat experience.” The options remain Optimized (default) and None. The documentation now refers to the setting as **Events registration form questions** instead of **Webinar registration form questions**. The page metadata was also updated. The setup steps now use revised names for webinar and town hall recording-publishing dropdowns, including audience-si",
         "sourceFiles": [
           "Teams/anonymous-users-in-meetings.md",
           "Teams/manage-event-chat.md",
@@ -234,7 +242,7 @@
       {
         "category": "Doc update",
         "headline": "Microsoft Teams",
-        "detail": "Updated Microsoft Teams documentation in Teams/anonymous-users-in-meetings.md. Updated Microsoft Teams documentation in Teams/manage-event-chat.md. Updated Microsoft Teams documentation in Teams/manage-registration-form-events.md. Updated Microsoft Teams documentation in Teams/manage-vod-publishing.md. Updated Microsoft Teams documentation in Teams/meeting-recording.md. Updated Microsoft Teams documentation in Teams/meeting-transcription-captions.md. Updated Microsoft Teams documentation in Teams/set-up-events.md. Updated Microsoft Teams documentation in Teams/settings-policies-reference.md."
+        "detail": "The article replaces references to “Who can attend webinars” and “Who can attend town halls” with “Who can attend events up to 1k attendees” and “Who can attend events optimized for a large audience,” including updated configuration steps. The dropdown label changed from “Town hall chat experience” to “Events optimized for a large audience chat experience.” The options remain Optimized (default) and None. The documentation now refers to the setting as **Events registration form questions** instead of **Webinar registration form questions**. The page metadata was also updated. The setup steps now use revised names for webinar and town hall recording-publishing dropdowns, including audience-si"
       }
     ],
     "generatedBy": "fallback"

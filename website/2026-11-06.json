@@ -19,11 +19,12 @@
       "eventId": "teams-docs:5de359c6d739240dc51ce1a999bb7fbc0220dd81:modified:Teams/devices/known-issues.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 2 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Known issue added for Large Gallery view on Teams Rooms for Android",
+        "summary": "The known-issues page now states that Large Gallery might be unavailable as a layout option on Teams Rooms for Android running app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update.",
+        "adminImpact": "Administrators should expect Large Gallery to be unavailable on affected app versions; no action is specified.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -44,11 +45,12 @@
       "eventId": "teams-docs:5de359c6d739240dc51ce1a999bb7fbc0220dd81:modified:Teams/rooms/rooms-release-note.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 2 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Low-bitrate video issue resolved",
+        "summary": "The release notes now document a fix for certain devices sending low-bitrate video in specific meeting scenarios.",
+        "adminImpact": "No administrator action is stated.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -69,11 +71,12 @@
       "eventId": "teams-docs:a438cf423c2a347e4efd9d2a0de640bbab9a627a:modified:Teams/aa-cq-reference-limits-supported-configurations.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 3 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Supported language table ordering updated",
+        "summary": "The reference table now lists several language locales in a different order, including Indonesian/Icelandic, Lithuanian/Latvian, and the Serbian-to-Spanish entries. The Spanish (Spain) audio link remains associated with es-ES.",
+        "adminImpact": "No administrator action is required; consult the updated table order when using the reference page.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -94,11 +97,12 @@
       "eventId": "teams-docs:a438cf423c2a347e4efd9d2a0de640bbab9a627a:modified:Teams/aa-cq-setup-teams-phone-agent.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 3 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Teams Phone agent language list reordered",
+        "summary": "The setup documentation changes the ordering of several language entries, including Indonesian, Icelandic, Latvian, Lithuanian, Serbian, Slovak, Slovenian, and Spanish.",
+        "adminImpact": "No configuration or administrative action is required.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -119,11 +123,12 @@
       "eventId": "teams-docs:a438cf423c2a347e4efd9d2a0de640bbab9a627a:modified:Teams/rooms/autopilot-autologin.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 3 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Autopilot + Autologin guidance no longer recommends the app update tool",
+        "summary": "The Teams Rooms app has included automatic updates since April 2024, so the app update tool is no longer recommended for new deployments.",
+        "adminImpact": "Review Intune configurations and consider unassigning the tool, except when deploying devices older than 2025.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     }
   ],
@@ -142,7 +147,7 @@
       {
         "category": "Doc update",
         "title": "Teams devices",
-        "summary": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md.",
+        "summary": "The known-issues page now states that Large Gallery might be unavailable as a layout option on Teams Rooms for Android running app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update.",
         "sourceFiles": [
           "Teams/devices/known-issues.md"
         ]
@@ -150,7 +155,7 @@
       {
         "category": "Doc update",
         "title": "Teams Rooms",
-        "summary": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md. Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+        "summary": "The release notes now document a fix for certain devices sending low-bitrate video in specific meeting scenarios. The Teams Rooms app has included automatic updates since April 2024, so the app update tool is no longer recommended for new deployments.",
         "sourceFiles": [
           "Teams/rooms/rooms-release-note.md",
           "Teams/rooms/autopilot-autologin.md"
@@ -159,7 +164,7 @@
       {
         "category": "Doc update",
         "title": "Microsoft Teams",
-        "summary": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md. Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md.",
+        "summary": "The reference table now lists several language locales in a different order, including Indonesian/Icelandic, Lithuanian/Latvian, and the Serbian-to-Spanish entries. The Spanish (Spain) audio link remains associated with es-ES. The setup documentation changes the ordering of several language entries, including Indonesian, Icelandic, Latvian, Lithuanian, Serbian, Slovak, Slovenian, and Spanish.",
         "sourceFiles": [
           "Teams/aa-cq-reference-limits-supported-configurations.md",
           "Teams/aa-cq-setup-teams-phone-agent.md"
@@ -170,17 +175,17 @@
       {
         "category": "Doc update",
         "headline": "Teams devices",
-        "detail": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md."
+        "detail": "The known-issues page now states that Large Gallery might be unavailable as a layout option on Teams Rooms for Android running app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update."
       },
       {
         "category": "Doc update",
         "headline": "Teams Rooms",
-        "detail": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md. Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md."
+        "detail": "The release notes now document a fix for certain devices sending low-bitrate video in specific meeting scenarios. The Teams Rooms app has included automatic updates since April 2024, so the app update tool is no longer recommended for new deployments."
       },
       {
         "category": "Doc update",
         "headline": "Microsoft Teams",
-        "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md. Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md."
+        "detail": "The reference table now lists several language locales in a different order, including Indonesian/Icelandic, Lithuanian/Latvian, and the Serbian-to-Spanish entries. The Spanish (Spain) audio link remains associated with es-ES. The setup documentation changes the ordering of several language entries, including Indonesian, Icelandic, Latvian, Lithuanian, Serbian, Slovak, Slovenian, and Spanish."
       }
     ],
     "generatedBy": "fallback"

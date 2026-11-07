@@ -1,210 +1,252 @@
 {
-  "version": 3,
-  "generatedAt": "2026-11-07T02:24:29.158Z",
-  "generator": {
-    "model": "deterministic-backfill",
-    "reasoningEffort": "none"
-  },
   "days": {
     "2026-11-05": {
-      "headline": "Certified Hardware Android leads 3 Teams updates",
-      "overview": "5 November 2026 recorded 3 updated Microsoft Teams documentation changes. The most active areas were Devices, Teams Rooms, Clients.",
-      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "headline": "Teams will organize muted and meeting chats into dedicated sections in January",
+      "overview": "Microsoft Teams will introduce a January 2027 chat reorganization: the Muted chats section will be enabled by default, while Meeting chats will be disabled by default, with users able to toggle and reorder both. Two worldwide changes are also planned for December 2026: a Workflows template that links team tags to channel membership and mobile call declines with chat messages. Documentation updates add certified-device entries and SlimCore troubleshooting detail.",
+      "adminImpact": "No required tenant-wide action is stated for the chat sections or mobile call-message feature. The Workflows template is optional and does not change defaults. Administrators should review the updated certified-hardware table during inventory and deployment planning; VDI support teams can use the specified BITS Client and AppXDeployment-Server logs when investigating SlimCore error 6/51.",
       "keyChanges": [
         {
-          "title": "Certified Hardware Android",
-          "detail": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
+          "title": "Muted and meeting chats get dedicated sections in January 2027",
+          "detail": "Teams will add Muted chats and Meeting chats sections. Muted chats will be enabled by default, while Meeting chats will be disabled by default. Users can enable or disable and reorder the sections, and muted chats move automatically unless they are favorited. Rollout begins in January 2027, with no admin action required.",
+          "product": "Teams",
+          "sourceId": "MC1269864"
+        },
+        {
+          "title": "Workflows will connect team tags to channel membership",
+          "detail": "An optional Workflows app template will automatically add users to channels when they are added to a team tag. The feature rolls out worldwide in mid-December 2026 and does not change defaults.",
+          "product": "Teams",
+          "sourceId": "MC1540351"
+        },
+        {
+          "title": "Teams mobile users will be able to decline calls with messages",
+          "detail": "Users will be able to decline incoming Teams mobile calls with a predefined or custom message sent through Teams chat. Worldwide rollout is scheduled for December 2026; the feature applies only to Teams-to-Teams calls with available chat and requires no admin action.",
+          "product": "Teams",
+          "sourceId": "MC1540349"
+        },
+        {
+          "title": "Certified Hardware Android adds Meeting Owl and Cisco entries",
+          "detail": "The table now includes Meeting Owl 5 Pro, Owl Tablet, and multiple Cisco devices, along with their associated software versions and certification dates. Administrators can use these details when validating inventories and planning deployments.",
           "product": "Devices",
           "sourceId": "doc-2026-11-05-certified-hardware-android-01"
         },
         {
-          "title": "Shared Spaces Insights",
-          "detail": "Updated Microsoft Teams documentation in Teams/rooms/shared-spaces-insights.md.",
-          "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-05-shared-spaces-insights-02"
-        },
-        {
-          "title": "Vdi 2 Troubleshooting",
-          "detail": "Updated Microsoft Teams documentation in Teams/vdi-2-troubleshooting.md.",
+          "title": "SlimCore troubleshooting adds Windows error 6/51 guidance",
+          "detail": "Vdi 2 Troubleshooting now documents Windows error 6/51, ERROR_INVALID_HANDLE, during SlimCore download, deployment, or startup, and points administrators to BITS Client and AppXDeployment-Server logs.",
           "product": "Clients",
           "sourceId": "doc-2026-11-05-vdi-2-troubleshooting-03"
         }
       ],
-      "generatedBy": "deterministic-backfill",
-      "generatedAt": "2026-11-07T02:24:29.158Z"
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-07T08:57:23.904Z",
+      "usage": {
+        "inputTokens": 1419,
+        "outputTokens": 2826,
+        "costUsd": 0.003675
+      }
     },
     "2026-11-06": {
-      "headline": "Aa Cq Reference Limits Supported Configurations leads 5 Teams updates",
-      "overview": "6 November 2026 recorded 5 updated Microsoft Teams documentation changes. The most active areas were Teams Rooms, Teams Phone, Devices.",
-      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "headline": "Teams Rooms app update tool is no longer recommended for new Autopilot deployments",
+      "overview": "This was a quiet, documentation-led day with one actionable Teams Rooms change. The Autopilot guidance says the Teams Rooms app has included automatic updates since April 2024, so the app update tool is no longer recommended for new deployments. A separate known-issues entry records possible Large Gallery unavailability on specified Teams Rooms for Android versions, while release notes document a low-bitrate video fix. Teams Phone updates only reorder language entries in reference and setup material.",
+      "adminImpact": "Review Intune assignments for the app update tool and consider unassigning it for new deployments, except when deploying devices older than 2025. Administrators should expect possible Large Gallery unavailability on the affected Android app versions; no action is specified for that issue or the low-bitrate video fix. The Teams Phone language-order changes require no configuration change.",
       "keyChanges": [
         {
-          "title": "Aa Cq Reference Limits Supported Configurations",
-          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-06-aa-cq-reference-limits-supported-configurations-03"
-        },
-        {
-          "title": "Aa Cq Setup Teams Phone Agent",
-          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-06-aa-cq-setup-teams-phone-agent-04"
-        },
-        {
-          "title": "Autopilot Autologin",
-          "detail": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+          "title": "Autopilot guidance changes the app update tool recommendation",
+          "detail": "Because the Teams Rooms app has included automatic updates since April 2024, the app update tool is no longer recommended for new deployments. Administrators should review Intune configurations and consider unassigning the tool, except when deploying devices older than 2025.",
           "product": "Teams Rooms",
           "sourceId": "doc-2026-11-06-autopilot-autologin-05"
         },
         {
-          "title": "Known Issues",
-          "detail": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md.",
-          "product": "Devices",
+          "title": "Large Gallery may be unavailable on specified Teams Rooms for Android versions",
+          "detail": "The known-issues page identifies possible Large Gallery unavailability on Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update, and no administrator action is specified.",
+          "product": "Teams Rooms for Android",
           "sourceId": "doc-2026-11-06-known-issues-01"
         },
         {
-          "title": "Rooms Release Note",
-          "detail": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md.",
+          "title": "Release notes record a low-bitrate video fix",
+          "detail": "Teams Rooms release notes now document a fix for certain devices sending low-bitrate video in specific meeting scenarios. The supplied evidence states no administrator action.",
           "product": "Teams Rooms",
           "sourceId": "doc-2026-11-06-rooms-release-note-02"
         }
       ],
-      "generatedBy": "deterministic-backfill",
-      "generatedAt": "2026-11-07T02:24:29.158Z"
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-07T08:57:23.904Z",
+      "usage": {
+        "inputTokens": 1339,
+        "outputTokens": 2014,
+        "costUsd": 0.002685
+      }
     },
     "2026-11-07": {
-      "headline": "Meeting Recording leads 8 Teams updates",
-      "overview": "7 November 2026 recorded 8 updated Microsoft Teams documentation changes. The most active areas were Meetings and events, Teams.",
-      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "headline": "Capability-based event labels now replace webinar and town hall names across Teams guides",
+      "overview": "The period is dominated by a coordinated terminology pass across event administration. Microsoft Learn now uses “Events up to 1k attendees” and “Events optimized for a large audience” in policy references and event guides, while individual pages rename anonymous-attendance, transcription, and event-chat controls. The recording guidance also distinguishes events with up to 1,000 attendees from large-audience events and clarifies policy assignment.",
+      "adminImpact": "Update internal runbooks, screenshots, and search terms to use the new audience-based labels. In the documented setup flow, associated policy names and commands remain the same; caption settings remain On by default, and event-chat options remain Optimized (default) and None. The supplied entries support reference updates rather than a stated tenant configuration change.",
       "keyChanges": [
         {
-          "title": "Meeting Recording",
-          "detail": "Updated Microsoft Teams documentation in Teams/meeting-recording.md.",
-          "product": "Meetings and events",
-          "sourceId": "doc-2026-11-07-meeting-recording-05"
-        },
-        {
-          "title": "Settings Policies Reference",
-          "detail": "Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
+          "title": "Policy references adopt audience-size labels",
+          "detail": "The Settings Policies Reference replaces webinar and town hall terminology with the exact labels “Events up to 1k attendees” and “Events optimized for a large audience” across related settings.",
           "product": "Teams",
           "sourceId": "doc-2026-11-07-settings-policies-reference-08"
         },
         {
-          "title": "Anonymous Users In Meetings",
-          "detail": "Updated Microsoft Teams documentation in Teams/anonymous-users-in-meetings.md.",
+          "title": "Recording guidance separates event audience sizes",
+          "detail": "The Meeting Recording article now groups webinars and town halls under events, documents recording settings for events with up to 1,000 attendees or for large audiences, and clarifies policy-assignment instructions.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-meeting-recording-05"
+        },
+        {
+          "title": "Anonymous-attendance steps use the new event labels",
+          "detail": "The Anonymous Users In Meetings guide now refers to “Who can attend events up to 1k attendees” and “Who can attend events optimized for a large audience,” with corresponding updated configuration steps.",
           "product": "Meetings and events",
           "sourceId": "doc-2026-11-07-anonymous-users-in-meetings-01"
         },
         {
-          "title": "Meeting Transcription Captions",
-          "detail": "Updated Microsoft Teams documentation in Teams/meeting-transcription-captions.md.",
+          "title": "Caption controls retain defaults under renamed toggles",
+          "detail": "Meeting Transcription Captions replaces the webinar and town hall toggle names with attendee-based labels and clarifies policy-assignment steps. Both settings remain On by default.",
           "product": "Meetings and events",
           "sourceId": "doc-2026-11-07-meeting-transcription-captions-06"
         },
         {
-          "title": "Set Up Events",
-          "detail": "Updated Microsoft Teams documentation in Teams/set-up-events.md.",
+          "title": "Event chat receives an audience-based setting name",
+          "detail": "The dropdown label “Town hall chat experience” is now “Events optimized for a large audience chat experience.” Its options remain Optimized (default) and None.",
           "product": "Meetings and events",
-          "sourceId": "doc-2026-11-07-set-up-events-07"
+          "sourceId": "doc-2026-11-07-manage-event-chat-02"
         }
       ],
-      "generatedBy": "deterministic-backfill",
-      "generatedAt": "2026-11-07T02:24:29.158Z"
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-07T08:57:23.904Z",
+      "usage": {
+        "inputTokens": 1697,
+        "outputTokens": 3801,
+        "costUsd": 0.004901
+      }
     }
   },
   "weeks": {
     "2026-11-02": {
-      "headline": "Meeting Recording leads 16 Teams updates",
-      "overview": "Week of 2 November 2026 recorded 16 updated Microsoft Teams documentation changes. The most active areas were Meetings and events, Teams Rooms, Devices.",
-      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "headline": "Muted and meeting chat sections lead Teams’ next wave of user-facing changes",
+      "overview": "The strongest changes are three planned Teams features: muted and meeting chat sections beginning in January 2027, a Workflows template for adding tag members to channels in mid-December 2026, and mobile users’ ability to decline Teams-to-Teams calls with a chat message in December. The 16 documentation updates were mostly terminology, language-table, and troubleshooting maintenance; event guidance now uses “Events up to 1k attendees” and “Events optimized for a large audience.”",
+      "adminImpact": "No administrator action is required for the three announced Teams features. For Teams Rooms, review Intune assignments for the app update tool: the app has updated automatically since April 2024, and the guidance no longer recommends the tool for new deployments except when deploying devices older than 2025. If internal event guidance uses the old webinar or town hall labels, update it; the associated policy names and commands remain unchanged. Teams Rooms for Android may lack Large Gallery on app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504.",
       "keyChanges": [
         {
-          "title": "Meeting Recording",
-          "detail": "Updated Microsoft Teams documentation in Teams/meeting-recording.md.",
-          "product": "Meetings and events",
-          "sourceId": "doc-2026-11-07-meeting-recording-05"
-        },
-        {
-          "title": "Settings Policies Reference",
-          "detail": "Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
+          "title": "Muted and meeting chat sections are planned for January 2027",
+          "detail": "Teams will introduce Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable, disable, and reorder the sections; muted chats move there automatically unless they are favorited. No administrator action is required.",
           "product": "Teams",
-          "sourceId": "doc-2026-11-07-settings-policies-reference-08"
+          "sourceId": "MC1269864"
         },
         {
-          "title": "Certified Hardware Android",
-          "detail": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-05-certified-hardware-android-01"
+          "title": "Workflows will auto-add tag members to channels",
+          "detail": "A new optional Workflows app template will add users to channels when they are added to a team tag. The worldwide rollout is scheduled for mid-December 2026, with no default changes.",
+          "product": "Teams",
+          "sourceId": "MC1540351"
         },
         {
-          "title": "Aa Cq Reference Limits Supported Configurations",
-          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-06-aa-cq-reference-limits-supported-configurations-03"
+          "title": "Teams mobile users will be able to decline calls with a message",
+          "detail": "Beginning in December 2026, users can decline incoming Teams-to-Teams calls with a predefined or custom message sent through Teams chat. The feature applies when chat is available and requires no administrator action.",
+          "product": "Teams",
+          "sourceId": "MC1540349"
         },
         {
-          "title": "Autopilot Autologin",
-          "detail": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+          "title": "Teams Rooms guidance no longer recommends the app update tool for new deployments",
+          "detail": "The Teams Rooms app has supported automatic updates since April 2024, so the app update tool is no longer recommended for new deployments. The guidance says to review Intune configurations and consider unassigning the tool, except for devices older than 2025.",
           "product": "Teams Rooms",
           "sourceId": "doc-2026-11-06-autopilot-autologin-05"
+        },
+        {
+          "title": "Large Gallery may be unavailable on specified Teams Rooms Android builds",
+          "detail": "The known-issues guidance identifies a possible Large Gallery limitation on Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. Microsoft expects the issue to be addressed in a future update.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-06-known-issues-01"
         }
       ],
-      "generatedBy": "deterministic-backfill",
-      "generatedAt": "2026-11-07T02:24:29.158Z"
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-07T08:57:23.904Z",
+      "usage": {
+        "inputTokens": 2948,
+        "outputTokens": 4720,
+        "costUsd": 0.006254
+      }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Meeting Recording leads 16 Teams updates",
-      "overview": "November 2026 recorded 16 updated Microsoft Teams documentation changes. The most active areas were Meetings and events, Teams Rooms, Devices.",
-      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "headline": "Teams plans new chat sections, tag-based channel workflows, and mobile call replies",
+      "overview": "November’s strongest Teams changes are three scheduled user-facing rollouts: Muted chats and Meeting chats in January 2027; an optional Workflows template that adds tag members to channels in mid-December; and mobile call declines with a predefined or custom chat message in December. The remaining updates are mostly documentation maintenance: event guidance now uses “Events up to 1k attendees” and “Events optimized for a large audience” instead of webinar and town hall labels, while Teams Rooms guidance changes deployment advice and records a Large Gallery issue on specified Android builds.",
+      "adminImpact": "No administrator action is stated for the three Teams rollouts; the Workflows template is optional and does not change defaults. Teams Rooms administrators should review Intune assignments for the app update tool: the Rooms app has updated automatically since April 2024, and guidance no longer recommends the tool for new deployments except for devices older than 2025. For event runbooks, use the revised audience-size labels; the associated policy names and commands remain unchanged. On Teams Rooms for Android, expect Large Gallery to be unavailable on app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504 until a future update addresses the issue.",
       "keyChanges": [
         {
-          "title": "Meeting Recording",
-          "detail": "Updated Microsoft Teams documentation in Teams/meeting-recording.md.",
-          "product": "Meetings and events",
-          "sourceId": "doc-2026-11-07-meeting-recording-05"
-        },
-        {
-          "title": "Settings Policies Reference",
-          "detail": "Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
+          "title": "Muted and meeting chat sections are planned for January 2027",
+          "detail": "Teams will add Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable, disable, and reorder the sections; muted chats move there automatically unless favorited. Rollout starts in January 2027, with no administrator action stated.",
           "product": "Teams",
-          "sourceId": "doc-2026-11-07-settings-policies-reference-08"
+          "sourceId": "MC1269864"
         },
         {
-          "title": "Certified Hardware Android",
-          "detail": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-05-certified-hardware-android-01"
+          "title": "A Workflows template will sync tag members into channels",
+          "detail": "Rolling worldwide in mid-December 2026, the optional Workflows app template will add users to channels when they are added to a team tag. It does not change defaults and requires no administrator action.",
+          "product": "Teams",
+          "sourceId": "MC1540351"
         },
         {
-          "title": "Aa Cq Reference Limits Supported Configurations",
-          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-06-aa-cq-reference-limits-supported-configurations-03"
+          "title": "Mobile users will decline Teams-to-Teams calls with a message",
+          "detail": "Worldwide rollout is scheduled for December 2026. Users will be able to send a predefined or custom Teams chat message when declining a Teams-to-Teams call, provided chat is available. No administrator action is required.",
+          "product": "Teams",
+          "sourceId": "MC1540349"
         },
         {
-          "title": "Autopilot Autologin",
-          "detail": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+          "title": "Teams Rooms guidance stops recommending the app update tool for new deployments",
+          "detail": "The Teams Rooms app has included automatic updates since April 2024. Updated deployment guidance says the app update tool is no longer recommended for new deployments, except when deploying devices older than 2025; administrators should review their Intune assignments.",
           "product": "Teams Rooms",
           "sourceId": "doc-2026-11-06-autopilot-autologin-05"
+        },
+        {
+          "title": "Large Gallery may be unavailable on specific Teams Rooms Android builds",
+          "detail": "The known-issues guidance identifies missing Large Gallery on Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-06-known-issues-01"
         }
       ],
-      "generatedBy": "deterministic-backfill",
-      "generatedAt": "2026-11-07T02:24:29.158Z"
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-07T08:57:23.904Z",
+      "usage": {
+        "inputTokens": 3201,
+        "outputTokens": 4737,
+        "costUsd": 0.006325
+      }
     }
   },
-  "usageByDay": {},
+  "version": 3,
+  "generatedAt": "2026-11-07T08:57:23.904Z",
+  "generator": {
+    "model": "gpt-5.6-luna",
+    "reasoningEffort": "xhigh"
+  },
+  "usageByDay": {
+    "2026-11-07": {
+      "inputTokens": 10604,
+      "outputTokens": 18098,
+      "requests": 5,
+      "costUsd": 0.023838
+    }
+  },
   "lastRun": {
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "requests": 0,
-    "costUsd": 0
+    "inputTokens": 10604,
+    "outputTokens": 18098,
+    "requests": 5,
+    "costUsd": 0.023838
   },
   "totalUsage": {
-    "inputTokens": 0,
-    "outputTokens": 0,
-    "requests": 0,
-    "costUsd": 0
+    "inputTokens": 10604,
+    "outputTokens": 18098,
+    "requests": 5,
+    "costUsd": 0.023838
   }
 }

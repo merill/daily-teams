@@ -19,11 +19,12 @@
       "eventId": "teams-docs:e896bcdae0357f9ca817b8a1542fe14922de3e36:modified:Teams/devices/certified-hardware-android.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 3 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Certified Android hardware list adds Meeting Owl and Cisco device entries",
+        "summary": "The table now includes Meeting Owl 5 Pro, Owl Tablet, and multiple Cisco devices with associated software versions and certification dates.",
+        "adminImpact": "Review the updated hardware and version details when validating device inventories and planning deployments.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -44,11 +45,12 @@
       "eventId": "teams-docs:e896bcdae0357f9ca817b8a1542fe14922de3e36:modified:Teams/rooms/shared-spaces-insights.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 3 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/rooms/shared-spaces-insights.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "Room occupancy insights documentation adds room-level drilldown details",
+        "summary": "The article now explains how to select a chart bar to view individual rooms, people counts, occupancy details, and comparisons with configured capacity.",
+        "adminImpact": "Administrators can use these documented insights to evaluate room sizing and occupancy patterns. No action is required.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     },
     {
@@ -69,11 +71,12 @@
       "eventId": "teams-docs:e896bcdae0357f9ca817b8a1542fe14922de3e36:modified:Teams/vdi-2-troubleshooting.md",
       "englishSummary": {
         "category": "Doc update",
-        "headline": "Mirror Learn: 3 changed",
-        "summary": "Updated Microsoft Teams documentation in Teams/vdi-2-troubleshooting.md.",
-        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "headline": "SlimCore troubleshooting guidance adds ERROR_INVALID_HANDLE",
+        "summary": "The troubleshooting page now documents Windows error 6/51 (ERROR_INVALID_HANDLE) during SlimCore download, deployment, or startup, with guidance to review BITS Client and AppXDeployment-Server logs.",
+        "adminImpact": "Administrators troubleshooting SlimCore failures have an additional error code and log locations to consult; no required configuration change is stated.",
         "actionRequired": false,
-        "generatedBy": "fallback"
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
       }
     }
   ],
@@ -92,7 +95,7 @@
       {
         "category": "Doc update",
         "title": "Teams devices",
-        "summary": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
+        "summary": "The table now includes Meeting Owl 5 Pro, Owl Tablet, and multiple Cisco devices with associated software versions and certification dates.",
         "sourceFiles": [
           "Teams/devices/certified-hardware-android.md"
         ]
@@ -100,7 +103,7 @@
       {
         "category": "Doc update",
         "title": "Teams Rooms",
-        "summary": "Updated Microsoft Teams documentation in Teams/rooms/shared-spaces-insights.md.",
+        "summary": "The article now explains how to select a chart bar to view individual rooms, people counts, occupancy details, and comparisons with configured capacity.",
         "sourceFiles": [
           "Teams/rooms/shared-spaces-insights.md"
         ]
@@ -108,7 +111,7 @@
       {
         "category": "Doc update",
         "title": "Microsoft Teams",
-        "summary": "Updated Microsoft Teams documentation in Teams/vdi-2-troubleshooting.md.",
+        "summary": "The troubleshooting page now documents Windows error 6/51 (ERROR_INVALID_HANDLE) during SlimCore download, deployment, or startup, with guidance to review BITS Client and AppXDeployment-Server logs.",
         "sourceFiles": [
           "Teams/vdi-2-troubleshooting.md"
         ]
@@ -118,17 +121,17 @@
       {
         "category": "Doc update",
         "headline": "Teams devices",
-        "detail": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md."
+        "detail": "The table now includes Meeting Owl 5 Pro, Owl Tablet, and multiple Cisco devices with associated software versions and certification dates."
       },
       {
         "category": "Doc update",
         "headline": "Teams Rooms",
-        "detail": "Updated Microsoft Teams documentation in Teams/rooms/shared-spaces-insights.md."
+        "detail": "The article now explains how to select a chart bar to view individual rooms, people counts, occupancy details, and comparisons with configured capacity."
       },
       {
         "category": "Doc update",
         "headline": "Microsoft Teams",
-        "detail": "Updated Microsoft Teams documentation in Teams/vdi-2-troubleshooting.md."
+        "detail": "The troubleshooting page now documents Windows error 6/51 (ERROR_INVALID_HANDLE) during SlimCore download, deployment, or startup, with guidance to review BITS Client and AppXDeployment-Server logs."
       }
     ],
     "generatedBy": "fallback"

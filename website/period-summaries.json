@@ -1,0 +1,210 @@
+{
+  "version": 3,
+  "generatedAt": "2026-11-07T02:24:29.158Z",
+  "generator": {
+    "model": "deterministic-backfill",
+    "reasoningEffort": "none"
+  },
+  "days": {
+    "2026-11-05": {
+      "headline": "Certified Hardware Android leads 3 Teams updates",
+      "overview": "5 November 2026 recorded 3 updated Microsoft Teams documentation changes. The most active areas were Devices, Teams Rooms, Clients.",
+      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "keyChanges": [
+        {
+          "title": "Certified Hardware Android",
+          "detail": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-05-certified-hardware-android-01"
+        },
+        {
+          "title": "Shared Spaces Insights",
+          "detail": "Updated Microsoft Teams documentation in Teams/rooms/shared-spaces-insights.md.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-05-shared-spaces-insights-02"
+        },
+        {
+          "title": "Vdi 2 Troubleshooting",
+          "detail": "Updated Microsoft Teams documentation in Teams/vdi-2-troubleshooting.md.",
+          "product": "Clients",
+          "sourceId": "doc-2026-11-05-vdi-2-troubleshooting-03"
+        }
+      ],
+      "generatedBy": "deterministic-backfill",
+      "generatedAt": "2026-11-07T02:24:29.158Z"
+    },
+    "2026-11-06": {
+      "headline": "Aa Cq Reference Limits Supported Configurations leads 5 Teams updates",
+      "overview": "6 November 2026 recorded 5 updated Microsoft Teams documentation changes. The most active areas were Teams Rooms, Teams Phone, Devices.",
+      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "keyChanges": [
+        {
+          "title": "Aa Cq Reference Limits Supported Configurations",
+          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-06-aa-cq-reference-limits-supported-configurations-03"
+        },
+        {
+          "title": "Aa Cq Setup Teams Phone Agent",
+          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-06-aa-cq-setup-teams-phone-agent-04"
+        },
+        {
+          "title": "Autopilot Autologin",
+          "detail": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-06-autopilot-autologin-05"
+        },
+        {
+          "title": "Known Issues",
+          "detail": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-06-known-issues-01"
+        },
+        {
+          "title": "Rooms Release Note",
+          "detail": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-06-rooms-release-note-02"
+        }
+      ],
+      "generatedBy": "deterministic-backfill",
+      "generatedAt": "2026-11-07T02:24:29.158Z"
+    },
+    "2026-11-07": {
+      "headline": "Meeting Recording leads 8 Teams updates",
+      "overview": "7 November 2026 recorded 8 updated Microsoft Teams documentation changes. The most active areas were Meetings and events, Teams.",
+      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "keyChanges": [
+        {
+          "title": "Meeting Recording",
+          "detail": "Updated Microsoft Teams documentation in Teams/meeting-recording.md.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-meeting-recording-05"
+        },
+        {
+          "title": "Settings Policies Reference",
+          "detail": "Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
+          "product": "Teams",
+          "sourceId": "doc-2026-11-07-settings-policies-reference-08"
+        },
+        {
+          "title": "Anonymous Users In Meetings",
+          "detail": "Updated Microsoft Teams documentation in Teams/anonymous-users-in-meetings.md.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-anonymous-users-in-meetings-01"
+        },
+        {
+          "title": "Meeting Transcription Captions",
+          "detail": "Updated Microsoft Teams documentation in Teams/meeting-transcription-captions.md.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-meeting-transcription-captions-06"
+        },
+        {
+          "title": "Set Up Events",
+          "detail": "Updated Microsoft Teams documentation in Teams/set-up-events.md.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-set-up-events-07"
+        }
+      ],
+      "generatedBy": "deterministic-backfill",
+      "generatedAt": "2026-11-07T02:24:29.158Z"
+    }
+  },
+  "weeks": {
+    "2026-11-02": {
+      "headline": "Meeting Recording leads 16 Teams updates",
+      "overview": "Week of 2 November 2026 recorded 16 updated Microsoft Teams documentation changes. The most active areas were Meetings and events, Teams Rooms, Devices.",
+      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "keyChanges": [
+        {
+          "title": "Meeting Recording",
+          "detail": "Updated Microsoft Teams documentation in Teams/meeting-recording.md.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-meeting-recording-05"
+        },
+        {
+          "title": "Settings Policies Reference",
+          "detail": "Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
+          "product": "Teams",
+          "sourceId": "doc-2026-11-07-settings-policies-reference-08"
+        },
+        {
+          "title": "Certified Hardware Android",
+          "detail": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-05-certified-hardware-android-01"
+        },
+        {
+          "title": "Aa Cq Reference Limits Supported Configurations",
+          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-06-aa-cq-reference-limits-supported-configurations-03"
+        },
+        {
+          "title": "Autopilot Autologin",
+          "detail": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-06-autopilot-autologin-05"
+        }
+      ],
+      "generatedBy": "deterministic-backfill",
+      "generatedAt": "2026-11-07T02:24:29.158Z"
+    }
+  },
+  "months": {
+    "2026-11": {
+      "headline": "Meeting Recording leads 16 Teams updates",
+      "overview": "November 2026 recorded 16 updated Microsoft Teams documentation changes. The most active areas were Meetings and events, Teams Rooms, Devices.",
+      "adminImpact": "Review the linked Microsoft Learn changes that apply to your managed platforms, policies, applications, and rollout plans. The archive preserves the source diff for verification.",
+      "keyChanges": [
+        {
+          "title": "Meeting Recording",
+          "detail": "Updated Microsoft Teams documentation in Teams/meeting-recording.md.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-meeting-recording-05"
+        },
+        {
+          "title": "Settings Policies Reference",
+          "detail": "Updated Microsoft Teams documentation in Teams/settings-policies-reference.md.",
+          "product": "Teams",
+          "sourceId": "doc-2026-11-07-settings-policies-reference-08"
+        },
+        {
+          "title": "Certified Hardware Android",
+          "detail": "Updated Microsoft Teams documentation in Teams/devices/certified-hardware-android.md.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-05-certified-hardware-android-01"
+        },
+        {
+          "title": "Aa Cq Reference Limits Supported Configurations",
+          "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-06-aa-cq-reference-limits-supported-configurations-03"
+        },
+        {
+          "title": "Autopilot Autologin",
+          "detail": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-06-autopilot-autologin-05"
+        }
+      ],
+      "generatedBy": "deterministic-backfill",
+      "generatedAt": "2026-11-07T02:24:29.158Z"
+    }
+  },
+  "usageByDay": {},
+  "lastRun": {
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "requests": 0,
+    "costUsd": 0
+  },
+  "totalUsage": {
+    "inputTokens": 0,
+    "outputTokens": 0,
+    "requests": 0,
+    "costUsd": 0
+  }
+}

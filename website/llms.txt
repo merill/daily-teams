@@ -1,0 +1,13 @@
+# Daily Teams News
+
+A readable record of what changed across Microsoft Teams admin documentation.
+
+- [Latest day](https://daily.teams.admin.news/)
+- [Current week](https://daily.teams.admin.news/week/)
+- [Products](https://daily.teams.admin.news/products/)
+- [Topics](https://daily.teams.admin.news/topics/)
+- [Message Center](https://daily.teams.admin.news/message-center/)
+- [Search the archive](https://daily.teams.admin.news/search/)
+- [Compare a Learn page](https://mx.merill.net/)
+- [About](https://daily.teams.admin.news/about/)
+- [RSS](https://daily.teams.admin.news/rss.xml)

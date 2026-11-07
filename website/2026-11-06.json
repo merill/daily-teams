@@ -1,0 +1,188 @@
+{
+  "newFiles": [],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/devices/known-issues.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "patch": "diff --git a/Teams/devices/known-issues.md b/Teams/devices/known-issues.md\nindex 8278752..fd00bd0 100644\n--- a/Teams/devices/known-issues.md\n+++ b/Teams/devices/known-issues.md\n@@ -14,7 +14,7 @@ ms.author: mattslomka\n manager: miaitelh\n ms.service: msteams\n ms.topic: troubleshooting-known-issue\n-ms.date: 2026-10-30T00:00:00.0000000Z\n+ms.date: 2026-11-05T00:00:00.0000000Z\n ms.subservice: itpro-devices\n locale: en-us\n document_id: 7f06572c-b6ae-7ff3-40dc-537712172644\n@@ -77,6 +77,7 @@ platformId: 448a114f-8665-34fc-cbe8-e0c937d45911\n \r\n | Issue | Description | Workaround |\r\n | --- | --- | --- |\r\n+| Large gallery view is unavailable for Teams Rooms on Android devices. | Teams Rooms on Android devices may not offer large gallery view as a layout selection when running application versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504 | This is expected and will be addressed in a future application release. |\r\n | Unable to join E2EE meeting using Teams Rooms on Android device. | When you use a Teams Rooms on Android device that is paired with a console, you're not able to join a Teams meeting that is set up with end-to-end encryption (E2EE). | Update to Teams Rooms on Android application [1449/1.0.96.2026249711](/en-us/MicrosoftTeams/rooms/rooms-release-note?tabs=Android#144910962026249711-september-2026) |\r\n | Devices may automatically exit meetings due to mismatched application versions. | Teams Rooms on Android devices with paired consoles may automatically exit meetings if the compute and console are operating on different Teams Rooms on Android application versions. | Review application versions installed on each device from the Pro Management Portal or on the device itself. Use the Pro Management Portal to force update the Teams Rooms application to the latest release on both devices. |\r\n | [DGJ] Unable to join future Google meet meetings on Teams Rooms on Android via One-Touch join | When using a Teams Rooms on Android device to join a Google Meet meeting **before its scheduled start time**, the meeting cannot be joined using the One-Touch Join button | If you need to join a Google Meet meeting before its scheduled start time, use the **Join by ID** option |\r\n",
+      "baseCommitSha": "e896bcdae0357f9ca817b8a1542fe14922de3e36",
+      "commitSha": "5de359c6d739240dc51ce1a999bb7fbc0220dd81",
+      "commitMessage": "Mirror Learn: 2 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-06T02:42:36Z",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/known-issues.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/known-issues",
+      "firstSeenAt": "2026-11-06T02:42:36.000Z",
+      "eventId": "teams-docs:5de359c6d739240dc51ce1a999bb7fbc0220dd81:modified:Teams/devices/known-issues.md",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Mirror Learn: 2 changed",
+        "summary": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md.",
+        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "actionRequired": false,
+        "generatedBy": "fallback"
+      }
+    },
+    {
+      "filename": "Teams/rooms/rooms-release-note.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "patch": "diff --git a/Teams/rooms/rooms-release-note.md b/Teams/rooms/rooms-release-note.md\nindex 7d3dc3a..e5ee191 100644\n--- a/Teams/rooms/rooms-release-note.md\n+++ b/Teams/rooms/rooms-release-note.md\n@@ -939,6 +939,7 @@ Resolved issues:\n - Resolved an issue where console was slow to join a meeting when QR code join was used.\r\n - Resolved an issue where certain devices appeared as unhealthy in the Pro Management Portal after entering “sleep mode”.\r\n - Resolved an issue where certain devices with paired consoles were unable to participate in end-to-end encrypted meetings.\r\n+- Resolved an issue where certain devices sent low bitrate video in certain meeting scenarios.\r\n \r\n ### 1449/1.0.96.2026144512 (August 2026)\r\n \r\n",
+      "baseCommitSha": "e896bcdae0357f9ca817b8a1542fe14922de3e36",
+      "commitSha": "5de359c6d739240dc51ce1a999bb7fbc0220dd81",
+      "commitMessage": "Mirror Learn: 2 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-06T02:42:36Z",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/rooms-release-note.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/rooms-release-note",
+      "firstSeenAt": "2026-11-06T02:42:36.000Z",
+      "eventId": "teams-docs:5de359c6d739240dc51ce1a999bb7fbc0220dd81:modified:Teams/rooms/rooms-release-note.md",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Mirror Learn: 2 changed",
+        "summary": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md.",
+        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "actionRequired": false,
+        "generatedBy": "fallback"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-reference-limits-supported-configurations.md",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 11,
+      "changes": 20,
+      "patch": "diff --git a/Teams/aa-cq-reference-limits-supported-configurations.md b/Teams/aa-cq-reference-limits-supported-configurations.md\nindex 197287a..874f43f 100644\n--- a/Teams/aa-cq-reference-limits-supported-configurations.md\n+++ b/Teams/aa-cq-reference-limits-supported-configurations.md\n@@ -84,8 +84,6 @@ Languages/Locales: 63 (Expand to see list of supported languages/locales)\n \r\n | # | Locale | Language | Optimized Voice |\r\n | --- | --- | --- | --- |\r\n-| 1. | ar-EG | Arabic (Egypt) |  |\r\n-| 1. | ar-EG | Arabic (Egypt) |  |\r\n | 01 | ar-EG | Arabic (Egypt) |  |\r\n | 02 | ar-SA | Arabic (Saudi Arabia) |  |\r\n | 03 | hy-AM | Armenian (Armenia) |  |\r\n@@ -121,14 +119,14 @@ Languages/Locales: 63 (Expand to see list of supported languages/locales)\n | 33 | he-IL | Hebrew (Israel) |  |\r\n | 34 | hi-IN | Hindi (India) | 🎵 [Diya](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/5908b5cfd1247ee1.wav), 🎵 [Meera](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/6fd584f9d50c9a45.wav) |\r\n | 35 | hu-HU | Hungarian (Hungary) |  |\r\n-| 36 | id-ID | Indonesian (Indonesia) |  |\r\n-| 37 | is-IS | Icelandic (Iceland) |  |\r\n+| 36 | is-IS | Icelandic (Iceland) |  |\r\n+| 37 | id-ID | Indonesian (Indonesia) |  |\r\n | 38 | it-IT | Italian (Italy) | Isabella |\r\n | 39 | ja-JP | Japanese (Japan) |  |\r\n | 40 | kn-IN | Kannada (India) |  |\r\n | 41 | ko-KR | Korean (Korea) |  |\r\n-| 42 | lt-LT | Lithuanian (Lithuania) |  |\r\n-| 43 | lv-LV | Latvian (Latvia) |  |\r\n+| 42 | lv-LV | Latvian (Latvia) |  |\r\n+| 43 | lt-LT | Lithuanian (Lithuania) |  |\r\n | 44 | mr-IN | Marathi (India) |  |\r\n | 45 | nb-NO | Norwegian Bokmål (Norway) |  |\r\n | 46 | fa-IR | Persian (Iran) |  |\r\n@@ -137,11 +135,11 @@ Languages/Locales: 63 (Expand to see list of supported languages/locales)\n | 49 | pt-PT | Portuguese (Portugal) |  |\r\n | 50 | ro-RO | Romanian (Romania) |  |\r\n | 51 | ru-RU | Russian (Russia) |  |\r\n-| 52 | sk-SK | Slovak (Slovakia) |  |\r\n-| 53 | sl-SI | Slovenian (Slovenia) |  |\r\n-| 54 | sr-RS | Serbian (Serbia) |  |\r\n-| 55 | es-ES | Spanish (Spain, International) | 🎵 [Ximena](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/5c0ab10bfbdf65f6.wav) |\r\n-| 56 | es-MX | Spanish (Mexico) |  |\r\n+| 52 | sr-RS | Serbian (Serbia) |  |\r\n+| 53 | sk-SK | Slovak (Slovakia) |  |\r\n+| 54 | sl-SI | Slovenian (Slovenia) |  |\r\n+| 55 | es-MX | Spanish (Mexico) |  |\r\n+| 56 | es-ES | Spanish (Spain, International) | 🎵 [Ximena](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/5c0ab10bfbdf65f6.wav) |\r\n | 57 | sv-SE | Swedish (Sweden) |  |\r\n | 58 | ta-IN | Tamil (India) |  |\r\n | 59 | th-TH | Thai (Thailand) |  |\r\n",
+      "baseCommitSha": "78aa112536491b764a7c6a880614d5f1f72ec4cd",
+      "commitSha": "a438cf423c2a347e4efd9d2a0de640bbab9a627a",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-06T21:44:36Z",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-reference-limits-supported-configurations.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-reference-limits-supported-configurations",
+      "firstSeenAt": "2026-11-06T21:44:36.000Z",
+      "eventId": "teams-docs:a438cf423c2a347e4efd9d2a0de640bbab9a627a:modified:Teams/aa-cq-reference-limits-supported-configurations.md",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Mirror Learn: 3 changed",
+        "summary": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md.",
+        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "actionRequired": false,
+        "generatedBy": "fallback"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent.md",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 11,
+      "changes": 20,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent.md b/Teams/aa-cq-setup-teams-phone-agent.md\nindex 323a1cf..d2a2797 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent.md\n@@ -249,8 +249,6 @@ Expand to see list of supported languages\n \r\n | # | Locale | Language | Optimized Voice |\r\n | --- | --- | --- | --- |\r\n-| 1. | ar-EG | Arabic (Egypt) |  |\r\n-| 1. | ar-EG | Arabic (Egypt) |  |\r\n | 01 | ar-EG | Arabic (Egypt) |  |\r\n | 02 | ar-SA | Arabic (Saudi Arabia) |  |\r\n | 03 | hy-AM | Armenian (Armenia) |  |\r\n@@ -286,14 +284,14 @@ Expand to see list of supported languages\n | 33 | he-IL | Hebrew (Israel) |  |\r\n | 34 | hi-IN | Hindi (India) | 🎵 [Diya](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/5908b5cfd1247ee1.wav), 🎵 [Meera](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/6fd584f9d50c9a45.wav) |\r\n | 35 | hu-HU | Hungarian (Hungary) |  |\r\n-| 36 | id-ID | Indonesian (Indonesia) |  |\r\n-| 37 | is-IS | Icelandic (Iceland) |  |\r\n+| 36 | is-IS | Icelandic (Iceland) |  |\r\n+| 37 | id-ID | Indonesian (Indonesia) |  |\r\n | 38 | it-IT | Italian (Italy) | Isabella |\r\n | 39 | ja-JP | Japanese (Japan) |  |\r\n | 40 | kn-IN | Kannada (India) |  |\r\n | 41 | ko-KR | Korean (Korea) |  |\r\n-| 42 | lt-LT | Lithuanian (Lithuania) |  |\r\n-| 43 | lv-LV | Latvian (Latvia) |  |\r\n+| 42 | lv-LV | Latvian (Latvia) |  |\r\n+| 43 | lt-LT | Lithuanian (Lithuania) |  |\r\n | 44 | mr-IN | Marathi (India) |  |\r\n | 45 | nb-NO | Norwegian Bokmål (Norway) |  |\r\n | 46 | fa-IR | Persian (Iran) |  |\r\n@@ -302,11 +300,11 @@ Expand to see list of supported languages\n | 49 | pt-PT | Portuguese (Portugal) |  |\r\n | 50 | ro-RO | Romanian (Romania) |  |\r\n | 51 | ru-RU | Russian (Russia) |  |\r\n-| 52 | sk-SK | Slovak (Slovakia) |  |\r\n-| 53 | sl-SI | Slovenian (Slovenia) |  |\r\n-| 54 | sr-RS | Serbian (Serbia) |  |\r\n-| 55 | es-ES | Spanish (Spain, International) | 🎵 [Ximena](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/5c0ab10bfbdf65f6.wav) |\r\n-| 56 | es-MX | Spanish (Mexico) |  |\r\n+| 52 | sr-RS | Serbian (Serbia) |  |\r\n+| 53 | sk-SK | Slovak (Slovakia) |  |\r\n+| 54 | sl-SI | Slovenian (Slovenia) |  |\r\n+| 55 | es-MX | Spanish (Mexico) |  |\r\n+| 56 | es-ES | Spanish (Spain, International) | 🎵 [Ximena](https://res.cdn.office.net/s01-itpro-tac-ui/1.0.261025.2/5c0ab10bfbdf65f6.wav) |\r\n | 57 | sv-SE | Swedish (Sweden) |  |\r\n | 58 | ta-IN | Tamil (India) |  |\r\n | 59 | th-TH | Thai (Thailand) |  |\r\n",
+      "baseCommitSha": "78aa112536491b764a7c6a880614d5f1f72ec4cd",
+      "commitSha": "a438cf423c2a347e4efd9d2a0de640bbab9a627a",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-06T21:44:36Z",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent",
+      "firstSeenAt": "2026-11-06T21:44:36.000Z",
+      "eventId": "teams-docs:a438cf423c2a347e4efd9d2a0de640bbab9a627a:modified:Teams/aa-cq-setup-teams-phone-agent.md",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Mirror Learn: 3 changed",
+        "summary": "Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md.",
+        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "actionRequired": false,
+        "generatedBy": "fallback"
+      }
+    },
+    {
+      "filename": "Teams/rooms/autopilot-autologin.md",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 2,
+      "changes": 10,
+      "patch": "diff --git a/Teams/rooms/autopilot-autologin.md b/Teams/rooms/autopilot-autologin.md\nindex 750f391..75b1c88 100644\n--- a/Teams/rooms/autopilot-autologin.md\n+++ b/Teams/rooms/autopilot-autologin.md\n@@ -11,8 +11,8 @@ recommendations: true\n author: MSTonySmith\n ms.author: tonysmit\n manager: pamgreen\n-ms.reviewer: altsou\n-ms.date: 2026-04-15T00:00:00.0000000Z\n+ms.reviewer: mattslomka\n+ms.date: 2026-11-06T00:00:00.0000000Z\n ms.topic: install-set-up-deploy\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -118,6 +118,12 @@ If you use Intune to manage other Windows devices besides Teams Rooms, we recomm\n \r\n ## Step 4: Deploy Teams Rooms app update tool\r\n \r\n+Note\r\n+\r\n+As of November 2026, the app update tool is no longer a recommended step in the deployment process for Autopilot + Autologin. The Teams Rooms app has had the automatic update functionality included since April 2024, all new devices being deployed should have the feature included out of box.\r\n+\r\n+If you have the app update tool still included in your Intune configuration it's recommended that you unassign it unless you're deploying devices older than 2025.\r\n+\r\n The Teams Rooms app update tool updates the Teams room app running on the device to a version that supports Windows Autopilot and Autologin. The update tool needs to be first downloaded, then uploaded to Intune, and deployed to the Teams Rooms on Windows devices. Although it's not required, use dynamic device groups. During the Windows Autopilot Enrollment Status Page (ESP), Intune installs the update tool to the Teams Rooms device and updates the Teams room app before it starts.\r\n \r\n Going through these steps enables Intune to push the update tool to the Teams Rooms enrolling through Windows Autopilot. The update tool then automatically updates the Teams app on the device so it can automatically log in.\r\n",
+      "baseCommitSha": "78aa112536491b764a7c6a880614d5f1f72ec4cd",
+      "commitSha": "a438cf423c2a347e4efd9d2a0de640bbab9a627a",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-06T21:44:36Z",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/autopilot-autologin.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/autopilot-autologin",
+      "firstSeenAt": "2026-11-06T21:44:36.000Z",
+      "eventId": "teams-docs:a438cf423c2a347e4efd9d2a0de640bbab9a627a:modified:Teams/rooms/autopilot-autologin.md",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Mirror Learn: 3 changed",
+        "summary": "Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+        "adminImpact": "Review the underlying documentation change to determine whether it affects tenant configuration or rollout plans.",
+        "actionRequired": false,
+        "generatedBy": "fallback"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [],
+  "summary": {
+    "totalCommits": 2,
+    "totalFiles": 5,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 0 new, 5 updated, and 0 removed Microsoft Teams documentation files across 3 documentation areas.",
+    "groups": [
+      {
+        "category": "Doc update",
+        "title": "Teams devices",
+        "summary": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md.",
+        "sourceFiles": [
+          "Teams/devices/known-issues.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams Rooms",
+        "summary": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md. Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md.",
+        "sourceFiles": [
+          "Teams/rooms/rooms-release-note.md",
+          "Teams/rooms/autopilot-autologin.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Microsoft Teams",
+        "summary": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md. Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md.",
+        "sourceFiles": [
+          "Teams/aa-cq-reference-limits-supported-configurations.md",
+          "Teams/aa-cq-setup-teams-phone-agent.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Doc update",
+        "headline": "Teams devices",
+        "detail": "Updated Microsoft Teams documentation in Teams/devices/known-issues.md."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams Rooms",
+        "detail": "Updated Microsoft Teams documentation in Teams/rooms/rooms-release-note.md. Updated Microsoft Teams documentation in Teams/rooms/autopilot-autologin.md."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Microsoft Teams",
+        "detail": "Updated Microsoft Teams documentation in Teams/aa-cq-reference-limits-supported-configurations.md. Updated Microsoft Teams documentation in Teams/aa-cq-setup-teams-phone-agent.md."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

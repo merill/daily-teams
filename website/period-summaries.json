@@ -125,6 +125,28 @@
         "outputTokens": 3166,
         "costUsd": 0.004163
       }
+    },
+    "2026-11-09": {
+      "headline": "SIP Gateway plan drops Edge V 200+ firmware 8.5.1.0565 listing",
+      "overview": "The Devices update removes the Edge V 200+ entry with firmware version 8.5.1.0565 from the SIP Gateway plan’s IP Phone section.",
+      "adminImpact": "Administrators validating device and firmware support should review the updated SIP Gateway plan.",
+      "keyChanges": [
+        {
+          "title": "Edge V 200+ entry removed from the SIP Gateway plan",
+          "detail": "The plan page no longer lists Edge V 200+ with firmware version 8.5.1.0565 under IP Phone. Use the revised plan when checking device and firmware support.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-09-sip-gateway-plan-01"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-09T23:28:30.930Z",
+      "usage": {
+        "inputTokens": 890,
+        "outputTokens": 588,
+        "costUsd": 0.000884
+      }
     }
   },
   "weeks": {
@@ -173,58 +195,80 @@
         "outputTokens": 4675,
         "costUsd": 0.006222
       }
+    },
+    "2026-11-09": {
+      "headline": "SIP Gateway plan drops Edge V 200+ firmware 8.5.1.0565 listing",
+      "overview": "Microsoft updated the SIP Gateway plan page so the IP Phone section no longer lists Edge V 200+ with firmware version 8.5.1.0565.",
+      "adminImpact": "Review the revised plan when validating device and firmware support for SIP Gateway deployments.",
+      "keyChanges": [
+        {
+          "title": "Edge V 200+ firmware combination removed from the documented plan",
+          "detail": "The SIP Gateway planning page no longer lists Edge V 200+ running firmware 8.5.1.0565 under IP Phone. Use the updated plan when checking device and firmware support.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-09-sip-gateway-plan-01"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-09T23:28:30.930Z",
+      "usage": {
+        "inputTokens": 810,
+        "outputTokens": 448,
+        "costUsd": 0.0007
+      }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams will add Muted and Meeting chat sections in January 2027",
-      "overview": "November’s strongest Teams product changes are forward-looking: a January 2027 chat reorganization and an optional December Workflows template that links team tags to channel membership. Event administration guidance is also shifting from webinar and town hall terminology to capability-based labels. Outside those items, the period is largely documentation maintenance, with the most consequential exceptions affecting Teams Rooms deployment tooling and an Android Rooms layout issue.",
-      "adminImpact": "No tenant-wide change is required for the new chat sections or the optional tag workflow. Update event runbooks and policy references to use “Events up to 1k attendees” and “Events optimized for a large audience”; the associated policy names and commands remain unchanged. For Teams Rooms, review Intune assignments for the app update tool and consider unassigning it for new deployments, except where deploying devices older than 2025. Expect Large Gallery to be unavailable on the documented Android app range; no remediation is specified.",
+      "headline": "Teams will add muted and meeting chat sections in January 2027",
+      "overview": "The month’s clearest Teams product change is a planned January 2027 chat reorganization, with separate sections for muted conversations and meeting chats. Microsoft also announced an optional Workflows template for adding tag members to channels, while Teams Rooms guidance and a known Android issue carry direct deployment implications. Event administration references are adopting attendee-size terminology across related documentation.",
+      "adminImpact": "No administrator action is needed for the new chat sections, and the tag workflow does not change defaults. Admins can assess the optional workflow for location- or project-based groups, update internal references to the new event labels, review Teams Rooms Intune assignments for the app update tool, and plan for Large Gallery to be unavailable on the affected Android app versions.",
       "keyChanges": [
         {
-          "title": "Muted and Meeting chats will reorganize conversations",
-          "detail": "Teams plans to begin rollout in January 2027 of Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable, disable, and reorder the sections; muted conversations move automatically unless they are favorited. No administrator action is required.",
+          "title": "Muted and meeting chat sections are planned for January 2027",
+          "detail": "Teams will add Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable, disable, and reorder the sections; muted chats move there automatically unless they are favorited.",
           "product": "Teams",
           "sourceId": "MC1269864"
         },
         {
-          "title": "Workflows will add team-tag members to channels automatically",
-          "detail": "A new optional Workflows app template, rolling out worldwide in mid-December 2026, will add users to channels when they are added to a team tag. The feature introduces no default changes and is suited to location- or project-based groups.",
+          "title": "Optional tag-to-channel automation is scheduled for mid-December",
+          "detail": "A Workflows app template will automatically add users to channels when they are added to a team tag. The feature is optional, rolls out worldwide in mid-December 2026, and does not change defaults.",
           "product": "Teams",
           "sourceId": "MC1540351"
         },
         {
-          "title": "Event setup guidance adopts capability-based labels",
-          "detail": "The setup guide now uses “Events up to 1k attendees” and “Events optimized for a large audience” throughout its policy tables and instructions instead of webinar and town hall terminology. The associated policy names and commands remain the same.",
-          "product": "Meetings and events",
-          "sourceId": "doc-2026-11-07-set-up-events-07"
+          "title": "Event policy references now use attendee-size labels",
+          "detail": "The Settings Policies Reference replaces webinar and town hall terminology with “Events up to 1k attendees” and “Events optimized for a large audience” across related settings.",
+          "product": "Teams",
+          "sourceId": "doc-2026-11-07-settings-policies-reference-08"
         },
         {
           "title": "Teams Rooms guidance no longer recommends the app update tool for new deployments",
-          "detail": "The guidance states that the Teams Rooms app has included automatic updates since April 2024, making the app update tool unnecessary for new deployments. Administrators should review Intune configurations and consider unassigning the tool, except when deploying devices older than 2025.",
+          "detail": "The Autopilot Autologin guidance says Teams Rooms app automatic updates have been included since April 2024, so the app update tool is no longer recommended for new deployments. It suggests considering unassignment except for devices older than 2025.",
           "product": "Teams Rooms",
           "sourceId": "doc-2026-11-06-autopilot-autologin-05"
         },
         {
-          "title": "Large Gallery may be unavailable on a defined Android Rooms range",
-          "detail": "The known-issues guidance identifies possible loss of the Large Gallery layout on Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update.",
-          "product": "Teams Rooms",
+          "title": "Large Gallery may be unavailable on a defined Android Rooms version range",
+          "detail": "The known-issues page identifies possible loss of the Large Gallery layout on Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update.",
+          "product": "Devices",
           "sourceId": "doc-2026-11-06-known-issues-01"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-07T14:57:18.262Z",
+      "generatedAt": "2026-11-09T23:28:30.930Z",
       "usage": {
-        "inputTokens": 3293,
-        "outputTokens": 4139,
-        "costUsd": 0.005625
+        "inputTokens": 3480,
+        "outputTokens": 3506,
+        "costUsd": 0.004903
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-07T14:57:18.262Z",
+  "generatedAt": "2026-11-09T23:28:30.930Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -235,18 +279,24 @@
       "outputTokens": 30078,
       "requests": 8,
       "costUsd": 0.039848
+    },
+    "2026-11-09": {
+      "inputTokens": 5180,
+      "outputTokens": 4542,
+      "requests": 3,
+      "costUsd": 0.006486
     }
   },
   "lastRun": {
-    "inputTokens": 8171,
-    "outputTokens": 11980,
+    "inputTokens": 5180,
+    "outputTokens": 4542,
     "requests": 3,
-    "costUsd": 0.01601
+    "costUsd": 0.006486
   },
   "totalUsage": {
-    "inputTokens": 18775,
-    "outputTokens": 30078,
-    "requests": 8,
-    "costUsd": 0.039848
+    "inputTokens": 23955,
+    "outputTokens": 34620,
+    "requests": 11,
+    "costUsd": 0.046334
   }
 }

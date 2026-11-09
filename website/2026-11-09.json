@@ -1,0 +1,61 @@
+{
+  "newFiles": [],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/devices/sip-gateway-plan.md",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 1,
+      "changes": 1,
+      "patch": "diff --git a/Teams/devices/sip-gateway-plan.md b/Teams/devices/sip-gateway-plan.md\nindex 00b4b69..f815ab7 100644\n--- a/Teams/devices/sip-gateway-plan.md\n+++ b/Teams/devices/sip-gateway-plan.md\n@@ -200,7 +200,6 @@ If you have a 3PIP or SIP device, you must have the following:\n |  | Edge E500^2^ | 8.1.0.12774 | 8.5.1.0508 | IP Phone |  |\r\n |  | Edge E550^2^ | 8.1.0.12774 | 8.5.1.0508 | IP Phone |  |\r\n |  | Edge V 200^2^ | 8.5.1.0565 | 8.5.1.0565 | IP Phone |  |\r\n-|  | Edge V 200+^2^ | 8.5.1.0565 | 8.5.1.0565 | IP Phone |  |\r\n |  | Edge V 250^2^ | 8.5.1.0565 | 8.5.1.0565 | IP Phone |  |\r\n |  | Edge V 250+^2^ | 8.5.1.0565 | 8.5.1.0565 | IP Phone |  |\r\n |  | Edge V 400^2^ | 8.5.1.0565 | 8.5.1.0565 | IP Phone |  |\r\n",
+      "baseCommitSha": "413fd77970c13885cafb33be36b42e27391f5948",
+      "commitSha": "76f73fc40194e868110db5b84d92a587e1d67216",
+      "commitMessage": "Mirror Learn: 1 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-09 13:13:10 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/sip-gateway-plan.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/sip-gateway-plan",
+      "eventId": "teams-docs:76f73fc40194e868110db5b84d92a587e1d67216:modified:Teams/devices/sip-gateway-plan.md",
+      "firstSeenAt": "2026-11-09T23:28:24.268Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Removed Edge V 200+ entry from SIP Gateway plan",
+        "summary": "The SIP Gateway plan page no longer lists Edge V 200+ with firmware version 8.5.1.0565 under IP Phone.",
+        "adminImpact": "Review the updated plan when validating device and firmware support.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 1,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 0 new, 1 updated, and 0 removed Microsoft Teams documentation files across 1 documentation area.",
+    "groups": [
+      {
+        "category": "Doc update",
+        "title": "Teams devices",
+        "summary": "The SIP Gateway plan page no longer lists Edge V 200+ with firmware version 8.5.1.0565 under IP Phone.",
+        "sourceFiles": [
+          "Teams/devices/sip-gateway-plan.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Doc update",
+        "headline": "Teams devices",
+        "detail": "The SIP Gateway plan page no longer lists Edge V 200+ with firmware version 8.5.1.0565 under IP Phone."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

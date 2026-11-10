@@ -78,6 +78,58 @@
         "generatedBy": "openai",
         "model": "gpt-5.6-luna"
       }
+    },
+    {
+      "filename": "Teams/rooms/certified-hardware.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "patch": "diff --git a/Teams/rooms/certified-hardware.md b/Teams/rooms/certified-hardware.md\nindex caa91ce..c33bf56 100644\n--- a/Teams/rooms/certified-hardware.md\n+++ b/Teams/rooms/certified-hardware.md\n@@ -75,6 +75,7 @@ The following devices are Certified under the Microsoft Teams Rooms on Windows C\n | Console | Processor | RAM | Disk |\r\n | --- | --- | --- | --- |\r\n | [Arena NUC (compute) with Logitech TAP Console](https://www.logitech.com/en-us/video-collaboration/partners/microsoft.html) | Core i5 | 16 GB | 256 GB |\r\n+| [AVer CORE500 Room Kit](https://www.averusa.com/products/accessory/core500) | Core Ultra 5 | 16 GB | 256 GB |\r\n | Intelligent Audio – Crestron AP-100 Small Room Ceiling System 1 ([DM-NAX-AP-100](https://www.crestron.com/Products/Catalog/AV-Over-IP/DM-NVX-AV-Over-IP/DM-NAX-Intelligent-Audio/DM-NAX-AP-100), Sennheiser TCCM, [Saros IC4A PoE Speaker (Active)](https://www.crestron.com/Products/Catalog/AV-Over-IP/DM-NVX-AV-Over-IP/DM-NAX-Intelligent-Audio/SAROS-DM-NAX-IC4A-W), [UC-Engine (UC-C100-T kit)](https://www.crestron.com/Products/Catalog/Unified-Communications/Flex-Conferencing/Integrator-Kit/UC-C100-T)) | Core i5 | 8 GB | 256 GB |\r\n | Intelligent Audio – Crestron AP-100 Medium Room Ceiling System 1 ([DM-NAX-AP-100](https://www.crestron.com/Products/Catalog/AV-Over-IP/DM-NVX-AV-Over-IP/DM-NAX-Intelligent-Audio/DM-NAX-AP-100), Sennheiser TCCM, [Saros IC4A PoE Speaker (Active)](https://www.crestron.com/Products/Catalog/AV-Over-IP/DM-NVX-AV-Over-IP/DM-NAX-Intelligent-Audio/SAROS-DM-NAX-IC4A-W), [Saros IC4P PoE Speaker (Passive)](https://www.crestron.com/Products/Catalog/Audio-Video-and-USB/Audio/In-Ceiling-Speakers/SAROS-IC4P-W), [UC-Engine (UC-C100-T kit)](https://www.crestron.com/Products/Catalog/Unified-Communications/Flex-Conferencing/Integrator-Kit/UC-C100-T)) | Core i5 | 8 GB | 256 GB |\r\n | Intelligent Audio – Crestron AP-100 Large Room Ceiling System 1 ([DM-NAX-AP-100](https://www.crestron.com/Products/Catalog/AV-Over-IP/DM-NVX-AV-Over-IP/DM-NAX-Intelligent-Audio/DM-NAX-AP-100), Sennheiser TCCM, [Saros IC4A PoE Speaker (Active)](https://www.crestron.com/Products/Catalog/AV-Over-IP/DM-NVX-AV-Over-IP/DM-NAX-Intelligent-Audio/SAROS-DM-NAX-IC4A-W), [Saros IC4P PoE Speaker (Passive)](https://www.crestron.com/Products/Catalog/Audio-Video-and-USB/Audio/In-Ceiling-Speakers/SAROS-IC4P-W), [UC-Engine (UC-C100-T kit)](https://www.crestron.com/Products/Catalog/Unified-Communications/Flex-Conferencing/Integrator-Kit/UC-C100-T)) | Core i5 | 8 GB | 256 GB |\r\n",
+      "baseCommitSha": "9cbdcd740f1c47a4ef013508a14276b95c7b95be",
+      "commitSha": "6aaad357983d973409e081442b098d502cd84025",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-10 12:54:00 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/certified-hardware",
+      "eventId": "teams-docs:6aaad357983d973409e081442b098d502cd84025:modified:Teams/rooms/certified-hardware.md",
+      "firstSeenAt": "2026-11-10T20:53:41.339Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "AVer CORE500 Room Kit added to certified hardware documentation",
+        "summary": "The certified hardware page now lists the AVer CORE500 Room Kit with a Core Ultra 5 processor, 16 GB memory, 256 GB storage, and a product link.",
+        "adminImpact": "Administrators evaluating room hardware can review this newly listed kit and its specifications. No action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/teams-devices-feature-comparison.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 4,
+      "changes": 8,
+      "patch": "diff --git a/Teams/rooms/teams-devices-feature-comparison.md b/Teams/rooms/teams-devices-feature-comparison.md\nindex ede7291..e89b991 100644\n--- a/Teams/rooms/teams-devices-feature-comparison.md\n+++ b/Teams/rooms/teams-devices-feature-comparison.md\n@@ -12,7 +12,7 @@ author: MattSlomka\n ms.author: mattslomka\n manager: pamgreen\n ms.reviewer: mattslomka\n-ms.date: 2026-10-13T00:00:00.0000000Z\n+ms.date: 2026-11-09T00:00:00.0000000Z\n ms.topic: article\n audience: Admin\n ms.service: msteams\n@@ -111,7 +111,7 @@ To help guide you as to what features are available on different platforms, you\n |  | Net promoter score (NPS) at meeting end | Available | Available |\r\n |  | Meeting controls on touch enabled front of room displays | Not available | Available |\r\n |  | Smart Camera Controls | Available | Available |\r\n-|  | Local pan tilt zoom (PTZ) controls | Not available | Available |\r\n+|  | Local pan tilt zoom (PTZ) controls | Available | Available |\r\n |  | Remote Pan tilt zoom (PTZ) control | Available | Available |\r\n |  | Switch between multiple in-room cameras | Available | Available |\r\n |  | Coordinated meetings | Available | Not available |\r\n@@ -227,7 +227,7 @@ To help guide you as to what features are available on different platforms, you\n |  | Net promoter score (NPS) at meeting end | Not available | Not available |\r\n |  | Meeting controls on touch enabled front of room displays | Not available | Available |\r\n |  | Smart Camera Controls | Available | Available |\r\n-|  | Local pan tilt zoom (PTZ) controls | Not available | Available |\r\n+|  | Local pan tilt zoom (PTZ) controls | Available | Available |\r\n |  | Remote Pan tilt zoom (PTZ) control | Available | Available |\r\n |  | Switch between multiple in-room cameras | Available | Available |\r\n |  | Coordinated meetings | Available | Not available |\r\n@@ -344,7 +344,7 @@ To help guide you as to what features are available on different platforms, you\n |  | Net promoter score (NPS) at meeting end | Not available | Not available |\r\n |  | Meeting controls on touch enabled front of room displays | Not available | Available |\r\n |  | Smart Camera Controls | Available | Available |\r\n-|  | Local pan tilt zoom (PTZ) controls | Not available | Available |\r\n+|  | Local pan tilt zoom (PTZ) controls | Available | Available |\r\n |  | Remote Pan tilt zoom (PTZ) control | Available | Available |\r\n |  | Switch between multiple in-room cameras | Available | Available |\r\n |  | Coordinated meetings | Available | Not available |\r\n",
+      "baseCommitSha": "9cbdcd740f1c47a4ef013508a14276b95c7b95be",
+      "commitSha": "6aaad357983d973409e081442b098d502cd84025",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-10 12:54:00 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/teams-devices-feature-comparison.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/teams-devices-feature-comparison",
+      "eventId": "teams-docs:6aaad357983d973409e081442b098d502cd84025:modified:Teams/rooms/teams-devices-feature-comparison.md",
+      "firstSeenAt": "2026-11-10T20:53:41.349Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Local PTZ controls are now listed as available for three Teams Rooms device entries",
+        "summary": "The feature comparison table changes local pan tilt zoom (PTZ) controls from Not available to Available in three rows.",
+        "adminImpact": "Use the updated comparison when evaluating Teams Rooms device capabilities and local PTZ control support.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
     }
   ],
   "deletedFiles": [],
@@ -118,17 +170,217 @@
       "version": "2026-11-10T00:03:36.62Z",
       "eventId": "message-center:MC1546409:2026-11-10T00:03:36.62Z",
       "firstSeenAt": "2026-11-10T10:00:42.007Z"
+    },
+    {
+      "id": "MC1465768",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-10",
+      "title": "Microsoft Teams: Users can temporarily pause all notifications",
+      "summary": "Microsoft Teams will allow users to temporarily pause notifications for a chosen duration to reduce interruptions and improve focus. This feature, available on desktop, web, and mobile, rolls out globally from mid-September to November 2026. No admin action is needed; users can enable it via their profile menu.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1465768/",
+      "originalUrl": "https://mc.merill.net/message/MC1465768",
+      "body": "<p>Updated November 10, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams will introduce a new capability that allows users to temporarily pause notifications for a selected period of time. This feature gives users greater control over interruptions, helps reduce notification overload, and enables focused work, meetings, and other activities without requiring changes to existing notification settings.</p><p><b><b>Rollout Schedule:</b></b></p><ul><li><b>Targeted Release (Worldwide):</b> Rollout begins in mid-September 2026 and is expected to complete by early October 2026.</li><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Rollout begins in early October 2026 and is expected to complete by end November 2026 (previously late October).</li></ul><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>All Microsoft Teams users.</li></ul><p><b>Platforms:</b></p><ul><li>Microsoft Teams desktop, web, and mobile.</li></ul><p><b>What will happen:</b></p><ul><li>Users will be able to temporarily pause Teams notifications for a selected duration.</li><li>The feature helps users focus on important work and meetings without modifying their existing notification settings.</li><li>Users can access this capability from the profile menu in the upper-right corner of the Teams application.</li><li>Once the selected pause period ends, notifications will automatically resume using the user's existing notification preferences.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required.</p><p>Consider informing users about this new capability so they can take advantage of improved notification management and reduced distractions while maintaining their existing notification preferences.</p><p><b><b>Compliance Considerations:</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact"
+      ],
+      "startDate": "2026-09-01T22:20:16Z",
+      "endDate": "2026-12-31T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-10T17:39:19.13Z",
+      "version": "2026-11-10T17:39:19.13Z",
+      "eventId": "message-center:MC1465768:2026-11-10T17:39:19.13Z",
+      "firstSeenAt": "2026-11-10T20:53:47.293Z"
+    },
+    {
+      "id": "MC1526651",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-10",
+      "title": "Microsoft Teams: Malicious QR code detection in messages",
+      "summary": "Microsoft Teams will detect malicious QR codes in messages starting mid-November 2026, warning users of harmful links. Detection applies to chats and channels, with external QR codes blurred by default. The feature is enabled via existing Malicious URL protection, requiring no admin action.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1526651/",
+      "originalUrl": "https://mc.merill.net/message/MC1526651",
+      "body": "<p>Updated November 10, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft Teams is extending malicious URL protection to provide near-real-time detection of malicious destinations embedded in QR codes shared in messages. Teams will analyze QR code destinations to identify potential phishing and fraud threats and display an additional warning when malicious content is detected.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in<b> mid-November 2026 </b>(previously early November) and expected to complete by <b>late November 2026</b> (previously<b> </b>mid-November)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users who use Microsoft Teams messaging</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams chats, meeting chats, and channels</li></ul><p><i>What will happen</i></p><ul><li>Teams will decode and evaluate QR code destinations in inline images shared in 1:1 chats, group chats, meeting chats, and channels.</li><li>Detection applies to internal and external communications.</li><li>Images containing QR codes from external senders are already blurred by default. When Teams identifies a malicious QR code, users will also see the warning, “<b>This message contains a link that might be harmful,</b>” and a “<b>Learn about file and link safety</b>” link.</li><li>QR code images from internal senders are not blurred by default. The same warning will appear when Teams detects a malicious QR code.</li><li>For users on Teams mobile in China, QR code images are blurred by default regardless of whether the sender is internal or external, and any messages containing malicious QR code will be blocked.</li><li>Malicious QR code detection is managed by the existing <b>Malicious URL protection</b> setting.</li><li>The setting is enabled by default. Organizations with Malicious URL protection enabled will automatically receive malicious QR code detection as the feature rolls out.</li><li>No separate configuration is available or required for malicious QR code detection.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required.</p><p>Admins can review or change the existing Malicious URL protection setting in <b><i>Teams admin center &gt; Settings and policies &gt; Messaging Safety</i></b>.</p><p>We recommend that you:</p><ul><li>Inform users and help desk staff about the additional warning for detected malicious QR codes.</li><li>Clarify that QR code blurring is a separate precautionary experience and does not mean that Teams has identified a QR code as malicious.</li><li>Review internal documentation about Teams messaging security and update it if necessary.</li></ul><p><b>Learn more</b></p><p>(Both to be updated closer to rollout.)</p><ul><li><a href=\"https://support.microsoft.com/teams/troubleshooting/make-sure-chats-links-and-files-are-secure-in-microsoft-teams\" rel=\"noopener noreferrer\">Make sure chats, links, and files are secure in Microsoft Teams | Microsoft Support</a></li><li><a href=\"https://learn.microsoft.com/microsoftteams/malicious-url-protection-teams\" rel=\"noopener noreferrer\">Malicious URL protection in Microsoft Teams - Microsoft Teams | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-26T22:29:08Z",
+      "endDate": "2026-12-31T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-10T17:37:06.887Z",
+      "version": "2026-11-10T17:37:06.887Z",
+      "eventId": "message-center:MC1526651:2026-11-10T17:37:06.887Z",
+      "firstSeenAt": "2026-11-10T20:53:47.293Z"
+    },
+    {
+      "id": "MC1537353",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-10",
+      "title": "Microsoft Teams: Invite attendees to register",
+      "summary": "Microsoft Teams is expanding the \"Invite to register\" feature for events, allowing organizers to email registration links. Rolling out worldwide by late November 2026. No special preparation needed, but configuring a custom domain for M365 notifications is recommended to avoid restrictions. No compliance issues identified.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1537353/",
+      "originalUrl": "https://mc.merill.net/message/MC1537353",
+      "body": "<p>Updated November 10, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams is expanding the Invite to register experience for Teams events with registration enabled. Organizers can select people to receive an email invitation with a link to register for the event.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide, GCC): We will begin rolling out in late November 2026 (previously mid-November) and expect to complete by late November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Invite to register will be available across event access types, including public, organization-wide, and events limited to specific people and groups. For public and organization-wide events, sending an invitation does not change who is eligible to register. For events limited to specific people and groups, the selected audience continues to determine registration eligibility.</p><p>This update gives organizers a consistent way to proactively invite their intended audience to register for an event.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No special preparation is required. However, if your tenant does not have a custom domain configured for M365 notifications, this capability will be restricted due to spam concerns. Admins should configure their custom domain for M365 notifications to allow full use of this feature.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-03T20:26:55Z",
+      "endDate": "2027-01-30T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-10T17:35:19.45Z",
+      "version": "2026-11-10T17:35:19.45Z",
+      "eventId": "message-center:MC1537353:2026-11-10T17:35:19.45Z",
+      "firstSeenAt": "2026-11-10T20:53:47.293Z"
+    },
+    {
+      "id": "MC1508234",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-10",
+      "title": "Microsoft Teams: Automatic recording and transcription options align with admin policies",
+      "summary": "Microsoft Teams will update meeting options to show automatic recording and transcription settings based on assigned policies, adding a new \"Record only\" option. Rollout starts mid-November 2026, completing by mid-December. No admin action is needed; organizers see only options allowed by their policies.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "policies",
+        "name": "Policies and settings",
+        "icon": "/assets/topics/policies.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1508234/",
+      "originalUrl": "https://mc.merill.net/message/MC1508234",
+      "body": "<p>Updated November 10, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft Teams is updating the Record and transcribe automatically setting in Meeting options, so meeting organizers see only the automatic recording and transcription options permitted by their assigned Teams meeting policies. This change reduces confusion, improves policy compliance, and helps ensure organizers cannot select options that are unavailable based on organizational settings.</p><p>As part of this update, Teams will introduce a new Record only option that automatically starts meeting recording without starting transcription.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning in <b>mid-November 2026</b> (previously early November) and expected to complete by <b>end of November 2026</b> (previously mid-November)</li><li><b>General Availability (Worldwide):</b> Beginning in <b>early December 2026</b> and expected to complete by <b>mid-December 2026</b></li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Teams administrators who manage meeting recording and transcription policies</li><li>Meeting organizers who configure automatic recording or transcription settings in Meeting options</li></ul><p><i>Platforms and services</i></p><ul><li>Teams desktop, web, and mobile clients that support Meeting Options.</li></ul><p><i>What will happen</i></p><ul><li>Meeting organizers will only see automatic recording and transcription options allowed by their effective Teams meeting policy.</li><li>Policy evaluation respects policies assigned directly to a user, inherited through group assignment, or applied through the global policy.</li><li>A new Record only option will be available when recording is permitted by policy.</li></ul><p></p><ul><li><span>The available automatic options for each policy combination are shown below:</span></li></ul><table><tbody><tr><td>Recording policy</td><td>Transcription policy</td><td>Automatic options available in Meeting Options</td></tr><tr><td><b>Allowed</b></td><td><b>Allowed</b></td><td><span>Record and transcribe; Transcribe only; Record only; Off</span></td></tr><tr><td><b>Allowed</b></td><td><span>Blocked</span></td><td><span>Record only; Off</span></td></tr><tr><td><span>Blocked</span></td><td><b>Allowed</b></td><td><span>Transcribe only; Off</span></td></tr><tr><td><span>Blocked</span></td><td><span>Blocked</span></td><td><span>The automatic setting is not shown</span></td></tr></tbody></table><p></p><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required; the feature is enabled automatically as part of the service update.</p><p>We recommend that:</p><ul><li>Inform meeting organizers about the new Record only option.</li><li>Communicate that available automatic recording and transcription options are now determined by the organizer's assigned Teams meeting policies.</li><li>Review recording and transcription policies if you want to understand which options organizers in your organization will see.</li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-14T23:16:43Z",
+      "endDate": "2027-01-15T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-10T17:33:00.413Z",
+      "version": "2026-11-10T17:33:00.413Z",
+      "eventId": "message-center:MC1508234:2026-11-10T17:33:00.413Z",
+      "firstSeenAt": "2026-11-10T20:53:47.293Z"
+    },
+    {
+      "id": "MC1506734",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-10",
+      "title": "Microsoft Teams: Video sharing from OneDrive in Teams events",
+      "summary": "Microsoft Teams will soon allow event organizers and producers to share videos directly from OneDrive during Teams events using \"Manage what attendees see,\" enabling smoother, higher-quality playback without screen sharing or embedding in PowerPoint. Rollout begins mid-November 2026, with no action required.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Major update",
+      "url": "/message-center/MC1506734/",
+      "originalUrl": "https://mc.merill.net/message/MC1506734",
+      "body": "<p>Updated November 10, 2026: We have updated the timeline. If you are a tenant in a GCCH or DoD environment, you can safely ignore this message as you are not impacted. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft Teams will soon support sharing video directly from OneDrive during Teams events. Organizers and producers using <i>Manage what attendees see</i> can load videos from OneDrive and present them on stage without screen sharing a local media player or embedding videos in PowerPoint. This improvement provides smoother, higher-quality video playback for attendees and simplifies event production through built-in video playback controls.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release (Worldwide):</b> Rollout will begin in mid-November 2026 (previously early November) and end in early December 2026.</li><li><b>General Availability (Worldwide, GCC):</b> Rollout will begin in early December 2026 and is expected to complete by early December 2026.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Teams event organizers and producers using events configured with <i>Manage what attendees see</i>.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>OneDrive</li><li>Teams events</li></ul><p><i>What will happen</i></p><ul><li>Organizers and producers will be able to select and share videos stored in OneDrive directly within Teams events configured with <i>Manage what attendees see and</i> will have access to built-in controls to start and pause video playback during events.</li><li>Videos can be presented on stage without screen sharing a local media player or embedding videos into a PowerPoint presentation.</li><li>Attendees will experience smoother and higher-quality video playback.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required. We recommend that you:</p><ul><li>Inform Teams event organizers and producers that they can share videos directly from OneDrive in Teams events configured with <i>Manage what attendees see</i>.</li><li>Ensure that organizers and producers store videos in OneDrive with the appropriate permissions before using them in events.</li><li>Review and update internal event production guidance that recommends screen sharing locally played videos or embedding videos in PowerPoint.</li></ul><p><b><b>Learn more</b></b></p><p>We will update this post with new documentation.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-13T22:14:57Z",
+      "endDate": "2027-01-01T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-10T17:30:19.04Z",
+      "version": "2026-11-10T17:30:19.04Z",
+      "eventId": "message-center:MC1506734:2026-11-10T17:30:19.04Z",
+      "firstSeenAt": "2026-11-10T20:53:47.293Z"
     }
   ],
   "summary": {
-    "totalCommits": 1,
-    "totalFiles": 3,
+    "totalCommits": 2,
+    "totalFiles": 5,
     "authors": [
       "github-actions[bot]"
     ]
   },
   "englishSummary": {
-    "overview": "Today's report includes 0 new, 3 updated, and 0 removed Microsoft Teams documentation files across 2 documentation areas.",
+    "overview": "Today's report includes 0 new, 5 updated, and 0 removed Microsoft Teams documentation files across 2 documentation areas.",
     "groups": [
       {
         "category": "Doc update",
@@ -141,10 +393,12 @@
       {
         "category": "Doc update",
         "title": "Teams Rooms",
-        "summary": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024. The documentation now uses dedicated screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display.",
+        "summary": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024. The documentation now uses dedicated screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display. The certified hardware page now lists the AVer CORE500 Room Kit with a Core Ultra 5 processor, 16 GB memory, 256 GB storage, and a product link. The feature comparison table changes local pan tilt zoom (PTZ) controls from Not available to Available in three rows.",
         "sourceFiles": [
           "Teams/rooms/autopilot-autologin.md",
-          "Teams/rooms/facilitator-teams-rooms.md"
+          "Teams/rooms/facilitator-teams-rooms.md",
+          "Teams/rooms/certified-hardware.md",
+          "Teams/rooms/teams-devices-feature-comparison.md"
         ]
       }
     ],
@@ -157,7 +411,7 @@
       {
         "category": "Doc update",
         "headline": "Teams Rooms",
-        "detail": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024. The documentation now uses dedicated screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display."
+        "detail": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024. The documentation now uses dedicated screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display. The certified hardware page now lists the AVer CORE500 Room Kit with a Core Ultra 5 processor, 16 GB memory, 256 GB storage, and a product link. The feature comparison table changes local pan tilt zoom (PTZ) controls from Not available to Available in three rows."
       }
     ],
     "generatedBy": "fallback"

@@ -149,43 +149,49 @@
       }
     },
     "2026-11-10": {
-      "headline": "Teams will retire off-network invitations for Teams Free accounts in December",
-      "overview": "Starting December 2026, external people will no longer be able to create Teams Free accounts through email invitations or chat links. Existing Teams Free collaboration and federation remain unchanged. The period also updates Teams guidance on external-call limits and Teams Rooms deployment and feature references.",
-      "adminImpact": "Update user guidance before December 2026; no tenant configuration change is specified. Administrators should also note that external 1:1 calling may be temporarily restricted when documented limits are reached, with limits potentially influenced by tenant age and calling activity. The Teams Rooms changes provide deployment and feature-review references rather than new administrative requirements.",
+      "headline": "Teams Free off-network invitations retire as OneDrive video sharing reaches Teams events",
+      "overview": "The period brings a December 2026 retirement for off-network invitations to Teams Free, alongside mid-November rollouts for direct OneDrive video sharing in Teams events and policy-aligned recording controls. Teams also adds malicious QR-code detection through existing Malicious URL protection. The remaining updates are mainly Teams Rooms reference and hardware documentation changes.",
+      "adminImpact": "Update user guidance for Teams Free invitations before December 2026; existing Teams Free collaboration and federation remain unchanged. No administrator action is required for the OneDrive video-sharing, recording-policy, or QR-code protections, although administrators should verify that existing Malicious URL protection is enabled and should use the revised Teams Rooms hardware and PTZ references when evaluating devices.",
       "keyChanges": [
         {
-          "title": "Off-network Teams Free invitations are retiring",
-          "detail": "Microsoft will retire off-network invitations starting December 2026. Users will no longer be able to invite external people by email or chat link to create Teams Free accounts, while existing Teams Free collaboration and federation continue unchanged.",
+          "title": "Off-network invitations to Teams Free will be retired",
+          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, but user-facing guidance should be updated.",
           "product": "Teams",
           "sourceId": "MC1546409"
         },
         {
-          "title": "Teams limits guidance now covers temporary external-call restrictions",
-          "detail": "The limits documentation now says limits may depend on factors including tenant age and calling activity. When a limit is reached, users may be temporarily unable to place outbound 1:1 calls to external users.",
+          "title": "Teams events will support direct OneDrive video sharing",
+          "detail": "Beginning in mid-November 2026, event organizers and producers can share OneDrive videos through “Manage what attendees see,” enabling playback without screen sharing or embedding the video in PowerPoint. No administrator action is required.",
           "product": "Teams",
-          "sourceId": "doc-2026-11-10-limits-specifications-teams-01"
+          "sourceId": "MC1506734"
         },
         {
-          "title": "Teams Rooms Facilitator guidance adds dedicated front-of-room screenshots",
-          "detail": "The page now uses separate screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display, giving administrators clearer visual reference when reviewing these features.",
-          "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-10-facilitator-teams-rooms-03"
+          "title": "Meeting recording controls will reflect assigned policies",
+          "detail": "From mid-November through mid-December 2026, meeting options will show automatic recording and transcription choices allowed by the organizer’s assigned policies, including a new “Record only” option.",
+          "product": "Teams",
+          "sourceId": "MC1508234"
         },
         {
-          "title": "Teams Rooms Autopilot guidance names version 5.0.111.0",
-          "detail": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024, adding a specific version reference for deployment reviews.",
+          "title": "Teams will detect malicious QR codes in chats and channels",
+          "detail": "Starting in mid-November 2026, Teams will warn about harmful QR-code links, with external QR codes blurred by default. The capability is enabled through existing Malicious URL protection and requires no separate administrator action.",
+          "product": "Teams",
+          "sourceId": "MC1526651"
+        },
+        {
+          "title": "Teams Rooms references add PTZ support and a certified room kit",
+          "detail": "The Teams Devices Feature Comparison now marks local pan-tilt-zoom controls as available in three rows, while the certified hardware list adds the AVer CORE500 Room Kit with a Core Ultra 5 processor, 16 GB of memory, and 256 GB of storage. These updates support device evaluation rather than signaling a new Teams Rooms rollout.",
           "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-10-autopilot-autologin-02"
+          "sourceId": "doc-2026-11-10-teams-devices-feature-comparison-05"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-10T10:00:42.250Z",
+      "generatedAt": "2026-11-10T20:53:47.538Z",
       "usage": {
-        "inputTokens": 1272,
-        "outputTokens": 1279,
-        "costUsd": 0.001789
+        "inputTokens": 2057,
+        "outputTokens": 1076,
+        "costUsd": 0.001703
       }
     }
   },
@@ -237,102 +243,102 @@
       }
     },
     "2026-11-09": {
-      "headline": "Teams Free off-network invitations retire in December 2026",
-      "overview": "The period’s consequential change is a Teams Free restriction: starting in December 2026, users will no longer be able to invite people outside the network by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged. The other updates are documentation changes, including clearer external-calling limits guidance and Teams Rooms and SIP Gateway reference edits.",
-      "adminImpact": "Update user guidance to remove or revise the off-network Teams Free invitation path; Microsoft says no administrator action is required. Make support teams aware that tenant age and calling activity can contribute to temporary restrictions on outbound 1:1 calls to external users. Review the revised SIP Gateway plan when validating device and firmware support; the Teams Rooms documentation edits require no specified action.",
+      "headline": "Teams Free off-network invitations end in December 2026",
+      "overview": "Starting December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts; existing Teams Free collaboration and federation remain unchanged. During November, Teams is also rolling out direct OneDrive video sharing in events, policy-filtered recording and transcription choices, malicious QR-code detection, and expanded event-registration email links.",
+      "adminImpact": "Update user guidance before the Teams Free retirement; no tenant action is specified. The other announcements also require no special preparation, although Microsoft recommends configuring a custom domain for Microsoft 365 notification emails to avoid event-registration restrictions. QR-code detection uses existing Malicious URL protection.",
       "keyChanges": [
         {
-          "title": "Teams Free will retire off-network invitations in December 2026",
-          "detail": "Users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged.",
+          "title": "Teams Free retires off-network invitations",
+          "detail": "From December 2026, users cannot invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged. Administrators should update user guidance; the notice specifies no admin action.",
           "product": "Teams",
           "sourceId": "MC1546409"
         },
         {
-          "title": "Teams limits guidance documents temporary external 1:1 calling restrictions",
-          "detail": "The limits page now states that limits may depend on factors including tenant age and calling activity. When a limit is reached, users may be temporarily unable to place outbound 1:1 calls to external users.",
+          "title": "Teams events gain direct OneDrive video sharing",
+          "detail": "Beginning mid-November 2026, event organizers and producers can share videos directly from OneDrive through \"Manage what attendees see\", supporting smoother, higher-quality playback without screen sharing or PowerPoint embedding. No admin action is required.",
           "product": "Teams",
-          "sourceId": "doc-2026-11-10-limits-specifications-teams-01"
+          "sourceId": "MC1506734"
         },
         {
-          "title": "SIP Gateway plan removes an Edge V 200+ firmware entry",
-          "detail": "The plan page no longer lists Edge V 200+ with firmware version 8.5.1.0565 under IP Phone. Administrators validating device and firmware support should use the updated plan.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-09-sip-gateway-plan-01"
+          "title": "Meeting recording choices now follow assigned policies",
+          "detail": "Rolling from mid-November through mid-December 2026, meeting options will show automatic recording and transcription settings according to assigned admin policies and add a \"Record only\" option. Organizers see only policy-allowed choices; no admin action is needed.",
+          "product": "Teams",
+          "sourceId": "MC1508234"
         },
         {
-          "title": "Facilitator Teams Rooms guidance adds dedicated front-of-room screenshots",
-          "detail": "The documentation now uses separate screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display, improving visual deployment and review guidance.",
-          "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-10-facilitator-teams-rooms-03"
+          "title": "Teams adds malicious QR-code detection",
+          "detail": "Starting mid-November 2026, Teams will detect malicious QR codes in chats and channels, warn users about harmful links, and blur external QR codes by default. The capability uses existing Malicious URL protection, so no admin action is required.",
+          "product": "Teams",
+          "sourceId": "MC1526651"
         },
         {
-          "title": "Autopilot Autologin guidance adds version 5.0.111.0",
-          "detail": "The page now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024, giving administrators an additional deployment reference.",
-          "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-10-autopilot-autologin-02"
+          "title": "Event organizers can email registration links",
+          "detail": "The \"Invite to register\" capability is expanding worldwide by late November 2026 so organizers can email event registration links. No special preparation is needed, but Microsoft recommends configuring a custom domain for Microsoft 365 notifications to avoid restrictions.",
+          "product": "Teams",
+          "sourceId": "MC1537353"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-10T10:00:42.250Z",
+      "generatedAt": "2026-11-10T20:53:47.538Z",
       "usage": {
-        "inputTokens": 1267,
-        "outputTokens": 1845,
-        "costUsd": 0.002467
+        "inputTokens": 2052,
+        "outputTokens": 5401,
+        "costUsd": 0.006892
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams Free off-network invitations retire in December as chat sections arrive in January",
-      "overview": "November’s clearest user-facing deadline is Teams Free’s December 2026 retirement of off-network invitations: email and chat-link invites will no longer create Teams Free accounts, while existing collaboration and federation remain unchanged. Teams will also begin rolling out Muted chats and Meeting chats in January 2027, alongside an optional Workflows template for tag-driven channel membership. Documentation updates mainly standardize event terminology and revise Teams Rooms deployment guidance.",
-      "adminImpact": "Update user guidance for the retired Teams Free invitation route; Microsoft says no administrator action is required. No tenant change is needed for the new chat sections, and the tag workflow is optional with no default changes. Update event runbooks to use “Events up to 1k attendees” and “Events optimized for a large audience”; the associated policy names and commands remain the same. Review Intune assignments for the Teams Rooms app update tool and consider unassigning it for new deployments, with the documented exception for devices older than 2025. Also expect Large Gallery to be unavailable on affected Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504.",
+      "headline": "Teams Free off-network invitations end in December as OneDrive event sharing expands",
+      "overview": "Teams Free off-network invitations are the month’s clearest deadline: starting in December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts, while existing Teams Free collaboration and federation remain unchanged. The period also brings direct OneDrive video sharing in Teams events, policy-filtered recording and transcription choices including “Record only,” and user-controlled Muted chats and Meeting chats sections rolling out in January 2027. Supporting Learn updates replace webinar and town hall wording with “Events up to 1k attendees” and “Events optimized for a large audience”; Teams will also add malicious QR-code detection in chats and channels under existing Malicious URL protection.",
+      "adminImpact": "Update user guidance about Teams Free before December; Microsoft says no tenant action is needed and existing collaboration and federation remain. No administrator preparation is required for OneDrive event sharing, the new chat sections, or policy-filtered recording choices; organizers will see only recording and transcription options allowed by their assigned policies. Update internal runbooks to the attendee-based event labels. For Teams Rooms, revised Autopilot Autologin guidance says automatic app updates have been included since April 2024; review Intune assignments and consider unassigning the app update tool for new deployments, except when deploying devices older than 2025. QR detection uses existing Malicious URL protection, so no new configuration is stated.",
       "keyChanges": [
         {
-          "title": "Teams Free will stop accepting off-network invitations",
-          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged.",
+          "title": "Teams Free off-network invitations retire in December 2026",
+          "detail": "Users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, and Microsoft says no administrator action is required beyond updating user guidance.",
           "product": "Teams",
           "sourceId": "MC1546409"
         },
         {
-          "title": "Teams adds separate Muted chats and Meeting chats sections",
-          "detail": "The January 2027 rollout adds Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable, disable, and reorder the sections; muted chats move automatically unless they are favorited.",
+          "title": "OneDrive videos become a direct source for Teams events",
+          "detail": "Starting mid-November 2026, event organizers and producers can share videos directly from OneDrive through “Manage what attendees see,” avoiding screen sharing or PowerPoint embedding for this playback scenario. No preparation is required.",
+          "product": "Teams",
+          "sourceId": "MC1506734"
+        },
+        {
+          "title": "Meeting recording choices will follow assigned policies",
+          "detail": "From mid-November through mid-December, meeting options will reflect each organizer’s automatic recording and transcription policies and add a new “Record only” choice. Organizers will see only options allowed by their assigned policies.",
+          "product": "Teams",
+          "sourceId": "MC1508234"
+        },
+        {
+          "title": "Muted and Meeting chats sections are planned for January",
+          "detail": "Teams will add Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable or disable and reorder the sections; muted chats move automatically into their section unless they are favorited.",
           "product": "Teams",
           "sourceId": "MC1269864"
         },
         {
-          "title": "A Workflows template will add tag members to channels automatically",
-          "detail": "Rolling out worldwide in mid-December 2026, the optional template adds users to channels when they are added to a team tag. It is aimed at location- or project-based groups and does not change defaults.",
+          "title": "Teams adds malicious QR-code detection to messages",
+          "detail": "Beginning in mid-November 2026, Teams will detect harmful QR codes in chats and channels and blur external QR codes by default. The capability uses existing Malicious URL protection and requires no administrator action.",
           "product": "Teams",
-          "sourceId": "MC1540351"
-        },
-        {
-          "title": "Event guidance adopts attendee-size labels across policy instructions",
-          "detail": "Setup and policy documentation now uses “Events up to 1k attendees” and “Events optimized for a large audience” instead of webinar and town hall labels. The associated policy names and commands remain the same.",
-          "product": "Meetings and events",
-          "sourceId": "doc-2026-11-07-set-up-events-07"
-        },
-        {
-          "title": "Teams Rooms guidance drops the app update tool for new deployments",
-          "detail": "The documentation says the Teams Rooms app has included automatic updates since April 2024, so the app update tool is no longer recommended for new deployments. It advises reviewing Intune configurations and considering unassignment except for devices older than 2025.",
-          "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-06-autopilot-autologin-05"
+          "sourceId": "MC1526651"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-10T10:00:42.250Z",
+      "generatedAt": "2026-11-10T20:53:47.538Z",
       "usage": {
-        "inputTokens": 4007,
-        "outputTokens": 4794,
-        "costUsd": 0.006554
+        "inputTokens": 4772,
+        "outputTokens": 9951,
+        "costUsd": 0.012896
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-10T10:00:42.250Z",
+  "generatedAt": "2026-11-10T20:53:47.538Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -351,22 +357,22 @@
       "costUsd": 0.006486
     },
     "2026-11-10": {
-      "inputTokens": 6546,
-      "outputTokens": 7918,
-      "requests": 3,
-      "costUsd": 0.010811
+      "inputTokens": 15427,
+      "outputTokens": 24346,
+      "requests": 6,
+      "costUsd": 0.032301
     }
   },
   "lastRun": {
-    "inputTokens": 6546,
-    "outputTokens": 7918,
+    "inputTokens": 8881,
+    "outputTokens": 16428,
     "requests": 3,
-    "costUsd": 0.010811
+    "costUsd": 0.02149
   },
   "totalUsage": {
-    "inputTokens": 30501,
-    "outputTokens": 42538,
-    "requests": 14,
-    "costUsd": 0.057145
+    "inputTokens": 39382,
+    "outputTokens": 58966,
+    "requests": 17,
+    "costUsd": 0.078635
   }
 }

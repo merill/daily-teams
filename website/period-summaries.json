@@ -147,6 +147,46 @@
         "outputTokens": 588,
         "costUsd": 0.000884
       }
+    },
+    "2026-11-10": {
+      "headline": "Teams will retire off-network invitations for Teams Free accounts in December",
+      "overview": "Starting December 2026, external people will no longer be able to create Teams Free accounts through email invitations or chat links. Existing Teams Free collaboration and federation remain unchanged. The period also updates Teams guidance on external-call limits and Teams Rooms deployment and feature references.",
+      "adminImpact": "Update user guidance before December 2026; no tenant configuration change is specified. Administrators should also note that external 1:1 calling may be temporarily restricted when documented limits are reached, with limits potentially influenced by tenant age and calling activity. The Teams Rooms changes provide deployment and feature-review references rather than new administrative requirements.",
+      "keyChanges": [
+        {
+          "title": "Off-network Teams Free invitations are retiring",
+          "detail": "Microsoft will retire off-network invitations starting December 2026. Users will no longer be able to invite external people by email or chat link to create Teams Free accounts, while existing Teams Free collaboration and federation continue unchanged.",
+          "product": "Teams",
+          "sourceId": "MC1546409"
+        },
+        {
+          "title": "Teams limits guidance now covers temporary external-call restrictions",
+          "detail": "The limits documentation now says limits may depend on factors including tenant age and calling activity. When a limit is reached, users may be temporarily unable to place outbound 1:1 calls to external users.",
+          "product": "Teams",
+          "sourceId": "doc-2026-11-10-limits-specifications-teams-01"
+        },
+        {
+          "title": "Teams Rooms Facilitator guidance adds dedicated front-of-room screenshots",
+          "detail": "The page now uses separate screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display, giving administrators clearer visual reference when reviewing these features.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-10-facilitator-teams-rooms-03"
+        },
+        {
+          "title": "Teams Rooms Autopilot guidance names version 5.0.111.0",
+          "detail": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024, adding a specific version reference for deployment reviews.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-10-autopilot-autologin-02"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-10T10:00:42.250Z",
+      "usage": {
+        "inputTokens": 1272,
+        "outputTokens": 1279,
+        "costUsd": 0.001789
+      }
     }
   },
   "weeks": {
@@ -197,78 +237,102 @@
       }
     },
     "2026-11-09": {
-      "headline": "SIP Gateway plan drops Edge V 200+ firmware 8.5.1.0565 listing",
-      "overview": "Microsoft updated the SIP Gateway plan page so the IP Phone section no longer lists Edge V 200+ with firmware version 8.5.1.0565.",
-      "adminImpact": "Review the revised plan when validating device and firmware support for SIP Gateway deployments.",
+      "headline": "Teams Free off-network invitations retire in December 2026",
+      "overview": "The period’s consequential change is a Teams Free restriction: starting in December 2026, users will no longer be able to invite people outside the network by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged. The other updates are documentation changes, including clearer external-calling limits guidance and Teams Rooms and SIP Gateway reference edits.",
+      "adminImpact": "Update user guidance to remove or revise the off-network Teams Free invitation path; Microsoft says no administrator action is required. Make support teams aware that tenant age and calling activity can contribute to temporary restrictions on outbound 1:1 calls to external users. Review the revised SIP Gateway plan when validating device and firmware support; the Teams Rooms documentation edits require no specified action.",
       "keyChanges": [
         {
-          "title": "Edge V 200+ firmware combination removed from the documented plan",
-          "detail": "The SIP Gateway planning page no longer lists Edge V 200+ running firmware 8.5.1.0565 under IP Phone. Use the updated plan when checking device and firmware support.",
+          "title": "Teams Free will retire off-network invitations in December 2026",
+          "detail": "Users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged.",
+          "product": "Teams",
+          "sourceId": "MC1546409"
+        },
+        {
+          "title": "Teams limits guidance documents temporary external 1:1 calling restrictions",
+          "detail": "The limits page now states that limits may depend on factors including tenant age and calling activity. When a limit is reached, users may be temporarily unable to place outbound 1:1 calls to external users.",
+          "product": "Teams",
+          "sourceId": "doc-2026-11-10-limits-specifications-teams-01"
+        },
+        {
+          "title": "SIP Gateway plan removes an Edge V 200+ firmware entry",
+          "detail": "The plan page no longer lists Edge V 200+ with firmware version 8.5.1.0565 under IP Phone. Administrators validating device and firmware support should use the updated plan.",
           "product": "Devices",
           "sourceId": "doc-2026-11-09-sip-gateway-plan-01"
+        },
+        {
+          "title": "Facilitator Teams Rooms guidance adds dedicated front-of-room screenshots",
+          "detail": "The documentation now uses separate screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display, improving visual deployment and review guidance.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-10-facilitator-teams-rooms-03"
+        },
+        {
+          "title": "Autopilot Autologin guidance adds version 5.0.111.0",
+          "detail": "The page now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024, giving administrators an additional deployment reference.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-10-autopilot-autologin-02"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-09T23:28:30.930Z",
+      "generatedAt": "2026-11-10T10:00:42.250Z",
       "usage": {
-        "inputTokens": 810,
-        "outputTokens": 448,
-        "costUsd": 0.0007
+        "inputTokens": 1267,
+        "outputTokens": 1845,
+        "costUsd": 0.002467
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams will add muted and meeting chat sections in January 2027",
-      "overview": "The month’s clearest Teams product change is a planned January 2027 chat reorganization, with separate sections for muted conversations and meeting chats. Microsoft also announced an optional Workflows template for adding tag members to channels, while Teams Rooms guidance and a known Android issue carry direct deployment implications. Event administration references are adopting attendee-size terminology across related documentation.",
-      "adminImpact": "No administrator action is needed for the new chat sections, and the tag workflow does not change defaults. Admins can assess the optional workflow for location- or project-based groups, update internal references to the new event labels, review Teams Rooms Intune assignments for the app update tool, and plan for Large Gallery to be unavailable on the affected Android app versions.",
+      "headline": "Teams Free off-network invitations retire in December as chat sections arrive in January",
+      "overview": "November’s clearest user-facing deadline is Teams Free’s December 2026 retirement of off-network invitations: email and chat-link invites will no longer create Teams Free accounts, while existing collaboration and federation remain unchanged. Teams will also begin rolling out Muted chats and Meeting chats in January 2027, alongside an optional Workflows template for tag-driven channel membership. Documentation updates mainly standardize event terminology and revise Teams Rooms deployment guidance.",
+      "adminImpact": "Update user guidance for the retired Teams Free invitation route; Microsoft says no administrator action is required. No tenant change is needed for the new chat sections, and the tag workflow is optional with no default changes. Update event runbooks to use “Events up to 1k attendees” and “Events optimized for a large audience”; the associated policy names and commands remain the same. Review Intune assignments for the Teams Rooms app update tool and consider unassigning it for new deployments, with the documented exception for devices older than 2025. Also expect Large Gallery to be unavailable on affected Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504.",
       "keyChanges": [
         {
-          "title": "Muted and meeting chat sections are planned for January 2027",
-          "detail": "Teams will add Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable, disable, and reorder the sections; muted chats move there automatically unless they are favorited.",
+          "title": "Teams Free will stop accepting off-network invitations",
+          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged.",
+          "product": "Teams",
+          "sourceId": "MC1546409"
+        },
+        {
+          "title": "Teams adds separate Muted chats and Meeting chats sections",
+          "detail": "The January 2027 rollout adds Muted chats, enabled by default, and Meeting chats, disabled by default. Users can enable, disable, and reorder the sections; muted chats move automatically unless they are favorited.",
           "product": "Teams",
           "sourceId": "MC1269864"
         },
         {
-          "title": "Optional tag-to-channel automation is scheduled for mid-December",
-          "detail": "A Workflows app template will automatically add users to channels when they are added to a team tag. The feature is optional, rolls out worldwide in mid-December 2026, and does not change defaults.",
+          "title": "A Workflows template will add tag members to channels automatically",
+          "detail": "Rolling out worldwide in mid-December 2026, the optional template adds users to channels when they are added to a team tag. It is aimed at location- or project-based groups and does not change defaults.",
           "product": "Teams",
           "sourceId": "MC1540351"
         },
         {
-          "title": "Event policy references now use attendee-size labels",
-          "detail": "The Settings Policies Reference replaces webinar and town hall terminology with “Events up to 1k attendees” and “Events optimized for a large audience” across related settings.",
-          "product": "Teams",
-          "sourceId": "doc-2026-11-07-settings-policies-reference-08"
+          "title": "Event guidance adopts attendee-size labels across policy instructions",
+          "detail": "Setup and policy documentation now uses “Events up to 1k attendees” and “Events optimized for a large audience” instead of webinar and town hall labels. The associated policy names and commands remain the same.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-07-set-up-events-07"
         },
         {
-          "title": "Teams Rooms guidance no longer recommends the app update tool for new deployments",
-          "detail": "The Autopilot Autologin guidance says Teams Rooms app automatic updates have been included since April 2024, so the app update tool is no longer recommended for new deployments. It suggests considering unassignment except for devices older than 2025.",
+          "title": "Teams Rooms guidance drops the app update tool for new deployments",
+          "detail": "The documentation says the Teams Rooms app has included automatic updates since April 2024, so the app update tool is no longer recommended for new deployments. It advises reviewing Intune configurations and considering unassignment except for devices older than 2025.",
           "product": "Teams Rooms",
           "sourceId": "doc-2026-11-06-autopilot-autologin-05"
-        },
-        {
-          "title": "Large Gallery may be unavailable on a defined Android Rooms version range",
-          "detail": "The known-issues page identifies possible loss of the Large Gallery layout on Teams Rooms for Android app versions 1449/1.0.96.2026249711 through 1449/1.0.96.2026264504. The issue is expected to be addressed in a future update.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-06-known-issues-01"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-09T23:28:30.930Z",
+      "generatedAt": "2026-11-10T10:00:42.250Z",
       "usage": {
-        "inputTokens": 3480,
-        "outputTokens": 3506,
-        "costUsd": 0.004903
+        "inputTokens": 4007,
+        "outputTokens": 4794,
+        "costUsd": 0.006554
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-09T23:28:30.930Z",
+  "generatedAt": "2026-11-10T10:00:42.250Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -285,18 +349,24 @@
       "outputTokens": 4542,
       "requests": 3,
       "costUsd": 0.006486
+    },
+    "2026-11-10": {
+      "inputTokens": 6546,
+      "outputTokens": 7918,
+      "requests": 3,
+      "costUsd": 0.010811
     }
   },
   "lastRun": {
-    "inputTokens": 5180,
-    "outputTokens": 4542,
+    "inputTokens": 6546,
+    "outputTokens": 7918,
     "requests": 3,
-    "costUsd": 0.006486
+    "costUsd": 0.010811
   },
   "totalUsage": {
-    "inputTokens": 23955,
-    "outputTokens": 34620,
-    "requests": 11,
-    "costUsd": 0.046334
+    "inputTokens": 30501,
+    "outputTokens": 42538,
+    "requests": 14,
+    "costUsd": 0.057145
   }
 }

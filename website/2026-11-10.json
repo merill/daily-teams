@@ -1,0 +1,165 @@
+{
+  "newFiles": [],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/limits-specifications-teams.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "patch": "diff --git a/Teams/limits-specifications-teams.md b/Teams/limits-specifications-teams.md\nindex 93e7a4e..2204b92 100644\n--- a/Teams/limits-specifications-teams.md\n+++ b/Teams/limits-specifications-teams.md\n@@ -196,6 +196,10 @@ Note\n \r\n Breakout rooms can only be created in meetings or events with up to 1,000 attendees. Breakout rooms aren't supported in events [optimized for large audiences](plan-events). Additionally, creating breakout rooms in a meeting or event automatically limits the number of attendees to 1,000. For more information about large Teams meetings and events, share the [Tips for setting up large meetings and events in Microsoft Teams](https://support.microsoft.com/teams/meetings/tips-for-setting-up-large-meetings-and-events-in-microsoft-teams) guidance with your end users.\r\n \r\n+### External calling limits\r\n+\r\n+Organizations might be subject to limits on outbound external one-to-one (1:1) calls based on factors such as tenant age and calling activity. These limits help prevent abuse. When a limit is reached, users might be temporarily unable to place outbound 1:1 calls to external users. Internal calling isn't affected. External calling automatically resumes when activity falls below the limit.\r\n+\r\n ### Meeting expiration\r\n \r\n The expiration applies to PSTN dial-in numbers, CVI coordinates, and underlying meeting policies and settings.\r\n",
+      "baseCommitSha": "76f73fc40194e868110db5b84d92a587e1d67216",
+      "commitSha": "9cbdcd740f1c47a4ef013508a14276b95c7b95be",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-10 00:22:59 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/limits-specifications-teams.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/limits-specifications-teams",
+      "eventId": "teams-docs:9cbdcd740f1c47a4ef013508a14276b95c7b95be:modified:Teams/limits-specifications-teams.md",
+      "firstSeenAt": "2026-11-10T10:00:34.769Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Documentation adds external outbound 1:1 calling limits",
+        "summary": "The documentation now states that limits may apply based on factors such as tenant age and calling activity. When reached, users may be temporarily unable to place outbound 1:1 calls to external users.",
+        "adminImpact": "Administrators should be aware that external calling may be temporarily restricted for some organizations.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/autopilot-autologin.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "patch": "diff --git a/Teams/rooms/autopilot-autologin.md b/Teams/rooms/autopilot-autologin.md\nindex 75b1c88..73a15f5 100644\n--- a/Teams/rooms/autopilot-autologin.md\n+++ b/Teams/rooms/autopilot-autologin.md\n@@ -120,7 +120,7 @@ If you use Intune to manage other Windows devices besides Teams Rooms, we recomm\n \r\n Note\r\n \r\n-As of November 2026, the app update tool is no longer a recommended step in the deployment process for Autopilot + Autologin. The Teams Rooms app has had the automatic update functionality included since April 2024, all new devices being deployed should have the feature included out of box.\r\n+As of November 2026, the app update tool is no longer a recommended step in the deployment process for Autopilot + Autologin. The Teams Rooms app has had the automatic update functionality included since April 2024 with version [5.0.111.0](/en-us/MicrosoftTeams/rooms/rooms-release-note?tabs=Windows#501110-4242024), all new devices being deployed should have the feature included out of box.\r\n \r\n If you have the app update tool still included in your Intune configuration it's recommended that you unassign it unless you're deploying devices older than 2025.\r\n \r\n",
+      "baseCommitSha": "76f73fc40194e868110db5b84d92a587e1d67216",
+      "commitSha": "9cbdcd740f1c47a4ef013508a14276b95c7b95be",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-10 00:22:59 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/autopilot-autologin.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/autopilot-autologin",
+      "eventId": "teams-docs:9cbdcd740f1c47a4ef013508a14276b95c7b95be:modified:Teams/rooms/autopilot-autologin.md",
+      "firstSeenAt": "2026-11-10T10:00:34.784Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Autopilot + Autologin guidance adds the Teams Rooms app version",
+        "summary": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024.",
+        "adminImpact": "Admins can use the added version reference when reviewing deployments. No administrator action is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/facilitator-teams-rooms.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/rooms/facilitator-teams-rooms.md b/Teams/rooms/facilitator-teams-rooms.md\nindex 5ea8b29..90348db 100644\n--- a/Teams/rooms/facilitator-teams-rooms.md\n+++ b/Teams/rooms/facilitator-teams-rooms.md\n@@ -75,11 +75,11 @@ In a scheduled meeting with Teams Rooms devices invited, you can view notes gene\n \r\n ![Screenshot that shows the notes button on the console that will open/close the notes panel on the front-of-room display.](media/facilitator-teams-rooms/notes-button-on-ubar.png)*Notes button on the console to open and close the Notes panel.*\r\n \r\n-![Screenshot that shows the notes panel on the front-of-room display in a meeting.](media/facilitator-teams-rooms/agenda-timer-front-of-room-display.png)*Notes panel on the front-of-room display*\r\n+![Screenshot that shows the notes panel on the front-of-room display in a meeting.](media/facilitator-teams-rooms/notes-panel-front-of-room.png)*Notes panel on the front-of-room display*\r\n \r\n Facilitator can proactively share insights, reminders and time left in a meeting, as well as respond to participant questions or commands in the **Chat** panel.\r\n \r\n-![Screenshot that shows Facilitator messages in chat panel on the front-of-room display.](media/facilitator-teams-rooms/agenda-timer-front-of-room-display.png)*Messages from Facilitator in the Chat panel on the front-of-room display*\r\n+![Screenshot that shows Facilitator messages in chat panel on the front-of-room display.](media/facilitator-teams-rooms/facilitator-in-chat.png)*Messages from Facilitator in the Chat panel on the front-of-room display*\r\n \r\n If there is an agenda in the meeting invite or agenda added to the Loop meeting notes before the meeting, agenda timer will appear at the front-of-room display to show allocation of time for each topic.\r\n \r\n",
+      "baseCommitSha": "76f73fc40194e868110db5b84d92a587e1d67216",
+      "commitSha": "9cbdcd740f1c47a4ef013508a14276b95c7b95be",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-10 00:22:59 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/facilitator-teams-rooms.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/facilitator-teams-rooms",
+      "eventId": "teams-docs:9cbdcd740f1c47a4ef013508a14276b95c7b95be:modified:Teams/rooms/facilitator-teams-rooms.md",
+      "firstSeenAt": "2026-11-10T10:00:34.793Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated Facilitator Teams Rooms screenshots",
+        "summary": "The documentation now uses dedicated screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display.",
+        "adminImpact": "Administrators have clearer visual guidance when reviewing these Teams Rooms features.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1546409",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-10",
+      "title": "Microsoft Teams: Retirement of off-network invitations to Teams Free",
+      "summary": "Microsoft Teams will retire off-network invitations for Teams Free accounts starting December 2026. Users can no longer invite external people via email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged. No admin action is needed, but user guidance should be updated.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Major update",
+      "url": "/message-center/MC1546409/",
+      "originalUrl": "https://mc.merill.net/message/MC1546409",
+      "body": "<p><b><b>What and Why:</b></b></p><p>Microsoft Teams will retire the invitation flow that allows work or school users to invite people who cannot be found in Teams to create a Teams Free account and join a chat. This change retires the off-network invitation flow (via email or sharing a link to chat) only — not federation with Teams Free.</p><p><b><b>Rollout Schedule:</b></b></p><p>Worldwide: We will begin rolling out in early December 2026 and expect to complete by late December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p><b>Who is affected:</b></p><ul><li>Users who use the off-network email invitation flow to invite external people to create a Teams Free account and join a chat.</li><li>Users who user share a link to chat flow to invite external people to create a Teams Free account and join a chat.&nbsp;</li></ul><p><b>Platforms/Services:</b></p><ul><li>Microsoft Teams desktop, web and mobile apps</li></ul><p><b>What will happen:</b></p><ul><li>Users will no longer be able to send these onboarding invitations from Teams chats.</li><li>People who need a Teams Free account will need to create one independently or collaborate through another supported method.</li><li>Collaboration with existing Teams Free users remains available, subject to your organization's external-access policies.</li><li>This change will take effect automatically. No admin action is required to enable the retirement.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required for this change to take effect. However, we recommend updating user guidance and helpdesk documentation before December 6, 2026, to reflect the following alternatives:</p><ul><li>For ongoing chat: If recipients do not have a Teams account, they can create a Teams Free account independently or get invited as guests to an existing team. Once their account is discoverable, users can search for their registered email address and start a conversation.</li><li>For team and channel collaboration: No change.</li><li>For meetings: No change.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Retirement"
+      ],
+      "startDate": "2026-11-10T00:03:31Z",
+      "endDate": "2027-02-28T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-10T00:03:36.62Z",
+      "version": "2026-11-10T00:03:36.62Z",
+      "eventId": "message-center:MC1546409:2026-11-10T00:03:36.62Z",
+      "firstSeenAt": "2026-11-10T10:00:42.007Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 3,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 0 new, 3 updated, and 0 removed Microsoft Teams documentation files across 2 documentation areas.",
+    "groups": [
+      {
+        "category": "Doc update",
+        "title": "Microsoft Teams",
+        "summary": "The documentation now states that limits may apply based on factors such as tenant age and calling activity. When reached, users may be temporarily unable to place outbound 1:1 calls to external users.",
+        "sourceFiles": [
+          "Teams/limits-specifications-teams.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams Rooms",
+        "summary": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024. The documentation now uses dedicated screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display.",
+        "sourceFiles": [
+          "Teams/rooms/autopilot-autologin.md",
+          "Teams/rooms/facilitator-teams-rooms.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Doc update",
+        "headline": "Microsoft Teams",
+        "detail": "The documentation now states that limits may apply based on factors such as tenant age and calling activity. When reached, users may be temporarily unable to place outbound 1:1 calls to external users."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams Rooms",
+        "detail": "The documentation now identifies version 5.0.111.0 alongside the automatic update functionality included since April 2024. The documentation now uses dedicated screenshots for the notes panel and Facilitator messages in the chat panel on the front-of-room display."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

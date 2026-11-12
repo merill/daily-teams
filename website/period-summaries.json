@@ -239,6 +239,52 @@
         "outputTokens": 5295,
         "costUsd": 0.006948
       }
+    },
+    "2026-11-12": {
+      "headline": "Facilitator will resolve meeting knowledge gaps with web answers starting February",
+      "overview": "Teams is preparing Facilitator for availability from February 2027. It will detect meeting knowledge gaps and provide web-search answers in chat, subject to Microsoft 365 Copilot (Premium), manual enablement, and admin and user controls. Event recording access is also shifting to event-specific settings, while channel meetings gain broader scheduling and discovery capabilities. Other updates provide operational guidance for Direct Routing and passwordless Teams Android deployments.",
+      "adminImpact": "Check the Copilot (Premium) requirement and manual enablement path before enabling Facilitator. For town halls and webinars, review RecordingForTownhall and RecordingForWebinar because the recording/transcript access option will use those settings instead of AllowCloudRecording; Microsoft says no action is required for that rollout. Channel meeting changes need no admin configuration, but user communication is recommended. If Conditional Access blocks Device Code Flow, review the passwordless Teams Android guidance, and use SIP OPTIONS—not call traffic—to interpret SBC health.",
+      "keyChanges": [
+        {
+          "title": "Facilitator adds web-search answers to meeting chat",
+          "detail": "Facilitator will detect and resolve knowledge gaps by providing relevant answers through web search in meeting chat. It becomes available from February 2027, requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports admin controls and user opt-out.",
+          "product": "Teams",
+          "sourceId": "MC1409304"
+        },
+        {
+          "title": "Event recording access shifts to town hall and webinar settings",
+          "detail": "For Events App town halls and webinars, the \"Who has access to the recording or transcript\" option will follow RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. Worldwide rollout is scheduled for early to mid-November 2026, with no admin action required.",
+          "product": "Teams",
+          "sourceId": "MC1550542"
+        },
+        {
+          "title": "Channel meetings add Outlook, calendar, and delegate scheduling",
+          "detail": "The enhanced channel meeting experience will support scheduling from the Teams calendar and Outlook, improve discovery for channel members, and add delegate scheduling. Rollout starts in November 2026 and completes by September 2027 across environments; Microsoft recommends informing users but requires no admin action.",
+          "product": "Teams",
+          "sourceId": "MC1509796"
+        },
+        {
+          "title": "Direct Routing guidance defines SBC health through SIP OPTIONS",
+          "detail": "Updated protocol guidance explains TLS validation, tenant lookup, and bidirectional SIP OPTIONS exchanges, with successful responses marking an SBC Active. It clarifies that SBC health reflects SIP OPTIONS rather than call traffic, and that hosted derived SBCs use the status of the main physical SBC. These distinctions support troubleshooting of Inactive states and SIP OPTIONS warnings.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-12-direct-routing-protocols-sip-03"
+        },
+        {
+          "title": "Passwordless Teams Android guidance covers Device Code Flow refreshes",
+          "detail": "The updated passwordless resource-account guidance states that Teams Android devices signed in with Device Code Flow continue using DCF when authentication tokens refresh. It also calls out considerations for organizations that block DCF with Conditional Access.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-12-passwordlessentraresourceaccounts-05"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-12T21:30:25.277Z",
+      "usage": {
+        "inputTokens": 2089,
+        "outputTokens": 5835,
+        "costUsd": 0.00742
+      }
     }
   },
   "weeks": {
@@ -289,102 +335,102 @@
       }
     },
     "2026-11-09": {
-      "headline": "Teams events gain direct OneDrive video sharing in November rollout",
-      "overview": "Teams’ most consequential changes this week are a mid-November event workflow that lets organizers and producers share OneDrive videos through “Manage what attendees see,” alongside policy-filtered recording controls and malicious QR-code detection. A separate December retirement will stop off-network invitations from creating Teams Free accounts, while Teams-certified device management is moving toward PMP and away from TAC. Most remaining updates were reference maintenance, although Teams Phone guidance repeatedly documents authorized users joining active calls through Monitor, Whisper, Barge, and Takeover.",
-      "adminImpact": "Update user guidance before the December Teams Free invitation change. For Teams-certified Android devices, Admin Agent version 1.0.0.202610190119 cannot be paused and is required for PMP management; administrators should prepare for TAC device-management deprecation targeted for mid-November 2026. The other highlighted rollouts state that no special admin action is required, with recording options constrained by assigned policies and QR protection using existing Malicious URL protection.",
+      "headline": "Teams changes event recording controls as off-network Teams Free invitations retire",
+      "overview": "Message Center leads this week with two meeting-policy behavior changes: town-hall and webinar recording access will use RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording, while meeting recording and transcription choices will reflect assigned policies and add “Record only.” Off-network invitations to create Teams Free accounts retire in December 2026. Other notable rollouts include OneDrive video sharing in Teams events and malicious QR-code detection. Most Learn updates are operational clarifications; the main device-management exception is the PMP Admin Agent release and planned TAC transition.",
+      "adminImpact": "No tenant configuration change is required for the highlighted Message Center rollouts. Administrators should update user guidance for the December 2026 Teams Free invitation retirement and account for organizers seeing only policy-allowed recording and transcription choices. For Teams Android device management, Admin Agent 1.0.0.202610190119 cannot be paused and is required for PMP management; administrators should prepare for TAC device-management deprecation targeted for mid-November 2026.",
       "keyChanges": [
         {
-          "title": "OneDrive videos become a direct sharing source for Teams events",
-          "detail": "Starting in mid-November 2026, event organizers and producers can share videos directly from OneDrive through “Manage what attendees see,” avoiding screen sharing or PowerPoint embedding and enabling higher-quality playback. No admin action is required.",
+          "title": "Town hall and webinar recording access is decoupled from AllowCloudRecording",
+          "detail": "For Events App town halls and webinars, “Who has access to the recording or transcript” will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. Worldwide rollout is scheduled for early to mid-November 2026, with no action required.",
           "product": "Teams",
-          "sourceId": "MC1506734"
+          "sourceId": "MC1550542"
         },
         {
-          "title": "Off-network invitations to Teams Free retire in December",
-          "detail": "Starting in December 2026, users can no longer invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; Microsoft says administrators should update user guidance.",
-          "product": "Teams",
-          "sourceId": "MC1546409"
-        },
-        {
-          "title": "Meeting recording choices will reflect assigned admin policies",
-          "detail": "From mid-November through mid-December 2026, meeting options will show automatic recording and transcription settings permitted by assigned policies, including a new “Record only” option. Organizers will see only policy-allowed choices, with no admin action required.",
+          "title": "Meeting recording options now reflect assigned policies",
+          "detail": "Organizers will see automatic recording and transcription choices allowed by their assigned policies, including a new “Record only” option. Rollout starts in mid-November 2026 and completes by mid-December; no admin action is required.",
           "product": "Teams",
           "sourceId": "MC1508234"
         },
         {
-          "title": "Teams adds malicious QR-code detection to chats and channels",
-          "detail": "Beginning in mid-November 2026, Teams will detect malicious QR codes in chats and channels and blur external QR codes by default. The protection uses existing Malicious URL protection and requires no admin action.",
+          "title": "Teams Free off-network invitations retire in December 2026",
+          "detail": "Users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; no admin action is required, but user guidance should be updated.",
           "product": "Teams",
-          "sourceId": "MC1526651"
+          "sourceId": "MC1546409"
         },
         {
-          "title": "Admin Agent 901 brings PMP fixes ahead of TAC management deprecation",
-          "detail": "The Certified Device Apps entry identifies version 1.0.0.202610190119 (Admin Agent 901) as adding Android 15 connectivity and provisioning fixes for PMP and being accelerated across Teams-certified devices. The update cannot be paused and is required for PMP management; TAC device-management deprecation is targeted for mid-November 2026.",
+          "title": "PMP Admin Agent release adds Android fixes ahead of TAC transition",
+          "detail": "The Certified Device Apps guidance identifies version 1.0.0.202610190119 (Admin Agent 901) as adding critical Android 15 connectivity and provisioning fixes for PMP, with rollout accelerated across Teams-certified devices. The update cannot be paused and is required for PMP management; TAC device-management deprecation is targeted for mid-November 2026.",
           "product": "Devices",
           "sourceId": "doc-2026-11-11-certified-device-apps-12"
+        },
+        {
+          "title": "Teams adds malicious QR-code warnings in chats and channels",
+          "detail": "Starting in mid-November 2026, Teams will detect malicious QR codes, warn users about harmful links, and blur external QR codes by default. The capability uses existing Malicious URL protection and requires no admin action.",
+          "product": "Teams",
+          "sourceId": "MC1526651"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-11T09:35:13.701Z",
+      "generatedAt": "2026-11-12T21:30:25.277Z",
       "usage": {
-        "inputTokens": 4162,
-        "outputTokens": 4856,
-        "costUsd": 0.00666
+        "inputTokens": 5357,
+        "outputTokens": 4271,
+        "costUsd": 0.006197
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams events gain OneDrive video sharing as policy controls and security rollouts expand",
-      "overview": "November’s strongest changes are operational: Teams events are gaining direct OneDrive video sharing, meeting recording and transcription options will reflect assigned policies, and off-network invitations to Teams Free will retire in December. Malicious QR-code detection is also rolling out in chats and channels through existing Malicious URL protection. For Teams-certified Android devices, an unpausable Admin Agent update is required for Pro Management Portal management as Microsoft prepares to deprecate TAC device management. Much of the remaining activity standardizes event terminology and refreshes deployment and troubleshooting guidance.",
-      "adminImpact": "Update user guidance for the December Teams Free invitation retirement. No special administrator action is stated for OneDrive video sharing, policy-aligned recording options, or QR-code detection; organizers will see only recording settings allowed by their policies, and QR protection uses existing Malicious URL protection. For certified Android devices, account for the required Admin Agent update and prepare for the planned TAC device-management deprecation. Event runbooks should adopt the capability-based labels “Events up to 1k attendees” and “Events optimized for a large audience” where applicable.",
+      "headline": "Teams event recording access shifts to dedicated webinar and town-hall policies",
+      "overview": "November's clearest administrator-facing change is a recording-control shift: for Events App town halls and webinars, “Who has access to the recording or transcript” will use RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. A related meeting-options update adds “Record only” and limits organizers to policy-allowed recording and transcription choices. The period also sets a December 2026 Teams Free invitation retirement, requires an unpausable Admin Agent update for PMP management, and schedules Facilitator's web-answer capability for February 2027.",
+      "adminImpact": "Most highlighted Message Center rollouts require no tenant change. Update user guidance for the Teams Free invitation retirement; existing collaboration and federation remain unchanged. Device administrators need to account for the PMP-required, non-pausable Admin Agent update and planned TAC deprecation, while Facilitator requires Microsoft 365 Copilot (Premium) and manual enablement. For recording, the notices state no administrator action is required, but policy assignments determine what organizers can select.",
       "keyChanges": [
         {
-          "title": "Organizers can share OneDrive videos directly in Teams events",
-          "detail": "Beginning in mid-November 2026, event organizers and producers can use “Manage what attendees see” to share videos from OneDrive, avoiding screen sharing or PowerPoint embedding and enabling smoother, higher-quality playback. No administrator action is required.",
+          "title": "Event recording access switches to event-specific settings",
+          "detail": "For Events App town halls and webinars, the “Who has access to the recording or transcript” option will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The worldwide rollout is scheduled for early to mid-November 2026, with no action required.",
           "product": "Teams",
-          "sourceId": "MC1506734"
+          "sourceId": "MC1550542"
         },
         {
-          "title": "Meeting options align recording controls with assigned policies",
-          "detail": "Rolling out from mid-November through mid-December 2026, automatic recording and transcription options will reflect each organizer’s assigned policies. The update adds a “Record only” option, and organizers will see only settings their policies allow.",
+          "title": "Meeting options now reflect assigned recording policies",
+          "detail": "Automatic recording and transcription choices will be based on assigned policies, including a new “Record only” option. Organizers will see only options permitted by their policies as the change rolls out from mid-November through mid-December 2026.",
           "product": "Teams",
           "sourceId": "MC1508234"
         },
         {
-          "title": "Off-network invitations to Teams Free retire in December",
-          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, but user guidance should be updated.",
+          "title": "Off-network invitations to create Teams Free accounts retire",
+          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; Microsoft recommends updating user guidance.",
           "product": "Teams",
           "sourceId": "MC1546409"
         },
         {
-          "title": "Teams adds malicious QR-code detection to messages",
-          "detail": "From mid-November 2026, Teams will detect potentially malicious QR codes in chats and channels, warn users about harmful links, and blur external QR codes by default. The capability is enabled through existing Malicious URL protection and requires no administrator action.",
-          "product": "Teams",
-          "sourceId": "MC1526651"
-        },
-        {
-          "title": "A required Android agent update accelerates the move to PMP",
-          "detail": "Certified Teams Android devices are receiving version 1.0.0.202610190119 (Admin Agent 901), which adds Android 15 connectivity and provisioning fixes. The update cannot be paused and is required for device management in the Pro Management Portal; the documentation also prepares administrators for TAC device-management deprecation targeted for mid-November 2026.",
+          "title": "PMP requires an unpausable Admin Agent update",
+          "detail": "Updated Certified Device Apps guidance identifies version 1.0.0.202610190119 (Admin Agent 901), which adds critical Android 15 connectivity and provisioning fixes for PMP and is being accelerated across Teams-certified devices. The update cannot be paused and is required for PMP device management; TAC device management is targeted for deprecation in mid-November 2026.",
           "product": "Devices",
           "sourceId": "doc-2026-11-11-certified-device-apps-12"
+        },
+        {
+          "title": "Facilitator will answer meeting knowledge gaps through web search",
+          "detail": "Starting in February 2027, Facilitator will detect knowledge gaps and provide relevant web-search answers in meeting chat. It requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports administrator controls and user opt-out.",
+          "product": "Teams",
+          "sourceId": "MC1409304"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-11T09:35:13.701Z",
+      "generatedAt": "2026-11-12T21:30:25.277Z",
       "usage": {
-        "inputTokens": 5834,
-        "outputTokens": 3246,
-        "costUsd": 0.005062
+        "inputTokens": 5906,
+        "outputTokens": 7314,
+        "costUsd": 0.009958
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-11T09:35:13.701Z",
+  "generatedAt": "2026-11-12T21:30:25.277Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -413,18 +459,24 @@
       "outputTokens": 13397,
       "requests": 3,
       "costUsd": 0.018669
+    },
+    "2026-11-12": {
+      "inputTokens": 13352,
+      "outputTokens": 17420,
+      "requests": 3,
+      "costUsd": 0.023574
     }
   },
   "lastRun": {
-    "inputTokens": 12964,
-    "outputTokens": 13397,
+    "inputTokens": 13352,
+    "outputTokens": 17420,
     "requests": 3,
-    "costUsd": 0.018669
+    "costUsd": 0.023574
   },
   "totalUsage": {
-    "inputTokens": 52346,
-    "outputTokens": 72363,
-    "requests": 20,
-    "costUsd": 0.097304
+    "inputTokens": 65698,
+    "outputTokens": 89783,
+    "requests": 23,
+    "costUsd": 0.120878
   }
 }

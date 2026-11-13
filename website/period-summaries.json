@@ -285,6 +285,52 @@
         "outputTokens": 5835,
         "costUsd": 0.00742
       }
+    },
+    "2026-11-13": {
+      "headline": "Passwordless sign-in guidance adds Authenticator and Conditional Access prerequisites for personal Teams phones",
+      "overview": "The period’s clearest administrator-facing addition is new guidance for passwordless sign-in on personally assigned Teams phones without device code flow. It specifies prerequisites, registration, and Conditional Access setup, while noting that the option does not satisfy phishing-resistant authentication requirements. Other meaningful updates clarify network, Intelligent Recap retention, and shared-mailbox recording behavior; much of the remaining activity repairs Teams Phone agent links.",
+      "adminImpact": "Teams phone administrators considering passwordless sign-in need Entra authentication-method and Conditional Access configuration. Network administrators should review DNS and firewall policies for relay discovery and UDP 49152–53247. Meeting administrators should verify Intelligent Recap retention settings and the global meeting policy used by unlicensed shared mailboxes. The repeated call-length link corrections require no configuration change.",
+      "keyChanges": [
+        {
+          "title": "New passwordless sign-in guidance for personal Teams phones",
+          "detail": "The new guidance explains how to use Microsoft Authenticator passwordless phone sign-in for personally assigned Teams phones without device code flow. It covers prerequisites, registration, and Conditional Access configuration, but the option does not meet phishing-resistant authentication requirements.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-13-passwordless-sign-in-for-personal-teams-phones-without-dcf-microsoft-teams-01"
+        },
+        {
+          "title": "Network guidance specifies relay DNS and UDP 49152–53247",
+          "detail": "The guidance now explains DNS-based relay discovery and warns that blocked relay-name resolution can prevent calls or media. It also identifies UDP 49152–53247 for Direct Routing non-media-bypass calls, giving administrators concrete DNS, proxy, and firewall checks.",
+          "product": "Clients",
+          "sourceId": "doc-2026-11-13-vdi-2-15"
+        },
+        {
+          "title": "Intelligent Recap retention uses an explicit day range",
+          "detail": "The setting is documented under **Copilot and other AI** as **Set a default expiration time for Intelligent Recap .docx files for non-transcribed meetings**. Administrators can set retention from 1 to 9999 days, or use -1 for no expiration.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-13-intelligent-recap-without-saving-transcripts-11"
+        },
+        {
+          "title": "Unlicensed shared mailboxes follow the global meeting policy for recording",
+          "detail": "The updated guidance states that shared mailboxes without a Teams license use the global identity’s meeting policy. When global cloud recording is disabled, users cannot record meetings organized by those mailboxes.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-13-tmr-meeting-recording-change-14"
+        },
+        {
+          "title": "Teams Phone agent links now target configurable call-length guidance",
+          "detail": "The cmdlet setup article’s references for configurable maximum call length and maximum call length now point to the “What’s new: configurable call length” section. The settings remain documented as configurable in Teams admin center.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-13-aa-cq-setup-teams-phone-agent-cmdlets-04"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-13T09:43:04.814Z",
+      "usage": {
+        "inputTokens": 2783,
+        "outputTokens": 2882,
+        "costUsd": 0.004015
+      }
     }
   },
   "weeks": {
@@ -335,85 +381,85 @@
       }
     },
     "2026-11-09": {
-      "headline": "Teams changes event recording controls as off-network Teams Free invitations retire",
-      "overview": "Message Center leads this week with two meeting-policy behavior changes: town-hall and webinar recording access will use RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording, while meeting recording and transcription choices will reflect assigned policies and add “Record only.” Off-network invitations to create Teams Free accounts retire in December 2026. Other notable rollouts include OneDrive video sharing in Teams events and malicious QR-code detection. Most Learn updates are operational clarifications; the main device-management exception is the PMP Admin Agent release and planned TAC transition.",
-      "adminImpact": "No tenant configuration change is required for the highlighted Message Center rollouts. Administrators should update user guidance for the December 2026 Teams Free invitation retirement and account for organizers seeing only policy-allowed recording and transcription choices. For Teams Android device management, Admin Agent 1.0.0.202610190119 cannot be paused and is required for PMP management; administrators should prepare for TAC device-management deprecation targeted for mid-November 2026.",
+      "headline": "Teams town hall and webinar recording access shifts to event settings",
+      "overview": "Most of this week’s 55 entries were routine documentation maintenance, including corrected links, tables, and terminology. The meaningful operational changes were a new event-specific recording dependency, policy-driven meeting recording choices, the December end of off-network Teams Free invitations, malicious QR-code protection, and a required PMP device-agent update ahead of TAC management deprecation.",
+      "adminImpact": "The recording, meeting-option, and QR-code rollouts require no configuration change, but they alter what organizers and users see. Update user guidance for the Teams Free invitation retirement. For Teams-certified devices, account for the unpausable Admin Agent 901 rollout and prepare for the planned move away from TAC device management.",
       "keyChanges": [
         {
-          "title": "Town hall and webinar recording access is decoupled from AllowCloudRecording",
-          "detail": "For Events App town halls and webinars, “Who has access to the recording or transcript” will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. Worldwide rollout is scheduled for early to mid-November 2026, with no action required.",
+          "title": "Town hall and webinar access uses event-specific recording settings",
+          "detail": "The Events App “Who has access to the recording or transcript” option will depend on `RecordingForTownhall` or `RecordingForWebinar` instead of `AllowCloudRecording`. Worldwide rollout is scheduled for early to mid-November 2026, with no admin action required.",
           "product": "Teams",
           "sourceId": "MC1550542"
         },
         {
-          "title": "Meeting recording options now reflect assigned policies",
-          "detail": "Organizers will see automatic recording and transcription choices allowed by their assigned policies, including a new “Record only” option. Rollout starts in mid-November 2026 and completes by mid-December; no admin action is required.",
+          "title": "Meeting organizers will see recording choices allowed by policy",
+          "detail": "Automatic recording and transcription options will reflect assigned admin policies, including a new `Record only` option. Rollout begins in mid-November and completes by mid-December 2026; organizers will see only options permitted by their policies.",
           "product": "Teams",
           "sourceId": "MC1508234"
         },
         {
-          "title": "Teams Free off-network invitations retire in December 2026",
-          "detail": "Users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; no admin action is required, but user guidance should be updated.",
+          "title": "Teams Free off-network invitations retire in December",
+          "detail": "Starting December 2026, users can no longer invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, but user guidance should be updated.",
           "product": "Teams",
           "sourceId": "MC1546409"
         },
         {
-          "title": "PMP Admin Agent release adds Android fixes ahead of TAC transition",
-          "detail": "The Certified Device Apps guidance identifies version 1.0.0.202610190119 (Admin Agent 901) as adding critical Android 15 connectivity and provisioning fixes for PMP, with rollout accelerated across Teams-certified devices. The update cannot be paused and is required for PMP management; TAC device-management deprecation is targeted for mid-November 2026.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-11-certified-device-apps-12"
-        },
-        {
-          "title": "Teams adds malicious QR-code warnings in chats and channels",
-          "detail": "Starting in mid-November 2026, Teams will detect malicious QR codes, warn users about harmful links, and blur external QR codes by default. The capability uses existing Malicious URL protection and requires no admin action.",
+          "title": "Teams adds malicious QR-code detection to chats and channels",
+          "detail": "Beginning in mid-November 2026, Teams will warn users about harmful QR-code links, with external QR codes blurred by default. The capability uses existing Malicious URL protection and requires no admin action.",
           "product": "Teams",
           "sourceId": "MC1526651"
+        },
+        {
+          "title": "PMP Admin Agent 901 delivers Android 15 fixes before TAC retirement",
+          "detail": "Version `1.0.0.202610190119` (Admin Agent 901) adds critical Android 15 connectivity and provisioning fixes for the Pro Management Portal and is being accelerated across Teams-certified devices. The update cannot be paused and is required to manage devices in PMP; TAC device management is targeted for deprecation in mid-November 2026.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-11-certified-device-apps-12"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-12T21:30:25.277Z",
+      "generatedAt": "2026-11-13T09:43:04.814Z",
       "usage": {
-        "inputTokens": 5357,
-        "outputTokens": 4271,
-        "costUsd": 0.006197
+        "inputTokens": 7213,
+        "outputTokens": 6431,
+        "costUsd": 0.00916
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams event recording access shifts to dedicated webinar and town-hall policies",
-      "overview": "November's clearest administrator-facing change is a recording-control shift: for Events App town halls and webinars, “Who has access to the recording or transcript” will use RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. A related meeting-options update adds “Record only” and limits organizers to policy-allowed recording and transcription choices. The period also sets a December 2026 Teams Free invitation retirement, requires an unpausable Admin Agent update for PMP management, and schedules Facilitator's web-answer capability for February 2027.",
-      "adminImpact": "Most highlighted Message Center rollouts require no tenant change. Update user guidance for the Teams Free invitation retirement; existing collaboration and federation remain unchanged. Device administrators need to account for the PMP-required, non-pausable Admin Agent update and planned TAC deprecation, while Facilitator requires Microsoft 365 Copilot (Premium) and manual enablement. For recording, the notices state no administrator action is required, but policy assignments determine what organizers can select.",
+      "headline": "Teams Free off-network invitations end in December as events gain OneDrive video sharing",
+      "overview": "November was documentation-heavy, but its substantive changes centered on Teams events, Teams Free access, AI, security, and device management. Teams events began rolling out direct OneDrive video sharing, recording and transcript access is being tied to event-specific settings, and off-network invitations to Teams Free are scheduled to end in December 2026. Facilitator is slated for February 2027 and requires Microsoft 365 Copilot (Premium) plus manual enablement, while certified devices are receiving required Admin Agent 901 updates. A separate security rollout adds malicious QR-code detection in chats and channels, with external QR codes blurred by default. Documentation updates also standardized event labels to “Events up to 1k attendees” and “Events optimized for a large audience,” while the associated policy names and commands remain unchanged.",
+      "adminImpact": "Update user guidance for the December Teams Free retirement; external people will no longer be able to create Teams Free accounts through email or chat links, while existing collaboration and federation remain. For Teams-certified devices, plan around the unpausable Admin Agent 901 update, its requirement for PMP management, and the planned TAC device-management deprecation. Facilitator adoption requires Microsoft 365 Copilot (Premium) and manual enablement. The OneDrive video and recording-access rollouts require no administrator action. Use the revised capability-based event labels when configuring or documenting events.",
       "keyChanges": [
         {
-          "title": "Event recording access switches to event-specific settings",
-          "detail": "For Events App town halls and webinars, the “Who has access to the recording or transcript” option will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The worldwide rollout is scheduled for early to mid-November 2026, with no action required.",
-          "product": "Teams",
-          "sourceId": "MC1550542"
-        },
-        {
-          "title": "Meeting options now reflect assigned recording policies",
-          "detail": "Automatic recording and transcription choices will be based on assigned policies, including a new “Record only” option. Organizers will see only options permitted by their policies as the change rolls out from mid-November through mid-December 2026.",
-          "product": "Teams",
-          "sourceId": "MC1508234"
-        },
-        {
-          "title": "Off-network invitations to create Teams Free accounts retire",
-          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; Microsoft recommends updating user guidance.",
+          "title": "Teams Free off-network invitations retire in December 2026",
+          "detail": "Starting in December 2026, users can no longer invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; Microsoft says no administrator action is required, but user guidance should be updated.",
           "product": "Teams",
           "sourceId": "MC1546409"
         },
         {
-          "title": "PMP requires an unpausable Admin Agent update",
-          "detail": "Updated Certified Device Apps guidance identifies version 1.0.0.202610190119 (Admin Agent 901), which adds critical Android 15 connectivity and provisioning fixes for PMP and is being accelerated across Teams-certified devices. The update cannot be paused and is required for PMP device management; TAC device management is targeted for deprecation in mid-November 2026.",
+          "title": "Teams events can share OneDrive videos through Manage what attendees see",
+          "detail": "Event organizers and producers can share videos directly from OneDrive during Teams events using “Manage what attendees see,” avoiding screen sharing or PowerPoint embedding. The rollout begins in mid-November 2026 and requires no administrator action.",
+          "product": "Teams",
+          "sourceId": "MC1506734"
+        },
+        {
+          "title": "Event recording and transcript access now follows event-specific controls",
+          "detail": "For Events App town halls and webinars, “Who has access to the recording or transcript” will depend on RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. The worldwide change rolls out in early to mid-November 2026 without administrator action.",
+          "product": "Teams",
+          "sourceId": "MC1550542"
+        },
+        {
+          "title": "Admin Agent 901 becomes required for PMP device management",
+          "detail": "Version 1.0.0.202610190119, Admin Agent 901, adds critical Android 15 connectivity and provisioning fixes for PMP and is being accelerated across Teams-certified devices. The update cannot be paused and is required to manage devices in PMP; the release also prepares for the planned TAC device-management deprecation.",
           "product": "Devices",
           "sourceId": "doc-2026-11-11-certified-device-apps-12"
         },
         {
-          "title": "Facilitator will answer meeting knowledge gaps through web search",
-          "detail": "Starting in February 2027, Facilitator will detect knowledge gaps and provide relevant web-search answers in meeting chat. It requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports administrator controls and user opt-out.",
+          "title": "Facilitator will proactively resolve meeting knowledge gaps",
+          "detail": "Beginning in February 2027, Facilitator will detect knowledge gaps and provide relevant web-search answers in meeting chat. It requires Microsoft 365 Copilot (Premium), must be manually enabled, and includes administrator controls and user opt-out support.",
           "product": "Teams",
           "sourceId": "MC1409304"
         }
@@ -421,16 +467,16 @@
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-12T21:30:25.277Z",
+      "generatedAt": "2026-11-13T09:43:04.814Z",
       "usage": {
-        "inputTokens": 5906,
-        "outputTokens": 7314,
-        "costUsd": 0.009958
+        "inputTokens": 5869,
+        "outputTokens": 9114,
+        "costUsd": 0.012111
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-12T21:30:25.277Z",
+  "generatedAt": "2026-11-13T09:43:04.814Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -465,18 +511,24 @@
       "outputTokens": 17420,
       "requests": 3,
       "costUsd": 0.023574
+    },
+    "2026-11-13": {
+      "inputTokens": 15865,
+      "outputTokens": 18427,
+      "requests": 3,
+      "costUsd": 0.025285
     }
   },
   "lastRun": {
-    "inputTokens": 13352,
-    "outputTokens": 17420,
+    "inputTokens": 15865,
+    "outputTokens": 18427,
     "requests": 3,
-    "costUsd": 0.023574
+    "costUsd": 0.025285
   },
   "totalUsage": {
-    "inputTokens": 65698,
-    "outputTokens": 89783,
-    "requests": 23,
-    "costUsd": 0.120878
+    "inputTokens": 81563,
+    "outputTokens": 108210,
+    "requests": 26,
+    "costUsd": 0.146163
   }
 }

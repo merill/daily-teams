@@ -1,0 +1,464 @@
+{
+  "newFiles": [
+    {
+      "filename": "Teams/phones/passwordless-sign-in-personal-teams-phones.md",
+      "status": "added",
+      "additions": 127,
+      "deletions": 0,
+      "changes": 127,
+      "patch": "diff --git a/Teams/phones/passwordless-sign-in-personal-teams-phones.md b/Teams/phones/passwordless-sign-in-personal-teams-phones.md\nnew file mode 100644\nindex 0000000..96465d7\n--- /dev/null\n+++ b/Teams/phones/passwordless-sign-in-personal-teams-phones.md\n@@ -0,0 +1,127 @@\n+---\n+layout: Conceptual\n+title: Passwordless sign-in for personal Teams phones without DCF - Microsoft Teams | Microsoft Learn\n+canonicalUrl: https://learn.microsoft.com/en-us/microsoftteams/phones/passwordless-sign-in-personal-teams-phones\n+breadcrumb_path: /microsoftteams/breadcrumb/toc.json\n+uhfHeaderId: MSDocsHeader-MicrosoftTeams\n+ms.suite: office\n+feedback_system: Standard\n+feedback_product_url: https://aka.ms/TeamsFeedback\n+recommendations: true\n+author: MattSlomka\n+ms.author: mattslomka\n+manager: kimmatlock\n+ms.reviewer: srpall\n+ms.date: 2026-11-11T00:00:00.0000000Z\n+ms.topic: how-to\n+ms.service: msteams\n+ms.subservice: itpro-devices\n+audience: Admin\n+ms.collection:\n+- teams-rooms-devices\n+- Teams_ITAdmin_Devices\n+search.appverid: MET150\n+f1.keywords:\n+- NOCSH\n+ms.localizationpriority: Medium\n+description: Learn how to set up Microsoft Authenticator passwordless phone sign-in for personally assigned Teams phones so users don't need device code flow.\n+locale: en-us\n+document_id: f3a72c41-7963-339c-6008-60f1bf870a46\n+document_version_independent_id: f3a72c41-7963-339c-6008-60f1bf870a46\n+original_content_git_url: https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness-pr/blob/live/Teams/phones/passwordless-sign-in-personal-teams-phones.md\n+site_name: Docs\n+depot_name: office.OfficeDocs-MicrosoftTeams\n+page_type: conceptual\n+toc_rel: ../toc.json\n+pdf_url_template: https://learn.microsoft.com/pdfstore/en-us/office.OfficeDocs-MicrosoftTeams/{branchName}{pdfName}\n+feedback_help_link_type: ''\n+feedback_help_link_url: ''\n+asset_id: phones/passwordless-sign-in-personal-teams-phones\n+moniker_range_name: \n+monikers: []\n+item_type: Content\n+source_path: Teams/phones/passwordless-sign-in-personal-teams-phones.md\n+cmProducts:\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/b5267373-9b61-4d5a-a4ac-5d03f8f8800f\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/5686b492-7c45-4088-8291-ecc0458747d3\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/fcc3cd4a-59ea-47a2-9cc1-784142a5a25d\n+spProducts:\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/bcd4f3ef-c612-47a8-aa4a-7f9bedc3a98c\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/838f4f15-80c1-4d49-b873-501fe4ed2d28\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/d7a55faf-a992-4e27-aa3a-eadc9830e778\n+platformId: d48cf2db-e1ab-c7de-e864-aeaf53db4a06\n+---\n+\n+# Passwordless sign-in for personal Teams phones without DCF - Microsoft Teams | Microsoft Learn\n+\n+If your organization uses personally assigned Microsoft Teams phones and wants to reduce or remove its dependency on device code flow (DCF) for security reasons, this article describes an alternative.\r\n+\r\n+Native passkey support for Teams phones is in development. Until it's available, you can use Microsoft Authenticator passwordless phone sign-in as an interim option. With this method, users don't type their password on the phone screen.\r\n+\r\n+This approach uses Microsoft Entra ID authentication and requires authentication method registration and Conditional Access configuration.\r\n+\r\n+## Prerequisites\r\n+\r\n+Before you begin, make sure that:\r\n+\r\n+- The user has a Microsoft Entra ID account.\r\n+- Microsoft Authenticator is installed on the user's iOS or Android mobile device.\r\n+- Your organization's security policies allow Microsoft Authenticator passwordless phone sign-in.\r\n+\r\n+Important\r\n+\r\n+Microsoft Authenticator passwordless phone sign-in doesn't meet the phishing-resistant authentication strength requirement. If your organization enforces phishing-resistant authentication, evaluate whether this interim approach meets your security policies.\r\n+\r\n+## Configure passwordless sign-in\r\n+\r\n+### Step 1: Enable passwordless authentication\r\n+\r\n+In the [Microsoft Entra admin center](https://entra.microsoft.com/):\r\n+\r\n+1. Go to **Authentication methods** &gt; **Policies**.\r\n+2. Select **Microsoft Authenticator**.\r\n+3. For all users or the Microsoft Entra ID group you want, set the authentication mode to **Any** or **Passwordless**.\r\n+4. Select **Save**.\r\n+\r\n+### Step 2: Have the user register for passwordless sign-in\r\n+\r\n+The user completes these steps on their mobile device:\r\n+\r\n+1. In **Microsoft Authenticator**, select the registered account.\r\n+2. Select **Set up Passwordless sign-in requests**.\r\n+3. Follow the instructions in the app to finish registering the account for passwordless phone sign-in.\r\n+\r\n+### Step 3: Check Conditional Access policies\r\n+\r\n+Microsoft recommends creating separate Conditional Access policies for Teams phone sign-in. Use device filters so the policies apply only to Teams phones. To learn more about device filters, see [Authentication best practices for Teams phones](authentication-best-practices-phones).\r\n+\r\n+Review the Conditional Access policies that apply to the user and to Teams phone sign-in. Make sure the authentication strength allows Microsoft Authenticator passwordless phone sign-in by not requiring phishing-resistant authentication.\r\n+\r\n+### Step 4: Sign in to the Teams phone\r\n+\r\n+1. On the Teams phone, select **Sign in on this device**.\r\n+2. Enter the user's email address.\r\n+3. If Microsoft Authenticator passwordless sign-in is offered, select it.\r\n+4. Approve the sign-in request in Microsoft Authenticator on the user's mobile device.\r\n+5. Confirm that the Teams phone signs in without using DCF.\r\n+\r\n+## Troubleshooting\r\n+\r\n+### Microsoft Authenticator isn't offered as a sign-in option\r\n+\r\n+- Make sure the user registered for passwordless phone sign-in, not only Authenticator push notifications for multifactor authentication (MFA).\r\n+- Check whether Conditional Access authentication strength requirements exclude this method.\r\n+- Review the Microsoft Entra sign-in logs for authentication failures or policy restrictions.\r\n+- Confirm that the Teams phone model, software version, and sign-in flow support this method.\r\n+\r\n+### The user is still prompted for a password\r\n+\r\n+- Check the user's passwordless registration and the authentication methods available to them.\r\n+- Check whether the sign-in flow supports Microsoft Authenticator passwordless authentication.\r\n+- Review the Conditional Access policies that apply and the Microsoft Entra sign-in logs.\r\n+\r\n+## Security considerations\r\n+\r\n+Microsoft Authenticator passwordless phone sign-in removes the need to enter a password, but it isn't classified as phishing-resistant authentication. Don't treat it as equivalent to passkeys or FIDO2 authentication.\r\n+\r\n+Before you deploy broadly, test these scenarios: first sign-in, later sign-ins, sign-out, device restart, and device reset.\n\\ No newline at end of file\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/phones/passwordless-sign-in-personal-teams-phones.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/phones/passwordless-sign-in-personal-teams-phones",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:added:Teams/phones/passwordless-sign-in-personal-teams-phones.md",
+      "firstSeenAt": "2026-11-13T09:42:41.330Z",
+      "englishSummary": {
+        "category": "New feature",
+        "headline": "Passwordless sign-in guidance for personal Teams phones",
+        "summary": "New guidance explains how to use Microsoft Authenticator passwordless phone sign-in for personally assigned Teams phones without device code flow. It covers prerequisites, registration, and Conditional Access configuration.",
+        "adminImpact": "Admins can reduce reliance on device code flow, but adopting this option requires Entra authentication-method and Conditional Access setup. It doesn't satisfy phishing-resistant authentication requirements.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/aa-cq-plan-overview.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-plan-overview.md b/Teams/aa-cq-plan-overview.md\nindex 3a780e5..8d29577 100644\n--- a/Teams/aa-cq-plan-overview.md\n+++ b/Teams/aa-cq-plan-overview.md\n@@ -101,7 +101,7 @@ Together, Teams Phone Agent and Microsoft Copilot Studio offer a scalable, custo\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -109,7 +109,7 @@ Together, Teams Phone Agent and Microsoft Copilot Studio offer a scalable, custo\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-plan-overview.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-plan-overview",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-plan-overview.md",
+      "firstSeenAt": "2026-11-13T09:42:41.202Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Configuration links now point to the updated section",
+        "summary": "The plan overview links for maximum call length and configurable disconnect messages now target the “What’s new: configurable call length” section.",
+        "adminImpact": "No action is required; administrators can use the updated links to find the configuration guidance.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md b/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\nindex 9eef5af..f5623b6 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\n@@ -133,7 +133,7 @@ None.\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -141,7 +141,7 @@ None.\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-agents-queues",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "firstSeenAt": "2026-11-13T09:42:41.217Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated links for configurable call length",
+        "summary": "The documentation now points both maximum call length links to the correct configurable call length section.",
+        "adminImpact": "Administrators following the guidance can use the updated links to reach the relevant Teams admin center configuration details.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md b/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md\nindex 47fb616..fa167d8 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md\n@@ -114,7 +114,7 @@ Customers with Teams Phone Agents serving these areas that have time zone config\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -122,7 +122,7 @@ Customers with Teams Phone Agents serving these areas that have time zone config\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-cmdlets",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+      "firstSeenAt": "2026-11-13T09:42:41.234Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated links for Teams Phone agent call-length settings",
+        "summary": "The documentation links for configurable maximum call length and maximum call length now point to the “What’s new: configurable call length” section. Both settings remain documented as configurable in Teams admin center.",
+        "adminImpact": "Administrators may use the updated links when navigating the documentation; no required action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md b/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md\nindex 69f3541..06eedbd 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md\n@@ -140,7 +140,7 @@ None.\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -148,7 +148,7 @@ None.\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-template-spam-detection",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+      "firstSeenAt": "2026-11-13T09:42:41.247Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated links for configurable call length guidance",
+        "summary": "The article’s links for maximum call length and configurable disconnect messages now point to the “What’s new: configurable call length” section.",
+        "adminImpact": "Administrators can use the corrected links to access the relevant configuration guidance.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md b/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md\nindex 3ff9782..1b65e17 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md\n@@ -132,7 +132,7 @@ None.\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -140,7 +140,7 @@ None.\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-tools-appointments",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+      "firstSeenAt": "2026-11-13T09:42:41.259Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated links for configurable call length",
+        "summary": "Two references now point to the corrected configurable-call-length section, while noting that maximum call length can be configured in Teams admin center.",
+        "adminImpact": "No action required; use the updated links when locating the configuration guidance.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md b/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md\nindex 757dadc..7e495a6 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md\n@@ -132,7 +132,7 @@ None.\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -140,7 +140,7 @@ None.\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-tools-questions-answers",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+      "firstSeenAt": "2026-11-13T09:42:41.272Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated links for configurable call length",
+        "summary": "Two references now point to the `whats-new-configurable-call-length` section instead of `configurable-call-length`.",
+        "adminImpact": "Administrators following these links will reach the section describing configuration in Teams admin center.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-ubb.md b/Teams/aa-cq-setup-teams-phone-agent-ubb.md\nindex 719a9c4..44fb88e 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-ubb.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-ubb.md\n@@ -133,7 +133,7 @@ None.\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -141,7 +141,7 @@ None.\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-ubb",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "firstSeenAt": "2026-11-13T09:42:41.284Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated links for configurable call length guidance",
+        "summary": "Two links now point to the `whats-new-configurable-call-length` section instead of `configurable-call-length`. The page continues to state that maximum call length can be configured in Teams admin center.",
+        "adminImpact": "Administrators should use the updated links when accessing this guidance. No configuration change is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent.md b/Teams/aa-cq-setup-teams-phone-agent.md\nindex 963b504..ea162be 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent.md\n@@ -182,7 +182,7 @@ None.\n     - Teams Phone Agent is now generally available to all customers.\r\n     - [Appointments integration with Microsoft Bookings](aa-cq-setup-teams-phone-agent-tools-appointments) can be configured in Teams admin center.\r\n     - [Automatic Recording for Teams Phone Agent](aa-cq-setup-teams-phone-agent-template-recording-automatic) can be configured in Teams admin center.\r\n-    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length with configurable disconnect message](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n     - Question and Answers URLs are refreshed daily.\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) for Teams Phone Agent updated.\r\n@@ -190,7 +190,7 @@ None.\n     - Appointments integration with Microsoft Bookings can be configured via PowerShell.\r\n - August 31, 2026\r\n     - [AI disclaimer](aa-cq-setup-teams-phone-agent#ai-disclaimer-customization) can be configured in Teams admin center.\r\n-    - [Maximum call length](aa-cq-setup-teams-phone-agent#configurable-call-length) can be configured in Teams admin center.\r\n+    - [Maximum call length](aa-cq-setup-teams-phone-agent#whats-new-configurable-call-length) can be configured in Teams admin center.\r\n - August 17, 2026\r\n     - Automatic Recording for Teams Phone Agent can be configured via PowerShell.\r\n - August 12, 2026\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/aa-cq-setup-teams-phone-agent.md",
+      "firstSeenAt": "2026-11-13T09:42:41.298Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Updated links for configurable call length",
+        "summary": "The Teams Phone agent documentation now points both configurable call-length references to the “What’s new: Configurable call length” section instead of the previous anchor.",
+        "adminImpact": "No administrator action is required; the documented configuration location in Teams admin center is unchanged.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/teams-phones-certified-hardware.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/devices/teams-phones-certified-hardware.md b/Teams/devices/teams-phones-certified-hardware.md\nindex ce7710a..6b0934b 100644\n--- a/Teams/devices/teams-phones-certified-hardware.md\n+++ b/Teams/devices/teams-phones-certified-hardware.md\n@@ -240,6 +240,8 @@ Devices must be updated to newer application releases (when available) to remain\n \r\n | Device model | Latest firmware version | Minimum version details | Included Microsoft applications | Release date | Cloud |\r\n | --- | --- | --- | --- | --- | --- |\r\n+| CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.5.1.0130 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026047602` Microsoft Intune: `25.02.1` Authenticator: `6.2601.189` Admin Agent: `1.0.0.202604060507.product (820)` | November 10, 2026 | DoD |\r\n+| CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.5.1.0130 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026047602` Microsoft Intune: `25.02.1` Authenticator: `6.2601.189` Admin Agent: `1.0.0.202604060507.product (820)` | November 10, 2026 | GCCH |\r\n | CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.5.0.1321 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026047602` Microsoft Intune: `25.02.1` Authenticator: `6.2601.189` Admin Agent: `1.0.0.202604060507.product (820)` | Sepetember 18, 2026 | DoD |\r\n | CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.5.0.1321 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026047602` Microsoft Intune: `25.02.1` Authenticator: `6.2601.189` Admin Agent: `1.0.0.202604060507.product (820)` | Sepetember 17, 2026 | GCCH |\r\n | CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.4.0.1491 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2025443703` Microsoft Intune: `25.02.1` Authenticator: `6.2509.6046` Admin Agent: `1.0.0.202511230136.product  (803)` | June 26, 2026 | GCCH |\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/teams-phones-certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/teams-phones-certified-hardware",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/devices/teams-phones-certified-hardware.md",
+      "firstSeenAt": "2026-11-13T09:42:41.311Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Certified hardware table adds DoD and GCCH entries",
+        "summary": "The Teams phones certified hardware documentation now lists CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 with firmware, Teams client, Intune, Authenticator, and Admin Agent versions for DoD and GCCH, dated November 10, 2026.",
+        "adminImpact": "Administrators can use these entries to verify applicable device and software versions; no action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/intelligent-recap-without-saving-transcripts.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/intelligent-recap-without-saving-transcripts.md b/Teams/intelligent-recap-without-saving-transcripts.md\nindex 143fb42..b1853bf 100644\n--- a/Teams/intelligent-recap-without-saving-transcripts.md\n+++ b/Teams/intelligent-recap-without-saving-transcripts.md\n@@ -12,7 +12,7 @@ author: LanaChin8\n ms.author: v-lanchin\n manager: v-jesserowe\n ms.reviewer: xiale\n-ms.date: 2026-10-26T00:00:00.0000000Z\n+ms.date: 2026-11-12T00:00:00.0000000Z\n ms.topic: how-to\n ms.service: msteams\n ms.subservice: meetings\n@@ -98,7 +98,7 @@ AI summary documents are stored in the Meetings folder of the meeting organizer'\n \r\n 1. In the left navigation of the Teams admin center, go to **Meetings** &gt; **Meeting policies**.\r\n 2. Select an existing policy or create a new one.\r\n-3. Under **AI memory and archive**, next to **Set a default expiration time for Intelligent recap docx**, enter the number of days that documents are retained. You can specify a value from **1** to **9999** days, or **-1** for no expiration.\r\n+3. Under **Copilot and other AI**, next to **Set a default expiration time for Intelligent Recap .docx files for non-transcribed meetings**, enter the number of days that documents are retained. You can specify a value from **1** to **9999** days, or **-1** for no expiration.\r\n 4. Select **Save**.\r\n \r\n ### Use PowerShell\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/intelligent-recap-without-saving-transcripts.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/intelligent-recap-without-saving-transcripts",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/intelligent-recap-without-saving-transcripts.md",
+      "firstSeenAt": "2026-11-13T09:42:41.325Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Intelligent Recap retention setting documentation updated",
+        "summary": "The setting is now documented under **Copilot and other AI** as **Set a default expiration time for Intelligent Recap .docx files for non-transcribed meetings**. Retention can be set from 1 to 9999 days, or -1 for no expiration.",
+        "adminImpact": "Admins can use the updated location and name when configuring retention for these Intelligent Recap files.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/prepare-network.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 1,
+      "changes": 3,
+      "patch": "diff --git a/Teams/prepare-network.md b/Teams/prepare-network.md\nindex cf00078..0eaf4a5 100644\n--- a/Teams/prepare-network.md\n+++ b/Teams/prepare-network.md\n@@ -15,7 +15,7 @@ ms.topic: how-to\n ms.service: msteams\n ms.subservice: msteams-admin\n ms.reviewer: snchatur\n-ms.date: 2026-05-26T00:00:00.0000000Z\n+ms.date: 2026-10-28T00:00:00.0000000Z\n audience: admin\n description: Learn about preparing your organization's network for Microsoft Teams, including network requirements, network optimization, and bandwidth requirements.\n ms.localizationpriority: high\n@@ -111,6 +111,7 @@ For an in-depth discussion of network optimization, including guidance for ident\n | Network planner | For help with assessing your network, including bandwidth calculations and network requirements across your org's physical locations, check out the [Network Planner](/en-us/microsoftteams/network-planner) tool, in the [Teams admin center](https://admin.teams.microsoft.com). When you provide your network details and Teams usage, the Network Planner calculates your network requirements for deploying Teams and cloud voice across your organization's physical locations.<br><br>For an example scenario, see [Using Network Planner - example scenario](/en-us/microsoftteams/tutorial-network-planner-example). |\r\n | Advisor for Teams | [Advisor for Teams](/en-us/microsoftteams/use-advisor-teams-roll-out) is part of the [Teams admin center](https://admin.teams.microsoft.com). It assesses your Microsoft 365 or Office 365 environment and identifies the most common configurations that you might need to update or modify before you can successfully roll out Teams. |\r\n | External Name Resolution | Be sure that all computers running the Teams client can resolve external DNS queries to discover the services provided by Microsoft 365 or Office 365 and that your firewalls aren't preventing access. For information about configuring firewall ports, go to [Microsoft 365 and Office 365 URLs and IP ranges](/en-us/microsoftteams/office-365-urls-ip-address-ranges). |\r\n+| High-port usage | Teams media prefers UDP ports 3478-3481. In some environments, such as virtual desktop infrastructure (VDI), Teams clients might also send media to UDP ports 49152-53247. If these ports are blocked, media setup can fail, so allow UDP traffic from Teams clients to destination ports 49152-53247. Direct Routing also uses high ports; for details, see [Plan Direct Routing](/en-us/microsoftteams/direct-routing-plan#media-ports). |\r\n | Maintain session persistence | Make sure your firewall doesn't change the mapped Network Address Translation (NAT) addresses or ports for UDP. |\r\n | Validate NAT pool size | Validate the network address translation (NAT) pool size required for user connectivity. When multiple users and devices access Microsoft 365 or Office 365 using [Network Address Translation (NAT) or Port Address Translation (PAT)](/en-us/office365/enterprise/nat-support-with-office-365), you need to ensure that the devices hidden behind each publicly routable IP address don't exceed the supported number. Ensure that adequate public IP addresses are assigned to the NAT pools to prevent port exhaustion. Port exhaustion contributes to internal users and devices being unable to connect to the Microsoft 365 or Office 365 service. |\r\n | Routing to Microsoft data centers | [Implement the most efficient routing to Microsoft data centers](/en-us/office365/enterprise/client-connectivity). Identify locations that can use local or regional egress points to connect to the Microsoft network as efficiently as possible. |\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/prepare-network.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/prepare-network",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/prepare-network.md",
+      "firstSeenAt": "2026-11-13T09:42:41.343Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Teams documentation adds high UDP port guidance",
+        "summary": "The network preparation guidance now states that Teams clients, including in some VDI environments, might send media to UDP ports 49152–53247. Blocking these ports can cause media setup failures.",
+        "adminImpact": "Review firewall rules and allow the specified UDP traffic from Teams clients where required.",
+        "actionRequired": true,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/teams-recording-compliance.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "patch": "diff --git a/Teams/teams-recording-compliance.md b/Teams/teams-recording-compliance.md\nindex abb0c68..9111801 100644\n--- a/Teams/teams-recording-compliance.md\n+++ b/Teams/teams-recording-compliance.md\n@@ -188,7 +188,7 @@ The following list includes partners certified to deliver a compliance recording\n | NICE Engage | [https://www.nice.com/products/recording/engage](https://www.nice.com/products/recording-management) |\r\n | NICE NTR-X | https://www.niceactimize.com/compliance/ms-teams-recording.html |\r\n | Numonix | https://numonix.cloud |\r\n-| Oak Innovation | https://www.oakinnovate.com/clarify |\r\n+| Subphonic | https://www.subphonic.ai/products/focus#teams |\r\n | Theta Lake | https://thetalake.com/integrations/microsoft/ |\r\n | Tollring | https://tollring.com/compliance-recording-for-microsoft-teams/ |\r\n | Touch Call Recording | https://touchcallrecording.com/teams-policy-based-recording-for-callings-and-meetings |\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/teams-recording-compliance.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/teams-recording-compliance",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/teams-recording-compliance.md",
+      "firstSeenAt": "2026-11-13T09:42:41.357Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Partner listing updated",
+        "summary": "The compliance recording partners table now lists Subphonic and its Teams product link instead of Oak Innovation.",
+        "adminImpact": "Administrators using the partner list should refer to the updated Subphonic entry.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/tmr-meeting-recording-change.md",
+      "status": "modified",
+      "additions": 0,
+      "deletions": 4,
+      "changes": 4,
+      "patch": "diff --git a/Teams/tmr-meeting-recording-change.md b/Teams/tmr-meeting-recording-change.md\nindex 4dad53f..dc60d8e 100644\n--- a/Teams/tmr-meeting-recording-change.md\n+++ b/Teams/tmr-meeting-recording-change.md\n@@ -98,10 +98,6 @@ For **meetings scheduled using a shared mailbox**, the shared mailbox is conside\n \r\n For details on shared mailboxes, see [About shared mailboxes - Microsoft 365 admin](/en-us/microsoft-365/admin/email/about-shared-mailboxes).\r\n \r\n-Note\r\n-\r\n-When shared mailboxes don't have a Teams license, they follow the global identity's meeting policy. If a shared mailbox without a Teams license organizes a meeting and you set **`-allowCloudRecording`** to false in the global policy, your users can't record. If you want to set a custom meeting policy for a shared mailbox, you must assign a Teams license first.\r\n-\r\n ### Video on Demand (VOD)\r\n \r\n When organizers record events, the recordings are stored in OneDrive. When an organizer uses VOD to publish event recordings, the recordings are stored in SharePoint Embedded File Storage Containers.\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/tmr-meeting-recording-change.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/tmr-meeting-recording-change",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/tmr-meeting-recording-change.md",
+      "firstSeenAt": "2026-11-13T09:42:41.369Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Clarified recording policy for unlicensed shared mailboxes",
+        "summary": "The documentation now explains that shared mailboxes without a Teams license follow the global identity’s meeting policy. If global cloud recording is disabled, users can’t record meetings organized by those mailboxes.",
+        "adminImpact": "Review the global meeting policy when unlicensed shared mailboxes organize meetings that require recording.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/vdi-2.md",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 1,
+      "changes": 10,
+      "patch": "diff --git a/Teams/vdi-2.md b/Teams/vdi-2.md\nindex 6f84ca0..51504e0 100644\n--- a/Teams/vdi-2.md\n+++ b/Teams/vdi-2.md\n@@ -12,7 +12,7 @@ author: officedocspr5\n ms.author: odocspr\n manager: jtremper\n ms.topic: article\n-ms.date: 2026-11-10T00:00:00.0000000Z\n+ms.date: 2026-11-12T00:00:00.0000000Z\n ms.service: msteams\n ms.subservice: msteams-admin\n audience: admin\n@@ -455,6 +455,14 @@ We recommend implementing these QoS policies using the endpoint source ports and\n 1. **VPN network**. Not recommended for media traffic.\r\n 2. **Packet shapers**. Any kind of packet sniffer, packet inspection, proxies, or packet shaper devices aren't recommended for Teams media traffic and might degrade quality significantly.\r\n \r\n+### Media path, DNS and Ports on the endpoint\r\n+\r\n+Media Processors and Transport relays are a critical part of the Teams calling services infrastructure in Azure, because relays allow media connectivity between two clients that would otherwise fail to communicate. Therefore, VDI Administrators must discuss the following topics with their Networking teams since VDI optimization shifts some of the networking requirements to SlimCore running on the user's device.\r\n+\r\n+1. Relay discovery is DNS-based when a participant needs to allocate its own relay and a peer is not offering UDP 3478-3481. An optimized user that cannot resolve public relay names might not generate a relay ICE candidate, and the call will not establish (or establish without media). Relay names are covered by the Teams domains in Microsoft 365 URLs and IP Address ranges, including names under \\*.teams.microsoft.com (e.g. \\*.tr.teams.microsoft.com or \\*.turn.teams.microsoft.com).\r\n+2. Verify that DNS filtering, split-horizon DNS, secure web gateways, PAC logic, or Firewall policies do not block external relay-name resolution.\r\n+3. Customers using Direct Routing need to take into account that Media Processors can also offer candidates in UDP 49152-53247 range in a non-media bypass call. Therefore, these destination UDP ports need to be allowed on the endpoint / branch office.\r\n+\r\n ## Microsoft Teams PowerShell policy for optimization\r\n \r\n The CsTeamsVdiPolicy cmdlets enabled administrators to control the type of meetings that users can create or the features that they can access while in a meeting specifically on a VDI environment, where WebRTC optimization was disabled using the VDI Partner's policy engine ([Citrix Studio](https://docs.citrix.com/en-us/citrix-virtual-apps-desktops/multimedia/opt-ms-teams.html#enable-optimization-of-microsoft-teams), [VMware HTML5 ADMX template](https://docs.vmware.com/en/VMware-Horizon/2203/horizon-remote-desktop-features/GUID-8557C3D7-4B08-4C98-B474-97B795300A6E.html#GUID-8557C3D7-4B08-4C98-B474-97B795300A6E), or [this registry key](/en-us/azure/virtual-desktop/teams-on-avd) for AVD and Windows 365).\r\n",
+      "baseCommitSha": "69c0f63934d5bb9ffc7716652674f2ae2794c7ab",
+      "commitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitMessage": "Mirror Learn: 14 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-12 22:24:15 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/vdi-2.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/vdi-2",
+      "eventId": "teams-docs:462381cbd1dc5c6dd6591897d75830541cd32cf8:modified:Teams/vdi-2.md",
+      "firstSeenAt": "2026-11-13T09:42:41.383Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "VDI guidance adds relay DNS and UDP port requirements",
+        "summary": "The documentation now explains DNS-based relay discovery, warns that blocked relay-name resolution can prevent calls or media, and identifies UDP 49152–53247 for Direct Routing non-media-bypass calls.",
+        "adminImpact": "Review DNS filtering, proxy, and firewall policies, and allow the specified UDP traffic to avoid call or media failures.",
+        "actionRequired": true,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 15,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 1 new, 14 updated, and 0 removed Microsoft Teams documentation files across 3 documentation areas.",
+    "groups": [
+      {
+        "category": "New feature",
+        "title": "Teams phones",
+        "summary": "New guidance explains how to use Microsoft Authenticator passwordless phone sign-in for personally assigned Teams phones without device code flow. It covers prerequisites, registration, and Conditional Access configuration.",
+        "sourceFiles": [
+          "Teams/phones/passwordless-sign-in-personal-teams-phones.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Microsoft Teams",
+        "summary": "The plan overview links for maximum call length and configurable disconnect messages now target the “What’s new: configurable call length” section. The documentation now points both maximum call length links to the correct configurable call length section. The documentation links for configurable maximum call length and maximum call length now point to the “What’s new: configurable call length” section. Both settings remain documented as configurable in Teams admin center. The article’s links for maximum call length and configurable disconnect messages now point to the “What’s new: configurable call length” section. Two references now point to the corrected configurable-call-length section, ",
+        "sourceFiles": [
+          "Teams/aa-cq-plan-overview.md",
+          "Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+          "Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+          "Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+          "Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+          "Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+          "Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+          "Teams/aa-cq-setup-teams-phone-agent.md",
+          "Teams/intelligent-recap-without-saving-transcripts.md",
+          "Teams/prepare-network.md",
+          "Teams/teams-recording-compliance.md",
+          "Teams/tmr-meeting-recording-change.md",
+          "Teams/vdi-2.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams devices",
+        "summary": "The Teams phones certified hardware documentation now lists CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 with firmware, Teams client, Intune, Authenticator, and Admin Agent versions for DoD and GCCH, dated November 10, 2026.",
+        "sourceFiles": [
+          "Teams/devices/teams-phones-certified-hardware.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "New feature",
+        "headline": "Teams phones",
+        "detail": "New guidance explains how to use Microsoft Authenticator passwordless phone sign-in for personally assigned Teams phones without device code flow. It covers prerequisites, registration, and Conditional Access configuration."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Microsoft Teams",
+        "detail": "The plan overview links for maximum call length and configurable disconnect messages now target the “What’s new: configurable call length” section. The documentation now points both maximum call length links to the correct configurable call length section. The documentation links for configurable maximum call length and maximum call length now point to the “What’s new: configurable call length” section. Both settings remain documented as configurable in Teams admin center. The article’s links for maximum call length and configurable disconnect messages now point to the “What’s new: configurable call length” section. Two references now point to the corrected configurable-call-length section, "
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams devices",
+        "detail": "The Teams phones certified hardware documentation now lists CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 with firmware, Teams client, Intune, Authenticator, and Admin Agent versions for DoD and GCCH, dated November 10, 2026."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

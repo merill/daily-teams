@@ -1,0 +1,346 @@
+{
+  "newFiles": [],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/devices/known-issues.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "patch": "diff --git a/Teams/devices/known-issues.md b/Teams/devices/known-issues.md\nindex 35c6702..cbbcba3 100644\n--- a/Teams/devices/known-issues.md\n+++ b/Teams/devices/known-issues.md\n@@ -92,6 +92,7 @@ platformId: 448a114f-8665-34fc-cbe8-e0c937d45911\n \r\n | Issue | Description | Workaround |\r\n | --- | --- | --- |\r\n+| Cannot manage ringtones for individual line keys with a Shared Space license. | Phones configured with a Teams Shared Space license do not support managing ringtones on individual line keys. This behavior applies to all such devices regardless of version. Managing ringtones requires a user license, such as an E5 license. Additionally, line keys programmed as Call Queues will not apply custom ringtones. | Use a user license like an E5 to manage ringtones on line keys. There is no workaround to manage ringtones on line keys configured as Call Queues, which always use the default ringtone. |\r\n | Incoming calls generate a \"Just me\" chat automatically. | When you receive a call from a main call queue on a Teams Phone, a \"Just Me\" chat is generated automatically in the Teams desktop app. This chat only includes you and it remains in the chat notifications list until you delete it manually. A new chat is generated with each incoming call.The problem occurs specifically when answering calls from a call queue on a Teams Phone device, but not when they're answered by using the Teams desktop app. | To work around the issue, turn on Conference mode for the call queue. Use the following steps:<br>1. In the Microsoft Teams admin center, select **Call queues**.<br>2. Select **Edit a call queue** &gt; **Call answering**.<br>3. On the Call answering page, toggle the **Conference mode** button to turn it on. |\r\n | Unable to save app configuration settings in the Teams admin center. | In the Microsoft Teams admin center you're not able to access the **Allowed apps** feature to remove applications that're installed on Teams Phone devices. This feature has been rolled back temporarily. | No workaround is available at this time. |\r\n | Can't configure ringtones for line keys on a device. | When you use line keys on either a Yealink, AudioCodes, or Poly device that is provisioned with a Teams Shared Space license, you can't configure ringtones for individual line keys. | Configure a ringtone for a line key by using a user license, such as an E5 license instead.  Use the following steps:<br>1. On a touch-enabled device's home screen, select the **Line Keys** app. On a non-touch enabled device, select an assigned line key.<br>2. By using your finger, long press on an assigned line key and select **Manage Ringtone**. |\r\n",
+      "baseCommitSha": "017c38860f4ffcc5b765cb568ee0340ab99bc72a",
+      "commitSha": "67d08e7d3b741462041a384d7a541b0fb43e3112",
+      "commitMessage": "Mirror Learn: 1 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-14 11:41:44 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/known-issues.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/known-issues",
+      "eventId": "teams-docs:67d08e7d3b741462041a384d7a541b0fb43e3112:modified:Teams/devices/known-issues.md",
+      "firstSeenAt": "2026-11-14T19:14:48.175Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Shared Space phones can’t manage individual line-key ringtones",
+        "summary": "The known-issues documentation now states that devices with a Teams Shared Space license don’t support managing ringtones for individual line keys, regardless of device version. A user license is required for ringtone management.",
+        "adminImpact": "Account for this limitation when configuring Shared Space phones and licensing users who need to manage line-key ringtones.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/certified-device-apps.md",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 1,
+      "changes": 10,
+      "patch": "diff --git a/Teams/devices/certified-device-apps.md b/Teams/devices/certified-device-apps.md\nindex 6880b4c..a850fe8 100644\n--- a/Teams/devices/certified-device-apps.md\n+++ b/Teams/devices/certified-device-apps.md\n@@ -12,7 +12,7 @@ author: MSTonySmith\n ms.author: tonysmit\n manager: pamgreen\n ms.reviewer: vapati\n-ms.date: 2026-10-29T00:00:00.0000000Z\n+ms.date: 2026-11-13T00:00:00.0000000Z\n ms.topic: article\n audience: Admin\n ms.service: msteams\n@@ -266,6 +266,7 @@ The following are supported versions of the Authenticator app:\n \r\n | **Release date** | **App version** |\r\n | --- | --- |\r\n+| November 2026 | 6.2610.6918 |\r\n | October 2026 | 6.2609.6407 |\r\n | September 2026 | 6.2607.4685 |\r\n | July 2026 | 6.2606.4246 |\r\n@@ -275,6 +276,13 @@ The following are supported versions of the Authenticator app:\n | December 2025 | 6.2509.6046 |\r\n | December 2024 | 6.2410.7268 |\r\n \r\n+### 6.2610.6918\r\n+\r\n+**This release is available for all Teams certified devices and contains following updates.**\r\n+\r\n+- Telemetry improvements and additional optimizations to conserve eMMC writes\r\n+- Security and reliability improvements\r\n+\r\n ### 6.2609.6407\r\n \r\n **This release is available for all Teams certified devices and contains following updates.**\r\n",
+      "baseCommitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitSha": "4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9",
+      "commitMessage": "Mirror Learn: 5 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-13 22:06:37 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/certified-device-apps.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/certified-device-apps",
+      "eventId": "teams-docs:4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9:modified:Teams/devices/certified-device-apps.md",
+      "firstSeenAt": "2026-11-14T19:14:48.194Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Teams certified device release 6.2610.6918 documented",
+        "summary": "The documentation now lists the November 2026 release, available for all Teams certified devices, with telemetry, eMMC write-conservation, security, and reliability improvements.",
+        "adminImpact": "No administrator action is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/manage-voicemail-policies.md",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 2,
+      "changes": 11,
+      "patch": "diff --git a/Teams/manage-voicemail-policies.md b/Teams/manage-voicemail-policies.md\nindex b63e5a2..01de04d 100644\n--- a/Teams/manage-voicemail-policies.md\n+++ b/Teams/manage-voicemail-policies.md\n@@ -63,7 +63,7 @@ Warning\n \r\n For Skype for Business customers, disabling voicemail through a Microsoft Teams calling policy might also disable the voicemail service for your Skype for Business users.\r\n \r\n-Voicemail policies allow you to configure and assign existing or new voicemail policies to groups of users for features such as call answering rules, voicemail transcription, transcription profanity masking, transcription translation, and system prompt language.\r\n+Voicemail policies allow you to configure and assign existing or new voicemail policies to groups of users for features such as call answering rules, voicemail transcription, transcription profanity masking, transcription translation, voicemail pre-triage with AI and system prompt language.\r\n \r\n Before specifying policies, you should read [Set up Cloud Voicemail](set-up-phone-system-voicemail). For information on managing settings for individual users, see [Manage Voicemail settings](manage-voicemail-settings).\r\n \r\n@@ -78,6 +78,7 @@ The default policies for users are:\n - Editing call answering rules is enabled.\r\n - Primary and secondary system prompt languages are set to null and the user's voicemail language setting is used.\r\n - No pre- or postamble configured.\r\n+- Voicemails pre-triage with AI isn't enabled.\r\n \r\n You can use the global (Org-wide default) policy that's created automatically or create and assign custom policies.\r\n \r\n@@ -136,11 +137,17 @@ You can also use PowerShell to configure and assign existing or new voicemail po\n - **Voicemail transcription** - This setting controls whether the Cloud Voicemail service generates a text transcription of the recorded voicemail and include it in the voicemail message. The transcription is done based on the language detected in the recorded voicemail.\r\n - **Translation for transcriptions** - This setting controls whether the Cloud Voicemail service translates the transcription of the recorded voicemail. The translation is attempted in the preferred language of the voicemail receiver.\r\n - **Mask profanity in voicemail transcription** - This setting controls whether the Cloud Voicemail service masks profanity found in the transcription of the voicemail.\r\n-- **Users can share data for service improvement** - This setting specifies whether voicemail and transcription data is shared with the service for training and improving accuracy. If set to false, voicemail data isn't be shared, regardless of user choice.\r\n+- **Users can share data for service improvement** - This setting is deprecated and no longer has any effect. Its value is ignored by the service and is retained only for backward compatibility. Historically it specified whether voicemail and transcription data was shared with the service for training and improving accuracy.\r\n - **Play preamble audio file before voicemail greeting** - The audio file to play to the caller before the user's voicemail greeting is played.\r\n - **Play postamble audio file after voicemail greeting** - The audio file to play to the caller after the user's voicemail greeting has played and before the caller is allowed to leave a voicemail message.\r\n - **Disconnect the call if preamble or postamble audio can't be played** - Is playing the Pre- or Postamble mandatory before the caller can leave a message.\r\n \r\n+Important\r\n+\r\n+The following configuration parameter is available through the Microsoft Frontier Program. General Availability for this functionality has not been determined at this time.\r\n+\r\n+- **Personal voicemail AI triage** - Specifies whether AI-powered triage is enabled for personal voicemail. When enabled, personal voicemail messages for eligible users are enriched with AI-generated metadata from voicemail transcription, including a summary, suggested actions, a category, and an importance classification. This feature requires a Microsoft 365 Copilot license and a configured spending policy for usage-based billing.\r\n+\r\n Note\r\n \r\n When transcription is turned off, the email users receive contains a message indicating that the audio quality wasn't good enough for transcription to take place.\n\\ No newline at end of file\n",
+      "baseCommitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitSha": "4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9",
+      "commitMessage": "Mirror Learn: 5 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-13 22:06:37 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/manage-voicemail-policies.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/manage-voicemail-policies",
+      "eventId": "teams-docs:4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9:modified:Teams/manage-voicemail-policies.md",
+      "firstSeenAt": "2026-11-14T19:14:48.201Z",
+      "englishSummary": {
+        "category": "Private preview",
+        "headline": "Voicemail AI triage is now documented",
+        "summary": "The documentation adds AI-powered voicemail pre-triage and the Personal voicemail AI triage parameter, available through the Microsoft Frontier Program. It also marks the service-improvement data-sharing setting as deprecated and ineffective.",
+        "adminImpact": "Administrators should not rely on the data-sharing setting to control service behavior. AI triage configuration is limited to the Frontier Program; no required action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/certified-hardware.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "patch": "diff --git a/Teams/rooms/certified-hardware.md b/Teams/rooms/certified-hardware.md\nindex c33bf56..15832cd 100644\n--- a/Teams/rooms/certified-hardware.md\n+++ b/Teams/rooms/certified-hardware.md\n@@ -397,6 +397,7 @@ The following Windows Touchboard Devices are Certified under the Microsoft Teams\n | Windows Touchboard Devices | Processor | RAM | Disk |\r\n | --- | --- | --- | --- |\r\n | [DTEN D7X AI Board 55\"](https://www.dten.com/products/d7x-ai/) | Ultra 7 155H | 16 GB | 256 GB |\r\n+| [Logitech Rally Board 65 for Windows Touchboard](https://www.logitech.com/video-collaboration/partners/microsoft.html) | Core Ultra 7 265H | 32GB | 250GB |\r\n | MAXHUB XBoard V555T | Core i5 | 16 GB | 256 GB |\r\n | MAXHUB XBoard V655T | Core i5 | 16 GB | 256 GB |\r\n | MAXHUB XBoard V755T | Core i5 | 16 GB | 256 GB |\r\n",
+      "baseCommitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitSha": "4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9",
+      "commitMessage": "Mirror Learn: 5 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-13 22:06:37 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/certified-hardware",
+      "eventId": "teams-docs:4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9:modified:Teams/rooms/certified-hardware.md",
+      "firstSeenAt": "2026-11-14T19:14:48.217Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Logitech Rally Board 65 added to the hardware list",
+        "summary": "The certified hardware documentation now lists the Logitech Rally Board 65 for Windows Touchboard, with an Intel Core Ultra 7 265H, 32 GB of memory, and 250 GB of storage.",
+        "adminImpact": "Administrators can consider this device when evaluating supported Teams Rooms hardware. No action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/room-planning-guidance.md",
+      "status": "modified",
+      "additions": 11,
+      "deletions": 3,
+      "changes": 14,
+      "patch": "diff --git a/Teams/rooms/room-planning-guidance.md b/Teams/rooms/room-planning-guidance.md\nindex 333edf5..597672b 100644\n--- a/Teams/rooms/room-planning-guidance.md\n+++ b/Teams/rooms/room-planning-guidance.md\n@@ -11,7 +11,7 @@ recommendations: true\n author: MSTonySmith\n ms.author: tonysmit\n manager: pamgreen\n-ms.date: 2025-10-14T00:00:00.0000000Z\n+ms.date: 2026-07-10T00:00:00.0000000Z\n ms.reviewer: sohailta\n ms.topic: article\n audience: Admin\n@@ -118,7 +118,7 @@ If you install Teams Rooms solutions or if you already have rooms that have alre\n \r\n *Video:* Video in these spaces will be handled by the Teams Rooms solution and its Microsoft-certified cameras.\r\n \r\n-*Engagement:* Your end users are able to take advantage of the complete Teams Rooms experience for their meetings, ensuring that everyone can join meetings easily and have great and audio and video.\r\n+*Engagement:* Your end users are able to take advantage of the complete Teams Rooms experience for their meetings, ensuring that everyone can join meetings easily and have great audio and video.\r\n \r\n #### Best experience – Teams Rooms solutions used in conjunction with personal devices\r\n \r\n@@ -164,6 +164,14 @@ As important as good audio, high-quality video is a necessity for modern Teams c\n - In shared spaces, the options and features expand. **Smaller rooms** may be covered by cameras included within all-in-one audio devices, such as soundbars. These cameras typically feature a wide field of view, ensuring that they capture every participant in the space in a single shot. Many of these cameras also feature things like intelligent framing of the image, so that the camera only shows the people in the meeting and not empty chairs, or people counting, to track and understand space utilization.\r\n - In **larger rooms**, cameras feature the technology needed to capture participants in a variety of locations at varying distances away. These cameras can capture groups or focus on specific individuals while maintaining great visual clarity. Devices that can track and feature only active speakers are regularly used in larger spaces so that many participants may be featured individually throughout a meeting as they contribute their thoughts.\r\n \r\n+### Console Configuration\r\n+\r\n+Microsoft Teams Rooms typically include a console intended to be placed on a meeting room table or wall mounted. Each Teams Rooms console is fully touch interactive and offers controls for: meeting join, meeting interaction, participant control, etc. Teams Rooms consoles come in many forms, some are USB connected while others are network connected and may offer content ingest as well.\r\n+\r\n+Teams Rooms all-in-one boards are the exception and don't typically include a console, instead call controls are available on the all-in-one board. A console can be added to an all-in-one board if desired.\r\n+\r\n+Teams Rooms devices both Windows and Android have a single console user interface intended to support a single in-room console. However, certain meeting room designs may be better suited for multiple consoles, in that case, Microsoft allows Teams Rooms device manufacturers to replicate the Teams Rooms console interface across multiple consoles. In this experience, an action taken on one console will also be shown on another console display, this is the expected behavior and is allowed by Microsoft and supported in partnership with the device manufacturer. Teams Rooms customers should consult with their device manufacturer to see if this feature is available on their specific devices.\r\n+\r\n ### Display Configuration\r\n \r\n The display configuration of a Microsoft Teams Rooms system depends on the primary purpose of the space. The following sections cover supported display configurations and key constraints for collaboration-focused, presentation-focused, and mixed-use spaces.\r\n@@ -701,7 +709,7 @@ Proper lighting enhances video quality and ensures in-room participants appear p\n \r\n Lighting recommendations:\r\n \r\n-- Balanced illumination: Diffused lights, LED panels, and pendent fixtures should be distributed throughout the room to ensure even illumination.\r\n+- Balanced illumination: Diffused lights, LED panels, and pendant fixtures should be distributed throughout the room to ensure even illumination.\r\n - Avoid direct backlighting: Position lights indirectly to prevent silhouettes and maintain facial detail.\r\n - Adjustable lighting: Provide flexibility such as dimmable or zoned lights, and blinds or shades to help tailor brightness.\r\n \r\n",
+      "baseCommitSha": "462381cbd1dc5c6dd6591897d75830541cd32cf8",
+      "commitSha": "4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9",
+      "commitMessage": "Mirror Learn: 5 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-13 22:06:37 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/room-planning-guidance.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/room-planning-guidance",
+      "eventId": "teams-docs:4cf2edec9b7b1e4865006c0ebb5f2bc1405843e9:modified:Teams/rooms/room-planning-guidance.md",
+      "firstSeenAt": "2026-11-14T19:14:48.225Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Teams Rooms planning guidance adds console configuration details",
+        "summary": "The guidance now describes console placement and controls, all-in-one board behavior, and console support across Windows and Android devices. It also corrects wording, spelling, and the publication date.",
+        "adminImpact": "Administrators can use the added console information when planning Teams Rooms; no action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1506734",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-14",
+      "title": "Microsoft Teams: Video sharing from OneDrive in Teams events",
+      "summary": "Microsoft Teams will soon allow organizers and producers to share videos directly from OneDrive during large-scale Teams events using \"Manage what attendees see,\" enabling smoother, higher-quality playback without screen sharing or embedding in PowerPoint. Rollout starts mid-November 2026, requiring no action but recommending informing event staff and updating guidance.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Major update",
+      "url": "/message-center/MC1506734/",
+      "originalUrl": "https://mc.merill.net/message/MC1506734",
+      "body": "<p>Updated November 13, 2026: We have updated the content. If you are a tenant in a GCCH or DoD environment, you can safely ignore this message as you are not impacted. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Microsoft Teams will soon support sharing video directly from OneDrive during Teams events that are optimized for scale (previously called town halls). Organizers and producers using <i>Manage what attendees see</i> can load videos from OneDrive and present them on stage without screen sharing a local media player or embedding videos in PowerPoint. This improvement provides smoother, higher-quality video playback for attendees and simplifies event production through built-in video playback controls.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release (Worldwide):</b> Rollout will begin in mid-November 2026 (previously early November) and end in early December 2026.</li><li><b>General Availability (Worldwide, GCC):</b> Rollout will begin in early December 2026 and is expected to complete by early December 2026.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Teams event organizers and producers using events configured with <i>Manage what attendees see</i>.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>OneDrive</li><li>Teams events</li></ul><p><i>What will happen</i></p><ul><li>Organizers and producers will be able to select and share videos stored in OneDrive directly within Teams events configured with <i>Manage what attendees see and</i> will have access to built-in controls to start and pause video playback during events.</li><li>Videos can be presented on stage without screen sharing a local media player or embedding videos into a PowerPoint presentation.</li><li>Attendees will experience smoother and higher-quality video playback.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No action is required. We recommend that you:</p><ul><li>Inform Teams event organizers and producers that they can share videos directly from OneDrive in Teams events configured with <i>Manage what attendees see</i>.</li><li>Ensure that organizers and producers store videos in OneDrive with the appropriate permissions before using them in events.</li><li>Review and update internal event production guidance that recommends screen sharing locally played videos or embedding videos in PowerPoint.</li></ul><p><b><b>Learn more</b></b></p><p>We will update this post with new documentation.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-13T22:14:57Z",
+      "endDate": "2027-01-01T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-14T00:13:01.18Z",
+      "version": "2026-11-14T00:13:01.18Z",
+      "eventId": "message-center:MC1506734:2026-11-14T00:13:01.18Z",
+      "firstSeenAt": "2026-11-14T19:14:58.673Z"
+    },
+    {
+      "id": "MC1552392",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-13",
+      "title": "Microsoft Teams: Automatic recording indicator for call queue calls on Mobile",
+      "summary": "Microsoft Teams on Mobile will show a clear banner indicating automatic, uninterruptible recording and transcription of call queue calls by the organization. This update, rolling out worldwide in December 2026, aligns mobile with desktop and requires no admin action, though informing calling reps is recommended.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1552392/",
+      "originalUrl": "https://mc.merill.net/message/MC1552392",
+      "body": "<p><b><b>What and Why:</b></b></p><p>When an organization automatically records its call queue calls, calling reps need to know at a glance that the call is being recorded and that this is controlled by the organization.</p><p>For call queue calls that are automatically recorded by the organization, Microsoft Teams on Mobile will clearly indicate that recording and transcription have started automatically and cannot be stopped. This gives calling reps a clear and accurate picture of the call and provides a consistent experience across desktop and Mobile.&nbsp;</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on early December 2026 and expect to complete by mid-December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Once available, calling reps who answer call queue calls that are automatically recorded by your organization will see the updated message in the recording banner in Teams on Mobile.</p><p>What will change:</p><ul><li>The banner will state that recording started automatically and cannot be stopped.</li><li>The previous wording, which implied the user had started the recording, will no longer appear on these calls.</li></ul><p>This change updates only the banner text. It applies to call queue calls that your organization records automatically. Other calls and recordings started manually by users are not affected. Existing consent text, the privacy link, and the AI notice in the banner stay the same.</p><p>This feature does not change how recordings are started, stored, or accessed. Automatic recording for call queues is already available on desktop and is configured by admins in Teams admin center. Mobile now shows the same recording state.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required before rollout. We recommend informing your calling reps about the updated banner, particularly those who answer queue calls on their mobile devices, so they know automatic recording is controlled by the organization and cannot be stopped by the rep.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature"
+      ],
+      "startDate": "2026-11-13T23:47:16Z",
+      "endDate": "2027-03-18T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-13T23:47:30.887Z",
+      "version": "2026-11-13T23:47:30.887Z",
+      "eventId": "message-center:MC1552392:2026-11-13T23:47:30.887Z",
+      "firstSeenAt": "2026-11-14T19:14:58.673Z"
+    },
+    {
+      "id": "MC1552391",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-13",
+      "title": "Microsoft Teams: Copilot in the Queues app on Mobile",
+      "summary": "Microsoft Teams is introducing Copilot in the Queues app on Mobile, allowing reps and supervisors to ask questions about recorded calls for quick insights. Rolling out worldwide from late November to mid-December 2026, it requires Teams Premium and Microsoft 365 Copilot licenses, with no admin action needed before rollout.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "ai",
+        "name": "AI and Copilot",
+        "icon": "/assets/topics/ai.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1552391/",
+      "originalUrl": "https://mc.merill.net/message/MC1552391",
+      "body": "<p><b><b>What and Why:</b></b></p><p>After a customer call, calling reps or supervisor leads often need to know what was discussed. They might be following up on a missed call, picking up a conversation a colleague handled, or checking how a call went. Getting those details usually means going through the call itself, which takes time, especially on Mobile.</p><p>We're introducing Copilot in the Queues app on Microsoft Teams Mobile. From shared call history, calling reps and supervisor leads can ask Copilot questions about a past call and quickly surface relevant information and insights from the conversation. This helps them get up to speed and take the next step without having to review the entire call.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on early December 2026 and expect to complete by mid December 2026.</p><p>Targeted Release (Worldwide): We will begin rolling out on late November 2026 and expect to complete by early December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Once available, eligible users will be able to use Copilot on calls in shared call history in the Queues app on Mobile.</p><p>Users will be able to:</p><ul><li>Open Copilot from a recorded call in shared call history.</li><li>Ask questions about the call and get relevant information and insights from the conversation.</li><li>Understand a customer conversation and decide on a follow-up without reviewing the full call.</li></ul><p>Copilot is available for recorded call queue calls, as it is on desktop.</p><p>&nbsp;Users need a Teams Premium license to use the Queues app and a Microsoft 365 Copilot license to use Copilot.</p><p>This feature does not change how call recordings are created, stored, or accessed. Copilot in the Queues app is already available on desktop, and Mobile brings the same capability to the phone.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required before rollout.</p><p>We recommend that you:</p><ul><li>Confirm that automatic recording is turned on for the call queues where you want users to use Copilot.</li><li>Review Microsoft 365 Copilot and Teams Premium license assignments for the users who will use the feature.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature"
+      ],
+      "startDate": "2026-11-13T23:46:16Z",
+      "endDate": "2027-01-17T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-13T23:46:48.683Z",
+      "version": "2026-11-13T23:46:48.683Z",
+      "eventId": "message-center:MC1552391:2026-11-13T23:46:48.683Z",
+      "firstSeenAt": "2026-11-14T19:14:58.673Z"
+    },
+    {
+      "id": "MC1552390",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-13",
+      "title": "Microsoft Teams: Manage call groups on Mobile",
+      "summary": "Microsoft Teams will allow users to create and manage call groups directly on Mobile, enabling call forwarding and ring settings without desktop access. This feature, rolling out worldwide in December 2026, requires a Teams Phone license and enabled calling policy, with no admin action needed before rollout.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1552390/",
+      "originalUrl": "https://mc.merill.net/message/MC1552390",
+      "body": "<p><b><b>What and Why:</b></b></p><p>Call groups let colleagues answer calls on a user's behalf, but changing one today means going to the desktop. When availability changes, for example when a backup contact is out or a new teammate needs to cover, users often notice while they are away from their desks and cannot update their call group from the phone where they take their calls.</p><p>We're introducing the ability to create and manage a call group directly from Microsoft Teams on Mobile. Users can add or remove members, configure how the group should ring, and choose to forward or simultaneously ring incoming calls to their call group. This makes it easier for on the go users to manage how their calls are handled without needing to reach desktop.</p><p>From Settings, users can open Calling and select Manage call group to view their current call group or create a new one.</p><p>Once the call group is set up, users can forward their calls to the group or ring the group at the same time as their own devices, using the call handling options in Calling settings.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on early December 2026 and expect to complete by mid December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Once available, eligible users will see Manage call group in the Calling settings of Teams on Mobile.</p><p>Users will be able to:</p><ul><li>View their current call group and its members.</li><li>Create a call group if they don't have one.</li><li>Add or remove members.</li><li>Choose how the group rings: Everyone at once or In the order below.</li><li>Reorder members when the ring order matters.</li><li>Forward calls to the call group or have the group ring alongside their own devices.</li></ul><p>Changes made on Mobile apply to the same call group settings that users manage on desktop. Mobile adds a new way to manage them and does not introduce a separate call group.</p><p>This feature is available to users with a Teams Phone license and uses the existing calling policy that controls call groups. If call groups are turned off for a user in their calling policy, they won't be able to use the feature on Mobile.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required before rollout.</p><p>Manage call groups on Mobile uses the same controls as the desktop experience.</p><p>We recommend that you:</p><ul><li>Review the calling policy assigned to the users who should be able to manage call groups, and confirm that call groups are allowed.</li><li>Confirm that those users have a Teams Phone license.</li><li>Inform your users, particularly those who rely on call groups for backup coverage and often work away from their desk uses Mobile.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature"
+      ],
+      "startDate": "2026-11-13T23:45:34Z",
+      "endDate": "2027-01-17T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-13T23:45:43.547Z",
+      "version": "2026-11-13T23:45:43.547Z",
+      "eventId": "message-center:MC1552390:2026-11-13T23:45:43.547Z",
+      "firstSeenAt": "2026-11-14T19:14:58.673Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 2,
+    "totalFiles": 5,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 0 new, 5 updated, and 0 removed Microsoft Teams documentation files across 3 documentation areas.",
+    "groups": [
+      {
+        "category": "Doc update",
+        "title": "Teams devices",
+        "summary": "The known-issues documentation now states that devices with a Teams Shared Space license don’t support managing ringtones for individual line keys, regardless of device version. A user license is required for ringtone management. The documentation now lists the November 2026 release, available for all Teams certified devices, with telemetry, eMMC write-conservation, security, and reliability improvements.",
+        "sourceFiles": [
+          "Teams/devices/known-issues.md",
+          "Teams/devices/certified-device-apps.md"
+        ]
+      },
+      {
+        "category": "Private preview",
+        "title": "Microsoft Teams",
+        "summary": "The documentation adds AI-powered voicemail pre-triage and the Personal voicemail AI triage parameter, available through the Microsoft Frontier Program. It also marks the service-improvement data-sharing setting as deprecated and ineffective.",
+        "sourceFiles": [
+          "Teams/manage-voicemail-policies.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams Rooms",
+        "summary": "The certified hardware documentation now lists the Logitech Rally Board 65 for Windows Touchboard, with an Intel Core Ultra 7 265H, 32 GB of memory, and 250 GB of storage. The guidance now describes console placement and controls, all-in-one board behavior, and console support across Windows and Android devices. It also corrects wording, spelling, and the publication date.",
+        "sourceFiles": [
+          "Teams/rooms/certified-hardware.md",
+          "Teams/rooms/room-planning-guidance.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Doc update",
+        "headline": "Teams devices",
+        "detail": "The known-issues documentation now states that devices with a Teams Shared Space license don’t support managing ringtones for individual line keys, regardless of device version. A user license is required for ringtone management. The documentation now lists the November 2026 release, available for all Teams certified devices, with telemetry, eMMC write-conservation, security, and reliability improvements."
+      },
+      {
+        "category": "Private preview",
+        "headline": "Microsoft Teams",
+        "detail": "The documentation adds AI-powered voicemail pre-triage and the Personal voicemail AI triage parameter, available through the Microsoft Frontier Program. It also marks the service-improvement data-sharing setting as deprecated and ineffective."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams Rooms",
+        "detail": "The certified hardware documentation now lists the Logitech Rally Board 65 for Windows Touchboard, with an Intel Core Ultra 7 265H, 32 GB of memory, and 250 GB of storage. The guidance now describes console placement and controls, all-in-one board behavior, and console support across Windows and Android devices. It also corrects wording, spelling, and the publication date."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

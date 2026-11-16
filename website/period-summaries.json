@@ -377,6 +377,34 @@
         "outputTokens": 4036,
         "costUsd": 0.00517
       }
+    },
+    "2026-11-16": {
+      "headline": "Defender adds Teams message snippets to Advanced Hunting before role-based event invites",
+      "overview": "Two Teams notices define the period: Microsoft Defender for Office 365 is adding permission-controlled Teams message data to Advanced Hunting, while town halls will receive separate invitations for attendees, presenters, and co-organizers beginning in January 2027.",
+      "adminImpact": "Security administrators should account for authorized-analyst access to the new Teams message data in Advanced Hunting. The invitation change rolls out automatically with no admin action required; user notification is recommended.",
+      "keyChanges": [
+        {
+          "title": "Advanced Hunting gains a MessageContents table for Teams messages",
+          "detail": "Microsoft Defender for Office 365 is introducing a new MessageContents table in Advanced Hunting. Authorized security analysts will be able to access Teams message snippets and metadata for threat investigations. Rollout runs from late September through late November 2026, with access controlled by specific permissions.",
+          "product": "Microsoft Defender for Office 365",
+          "sourceId": "MC1474106"
+        },
+        {
+          "title": "Town hall invites will reflect attendee roles",
+          "detail": "Starting in early January 2027, Teams will send separate event invitations for Attendee, Presenter, and Co-organizer roles, allowing organizers to manage distinct town hall invites. The rollout is automatic; Microsoft recommends notifying users.",
+          "product": "Teams",
+          "sourceId": "MC1009930"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-16T23:26:33.841Z",
+      "usage": {
+        "inputTokens": 1142,
+        "outputTokens": 1312,
+        "costUsd": 0.001803
+      }
     }
   },
   "weeks": {
@@ -471,58 +499,86 @@
         "outputTokens": 2713,
         "costUsd": 0.004886
       }
-    }
-  },
-  "months": {
-    "2026-11": {
-      "headline": "Facilitator and off-network Teams Free invitation retirement lead November’s changes",
-      "overview": "November’s consequential Teams changes span a February 2027 AI rollout, a December 2026 Teams Free invitation cutoff, changed town hall and webinar recording-access behavior, and a non-pausable device-agent update required for PMP management. Malicious QR-code detection adds a security safeguard through existing URL protection. Much of the remaining activity was incremental documentation maintenance, including broader event labels such as “Events up to 1k attendees” and “Events optimized for a large audience.”",
-      "adminImpact": "Assess Microsoft 365 Copilot (Premium) licensing and manual enablement if adopting Facilitator, update user guidance before the Teams Free invitation retirement, and validate event access policies against RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. For Teams-certified devices, prepare PMP operations around Admin Agent 901: the update cannot be paused and is required for PMP management, while TAC device-management deprecation is targeted for mid-November 2026. Malicious QR-code protection uses existing Malicious URL protection, so no new security control is identified.",
+    },
+    "2026-11-16": {
+      "headline": "Teams adds MessageContents hunting while town hall invites split by participant role",
+      "overview": "This period brings two substantive Teams changes: Microsoft Defender for Office 365 is rolling out a MessageContents table in Advanced Hunting for Teams messages, while Teams is planning separate town hall invitations for Attendee, Presenter, and Co-organizer roles from early January 2027.",
+      "adminImpact": "Security administrators should verify that access to Teams message snippets and metadata is limited to authorized analysts with the required permissions. No configuration is needed for the role-based town hall invitations, but organizers and participants should be informed about the separate emails arriving from early January 2027.",
       "keyChanges": [
         {
-          "title": "Facilitator will resolve meeting knowledge gaps through web search",
-          "detail": "Microsoft Teams is scheduled to introduce Facilitator in February 2027. It will detect knowledge gaps and provide relevant web-search answers in meeting chat. The capability requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports administrator controls and user opt-out.",
-          "product": "Teams",
-          "sourceId": "MC1409304"
+          "title": "Defender Advanced Hunting adds a Teams MessageContents table",
+          "detail": "Microsoft Defender for Office 365 introduces a new MessageContents table in Advanced Hunting for Teams messages. Authorized security analysts can access message snippets and metadata for threat investigations; rollout runs from late September through late November 2026, with access controlled by specific permissions.",
+          "product": "Microsoft Defender for Office 365 Advanced Hunting for Teams",
+          "sourceId": "MC1474106"
         },
         {
-          "title": "Off-network Teams Free invitations retire in December 2026",
-          "detail": "Users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; no administrator action is required, but user guidance should be updated before the retirement.",
-          "product": "Teams",
-          "sourceId": "MC1546409"
-        },
-        {
-          "title": "Town hall and webinar recording access is moving to event-specific settings",
-          "detail": "During the worldwide early-to-mid-November rollout, the “Who has access to the recording or transcript” option for Events App town halls and webinars will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. Microsoft states that no action is required.",
-          "product": "Teams",
-          "sourceId": "MC1550542"
-        },
-        {
-          "title": "Admin Agent 901 adds Android 15 fixes and becomes required for PMP management",
-          "detail": "Certified Device Apps version 1.0.0.202610190119 adds critical Android 15 connectivity and provisioning fixes for PMP and is being accelerated across all Teams-certified devices. The update cannot be paused and is required to manage devices in PMP; the documentation also prepares for TAC device-management deprecation targeted for mid-November 2026.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-11-certified-device-apps-12"
-        },
-        {
-          "title": "Teams adds malicious QR-code detection through existing URL protection",
-          "detail": "Starting in mid-November 2026, Teams will detect malicious QR codes in chats and channels, warn users about harmful links, and blur external QR codes by default. The capability is enabled through existing Malicious URL protection and requires no new administrator action.",
-          "product": "Teams",
-          "sourceId": "MC1526651"
+          "title": "Town hall invitations will reflect participant roles",
+          "detail": "Starting in early January 2027, Teams will send separate event invitations for Attendee, Presenter, and Co-organizer roles. The rollout is automatic and requires no administrator action; user notification is recommended.",
+          "product": "Microsoft Teams town halls",
+          "sourceId": "MC1009930"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-14T19:14:58.872Z",
+      "generatedAt": "2026-11-16T23:26:33.841Z",
       "usage": {
-        "inputTokens": 5907,
-        "outputTokens": 5259,
-        "costUsd": 0.007492
+        "inputTokens": 950,
+        "outputTokens": 1239,
+        "costUsd": 0.001677
+      }
+    }
+  },
+  "months": {
+    "2026-11": {
+      "headline": "Facilitator and new event controls headline Teams’ November administrator changes",
+      "overview": "November’s consequential Teams changes span AI, meeting governance, security investigations, external collaboration, and device management. Facilitator is planned for February 2027 and requires Microsoft 365 Copilot (Premium); event recording and transcript access now follows RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. Defender for Office 365 adds authorized access to Teams message snippets and metadata through MessageContents, while off-network invitations to Teams Free end in December. Device guidance also records an unpausable Admin Agent 901 rollout tied to PMP and planned TAC device-management deprecation.",
+      "adminImpact": "Prepare to license and manually enable Facilitator only where its meeting knowledge-gap workflow is appropriate, and review its admin controls and user opt-out. Audit town hall and webinar access policies using RecordingForTownhall and RecordingForWebinar. Security teams should verify permissions for MessageContents access. Update user guidance before off-network Teams Free invitations are retired; existing Teams Free collaboration and federation remain unchanged. For Teams-certified devices, prepare for the required Admin Agent update and the move toward PMP as TAC device management is deprecated.",
+      "keyChanges": [
+        {
+          "title": "Facilitator will answer meeting knowledge gaps through web search",
+          "detail": "Starting in February 2027, Facilitator will detect knowledge gaps and provide relevant answers in meeting chat using web search. It requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports admin controls and user opt-out.",
+          "product": "Teams",
+          "sourceId": "MC1409304"
+        },
+        {
+          "title": "Event recording access now follows event-specific policy settings",
+          "detail": "For Events App town halls and webinars, “Who has access to the recording or transcript” will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The behavior rolls out worldwide in early to mid-November 2026.",
+          "product": "Teams",
+          "sourceId": "MC1550542"
+        },
+        {
+          "title": "Defender adds Teams MessageContents to Advanced Hunting",
+          "detail": "Microsoft Defender for Office 365 is adding a MessageContents table containing Teams message snippets and metadata for threat investigations. Access is restricted to authorized security analysts with the required permissions, with rollout completing by late November 2026.",
+          "product": "Teams",
+          "sourceId": "MC1474106"
+        },
+        {
+          "title": "Off-network invitations to Teams Free retire in December",
+          "detail": "Beginning in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation are unchanged.",
+          "product": "Teams",
+          "sourceId": "MC1546409"
+        },
+        {
+          "title": "Admin Agent 901 rollout reinforces PMP device management",
+          "detail": "The Certified Device Apps guidance records version 1.0.0.202610190119, with Android 15 connectivity and provisioning fixes for PMP. The update cannot be paused, is required to manage devices in PMP, and prepares for TAC device-management deprecation targeted for mid-November 2026.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-11-certified-device-apps-12"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-16T23:26:33.841Z",
+      "usage": {
+        "inputTokens": 6075,
+        "outputTokens": 2189,
+        "costUsd": 0.003842
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-14T19:14:58.872Z",
+  "generatedAt": "2026-11-16T23:26:33.841Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -569,18 +625,24 @@
       "outputTokens": 12008,
       "requests": 3,
       "costUsd": 0.017548
+    },
+    "2026-11-16": {
+      "inputTokens": 8167,
+      "outputTokens": 4740,
+      "requests": 3,
+      "costUsd": 0.007321
     }
   },
   "lastRun": {
-    "inputTokens": 15694,
-    "outputTokens": 12008,
+    "inputTokens": 8167,
+    "outputTokens": 4740,
     "requests": 3,
-    "costUsd": 0.017548
+    "costUsd": 0.007321
   },
   "totalUsage": {
-    "inputTokens": 97257,
-    "outputTokens": 120218,
-    "requests": 29,
-    "costUsd": 0.163711
+    "inputTokens": 105424,
+    "outputTokens": 124958,
+    "requests": 32,
+    "costUsd": 0.171032
   }
 }

@@ -1,0 +1,501 @@
+{
+  "newFiles": [],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/aa-cq-plan-overview.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-plan-overview.md b/Teams/aa-cq-plan-overview.md\nindex 8d29577..0083f75 100644\n--- a/Teams/aa-cq-plan-overview.md\n+++ b/Teams/aa-cq-plan-overview.md\n@@ -91,6 +91,8 @@ Together, Teams Phone Agent and Microsoft Copilot Studio offer a scalable, custo\n [![Open in New Tab](media/aa-cq/teams-phone-agent-demo.png)](https://go.microsoft.com/fwlink/?LinkId=2373040)\r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n@@ -145,6 +147,8 @@ Internal callers, using their Teams client, can reach an auto attendant by calli\n \r\n ## What's new in Auto Attendant (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-auto-attendant#multiple-users-with-the-same-name)\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) updated.\r\n \r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-plan-overview.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-plan-overview",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-plan-overview.md",
+      "firstSeenAt": "2026-11-17T10:50:29.177Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Dial-by-name search adds context for duplicate names",
+        "summary": "The documentation now records enhanced search context when multiple users have the same name, with guidance linked for Teams Phone agents and auto attendants.",
+        "adminImpact": "No administrator action is stated; review the linked guidance if your organization uses these dial-by-name scenarios.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-reference-dial-by-name-number.md",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 14,
+      "changes": 28,
+      "patch": "diff --git a/Teams/aa-cq-reference-dial-by-name-number.md b/Teams/aa-cq-reference-dial-by-name-number.md\nindex 745335d..7333a6a 100644\n--- a/Teams/aa-cq-reference-dial-by-name-number.md\n+++ b/Teams/aa-cq-reference-dial-by-name-number.md\n@@ -12,7 +12,7 @@ author: CLYVR\n ms.author: colongma\n manager: roykuntz\n ms.reviewer: colongma\n-ms.date: 2026-08-31T00:00:00.0000000Z\n+ms.date: 2026-11-16T00:00:00.0000000Z\n ms.topic: reference\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -155,25 +155,25 @@ Callers can say names in the following formats:\n \r\n ### Multiple users with the same name\r\n \r\n-If there are multiple users with the same name, it's possible that a Dial by Name search returns these users. In this case, the default behavior is to say each name followed by the option to select. For example, if the caller searches for `John Smith` and there are three people with that name in the organization, the caller hears:\r\n+If there are multiple users with the same name, the default behavior is to say each name followed by the option to select.\r\n \r\n-- For John Smith, press 1.\r\n-- For John Smith, press 2.\r\n-- For John Smith, press 3.\r\n+For example, if the caller searches for John Smith and there are three people with that name in the organization, the caller hears:\r\n \r\n-In these situations, you can extend the information the caller is presented with by configuring the [-UserNameExtension](/en-us/powershell/module/teams/new-csautoattendant#-usernameextension) parameter.\r\n+For John Smith, press 1. For John Smith, press 2. For John Smith, press 3.\r\n \r\n-The `-UserNameExtension` parameter specifies how to extend the information returned in a Dial by Name search with additional information. Possible values are:\r\n+In these situations, you can extend the information the caller hears by configuring the **Enhanced search context** option.\r\n \r\n-- **None**: The username is pronounced as is. This is the default value.\r\n-- **Office**: Adds office information from the user profile.\r\n-- **Department**: Adds department information from the user profile.\r\n+This option adds the user's department or office location information, making it easier for the caller to determine which John Smith they want.\r\n \r\n-If `-UserNameExtension` is configured with `Department`, and the caller searches for `John Smith` when there are three people with that name in the organization, the caller hears:\r\n+Possible values are:\r\n \r\n-- For John Smith in accounting, press 1.\r\n-- For John Smith in sales, press 2.\r\n-- For John Smith in support, press 3.\r\n+- None: The username is pronounced as is. This is the default value.\r\n+- Office: Adds office information from the user profile.\r\n+- Department: Adds department information from the user profile.\r\n+\r\n+If the **Enhanced search context** is configured with Department, the caller hears:\r\n+\r\n+For John Smith in accounting, press 1. For John Smith in sales, press 2. For John Smith in support, press 3.\r\n \r\n ## Dial by Extension\r\n \r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-reference-dial-by-name-number.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-reference-dial-by-name-number",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-reference-dial-by-name-number.md",
+      "firstSeenAt": "2026-11-17T10:50:29.190Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Dial by Name documentation now references Enhanced search context",
+        "summary": "The page now explains duplicate-name prompts and directs administrators to the Enhanced search context option instead of the `-UserNameExtension` parameter. It documents None, Office, and Department values with updated examples.",
+        "adminImpact": "Administrators can configure department or office details to help callers distinguish users with the same name. No action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-auto-attendant-cmdlets.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-auto-attendant-cmdlets.md b/Teams/aa-cq-setup-auto-attendant-cmdlets.md\nindex 5d5e18f..4ef25e9 100644\n--- a/Teams/aa-cq-setup-auto-attendant-cmdlets.md\n+++ b/Teams/aa-cq-setup-auto-attendant-cmdlets.md\n@@ -92,6 +92,8 @@ Customers with auto attendants serving these areas that have time zone configura\n \r\n ## What's new in Auto Attendant (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-auto-attendant#multiple-users-with-the-same-name)\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) updated.\r\n \r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-auto-attendant-cmdlets.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant-cmdlets",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-auto-attendant-cmdlets.md",
+      "firstSeenAt": "2026-11-17T10:50:29.200Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Auto attendant cmdlet documentation adds dial-by-name search guidance",
+        "summary": "The page now includes a November 16, 2026 entry covering enhanced search context for multiple users with the same name.",
+        "adminImpact": "Administrators configuring dial-by-name auto attendants can review the linked guidance; no required action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-auto-attendant-template-shared-history.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-auto-attendant-template-shared-history.md b/Teams/aa-cq-setup-auto-attendant-template-shared-history.md\nindex 9082ebf..7cfc7c4 100644\n--- a/Teams/aa-cq-setup-auto-attendant-template-shared-history.md\n+++ b/Teams/aa-cq-setup-auto-attendant-template-shared-history.md\n@@ -110,6 +110,8 @@ None.\n \r\n ## What's new in Auto Attendant (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-auto-attendant#multiple-users-with-the-same-name)\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) updated.\r\n \r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-auto-attendant-template-shared-history.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant-template-shared-history",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-auto-attendant-template-shared-history.md",
+      "firstSeenAt": "2026-11-17T10:50:29.208Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Dial-by-name search context is enhanced for duplicate names",
+        "summary": "The documentation records a November 16, 2026 enhancement providing additional search context when multiple users have the same name.",
+        "adminImpact": "Administrators managing auto attendants can review the linked guidance; no required action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-auto-attendant.md",
+      "status": "modified",
+      "additions": 71,
+      "deletions": 3,
+      "changes": 74,
+      "patch": "diff --git a/Teams/aa-cq-setup-auto-attendant.md b/Teams/aa-cq-setup-auto-attendant.md\nindex 368594d..81d9acd 100644\n--- a/Teams/aa-cq-setup-auto-attendant.md\n+++ b/Teams/aa-cq-setup-auto-attendant.md\n@@ -12,7 +12,7 @@ author: CLYVR\n ms.author: colongma\n manager: roykuntz\n ms.reviewer: colongma\n-ms.date: 2026-11-03T00:00:00.0000000Z\n+ms.date: 2026-11-16T00:00:00.0000000Z\n ms.topic: how-to\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -52,11 +52,11 @@ source_path: Teams/aa-cq-setup-auto-attendant.md\n cmProducts:\n - https://authoring-docs-microsoft.poolparty.biz/devrel/1ae5c491-970a-4062-8301-6336e69f9026\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/b5267373-9b61-4d5a-a4ac-5d03f8f8800f\n-- https://authoring-docs-microsoft.poolparty.biz/devrel/63959238-cb90-4871-a33d-4a5519097e47\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/12ed19f9-ebdf-4c8a-8bcd-7a681836774d\n spProducts:\n - https://authoring-docs-microsoft.poolparty.biz/devrel/f2c3e52e-3667-4e8a-bf11-20b9eaccdc8c\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/bcd4f3ef-c612-47a8-aa4a-7f9bedc3a98c\n-- https://authoring-docs-microsoft.poolparty.biz/devrel/78d87f42-5582-4a6b-90be-7db2f12b34e6\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/3a764584-4f97-452b-8f1d-36f19b12f6ae\n platformId: ccb323ec-f511-c250-e46b-29053c24cb4d\n ---\n \n@@ -127,6 +127,8 @@ None.\n \r\n ## What's new in Auto Attendants (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-auto-attendant#multiple-users-with-the-same-name)\r\n - September 29, 2026\r\n     - [Historical reporting](aa-cq-report-historical) updated.\r\n \r\n@@ -397,6 +399,28 @@ Note\n \r\n If you want to offer callers both the **Dial by name** and **Dial by extension** features, you can enable the **Dial by name** feature on the main Auto Attendant and then config an option to transfer to a second Auto Attendant where **Dial by extension** is enabled.\r\n \r\n+###### Multiple users with the same name\r\n+\r\n+If there are multiple users with the same name, the default behavior is to say each name followed by the option to select.\r\n+\r\n+For example, if the caller searches for John Smith and there are three people with that name in the organization, the caller hears:\r\n+\r\n+For John Smith, press 1. For John Smith, press 2. For John Smith, press 3.\r\n+\r\n+In these situations, you can extend the information the caller hears by configuring the **Enhanced search context** option.\r\n+\r\n+This option adds the user's department or office location information, making it easier for the caller to determine which John Smith they want.\r\n+\r\n+Possible values are:\r\n+\r\n+- None: The username is pronounced as is. This is the default value.\r\n+- Office: Adds office information from the user profile.\r\n+- Department: Adds department information from the user profile.\r\n+\r\n+If the **Enhanced search context** is configured with Department, the caller hears:\r\n+\r\n+For John Smith in accounting, press 1. For John Smith in sales, press 2. For John Smith in support, press 3.\r\n+\r\n For more information, see the [Dial by name or number reference](aa-cq-reference-dial-by-name-number).\r\n \r\n After setting the business-hours call flow options, select **Next**.\r\n@@ -489,6 +513,28 @@ Note\n \r\n If you want to offer callers both the **Dial by name** and **Dial by extension** features, you can enable the **Dial by name** feature on the main Auto Attendant and then config an option to transfer to a second Auto Attendant where **Dial by extension** is enabled.\r\n \r\n+###### Multiple users with the same name\r\n+\r\n+If there are multiple users with the same name, the default behavior is to say each name followed by the option to select.\r\n+\r\n+For example, if the caller searches for John Smith and there are three people with that name in the organization, the caller hears:\r\n+\r\n+For John Smith, press 1. For John Smith, press 2. For John Smith, press 3.\r\n+\r\n+In these situations, you can extend the information the caller hears by configuring the **Enhanced search context** option.\r\n+\r\n+This option adds the user's department or office location information, making it easier for the caller to determine which John Smith they want.\r\n+\r\n+Possible values are:\r\n+\r\n+- None: The username is pronounced as is. This is the default value.\r\n+- Office: Adds office information from the user profile.\r\n+- Department: Adds department information from the user profile.\r\n+\r\n+If the **Enhanced search context** is configured with Department, the caller hears:\r\n+\r\n+For John Smith in accounting, press 1. For John Smith in sales, press 2. For John Smith in support, press 3.\r\n+\r\n For more information, see the [Dial by name or number reference](aa-cq-reference-dial-by-name-number).\r\n \r\n After setting the after-hours call flow options, select **Next**.\r\n@@ -594,6 +640,28 @@ Note\n \r\n If you want to offer callers both the **Dial by name** and **Dial by extension** features, you can enable the **Dial by name** feature on the main Auto Attendant and then config an option to transfer to a second Auto Attendant where **Dial by extension** is enabled.\r\n \r\n+###### Multiple users with the same name\r\n+\r\n+If there are multiple users with the same name, the default behavior is to say each name followed by the option to select.\r\n+\r\n+For example, if the caller searches for John Smith and there are three people with that name in the organization, the caller hears:\r\n+\r\n+For John Smith, press 1. For John Smith, press 2. For John Smith, press 3.\r\n+\r\n+In these situations, you can extend the information the caller hears by configuring the **Enhanced search context** option.\r\n+\r\n+This option adds the user's department or office location information, making it easier for the caller to determine which John Smith they want.\r\n+\r\n+Possible values are:\r\n+\r\n+- None: The username is pronounced as is. This is the default value.\r\n+- Office: Adds office information from the user profile.\r\n+- Department: Adds department information from the user profile.\r\n+\r\n+If the **Enhanced search context** is configured with Department, the caller hears:\r\n+\r\n+For John Smith in accounting, press 1. For John Smith in sales, press 2. For John Smith in support, press 3.\r\n+\r\n For more information, see the [Dial by name or number reference](aa-cq-reference-dial-by-name-number).\r\n \r\n Repeat the procedure as needed to add more holidays.\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-auto-attendant.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-auto-attendant",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-auto-attendant.md",
+      "firstSeenAt": "2026-11-17T10:50:29.216Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Auto attendant documentation adds enhanced search context",
+        "summary": "The setup page now explains how to configure Enhanced search context for duplicate names, adding a user’s office or department to dial-by-name prompts. Options are None, Office, and Department.",
+        "adminImpact": "Administrators can use this setting to help callers distinguish between users with the same name; no required change is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md b/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\nindex f5623b6..c09e3e6 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\n@@ -123,6 +123,8 @@ None.\n \r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-agents-queues",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "firstSeenAt": "2026-11-17T10:50:29.224Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Documentation adds enhanced Dial by name search context",
+        "summary": "The page now notes enhanced search context when multiple users have the same name and includes a November 16, 2026 entry.",
+        "adminImpact": "No administrator action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md b/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md\nindex fa167d8..7c234a7 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md\n@@ -104,6 +104,8 @@ Customers with Teams Phone Agents serving these areas that have time zone config\n \r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-cmdlets",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+      "firstSeenAt": "2026-11-17T10:50:29.231Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Dial by name adds enhanced context for duplicate names",
+        "summary": "The documentation records a November 16, 2026 update enhancing Dial by name search context when multiple users share the same name.",
+        "adminImpact": "Administrators can account for this behavior when reviewing name-based dialing scenarios. No administrator action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md b/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md\nindex 06eedbd..d266e46 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md\n@@ -130,6 +130,8 @@ None.\n \r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-template-spam-detection",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+      "firstSeenAt": "2026-11-17T10:50:29.239Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Dial-by-name guidance updated",
+        "summary": "The documentation now records a November 16, 2026 update and adds enhanced search context for multiple users with the same name.",
+        "adminImpact": "Review the updated guidance when handling dial-by-name searches involving duplicate user names.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md b/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md\nindex 1b65e17..899e667 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md\n@@ -122,6 +122,8 @@ None.\n \r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-tools-appointments",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+      "firstSeenAt": "2026-11-17T10:50:29.247Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Dial-by-name search adds context for duplicate names",
+        "summary": "The documentation records a November 16, 2026 enhancement providing additional search context when multiple users have the same name.",
+        "adminImpact": "Administrators should be aware of the enhanced duplicate-name search behavior; no action is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md b/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md\nindex 7e495a6..ffc974a 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md\n@@ -122,6 +122,8 @@ None.\n \r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-tools-questions-answers",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+      "firstSeenAt": "2026-11-17T10:50:29.255Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Dial-by-name search now covers duplicate names",
+        "summary": "The documentation adds a November 16, 2026 update describing enhanced search context for multiple users with the same name.",
+        "adminImpact": "Review the linked guidance if users rely on dial-by-name search and duplicate names are common in your organization.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-ubb.md b/Teams/aa-cq-setup-teams-phone-agent-ubb.md\nindex 44fb88e..fa77c96 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-ubb.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-ubb.md\n@@ -123,6 +123,8 @@ None.\n \r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-ubb",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "firstSeenAt": "2026-11-17T10:50:29.263Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Teams Phone agent documentation adds dial-by-name guidance",
+        "summary": "The page now includes a November 16, 2026 entry describing enhanced search context when multiple users share the same name, with a link to related guidance.",
+        "adminImpact": "Administrators can review the linked guidance when configuring or supporting dial-by-name scenarios; no action is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent.md",
+      "status": "modified",
+      "additions": 69,
+      "deletions": 1,
+      "changes": 70,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent.md b/Teams/aa-cq-setup-teams-phone-agent.md\nindex ea162be..787861a 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent.md\n@@ -12,7 +12,7 @@ author: CLYVR\n ms.author: colongma\n manager: roykuntz\n ms.reviewer: colongma\n-ms.date: 2026-11-09T00:00:00.0000000Z\n+ms.date: 2026-11-16T00:00:00.0000000Z\n ms.topic: how-to\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -172,6 +172,8 @@ None.\n \r\n ## What's new in Teams Phone Agent (last six months)\r\n \r\n+- November 16, 2026\r\n+    - Dial by name enhanced search context for [multiple users with the same name](aa-cq-setup-teams-phone-agent#multiple-users-with-the-same-name)\r\n - October 21, 2026\r\n     - [Spam detection](aa-cq-setup-teams-phone-agent-template-spam-detection) can be configured in Teams admin center.\r\n - October 19, 2026\r\n@@ -545,6 +547,28 @@ Note\n \r\n If you want to offer callers both the **Dial by name** and **Dial by extension** features, you can enable the **Dial by name** feature on the main Teams Phone Agent and then config an option to transfer to a second Teams Phone Agent or Auto Attendant where **Dial by extension** is enabled.\r\n \r\n+###### Multiple users with the same name\r\n+\r\n+If there are multiple users with the same name, the default behavior is to say each name followed by the option to select.\r\n+\r\n+For example, if the caller searches for John Smith and there are three people with that name in the organization, the caller hears:\r\n+\r\n+For John Smith, press 1. For John Smith, press 2. For John Smith, press 3.\r\n+\r\n+In these situations, you can extend the information the caller hears by configuring the **Enhanced search context** option.\r\n+\r\n+This option adds the user's department or office location information, making it easier for the caller to determine which John Smith they want.\r\n+\r\n+Possible values are:\r\n+\r\n+- None: The username is pronounced as is. This is the default value.\r\n+- Office: Adds office information from the user profile.\r\n+- Department: Adds department information from the user profile.\r\n+\r\n+If the **Enhanced search context** is configured with Department, the caller hears:\r\n+\r\n+For John Smith in accounting, press 1. For John Smith in sales, press 2. For John Smith in support, press 3.\r\n+\r\n For more information, see the [Dial by name or number reference](aa-cq-reference-dial-by-name-number).\r\n \r\n After setting the business-hours call flow options, select **Next**.\r\n@@ -679,6 +703,28 @@ Note\n \r\n If you want to offer callers both the **Dial by name** and **Dial by extension** features, you can enable the **Dial by name** feature on the main Teams Phone Agent and then config an option to transfer to a second Teams Phone Agent or Auto Attendant where **Dial by extension** is enabled.\r\n \r\n+###### Multiple users with the same name\r\n+\r\n+If there are multiple users with the same name, the default behavior is to say each name followed by the option to select.\r\n+\r\n+For example, if the caller searches for John Smith and there are three people with that name in the organization, the caller hears:\r\n+\r\n+For John Smith, press 1. For John Smith, press 2. For John Smith, press 3.\r\n+\r\n+In these situations, you can extend the information the caller hears by configuring the **Enhanced search context** option.\r\n+\r\n+This option adds the user's department or office location information, making it easier for the caller to determine which John Smith they want.\r\n+\r\n+Possible values are:\r\n+\r\n+- None: The username is pronounced as is. This is the default value.\r\n+- Office: Adds office information from the user profile.\r\n+- Department: Adds department information from the user profile.\r\n+\r\n+If the **Enhanced search context** is configured with Department, the caller hears:\r\n+\r\n+For John Smith in accounting, press 1. For John Smith in sales, press 2. For John Smith in support, press 3.\r\n+\r\n For more information, see the [Dial by name or number reference](aa-cq-reference-dial-by-name-number).\r\n \r\n After setting the after-hours call flow options, select **Next**.\r\n@@ -828,6 +874,28 @@ Note\n \r\n If you want to offer callers both the **Dial by name** and **Dial by extension** features, you can enable the **Dial by name** feature on the main Teams Phone Agent and then config an option to transfer to a second Teams Phone Agent or Auto Attendant where **Dial by extension** is enabled.\r\n \r\n+###### Multiple users with the same name\r\n+\r\n+If there are multiple users with the same name, the default behavior is to say each name followed by the option to select.\r\n+\r\n+For example, if the caller searches for John Smith and there are three people with that name in the organization, the caller hears:\r\n+\r\n+For John Smith, press 1. For John Smith, press 2. For John Smith, press 3.\r\n+\r\n+In these situations, you can extend the information the caller hears by configuring the **Enhanced search context** option.\r\n+\r\n+This option adds the user's department or office location information, making it easier for the caller to determine which John Smith they want.\r\n+\r\n+Possible values are:\r\n+\r\n+- None: The username is pronounced as is. This is the default value.\r\n+- Office: Adds office information from the user profile.\r\n+- Department: Adds department information from the user profile.\r\n+\r\n+If the **Enhanced search context** is configured with Department, the caller hears:\r\n+\r\n+For John Smith in accounting, press 1. For John Smith in sales, press 2. For John Smith in support, press 3.\r\n+\r\n For more information, see the [Dial by name or number reference](aa-cq-reference-dial-by-name-number).\r\n \r\n After setting the holidays call flow options, select **Next**.\r\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/aa-cq-setup-teams-phone-agent.md",
+      "firstSeenAt": "2026-11-17T10:50:29.272Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Dial-by-name documentation adds enhanced search context details",
+        "summary": "The documentation now explains how to configure Enhanced search context for callers choosing among users with the same name. Administrators can use None, Office, or Department to add identifying information to the spoken options.",
+        "adminImpact": "Review the setting if callers need more context to distinguish users with identical names; no action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/malicious-url-protection-teams.md",
+      "status": "modified",
+      "additions": 58,
+      "deletions": 58,
+      "changes": 116,
+      "patch": "diff --git a/Teams/malicious-url-protection-teams.md b/Teams/malicious-url-protection-teams.md\nindex 19736bd..37b4d26 100644\n--- a/Teams/malicious-url-protection-teams.md\n+++ b/Teams/malicious-url-protection-teams.md\n@@ -8,10 +8,10 @@ ms.suite: office\n feedback_system: Standard\n feedback_product_url: https://aka.ms/TeamsFeedback\n recommendations: true\n-author: marina-hayrapetyan\n-ms.author: mhayrapetyan\n-manager: ktsuji\n-ms.date: 2025-11-04T00:00:00.0000000Z\n+author: LanaChin8\n+ms.author: v-lanchin\n+manager: v-jesserowe\n+ms.date: 2026-11-16T00:00:00.0000000Z\n ms.topic: how-to\n ms.service: msteams\n ms.subservice: msteams-admin\n@@ -54,88 +54,88 @@ platformId: c1bc8fad-bd4c-b5a3-6e58-de6ecbe9c0b2\n \n # Malicious URL protection in Microsoft Teams - Microsoft Teams | Microsoft Learn\n \n-Link Protection helps to safeguard users from malicious URLs shared in chats, channels, and meeting messages. This feature helps protect your organization from phishing and other link-based threats by automatically displaying warnings when potentially harmful links are detected in Teams conversations.\r\n+Malicious URL protection helps safeguard users from malicious URLs shared in Teams chats, channels, and meeting messages, including URLs in QR codes. This feature helps protect your organization from phishing and other link-based threats by automatically displaying warnings when potentially harmful links are detected in Teams conversations.\r\n \r\n-## How Link Protection works in Teams\r\n+## How malicious URL protection works\r\n \r\n-At a high level, here's how Link Protection works in Microsoft Teams:\r\n+At a high level, here's how malicious URL protection works:\r\n \r\n-1. A user sends a message containing a URL in a chat, channel, or meeting conversation.\r\n+1. A user sends a message that contains a URL directly or embedded in a QR code in a chat, channel, or meeting conversation.\r\n 2. Teams automatically scans the URL against threat intelligence databases to identify potentially malicious links.\r\n-3. If a harmful link is detected, Teams displays clear warnings to both the sender and all recipients in the conversation.\r\n+3. If the URL is detected as potentially malicious, Teams displays warnings to both the sender and all recipients in the conversation.\r\n \r\n-## User experience in Teams\r\n+## Manage malicious URL protection in Teams\r\n \r\n-### Sender experience\r\n+For **new tenants**, this protection is included as part of Teams baseline security protection and doesn’t require admin configuration.\r\n \r\n-When you send a message containing a potentially malicious URL, you can:\r\n+For **existing tenants** and **GCC**, **GCC High**, and **DoD tenants**, admins can turn malicious URL protection off or on in the Teams admin center. It's enabled by default.\r\n \r\n-- See a clear warning that the shared link is flagged as potentially harmful.\r\n-- Receive detailed information about why the link was flagged (for R3 users) or a generic warning (for R4 users).\r\n-- Retain the ability to edit or delete the message if desired.\r\n-- Modify the message to remove or replace the problematic link.\r\n+To turn off or turn on malicious URL protection:\r\n \r\n-[![Screenshot of message of malicious URL for sender.](media/sender-msg-malicious-url-protect.png)](media/sender-msg-malicious-url-protect.png#lightbox)\r\n+1. Sign in to the [Teams admin center](https://admin.teams.microsoft.com/).\r\n+2. In the left navigation, go to **Messaging** &gt; **Messaging settings**.\r\n+3. Under **Messaging safety**, turn off or turn on **Malicious URL protection**.\r\n \r\n-### Receiver experience\r\n+    [![Screenshot of the Malicious URL protection setting in the Teams admin center.](media/malicious-url-protection.png)](media/malicious-url-protection.png#lightbox)\r\n+4. Select **Save**.\r\n \r\n-As a receiver, when someone sends you a message with a flagged URL, you can:\r\n+This is a tenant-level setting. When enabled, all users in your organization have malicious URL protection applied to their Teams messages.\r\n \r\n-- See a clear warning before any interaction with the flagged link.\r\n-- Receive information about the potential threat to help make informed decisions.\r\n-- Choose whether to proceed with caution or avoid clicking the link entirely.\r\n-- Receive different levels of detail, depending on your Teams client version (R3 users see detailed explanations, R4 users see generic \"This message was flagged\" warnings).\r\n+## User experience\r\n \r\n-[![Screenshot of message of flagged URL.](media/receiver-msg-flagged-url.png)](media/receiver-msg-flagged-url.png#lightbox)\r\n+Here's an overview of the user experience. For more information, see [Make sure chats, links, and files are secure in Microsoft Teams](https://support.microsoft.com/teams/troubleshooting/make-sure-chats-links-and-files-are-secure-in-microsoft-teams).\r\n \r\n-### External collaboration experience\r\n+### Sender experience\r\n+\r\n+When a user sends a message that contains a potentially malicious URL, the user:\r\n+\r\n+- Sees a warning that the URL is identified as potentially harmful.\r\n \r\n-When collaborating with users from external organizations, Malicious URL Protection in external conversations follows these rules:\r\n+    [![Screenshot of message of malicious URL for sender.](media/sender-msg-malicious-url-protect.png)](media/sender-msg-malicious-url-protect.png#lightbox)\r\n+- Can edit or delete the message.\r\n+- Can remove or replace the problematic URL in the message.\r\n \r\n-- If any participating organization in the conversation has URL protection enabled, it applies to everyone.\r\n-- Warning messages display for all participants when any participating organization has turned on the feature.\r\n+### Receiver experience\r\n+\r\n+When someone sends a message that contains a potentially malicious URL, as the recipient, the user:\r\n+\r\n+- Sees a warning before any interaction with the flagged URL.\r\n \r\n-## Manage Malicious URL Protection in Teams\r\n+    [![Screenshot of message of flagged URL.](media/receiver-msg-flagged-url.png)](media/receiver-msg-flagged-url.png#lightbox)\r\n+- Receives information about the potential threat to help them make an informed decision.\r\n+- Can choose whether to proceed with caution or avoid the link entirely.\r\n \r\n-For **new tenants** this protection is included as part of Microsoft Teams baseline security posture. Administrators do not need to configure any setting to activate malicious URL protection. \r\n+### External collaboration experience\r\n \r\n-For **existing tenants** that still display the setting, administrators can review or modify the configuration using the Teams admin center.\r\n+When collaborating with users from external organizations, malicious URL protection follows these rules:\r\n \r\n-To enable Link Protection using the Teams Admin Center:\r\n+- If any organization in the conversation has malicious URL protection enabled, the protection applies to all participants.\r\n+- A warning message is displayed to all participants in the conversation when any organization has the feature enabled.\r\n \r\n-1. Sign in to the Teams Admin Center at [https://admin.teams.microsoft.com](https://admin.teams.microsoft.com/).\r\n-2. In the left navigation, select **Messaging settings**.\r\n-3. Scroll down to **Messaging safety** settings.\r\n-4. Turn on the setting: **Scan messages for unsafe URLs**.\r\n-5. Select **Save** to apply the changes.\r\n+## How malicious URL protection differs from Safe Links and zero-hour auto purge (ZAP)\r\n \r\n-[![Screenshot of enabling Link Protection using Teams admin center.](media/links-protection-teams-msg.png)](media/links-protection-teams-msg.png#lightbox)\r\n+The following table summarizes the differences between malicious URL protection, [Safe Links for Teams in Microsoft Defender for Office 365](/en-us/defender-office-365/safe-links-about#safe-links-settings-for-microsoft-teams), and [zero-hour auto purge (ZAP) for Teams in Microsoft Defender](/en-us/defender-office-365/zero-hour-auto-purge#zero-hour-auto-purge-zap-in-microsoft-teams).\r\n \r\n-Once enabled, all users in the tenant can have Link Protection applied to their Teams messages.\r\n+| - | Malicious URL protection | Safe Links | ZAP for Teams |\r\n+| --- | --- | --- | --- |\r\n+| **Availability** | All Teams users (baseline protection) | Requires Defender for Office 365 Plan 1 or Plan 2 license | Requires Defender for Office 365 Plan 1 or Plan 2 license |\r\n+| **Action** | Displays warning | Blocks on click | Removes content |\r\n+| **Configuration** | Automatic | Microsoft Defender portal | Microsoft Defender portal |\r\n \r\n-## FAQs\r\n+Here are more details:\r\n \r\n-- What's the difference between this feature, [Safe Links for Teams in Microsoft Defender for Office 365](/en-us/defender-office-365/safe-links-about#safe-links-settings-for-microsoft-teams), and [zero-hour auto purge (ZAP) for Teams in Microsoft Defender for Office 365 Plan 2](/en-us/defender-office-365/zero-hour-auto-purge#zero-hour-auto-purge-zap-in-microsoft-teams)?\r\n - **Malicious URL protection**:\r\n \r\n-    - Is available for all Teams users as part of base protection.\r\n-    - Doesn't block links on click.\r\n-    - Adds warnings to messages to inform users about link reputation.\r\n-    - Doesn't require additional licenses.\r\n+    - Is available for all Teams users as part of baseline protection.\r\n+    - Doesn't block URLs on click.\r\n+    - Adds warnings to messages to inform users about URLs identified as potentially malicious.\r\n+    - Doesn't require an additional license.\r\n - **Safe Links**:\r\n \r\n-    - Blocks URLs at the time of click based on your Microsoft Defender portal settings\r\n-    - Requires Microsoft Defender licenses\r\n+    - Blocks URLs at the time of click based on your Defender portal settings.\r\n+    - Requires a Microsoft Defender for Office 365 Plan 1 or Plan 2 license.\r\n - **Zero-hour auto purge (ZAP)**:\r\n \r\n-    - Removes malicious URL and content entirely for internal messages.\r\n-    - Actions are based on your settings in the Microsoft Defender portal.\r\n-    - Requires Microsoft Defender for Office 365 Plan 1 or Plan 2 license.\r\n-\r\n-    The differences are summarized in the following table:\r\n-\r\n-    | Feature | Malicious URL Protection | Safe Links | ZAP for Teams |\r\n-    | --- | --- | --- | --- |\r\n-    | **Availability** | All Teams users (base protection) | Requires Defender for Office 365 Plan 1 or Plan 2 license. | Requires Defender for Office 365 Plan 1 or Plan 2 license. |\r\n-    | **Action** | Displays warning | Blocks on click. | Removes content. |\r\n-    | **Configuration** | Automatic | Microsoft Defender portal. | Microsoft Defender portal. |\n\\ No newline at end of file\n+    - Removes malicious URLs and content entirely for internal messages.\r\n+    - Actions are based on your Defender portal settings.\r\n+    - Requires a Microsoft Defender for Office 365 Plan 1 or Plan 2 license.\n\\ No newline at end of file\n",
+      "baseCommitSha": "932c07a5f499c304de70f090f00d3ccc519d38e0",
+      "commitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitMessage": "Mirror Learn: 13 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 00:24:01 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/malicious-url-protection-teams.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/malicious-url-protection-teams",
+      "eventId": "teams-docs:d0751e002071f0165f7466e4428e563c7ffc0af8:modified:Teams/malicious-url-protection-teams.md",
+      "firstSeenAt": "2026-11-17T10:50:29.280Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Malicious URL protection now includes QR-code URLs",
+        "summary": "The documentation renames Link Protection to malicious URL protection and adds coverage for URLs embedded in QR codes. It also documents tenant-level administration and the behavior for new, existing, GCC, GCC High, and DoD tenants.",
+        "adminImpact": "Protection is enabled by default. Administrators can manage it under Teams admin center > Messaging > Messaging settings > Messaging safety; no mandatory change is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1556098",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-16",
+      "title": "Microsoft Teams Mobile: Introducing shared call history in the Queues app",
+      "summary": "Microsoft Teams mobile Queues app now offers shared call history for authorized representatives, showing missed, answered, outgoing, and voicemail calls. Rolling out worldwide in December 2026, it helps teams manage calls efficiently with status updates and filtering, extending desktop features to mobile without new admin actions.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1556098/",
+      "originalUrl": "https://mc.merill.net/message/MC1556098",
+      "body": "<p><b><b>What and why</b></b></p><p>We are introducing shared call history in the Queues app on Microsoft Teams mobile, allowing authorized call queue representatives to view calls handled across their queue. This includes missed, answered, outgoing, and voicemail calls. By extending the existing desktop experience to mobile, we are helping teams coordinate customer follow-ups, avoid duplicate callbacks, and manage calls more efficiently while working away from their desks.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Rollout will begin in early December 2026 and is expected to complete by mid-December 2026.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Representatives and supervisors with access to shared call history in the Queues app, which is included with a Teams Premium license.</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams mobile, Queues app</li></ul><p><i>What will happen</i></p><ul><li>Authorized representatives can view shared call history across their call queue, including missed, answered, outgoing, and voicemail calls. Shared call history on mobile uses the same administrative settings as the desktop experience.</li></ul><p></p><ul><li>Users can filter call history by resolution status to identify calls that need attention.</li></ul><p></p><ul><li>Users can tap a call to view details, including the caller, call type, time, voicemail or forwarding information, and a timeline of the call's progression through the queue.</li></ul><p></p><ul><li>The system automatically marks missed calls as <b><i>Unresolved</i></b>, allowing representatives to identify customers who need follow-up.</li><li>Users can change missed call statuses to <b><i>In progress</i></b> or <b><i>Resolved</i></b>. All queue members with access to shared call history can see the updated status, who made the change, and when.</li><li>Users without shared call history enabled will continue to see only their personal call history.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No new administrative action is required for this rollout. We recommend that you inform call queue representatives about the new mobile experience, particularly how to update missed call statuses to avoid duplicate follow-ups.</p><ul><li>If your organization already uses shared call history, eligible users will automatically receive the mobile experience.</li><li>If shared call history is not enabled, you can enable it in the Teams admin center by creating a Shared Call History template and assigning it to your call queues. You can grant access to all queue members or restrict access to authorized users.</li></ul><p><b><b>Learn more</b></b></p><ul><li><a href=\"https://learn.microsoft.com/microsoftteams/aa-cq-plan-shared-call-history\" rel=\"noopener noreferrer\">Planning - Shared Call History for voice applications - Microsoft Teams | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-16T22:27:42Z",
+      "endDate": "2027-02-19T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-16T22:28:03.983Z",
+      "version": "2026-11-16T22:28:03.983Z",
+      "eventId": "message-center:MC1556098:2026-11-16T22:28:03.983Z",
+      "firstSeenAt": "2026-11-17T10:50:52.252Z"
+    },
+    {
+      "id": "MC1556096",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-16",
+      "title": "Microsoft Teams: Audio announcement for Recording and Transcription",
+      "summary": "Microsoft Teams now supports an optional audio announcement when recording or transcription starts, configurable via Meeting and Calling Policies. Rolling out from May 2026 to January 2027 worldwide. No admin action required; default is off. Compliance recording is not supported with this feature.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1556096/",
+      "originalUrl": "https://mc.merill.net/message/MC1556096",
+      "body": "<p><b><b>What and Why:</b></b></p><p>The recording feature in Microsoft Teams now supports an audio announcement for Teams meetings and calls. With this new functionality, admins can enable a policy that plays an audio announcement when recording or transcription starts. This can be applied tenant-wide or to specific groups. The announcement helps ensure allowed participants who are permitted by policy are informed and improves accessibility awareness. This setting is available in both Meeting Policy and Calling Policy.</p><p></p><p></p><p><b><b>Rollout Schedule:</b></b></p><p>Public Preview (Worldwide): We began rolling out on early May 2026 and expect to complete by mid-December 2026.</p><p>General Availability (Worldwide): We will begin rolling out on mid-December 2026 and expect to complete by early January 2027.</p><p>General Availability (GCC): We will begin rolling out on mid-December 2026 and expect to complete by late January 2027.</p><p>General Availability (GCC High, DoD): We will begin rolling out on mid-December 2026 and expect to complete by late January 2027.</p><p><b><b>Impact on Your Organization:</b></b></p><p>None.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required. The default audio announcement policy is OFF; it can be turned on as needed.</p><p><b><b>Compliance considerations:</b></b></p><p>Confirmed that compliance recording is not supported with this feature. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature"
+      ],
+      "startDate": "2026-11-16T22:27:03Z",
+      "endDate": "2027-03-29T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-16T22:27:20.103Z",
+      "version": "2026-11-16T22:27:20.103Z",
+      "eventId": "message-center:MC1556096:2026-11-16T22:27:20.103Z",
+      "firstSeenAt": "2026-11-17T10:50:52.252Z"
+    },
+    {
+      "id": "MC1556088",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-16",
+      "title": "Microsoft Teams: End of support for iOS 17 and iPadOS 17",
+      "summary": "Microsoft Teams will end support for iOS 17 and iPadOS 17 starting mid-December 2026, requiring iOS/iPadOS 18 or later for new releases. Existing versions will keep working without support. Organizations should notify users, encourage OS upgrades, update policies, and revise support documentation accordingly.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Major update",
+      "url": "/message-center/MC1556088/",
+      "originalUrl": "https://mc.merill.net/message/MC1556088",
+      "body": "<p><b><b>What and Why:</b></b></p><p>Microsoft Teams is ending support for upcoming builds on iOS 17 and iPadOS 17. As this change rolls out, new Teams releases will require iOS 18 or later on iPhone and iPadOS 18 or later on iPad.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in mid-December 2026 and expect to complete by early January 2027.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Users whose devices remain on iOS 17 or iPadOS 17 will not be able to install newer Teams releases that require a newer operating system.</p><p>Teams versions already installed on these devices will continue functioning without official support. This change does not introduce a block on opening or signing in to those existing installations.</p><p><b><b>Action Required/Recommendations:</b></b></p><ul><li>Identify devices running iOS 17 or iPadOS 17 and notify affected users.</li><li>Advise users to upgrade to a supported operating system, then update Teams through the Apple App Store, to continue receiving supported Teams releases.</li><li>Review any mobile device management (MDM) or app deployment policies that pin or require specific iOS/iPadOS versions, and update them to allow iOS 18/iPadOS 18 so affected devices are not blocked from upgrading.</li><li>Update internal support documentation and helpdesk guidance.</li></ul><p>Learn more: <a href=\"https://learn.microsoft.com/en-us/microsoftteams/teams-client-system-requirements\" rel=\"noopener noreferrer\">Hardware requirements for Microsoft Teams</a>.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "User impact",
+        "Admin impact",
+        "Retirement"
+      ],
+      "startDate": "2026-11-16T22:20:40Z",
+      "endDate": "2027-03-29T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-16T22:20:58.693Z",
+      "version": "2026-11-16T22:20:58.693Z",
+      "eventId": "message-center:MC1556088:2026-11-16T22:20:58.693Z",
+      "firstSeenAt": "2026-11-17T10:50:52.252Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 13,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 0 new, 13 updated, and 0 removed Microsoft Teams documentation files across 1 documentation area.",
+    "groups": [
+      {
+        "category": "Feature update",
+        "title": "Microsoft Teams",
+        "summary": "The documentation now records enhanced search context when multiple users have the same name, with guidance linked for Teams Phone agents and auto attendants. The page now explains duplicate-name prompts and directs administrators to the Enhanced search context option instead of the `-UserNameExtension` parameter. It documents None, Office, and Department values with updated examples. The page now includes a November 16, 2026 entry covering enhanced search context for multiple users with the same name. The documentation records a November 16, 2026 enhancement providing additional search context when multiple users have the same name. The setup page now explains how to configure Enhanced sear",
+        "sourceFiles": [
+          "Teams/aa-cq-plan-overview.md",
+          "Teams/aa-cq-reference-dial-by-name-number.md",
+          "Teams/aa-cq-setup-auto-attendant-cmdlets.md",
+          "Teams/aa-cq-setup-auto-attendant-template-shared-history.md",
+          "Teams/aa-cq-setup-auto-attendant.md",
+          "Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+          "Teams/aa-cq-setup-teams-phone-agent-cmdlets.md",
+          "Teams/aa-cq-setup-teams-phone-agent-template-spam-detection.md",
+          "Teams/aa-cq-setup-teams-phone-agent-tools-appointments.md",
+          "Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
+          "Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+          "Teams/aa-cq-setup-teams-phone-agent.md",
+          "Teams/malicious-url-protection-teams.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Feature update",
+        "headline": "Microsoft Teams",
+        "detail": "The documentation now records enhanced search context when multiple users have the same name, with guidance linked for Teams Phone agents and auto attendants. The page now explains duplicate-name prompts and directs administrators to the Enhanced search context option instead of the `-UserNameExtension` parameter. It documents None, Office, and Department values with updated examples. The page now includes a November 16, 2026 entry covering enhanced search context for multiple users with the same name. The documentation records a November 16, 2026 enhancement providing additional search context when multiple users have the same name. The setup page now explains how to configure Enhanced sear"
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

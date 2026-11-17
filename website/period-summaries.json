@@ -407,19 +407,37 @@
       }
     },
     "2026-11-17": {
-      "headline": "QR-code coverage expands malicious URL guidance while Teams Phone documents duplicate-name controls",
-      "overview": "The period was dominated by documentation maintenance, with 12 Teams Phone pages carrying related guidance on Enhanced search context for duplicate-name dial-by-name prompts. The main security update renames Link Protection as malicious URL protection, adds URLs embedded in QR codes, and documents administration and behavior for new, existing, GCC, GCC High, and DoD tenants.",
-      "adminImpact": "No mandatory change is stated. Malicious URL protection is documented as enabled by default and managed in Teams admin center > Messaging > Messaging settings > Messaging safety. Teams Phone administrators configuring auto attendants or Teams Phone agents can review Enhanced search context and choose None, Office, or Department when callers need more information to distinguish users with the same name.",
+      "headline": "Guest-invitation reporting and synthetic-media detection headline Teams security updates",
+      "overview": "The period’s most consequential changes are two late-November Teams security rollouts: users will be able to report suspicious guest invitations to IT admins, while organizations can integrate certified third-party detection for synthetic audio and video in meetings. Consecutive interpretation in Interpreter is also targeted for general availability by late 2026. Documentation updates add operational detail for malicious URL protection and duplicate-name dialing in Teams Phone.",
+      "adminImpact": "Check messaging policies for the Report a security concern setting. Adopting synthetic-media detection requires deploying provider apps, granting permissions, and configuring meeting policies. Interpreter’s consecutive interpretation requires spending policies and eligible organizers with Copilot licenses. Administrators should also review the updated Messaging safety terminology and Enhanced search context options where those scenarios apply.",
       "keyChanges": [
         {
-          "title": "Malicious URL protection guidance now documents QR-code URLs and tenant scope",
-          "detail": "The security page changes the terminology from Link Protection to malicious URL protection, adds coverage for URLs embedded in QR codes, and documents tenant-level administration plus behavior for new, existing, GCC, GCC High, and DoD tenants. It says protection is enabled by default and is managed under Teams admin center > Messaging > Messaging settings > Messaging safety.",
+          "title": "Guest-invitation reporting reaches Teams in late November",
+          "detail": "Starting late November 2026, users can report suspicious guest invitations for security concerns, with reports routed to IT admins through the Teams admin center. No action is needed when Report a security concern is already enabled in messaging policies.",
+          "product": "Teams",
+          "sourceId": "MC1530615"
+        },
+        {
+          "title": "Teams meetings add certified third-party synthetic-media detection",
+          "detail": "Starting late November 2026, organizations can integrate certified third-party detection for synthetic audio and video in meetings. Admins adopting a provider must deploy its app, grant permissions, and configure meeting policies; the detection itself is performed by the third party.",
+          "product": "Teams",
+          "sourceId": "MC1509787"
+        },
+        {
+          "title": "Interpreter’s consecutive interpretation moves toward general availability",
+          "detail": "The turn-by-turn AI spoken translation capability, currently in public preview, is expected to reach general availability by late 2026. It uses usage-based Copilot Credits billing, so organizations need spending policies and meeting organizers with eligible Copilot licenses.",
+          "product": "Teams",
+          "sourceId": "MC1239927"
+        },
+        {
+          "title": "Malicious URL protection guidance adds QR-code coverage and tenant scope",
+          "detail": "The updated article uses malicious URL protection in place of Link Protection, documents URLs embedded in QR codes, and explains tenant-level administration for new, existing, GCC, GCC High, and DoD tenants. It directs administrators to Teams admin center > Messaging > Messaging settings > Messaging safety and states that protection is enabled by default.",
           "product": "Security and compliance",
           "sourceId": "doc-2026-11-17-malicious-url-protection-in-microsoft-teams-microsoft-teams-13"
         },
         {
-          "title": "Enhanced search context documents three options for duplicate-name prompts",
-          "detail": "Updated Teams Phone guidance describes Enhanced search context for callers choosing among users with the same name. The available values are None, Office, and Department, with office or department details added to spoken dial-by-name options. The reference guidance directs administrators to this setting instead of the `-UserNameExtension` parameter.",
+          "title": "Teams Phone guidance centers duplicate-name dialing on Enhanced search context",
+          "detail": "The dial-by-name reference now directs administrators to Enhanced search context instead of the -UserNameExtension parameter when multiple users share a name. The available values are None, Office, and Department, which add identifying information to spoken prompts.",
           "product": "Teams Phone",
           "sourceId": "doc-2026-11-17-aa-cq-reference-dial-by-name-number-02"
         }
@@ -427,11 +445,11 @@
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-17T10:50:52.463Z",
+      "generatedAt": "2026-11-17T22:28:56.435Z",
       "usage": {
-        "inputTokens": 2509,
-        "outputTokens": 1951,
-        "costUsd": 0.002843
+        "inputTokens": 3865,
+        "outputTokens": 4184,
+        "costUsd": 0.005794
       }
     }
   },
@@ -529,102 +547,102 @@
       }
     },
     "2026-11-16": {
-      "headline": "Teams ends iOS 17 and iPadOS 17 support mid-December, requiring OS 18",
-      "overview": "The most consequential change is Teams ending support for iOS 17 and iPadOS 17 in mid-December 2026; new releases will require version 18 or later, although existing versions will continue working without support. The week also brought a new Teams message-content table for security investigations, optional recording and transcription announcements, and clearer Teams Phone guidance for duplicate-name dialing. Teams mobile Queues is separately rolling out shared call history to authorized representatives in December.",
-      "adminImpact": "Identify affected iOS and iPadOS users, notify them, encourage OS upgrades, and update policies and support materials before mid-December. The recording announcement is off by default and requires no action unless administrators want to configure it through Meeting and Calling Policies; compliance recording isn't supported. Access to the MessageContents table is permission-controlled. Teams Phone administrators should review the duplicate-name setting where relevant, while malicious URL protection remains enabled by default and is managed under Teams admin center > Messaging > Messaging settings > Messaging safety.",
+      "headline": "Teams sets mid-December iOS 17 cutoff as new security controls arrive",
+      "overview": "Teams will require iOS and iPadOS 18 or later for new releases from mid-December, while several security capabilities roll out: Defender Advanced Hunting gains the MessageContents table, meetings add certified third-party synthetic-media detection, and users gain reporting for suspicious guest invitations. Teams is also rolling out optional recording and transcription start announcements, which remain off by default. The main documentation thread records Enhanced search context options—None, Office, and Department—for distinguishing duplicate names in Teams Phone dial-by-name flows.",
+      "adminImpact": "Prepare users and support teams for the iOS/iPadOS 18 requirement and update related policies and documentation. For synthetic-media detection, deploy certified provider apps, grant permissions, and configure meeting policies. Review permissions for analysts who need MessageContents and check whether messaging policies enable “Report a security concern.” The recording announcement is opt-in and unsupported with compliance recording.",
       "keyChanges": [
         {
-          "title": "Teams support moves to iOS and iPadOS 18",
-          "detail": "Starting in mid-December 2026, new Teams releases require iOS/iPadOS 18 or later. Existing app versions will continue working but will no longer be supported. Microsoft recommends notifying users, encouraging OS upgrades, updating policies, and revising support documentation.",
+          "title": "Teams ends iOS 17 and iPadOS 17 support in mid-December",
+          "detail": "New Teams releases will require iOS or iPadOS 18 or later. Existing app versions will continue working but without support; Microsoft recommends notifying users, encouraging OS upgrades, and updating support policies and documentation.",
           "product": "Teams",
           "sourceId": "MC1556088"
         },
         {
-          "title": "Advanced Hunting adds a MessageContents table for Teams messages",
-          "detail": "Microsoft Defender for Office 365 is rolling out the new MessageContents table in Advanced Hunting from late September through late November 2026. Authorized security analysts can access Teams message snippets and metadata, with access controlled by specific permissions.",
+          "title": "Certified third-party synthetic-media detection comes to Teams meetings",
+          "detail": "Starting in late November, organizations can integrate certified third-party solutions to detect synthetic audio and video. Administrators must deploy provider apps, grant permissions, and configure meeting policies; detection is performed by the provider while Teams enables the integration.",
+          "product": "Teams",
+          "sourceId": "MC1509787"
+        },
+        {
+          "title": "Defender Advanced Hunting adds the MessageContents table for Teams",
+          "detail": "During the rollout through late November, authorized security analysts can access Teams message snippets and metadata in the new MessageContents table for threat investigations. Access is controlled by specific permissions.",
           "product": "Teams",
           "sourceId": "MC1474106"
         },
         {
-          "title": "Recording and transcription gain optional audio announcements",
-          "detail": "Meeting and Calling Policies can control an audio announcement when recording or transcription starts. The worldwide rollout runs from May 2026 through January 2027; the option is off by default, requires no admin action, and doesn't support compliance recording.",
+          "title": "Users can report suspicious guest invitations to IT administrators",
+          "detail": "Starting in late November, users will be able to report guest invitations submitted as security concerns, with reports delivered to IT administrators through the Teams admin center. The capability is controlled by messaging policies; no action is needed when “Report a security concern” is already enabled.",
+          "product": "Teams",
+          "sourceId": "MC1530615"
+        },
+        {
+          "title": "Recording and transcription start announcements are policy-controlled and off by default",
+          "detail": "Teams now supports an optional audio announcement when recording or transcription starts, configurable through Meeting and Calling Policies as rollout continues worldwide from May 2026 through January 2027. Compliance recording does not support this feature.",
           "product": "Teams",
           "sourceId": "MC1556096"
-        },
-        {
-          "title": "Teams Phone guidance clarifies duplicate-name search context",
-          "detail": "The updated auto attendant guidance explains the Enhanced search context setting for dial-by-name prompts when users share a name. Administrators can select None, Office, or Department; Office and Department add the user's office or department to the spoken options.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-17-aa-cq-setup-auto-attendant-05"
-        },
-        {
-          "title": "Teams security guidance adopts malicious URL protection terminology",
-          "detail": "The updated guidance renames Link Protection as malicious URL protection and documents URLs embedded in QR codes, tenant-level administration, and behavior for new, existing, GCC, GCC High, and DoD tenants. Protection is enabled by default, and the documented management path is Teams admin center > Messaging > Messaging settings > Messaging safety.",
-          "product": "Security and compliance",
-          "sourceId": "doc-2026-11-17-malicious-url-protection-in-microsoft-teams-microsoft-teams-13"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-17T10:50:52.463Z",
+      "generatedAt": "2026-11-17T22:28:56.435Z",
       "usage": {
-        "inputTokens": 2921,
-        "outputTokens": 7399,
-        "costUsd": 0.009463
+        "inputTokens": 4269,
+        "outputTokens": 5234,
+        "costUsd": 0.007135
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams will require iOS and iPadOS 18 for new releases in mid-December",
-      "overview": "Teams’ clearest administrator deadline is mid-December 2026, when new releases will require iOS or iPadOS 18; existing app versions will continue working without support. November also set up Facilitator’s February 2027 rollout, retired off-network invitations to Teams Free for December, changed event recording access to event-specific policies, and advanced the device-management transition toward PMP. Most remaining activity was documentation terminology and procedure cleanup.",
-      "adminImpact": "Prioritize iOS and iPadOS inventory, user notices, OS upgrades, and support-document updates before mid-December. When reviewing town hall or webinar recording access, use RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. If adopting Facilitator, plan for Microsoft 365 Copilot (Premium) licensing and manual enablement. Update guidance for users who invite external participants to Teams Free, and account for the unpausable Admin Agent 901 rollout and PMP requirement as planned TAC device-management deprecation approaches.",
+      "headline": "Facilitator leads Teams’ roadmap as iOS 17 support ends and device management shifts",
+      "overview": "November’s most consequential changes span AI, client support, device administration, event policy behavior, and meeting security. Facilitator is planned for February 2027 and requires Microsoft 365 Copilot (Premium) with manual enablement. New Teams releases will require iOS or iPadOS 18 from mid-December, while Admin Agent 901 brings Android 15 connectivity and provisioning fixes for PMP and becomes required for PMP management. Event recording access is moving to event-specific policies, and certified third-party synthetic-media detection is arriving in meetings. Separately, off-network invitations to create Teams Free accounts will retire in December, while existing Teams Free collaboration and federation remain unchanged.",
+      "adminImpact": "Prepare users and support teams for the iOS/iPadOS 18 requirement and update related policies and documentation. For devices, allow the unpausable Admin Agent 901 update and prepare for the planned TAC device-management deprecation and PMP management requirements. Review town hall and webinar access procedures using RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. If adopting synthetic-media detection, deploy certified provider apps, grant permissions, and configure meeting policies. Facilitator adoption will require Microsoft 365 Copilot (Premium) and manual enablement; Teams Free changes call for updated user guidance rather than a tenant configuration change.",
       "keyChanges": [
         {
-          "title": "iOS 17 and iPadOS 17 lose support for new Teams releases",
-          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing Teams versions will continue working, but without support. Organizations should notify affected users, encourage OS upgrades, and revise policies and support materials.",
-          "product": "Teams",
-          "sourceId": "MC1556088"
-        },
-        {
-          "title": "Facilitator will resolve meeting knowledge gaps with web answers",
-          "detail": "Facilitator is scheduled to become available in February 2027. It can detect knowledge gaps and provide relevant web-search answers in meeting chat. The capability requires Microsoft 365 Copilot (Premium), must be manually enabled, and includes administrator controls and user opt-out.",
+          "title": "Facilitator is scheduled to close meeting knowledge gaps in February 2027",
+          "detail": "The Teams AI feature will detect knowledge gaps and provide relevant web-search answers in meeting chat. It requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports administrator controls and user opt-out.",
           "product": "Teams",
           "sourceId": "MC1409304"
         },
         {
-          "title": "Event recording access now follows town hall and webinar policies",
-          "detail": "For Events App town halls and webinars, the “Who has access to the recording or transcript” option will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The behavior rolls out worldwide in early to mid-November 2026.",
+          "title": "Teams ends new-release support for iOS 17 and iPadOS 17",
+          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing Teams versions will continue working, but without support.",
+          "product": "Teams",
+          "sourceId": "MC1556088"
+        },
+        {
+          "title": "Admin Agent 901 brings Android 15 PMP fixes ahead of TAC deprecation",
+          "detail": "Certified Device Apps version 1.0.0.202610190119 adds critical Android 15 connectivity and provisioning fixes for PMP and is being accelerated across Teams-certified devices. The update cannot be paused and is required to manage devices in PMP; TAC device-management deprecation is targeted for mid-November 2026.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-11-certified-device-apps-12"
+        },
+        {
+          "title": "Town hall and webinar recording access switches to event-specific policies",
+          "detail": "For Events App town halls and webinars, the “Who has access to the recording or transcript” option is changing to depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. Worldwide rollout was scheduled for early to mid-November 2026.",
           "product": "Teams",
           "sourceId": "MC1550542"
         },
         {
-          "title": "Teams will retire off-network invitations to Teams Free",
-          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, so the main administrator impact is updating user guidance.",
+          "title": "Teams adds certified third-party synthetic-media detection to meetings",
+          "detail": "Beginning in late November 2026, Teams will support certified third-party detection of synthetic audio and video in meetings. Administrators must deploy provider apps, grant permissions, and configure meeting policies; detection itself is performed by the third party.",
           "product": "Teams",
-          "sourceId": "MC1546409"
-        },
-        {
-          "title": "Admin Agent 901 advances the PMP device-management transition",
-          "detail": "Certified-device guidance lists version 1.0.0.202610190119, or Admin Agent 901, with Android 15 connectivity and provisioning fixes for PMP. The rollout is being accelerated across Teams-certified devices, cannot be paused, and is required for PMP management; the guidance also prepares for planned TAC device-management deprecation.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-11-certified-device-apps-12"
+          "sourceId": "MC1509787"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-17T10:50:52.463Z",
+      "generatedAt": "2026-11-17T22:28:56.435Z",
       "usage": {
-        "inputTokens": 6218,
-        "outputTokens": 4805,
-        "costUsd": 0.00701
+        "inputTokens": 6169,
+        "outputTokens": 5885,
+        "costUsd": 0.008296
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-17T10:50:52.463Z",
+  "generatedAt": "2026-11-17T22:28:56.435Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -679,22 +697,22 @@
       "costUsd": 0.007321
     },
     "2026-11-17": {
-      "inputTokens": 11648,
-      "outputTokens": 14155,
-      "requests": 3,
-      "costUsd": 0.019316
+      "inputTokens": 25951,
+      "outputTokens": 29458,
+      "requests": 6,
+      "costUsd": 0.04054
     }
   },
   "lastRun": {
-    "inputTokens": 11648,
-    "outputTokens": 14155,
+    "inputTokens": 14303,
+    "outputTokens": 15303,
     "requests": 3,
-    "costUsd": 0.019316
+    "costUsd": 0.021224
   },
   "totalUsage": {
-    "inputTokens": 117072,
-    "outputTokens": 139113,
-    "requests": 35,
-    "costUsd": 0.190348
+    "inputTokens": 131375,
+    "outputTokens": 154416,
+    "requests": 38,
+    "costUsd": 0.211572
   }
 }

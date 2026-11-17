@@ -338,6 +338,110 @@
         "generatedBy": "openai",
         "model": "gpt-5.6-luna"
       }
+    },
+    {
+      "filename": "Teams/devices/usb-devices.md",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 1,
+      "changes": 14,
+      "patch": "diff --git a/Teams/devices/usb-devices.md b/Teams/devices/usb-devices.md\nindex 6ce2dd5..b7fc952 100644\n--- a/Teams/devices/usb-devices.md\n+++ b/Teams/devices/usb-devices.md\n@@ -419,7 +419,7 @@ Note\n \r\n Teams doesn't support button controls on connected certified peripherals if third-party collaboration and conferencing apps are running at the same time.\r\n \r\n-# [Certified Native Bluetooth devices](#tab/bluetooth)\r\n+# [Certified Native Bluetooth devices - Classic](#tab/bluetoothclassic)\r\n *Table Updated November 2026*\r\n \r\n Note\r\n@@ -456,4 +456,16 @@ The date format is MM/DD/YYYY.\n | Logitech | Zone 305 Headset | 4/4/2025 | Certified for Microsoft Teams |\r\n | Logitech | Zone Wireless 2 Headset | 01/13/2025 | Certified for Microsoft Teams |\r\n \r\n+# [Certified Native Bluetooth devices - LE Audio](#tab/bluetoothleaudio)\r\n+*Table Updated November 2026*\r\n+\r\n+Note\r\n+\r\n+The date format is MM/DD/YYYY.\r\n+\r\n+| **Manufacturer** | **Model** | **Qualified** | **Certified Program** |\r\n+| --- | --- | --- | --- |\r\n+| Jabra | Evolve3 85 | 11/13/2026 | Certified for Microsoft Teams |\r\n+| Jabra | Evolve3 75 | 11/13/2026 | Certified for Microsoft Teams |\r\n+\r\n ---\n\\ No newline at end of file\n",
+      "baseCommitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitSha": "2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 13:45:28 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/usb-devices.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/usb-devices",
+      "eventId": "teams-docs:2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b:modified:Teams/devices/usb-devices.md",
+      "firstSeenAt": "2026-11-17T22:28:47.894Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Bluetooth device certification list updated",
+        "summary": "The page now separates Certified Native Bluetooth devices into Classic and LE Audio tabs and adds Jabra Evolve3 85 and Evolve3 75, both qualified on 11/13/2026.",
+        "adminImpact": "Review the updated list when evaluating Teams-certified Bluetooth devices; no administrator action is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/manage-meeting-recording-options.md",
+      "status": "modified",
+      "additions": 22,
+      "deletions": 0,
+      "changes": 22,
+      "patch": "diff --git a/Teams/manage-meeting-recording-options.md b/Teams/manage-meeting-recording-options.md\nindex e6f881f..84168b4 100644\n--- a/Teams/manage-meeting-recording-options.md\n+++ b/Teams/manage-meeting-recording-options.md\n@@ -65,6 +65,7 @@ The following table shows the features available to help you manage meeting reco\n | Microsoft Copilot in Teams meetings and events | Yes | No | Yes | Yes |\r\n | Meeting recording overall | Yes | No | No | No |\r\n | Privacy and Security URL | Yes | No | No | No |\r\n+| Audio announcements for recording and transcription | Yes | No | No | No |\r\n | Record and transcribe automatically | No^1^ | Yes | Yes | Yes |\r\n | Recordings and transcripts expiration | Yes | No | No | No |\r\n | Transcription | Yes | No | No | Yes |\r\n@@ -105,6 +106,27 @@ With a Teams admin policy or meeting template, you can manage how meeting transc\n \r\n With a Teams admin policy, you can add your custom privacy statement to Teams meeting recordings and transcripts in your organization. If your organization has a legal website that you want people to go to for any legal concerns, this policy allows you to display the URL. To learn more, see [Manage Teams recording policies for meetings and events](meeting-recording#set-a-custom-privacy-policy-url).\r\n \r\n+## Audio announcements for recording and transcription\r\n+\r\n+You can enable audio announcements to notify users when recording or transcription starts in Teams meetings and VoIP calls. Announcements help participants stay informed and improve accessibility awareness. Whether a user hears an announcement depends on that user's assigned policy, not just the meeting organizer's policy.\r\n+\r\n+Use the **`-RecordingAndTranscriptionAudioNotification`** parameter in [Set-CsTeamsMeetingPolicy](/en-us/powershell/module/microsoftteams/set-csteamsmeetingpolicy#-recordingandtranscriptionaudionotification) for meetings and group calls, and in [Set-CsTeamsCallingPolicy](/en-us/powershell/module/microsoftteams/set-csteamscallingpolicy#-recordingandtranscriptionaudionotification) for 1:1 VoIP calls. The default value is **Disabled**. Set it to **Enabled** to turn on announcements, or **Disabled** to turn them off.\r\n+\r\n+For example, to enable announcements in the global meeting and calling policies, run:\r\n+\r\n+```powershell\r\n+Set-CsTeamsMeetingPolicy -Identity Global -RecordingAndTranscriptionAudioNotification Enabled\r\n+Set-CsTeamsCallingPolicy -Identity Global -RecordingAndTranscriptionAudioNotification Enabled\r\n+```\r\n+\r\n+Changes to the global policies apply to users who don't have custom policies assigned. To enable announcements for specific users or groups instead, configure custom meeting and calling policies and [assign those policies to the users or groups](assign-policies-users-and-groups).\r\n+\r\n+Supported clients include Windows and macOS desktop, web, Microsoft Teams Rooms, Android, iOS, and VDI 2.0. VDI 1.0 isn't supported.\r\n+\r\n+Note\r\n+\r\n+This policy doesn't control audio announcements for PSTN users or for Teams users in 1:1 calls between Teams and PSTN. Audio announcements for these scenarios are enabled by default.\r\n+\r\n ## Require participant agreement for recording\r\n \r\n With a Teams meeting policy, you can require participants to agree to being recorded before they can unmute or turn on their camera. Consent results are stored in the meeting attendance report. For details, see [Require participant agreement for recording](participant-agreement-recording-transcription).\r\n",
+      "baseCommitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitSha": "2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 13:45:28 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/manage-meeting-recording-options.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/manage-meeting-recording-options",
+      "eventId": "teams-docs:2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b:modified:Teams/manage-meeting-recording-options.md",
+      "firstSeenAt": "2026-11-17T22:28:47.909Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Documentation adds configuration details for recording and transcription announcements",
+        "summary": "The article now explains how to enable audio announcements through Teams meeting and calling policies, provides PowerShell examples, lists supported clients, and describes PSTN behavior.",
+        "adminImpact": "Administrators can configure the relevant policies and account for client support; PSTN announcements are enabled by default.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/recording-transcription-overview.md",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 0,
+      "changes": 3,
+      "patch": "diff --git a/Teams/recording-transcription-overview.md b/Teams/recording-transcription-overview.md\nindex 590759e..3616ff8 100644\n--- a/Teams/recording-transcription-overview.md\n+++ b/Teams/recording-transcription-overview.md\n@@ -65,6 +65,7 @@ As an admin, you can manage convenience recording and transcription for meetings\n - **Convenience recording**: User-initiated recording of Teams meetings, events, and calls.\r\n - **Transcription**: Automatic conversion of spoken audio into text.\r\n - **Explicit recording consent**: A policy setting that requires participants to consent before they can be included in recording/transcription.\r\n+- **Audio announcements**: Policy-controlled audio notifications when recording or transcription starts in Teams meetings and VoIP calls. These announcements are off by default and play for users whose assigned meeting or calling policy enables them.\r\n - **Intelligent recap**: AI-generated meeting or call recap features that depend on transcript availability and licensing.\r\n \r\n ## Meeting, events, and calling policies\r\n@@ -95,6 +96,7 @@ When you make changes to the Global policy, they apply to everyone in your organ\n | Record an event | Allow or prevent event recording for users, groups, or your entire organization. | [Manage Teams recording policies for meetings and events](meeting-recording) |\r\n | Transcription for meetings | Allow or prevent meeting and group call transcription for users, groups, or your entire organization. | [Admins- Manage transcription and captions for Teams meetings](meeting-transcription-captions#meetings) |\r\n | Transcription for events | Allow or prevent transcription for events for users, groups, or your entire organization. | [Admins- Manage transcription and captions for Teams meetings](meeting-transcription-captions) |\r\n+| Audio announcements | Control whether users hear an audio announcement when recording or transcription starts in meetings and group calls. | [Manage audio announcements for recording and transcription](manage-meeting-recording-options#audio-announcements-for-recording-and-transcription) |\r\n | Auto recording | Control whether organizers have the **Record and transcribe automatically** setting in their **Meeting options** for meetings and events. If you allow auto recording, your users’ **Record and transcribe automatically** setting is **Off** by default for meetings and **On** for events. When organizers want their meetings to be recorded and transcribed automatically, they must switch the toggle to **On** for each meeting. With a Teams Premium license, you can use [Meeting templates or Sensitivity labels](manage-teams-auto-recording) to enforce a value for this setting. | [Manage Teams recording policies for meetings and events](manage-teams-auto-recording) |\r\n | Real-Time-Text (RTT) | Manage whether your users can use RTT in Teams meetings and group calls. | [Manage Real-Time Text (RTT) in Teams for users in your organization](teams-real-time-text) |\r\n | Explicit recording consent | Control whether meeting participants must provide consent to be recorded. | [Manage Teams recording policies for meetings and events](participant-agreement-recording-transcription) |\r\n@@ -118,6 +120,7 @@ When you make changes to the Global policy, they apply to everyone in your organ\n | --- | --- | --- |\r\n | Recording | Allow or prevent 1:1 and PSTN call recording for users, groups, or your entire organization. | [Configure call recording, transcription, and captions in Teams](call-recording-transcription-captions#enable-call-recording) |\r\n | Transcription | Allow or prevent 1:1 and PSTN call transcription for users, groups, or your entire organization. | [Configure call recording, transcription, and captions in Teams](call-recording-transcription-captions#enable-call-transcription) |\r\n+| Audio announcements | Control whether Teams users hear an audio announcement when recording or transcription starts in 1:1 VoIP calls. This policy doesn't control announcements for PSTN users or 1:1 Teams-to-PSTN calls. | [Manage audio announcements for recording and transcription](manage-meeting-recording-options#audio-announcements-for-recording-and-transcription) |\r\n | Intelligent recap for calls | Licensing and the transcription policy control this feature. Users with a Teams Premium or Microsoft Copilot license automatically have access to this feature. | [Intelligent recap for Teams calls and meetings](intelligent-recap-calls-meetings) |\r\n | Real-Time-Text (RTT) | Manage whether your users can use RTT in Teams 1:1 VoIP calls. | [Manage Real-Time Text (RTT) in Teams for users in your organization](teams-real-time-text) |\r\n \r\n",
+      "baseCommitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitSha": "2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 13:45:28 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/recording-transcription-overview.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/recording-transcription-overview",
+      "eventId": "teams-docs:2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b:modified:Teams/recording-transcription-overview.md",
+      "firstSeenAt": "2026-11-17T22:28:47.917Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Audio announcement policy coverage expanded",
+        "summary": "The documentation now describes policy-controlled audio announcements when recording or transcription starts in meetings, group calls, and 1:1 VoIP calls. It notes that announcements are off by default and excludes PSTN users and 1:1 Teams-to-PSTN calls.",
+        "adminImpact": "Admins can use the updated scope and linked guidance to understand which users and call types are covered by these policies.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/teams-recording-policy.md",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 0,
+      "changes": 6,
+      "patch": "diff --git a/Teams/teams-recording-policy.md b/Teams/teams-recording-policy.md\nindex caf266d..fadd503 100644\n--- a/Teams/teams-recording-policy.md\n+++ b/Teams/teams-recording-policy.md\n@@ -104,6 +104,12 @@ Tip\n \r\n To learn more about recording options that you might allow your users to control, see [Record a meeting in Microsoft Teams](https://support.microsoft.com/office/record-a-meeting-in-microsoft-teams-34dfbe7f-b07d-4a27-b4c6-de62f1348c24). \r\n \r\n+## Audio announcements for recording and transcription\r\n+\r\n+For recording and transcription in Teams meetings and VoIP calls, you can enable audio announcements to notify participants when recording or transcription starts. These policy-controlled announcements are off by default. Whether a user hears an announcement depends on that user's assigned meeting or calling policy.\r\n+\r\n+You can configure the policies for your organization or assign custom policies to specific users or groups. For configuration steps, supported clients, and PSTN exclusions, see [Audio announcements for recording and transcription](manage-meeting-recording-options#audio-announcements-for-recording-and-transcription).\r\n+\r\n ## Managing recording policies\r\n \r\n For more specific details on convenience and compliance recording, see the following resources.\r\n",
+      "baseCommitSha": "d0751e002071f0165f7466e4428e563c7ffc0af8",
+      "commitSha": "2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 13:45:28 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/teams-recording-policy.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/teams-recording-policy",
+      "eventId": "teams-docs:2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b:modified:Teams/teams-recording-policy.md",
+      "firstSeenAt": "2026-11-17T22:28:47.925Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Audio announcement policies are now documented",
+        "summary": "The recording policy documentation adds guidance for enabling audio announcements when recording or transcription starts in Teams meetings and VoIP calls. Announcements are off by default and can be assigned organization-wide or to specific users or groups.",
+        "adminImpact": "Administrators can review the linked configuration steps, supported clients, and PSTN exclusions when deciding whether to enable these policies.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
     }
   ],
   "deletedFiles": [],
@@ -456,17 +560,295 @@
       "version": "2026-11-16T22:20:58.693Z",
       "eventId": "message-center:MC1556088:2026-11-16T22:20:58.693Z",
       "firstSeenAt": "2026-11-17T10:50:52.252Z"
+    },
+    {
+      "id": "MC1557760",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams: Registration capacity for town halls and webinars increases to 20,000",
+      "summary": "Starting December 2026, Microsoft Teams town halls and webinars registration capacity increases up to 20,000, scaling with attendee capacity. Teams Enterprise allows 3,000 registrations; Attendee Capacity Packs enable up to 20,000. No new policies needed; organizers should ensure proper licensing and update training accordingly.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1557760/",
+      "originalUrl": "https://mc.merill.net/message/MC1557760",
+      "body": "<p><b><b>What and why</b></b></p><p>Starting in December, registration capacity for Microsoft Teams town halls and webinars scales with the event's attendee capacity, up to 20,000 registrations per event. Organizers with Teams Enterprise can allow up to 3,000 registrations. Organizers with Attendee Capacity Packs can allow up to 20,000. Organizers can use this to plan large-scale events with registration.</p><p></p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> We will begin rolling out in <b>early December 2026</b> and expect to complete by<b> late December 2026</b>.</li></ul><p></p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizers of Teams town halls and webinars that use registration</li><li>Admins who manage Teams events policies and Attendee Capacity Pack licenses</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams (town halls and webinars)</li></ul><p><i>What will happen</i></p><ul><li>Registration capacity scales with attendee capacity, up to 20,000 registrations per event.</li><li>Organizers with Teams Enterprise can allow up to 3,000 registrations.</li><li>Organizers with Attendee Capacity Packs can allow up to 20,000 registrations.</li><li>Large webinars with registration don't support broadcast-style streaming, which is available with town halls.</li><li>Organizers still need the right events policy. No new policy access is needed, only the right Attendee Capacity Pack where applicable.</li><li>Existing Teams events policies and admin controls don't change.</li><li>We plan to support more registrations per event in future releases.</li></ul><p></p><p><b><b>Action required and recommendations</b></b></p><p>No action is required. To prepare, you can:</p><ul><li>Tell organizers about the higher registration limits.</li><li>Make sure organizers who need more than 3,000 registrations per event have an Attendee Capacity Pack of the right size. Assign packs in the <i>Teams admin center</i> (<b>Add-on Licenses</b> &gt; <b>Teams Events</b>).</li><li>Update internal training and documentation that mention a 1,000-registration limit.</li><li>Review your Teams events policies in the <i>Teams admin center</i> (<b>Meetings</b> &gt; <b>Events policies</b>) to confirm they meet your organization's needs.</li></ul><p></p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-17T19:13:20Z",
+      "endDate": "2027-01-31T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T19:13:35.257Z",
+      "version": "2026-11-17T19:13:35.257Z",
+      "eventId": "message-center:MC1557760:2026-11-17T19:13:35.257Z",
+      "firstSeenAt": "2026-11-17T22:28:56.212Z"
+    },
+    {
+      "id": "MC1443517",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams: External presenters can manage event production controls",
+      "summary": "Microsoft Teams now allows event organizers to grant trusted external presenters (federated B2B and guest users) production control during events, enabling them to manage attendee viewing. This feature, rolling out August to November 2026, requires explicit organizer assignment and supports collaboration with external partners.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1443517/",
+      "originalUrl": "https://mc.merill.net/message/MC1443517",
+      "body": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Organizations can now allow trusted external presenters to manage Microsoft Teams event production controls. Federated (B2B) users and guest users can be assigned through the <b>Who has control of production</b> <b>tools</b> setting, enabling them to manage the attendee viewing experience during Teams events.</p><p>This feature helps organizations that work with external event producers, agencies, and third-party event management partners by allowing authorized external presenters to perform production tasks without requiring internal staff to manage the event.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=567298\" rel=\"noopener noreferrer\">567298</a>.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release:</b> Beginning in <b>early August 2026</b> and expected to complete by <b>early October 2026 </b>(previously early September) (previously mid-August)</li><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning <b>early August 2026</b> and expected to complete by <b>late November 2026</b> (previously early November)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizations that use Microsoft Teams events</li><li>Event organizers who work with external presenters, production vendors, agencies, or trusted partners</li><li>Federated (B2B) users and guest users who are invited to participate in Teams events</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li><li>Teams events</li></ul><p><i>What will happen</i></p><ul><li>Event organizers can grant production control permissions to federated (B2B) users and guest users.</li><li>Authorized external presenters can manage production controls and determine what attendees see during an event.</li><li>The feature is available only when an organizer explicitly assigns production control access.</li><li>Existing events and configurations will not be modified automatically.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required before rollout.</p><p>We recommend that you:</p><ul><li>Review internal guidance and governance policies for Teams events that include external participants.</li><li>Inform event organizers about this new capability.</li><li>Determine which external presenters, vendors, or partners should be authorized to receive production control permissions.</li><li>Update any training or documentation used by event organizers, if applicable.</li></ul><p>Organizers can use the <b>Who has control of production tools</b> setting when configuring a Teams event to grant production access to trusted external users.</p><p><b><b>Compliance considerations</b></b></p><table><tbody><tr><td>Question</td><td>Answer</td></tr><tr><td>Does this change provide a new way for users, tenants, or subscriptions to communicate?</td><td>Yes. This feature enables organizations to include federated (B2B) and guest users in Teams event production workflows, expanding collaboration and communication capabilities with trusted external participants.</td></tr><tr><td>Does this change include an admin or organizer control?</td><td>Yes. Event organizers can use the Who has control of production tools setting to grant or restrict production control access for trusted external users when configuring a Teams event.</td></tr><tr><td>Can users enable or disable this capability themselves?</td><td>Yes. Event organizers can choose whether to grant production control permissions to federated (B2B) and guest users when setting up an event.</td></tr></tbody></table>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-07-31T00:25:38Z",
+      "endDate": "2026-12-31T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T17:39:27.03Z",
+      "version": "2026-11-17T17:39:27.03Z",
+      "eventId": "message-center:MC1443517:2026-11-17T17:39:27.03Z",
+      "firstSeenAt": "2026-11-17T22:28:56.212Z"
+    },
+    {
+      "id": "MC1307982",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams Town halls: Upload custom backgrounds in Manage what attendees see",
+      "summary": "Microsoft Teams will allow organizers and presenters of town hall events with Teams Premium licenses to upload custom background images in the \"Manage what attendees see\" feature. Rollout begins early June 2026, enabling branded visuals behind presenters and shared content in supported layouts, with no admin action needed.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1307982/",
+      "originalUrl": "https://mc.merill.net/message/MC1307982",
+      "body": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p>To help organizations deliver more polished and branded town hall events, Microsoft Teams is introducing the ability for organizers and presenters to <b>upload custom background images</b> in the <i>Manage what attendees see experience</i>. This enhancement allows teams to replace default backgrounds with branded visuals—such as company logos or event-specific designs—so presenters and shared content appear consistently on brand for attendees. This feature is available for Teams events organizers with a Teams Enterprise license. This update applies to Teams for Windows desktop and Mac desktop.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?searchterms=561493\" rel=\"noopener noreferrer\">561493</a></b>.</p><p><b><b>When this will happen</b></b></p><ul><li><b>Targeted Release: </b>Rollout begins in<b> early June 2026 </b>(previously late May)<b> </b>and is expected to complete by<b> early June 2026 </b>(previously late May).</li><li><b>General Availability (Worldwide): </b>Rollout begins in<b> early June 2026</b> and is expected to complete by <b>late November 2026</b> (previously early November).</li></ul><p><b><b>How this affects your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizers and presenters of <b>Teams town hall events</b></li><li>Users assigned a <b>Teams Premium </b>license</li><li>Tenants using <b>Manage what attendees see</b> in <i>town halls</i></li></ul><p><i>What will happen</i></p><ul><li>Organizers and presenters can upload<b> custom background images </b>directly within the <b><i>Manage what attendees see</i></b><i> experience</i>.</li><li>Uploaded backgrounds appear behind presenters and shared content in supported town hall layouts.</li><li>JPEG and PNG image formats are supported, with recommended resolution guidance shown during upload.</li><li><b>Custom backgrounds</b> appear alongside existing default background options in the background picker.</li><li>The feature is<b> enabled by default </b>for eligible users and <b>applies only to town hall events where Manage what attendees see is enabled</b>.</li><li>There is<b> no change</b> to standard Teams meetings or webinars.</li></ul><p><b><b>What you can do to prepare</b></b></p><ul><li>No admin action is required before rollout.</li><li>Consider notifying users who organize or present town halls about this new capability.</li><li>Prepare branded background images that align with your organization’s visual identity guidelines.</li><li>Update internal documentation or event playbooks if you provide guidance on hosting town halls.</li><li>Optionally, run a test town hall event to familiarize presenters with the upload flow and attendee experience.</li></ul><p><b>Learn more:</b> <a href=\"https://support.microsoft.com/office/manage-what-attendees-see-in-microsoft-teams-19bfd690-8122-49f4-bc04-c2c5f69b4e16#bkmk_customize_event_screen\" rel=\"noopener noreferrer\">Customize the event screen - Manage what attendees see in Microsoft Teams | Microsoft Support</a></p><p><b><b>Compliance considerations</b></b></p><table><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change store new customer data?</td><td><b>Yes.</b> Uploaded custom background images are stored as part of the Teams town hall event configuration.</td></tr><tr><td>Does the change alter how existing customer data is processed or accessed?</td><td><b>Yes.</b> Background images are rendered behind presenters and shared content during the live event for attendees.</td></tr></tbody></table>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-05-12T01:21:10Z",
+      "endDate": "2026-12-31T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T17:37:19.507Z",
+      "version": "2026-11-17T17:37:19.507Z",
+      "eventId": "message-center:MC1307982:2026-11-17T17:37:19.507Z",
+      "firstSeenAt": "2026-11-17T22:28:56.212Z"
+    },
+    {
+      "id": "MC1530615",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams: Report guest invitations for security concerns",
+      "summary": "Microsoft Teams will let users report suspicious guest invitations for security concerns starting late November 2026. Reports go to IT admins via the Teams admin center. No action is needed if \"Report a security concern\" is already enabled in messaging policies, which control this feature.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "reporting",
+        "name": "Reports, alerts and monitoring",
+        "icon": "/assets/topics/reporting.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1530615/",
+      "originalUrl": "https://mc.merill.net/message/MC1530615",
+      "body": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams will enable users to report guest invitations for security concerns directly from Teams. When users receive an unexpected or potentially malicious invitation to join another organization as a guest, they can report it to their IT admin for review, helping identify and mitigate phishing and other abuse through guest invitations.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in late November 2026 (previously mid-November) and expect to complete by late November 2026 (previously mid-November).</p><p><b><b>Impact on Your Organization:</b></b></p><p>Users can report suspicious guest invitations when declining them in Teams. Reports are shared with their IT admin through the User reported security submissions report in the Teams admin center and with Microsoft for review.</p><p></p><p><b><b>Action Required/Recommendations:</b></b></p><p>No action is required for organizations that already have <b>Report a security concern</b> enabled in their Teams messaging policy. Admins can manage this capability through <b>Teams admin center &gt; Messaging policies &gt; Report a security concern</b>.</p><p><b><b>Compliance considerations:</b></b></p><table><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change include an admin control?</td><td>Yes. The capability is controlled through the Teams messaging policy setting for Report a security concern.</td></tr></tbody></table>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-29T18:35:09Z",
+      "endDate": "2027-01-15T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T17:34:34.37Z",
+      "version": "2026-11-17T17:34:34.37Z",
+      "eventId": "message-center:MC1530615:2026-11-17T17:34:34.37Z",
+      "firstSeenAt": "2026-11-17T22:28:56.212Z"
+    },
+    {
+      "id": "MC1509787",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams: Third-party synthetic audio and video detection in meetings",
+      "summary": "Microsoft Teams will support certified third-party synthetic audio and video detection in meetings starting late November 2026. Organizations can integrate these solutions to enhance security against AI-generated media threats. Admins must deploy provider apps, grant permissions, and configure meeting policies. Detection is performed by third parties, with Microsoft Teams enabling integration.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1509787/",
+      "originalUrl": "https://mc.merill.net/message/MC1509787",
+      "body": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Organizations can enhance meeting security with synthetic audio and video detection solutions provided by certified third-party providers. Third-party detection solutions analyze meeting media for signs of synthetic or manipulated audio and video and send detection signals to Teams, enabling integrated in-meeting experiences and controls.</p><p><b>Important:</b> Synthetic media detection is performed by the third-party provider. Microsoft Teams provides the platform integration and experiences for surfacing and acting on detection signals from supported providers.</p><p>This message is associated with Microsoft 365 Roadmap ID 573451.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in late November 2026 (previously mid-November) and expect to complete by late November 2026.</p><p>General Availability (Worldwide): We will communicate via Message center when we are ready to proceed.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Organizations can choose and integrate certified third-party deepfake detection solutions into Microsoft Teams meetings, helping protect users from emerging AI-generated voice and video threats. This gives customers more flexibility to meet security and compliance needs while enabling users to make more informed trust decisions during meetings.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>To use third-party Synthetic Audio and Video Detection in Microsoft Teams, administrators should evaluate and select a supported detection provider, deploy the provider app through Manage apps in the Teams admin center, grant required permissions, and configure applicable Teams meeting policies.</p><p><b><b>Compliance considerations:</b></b></p><table><tbody><tr><td><b>Question</b></td><td><b>Answer</b></td></tr><tr><td>Does the change introduce or significantly modify AI/ML capabilities that interact with customer data?</td><td>Yes. Certified third-party providers may analyze meeting audio/video signals for synthetic media detection. Review provider terms, data handling, and compliance documentation before enabling.</td></tr><tr><td>Does the change include an admin control?</td><td>Yes. Admins manage provider app deployment, permissions, and Teams meeting policy configuration.</td></tr></tbody></table>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-15T23:01:09Z",
+      "endDate": "2027-02-15T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T17:34:21.327Z",
+      "version": "2026-11-17T17:34:21.327Z",
+      "eventId": "message-center:MC1509787:2026-11-17T17:34:21.327Z",
+      "firstSeenAt": "2026-11-17T22:28:56.212Z"
+    },
+    {
+      "id": "MC1518033",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams: Onboarding workflow for new team members",
+      "summary": "Microsoft Teams will introduce an onboarding workflow to automatically connect new members to relevant channels, improving engagement and onboarding speed. Rollout starts late November 2026 for Targeted Release and early December 2026 for General Availability. No admin action is required.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1518033/",
+      "originalUrl": "https://mc.merill.net/message/MC1518033",
+      "body": "<p>Updated November 17, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams is introducing an onboarding workflow that helps new team members get started faster by automatically connecting them to relevant channels when they join a team. This can improve engagement, accelerate onboarding, and make important information easier to find from the start.</p><p>This message is associated with Microsoft 365 Roadmap ID 573452.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in late November 2026 (previously mid-November) and expect to complete in late November 2026 (previously mid-November).</p><p>General Availability (Worldwide): We will begin rolling out in early December 2026 and expect to complete by mid-December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Today, new team members may need to manually discover and join the channels that are most relevant to their work. With this update, team owners can automatically add new members to relevant channels through the onboarding workflow when they are added to a team.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required. You may want to inform team owners about this upcoming improvement so they understand how to connect new members to relevant channels more efficiently during onboarding.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact"
+      ],
+      "startDate": "2026-10-20T23:00:34Z",
+      "endDate": "2027-02-15T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T17:29:22.283Z",
+      "version": "2026-11-17T17:29:22.283Z",
+      "eventId": "message-center:MC1518033:2026-11-17T17:29:22.283Z",
+      "firstSeenAt": "2026-11-17T22:28:56.212Z"
+    },
+    {
+      "id": "MC1239927",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams: Consecutive interpretation in Interpreter agent will be generally available",
+      "summary": "Consecutive interpretation in Microsoft Teams Interpreter, currently in public preview, will roll out to general availability by late 2026. It offers turn-by-turn AI-generated spoken translation using usage-based billing with Copilot Credits. Organizations must set spending policies and have eligible meeting organizers with Copilot licenses.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "ai",
+        "name": "AI and Copilot",
+        "icon": "/assets/topics/ai.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1239927/",
+      "originalUrl": "https://mc.merill.net/message/MC1239927",
+      "body": "<p>Updated November 16, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>Introduction</b></b></p><p><b>Consecutive interpretation in Interpreter for Teams meetings</b>, currently in public preview, is planned to begin rolling out to general availability. This is a new mode in Interpreter that helps meeting participants collaborate more naturally in bilingual conversations. After an eligible meeting organizer turns it on, this turn-by-turn experience interprets each statement after a speaker finishes and then plays the interpreted audio for all meeting participants to hear.&nbsp;</p><p>Similar to other new advanced Microsoft AI experiences, consecutive interpretation will be delivered through usage-based billing (UBB) with Copilot Credits. Usage charges can begin after an administrator configures a spending policy and an eligible meeting organizer turns on the experience for their meeting. A Copilot license is also required as a pre-requisite for the organizer of the meeting.&nbsp;</p><p>The existing simultaneous interpretation mode in Interpreter for Teams meetings and Rooms, which is generally available, hasn't changed. It's still a personal listening experience that includes 20 hours of interpreted audio per month through a Copilot license or a Teams Rooms Pro license. Access beyond the hours included is subject to available capacity, limitations, and additional terms.</p><p>This message is associated with <b>Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=557180\" rel=\"noopener noreferrer\">557180</a></b>.</p><p><b><b>When this will happen</b></b></p><ul><li><b>Targeted Release:</b> Rollout begins in<b> early May 2026 </b>(previously early April) and is expected to complete by <b>late May 2026</b> (previously mid-April).</li><li><b>General Availability (Worldwide)</b>: Rollout begins in <b>mid-November 2026</b> and is expected to complete by <b>early December 2026</b>.</li></ul><p><b><b>How this will affect your organization</b></b></p><p><i>Who is affected:</i>&nbsp;</p><p>Organizations that use Interpreter in Teams meetings, including public preview users of consecutive interpretation.&nbsp;</p><ul><li>In a meeting, an eligible organizer can select More &gt; Interpreter &gt; Consecutive interpretation (uses credits), then choose the two spoken languages.&nbsp;</li><li>Consecutive interpretation waits for each speaker to finish, then provides AI-generated spoken interpretation so that all participants hear the same interpreted speech. Interpretation quality may vary depending on audio quality, participant speech patterns, network conditions, and language pair.&nbsp;</li><li>Available in Teams meetings on Windows, Mac and web; not currently supported in Teams Events, calls or Teams Rooms.</li></ul><p><b><b>What you need to do to prepare</b></b></p><ul><li>You will need to set up spending policies to enable consecutive interpretation for eligible meeting organizers. Learn more: <a href=\"https://learn.microsoft.com/copilot/implement/usage-based-billing-manage-copilot-credits\" rel=\"noopener noreferrer\">Managing AI experiences enabled by usage-based billing | Microsoft Learn</a>&nbsp;</li><li>When the experience is generally available, updates will be published to the<a href=\"https://www.microsoft.com/licensing/guidance/CopilotCreditsGuide\" rel=\"noopener noreferrer\"> Copilot Credits Guide</a> so you can review pricing rates and estimate costs for your organization.</li><li><a href=\"https://www.microsoft.com/licensing/guidance/CopilotCreditsGuide\" rel=\"noopener noreferrer\">Learn more</a></li></ul>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Copilot (Microsoft 365)"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-02-26T23:57:13Z",
+      "endDate": "2027-01-18T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T17:06:18.273Z",
+      "version": "2026-11-17T17:06:18.273Z",
+      "eventId": "message-center:MC1239927:2026-11-17T17:06:18.273Z",
+      "firstSeenAt": "2026-11-17T22:28:56.212Z"
     }
   ],
   "summary": {
-    "totalCommits": 1,
-    "totalFiles": 13,
+    "totalCommits": 2,
+    "totalFiles": 17,
     "authors": [
       "github-actions[bot]"
     ]
   },
   "englishSummary": {
-    "overview": "Today's report includes 0 new, 13 updated, and 0 removed Microsoft Teams documentation files across 1 documentation area.",
+    "overview": "Today's report includes 0 new, 17 updated, and 0 removed Microsoft Teams documentation files across 2 documentation areas.",
     "groups": [
       {
         "category": "Feature update",
@@ -485,7 +867,18 @@
           "Teams/aa-cq-setup-teams-phone-agent-tools-questions-answers.md",
           "Teams/aa-cq-setup-teams-phone-agent-ubb.md",
           "Teams/aa-cq-setup-teams-phone-agent.md",
-          "Teams/malicious-url-protection-teams.md"
+          "Teams/malicious-url-protection-teams.md",
+          "Teams/manage-meeting-recording-options.md",
+          "Teams/recording-transcription-overview.md",
+          "Teams/teams-recording-policy.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams devices",
+        "summary": "The page now separates Certified Native Bluetooth devices into Classic and LE Audio tabs and adds Jabra Evolve3 85 and Evolve3 75, both qualified on 11/13/2026.",
+        "sourceFiles": [
+          "Teams/devices/usb-devices.md"
         ]
       }
     ],
@@ -494,6 +887,11 @@
         "category": "Feature update",
         "headline": "Microsoft Teams",
         "detail": "The documentation now records enhanced search context when multiple users have the same name, with guidance linked for Teams Phone agents and auto attendants. The page now explains duplicate-name prompts and directs administrators to the Enhanced search context option instead of the `-UserNameExtension` parameter. It documents None, Office, and Department values with updated examples. The page now includes a November 16, 2026 entry covering enhanced search context for multiple users with the same name. The documentation records a November 16, 2026 enhancement providing additional search context when multiple users have the same name. The setup page now explains how to configure Enhanced sear"
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams devices",
+        "detail": "The page now separates Certified Native Bluetooth devices into Classic and LE Audio tabs and adds Jabra Evolve3 85 and Evolve3 75, both qualified on 11/13/2026."
       }
     ],
     "generatedBy": "fallback"

@@ -1,0 +1,101 @@
+{
+  "newFiles": [
+    {
+      "filename": "Teams/intelligent-call-delegation.md",
+      "status": "added",
+      "additions": 143,
+      "deletions": 0,
+      "changes": 143,
+      "patch": "diff --git a/Teams/intelligent-call-delegation.md b/Teams/intelligent-call-delegation.md\nnew file mode 100644\nindex 0000000..91b00d5\n--- /dev/null\n+++ b/Teams/intelligent-call-delegation.md\n@@ -0,0 +1,143 @@\n+---\n+layout: Conceptual\n+title: Manage intelligent call delegation in Microsoft Teams - Microsoft Teams | Microsoft Learn\n+canonicalUrl: https://learn.microsoft.com/en-us/microsoftteams/intelligent-call-delegation\n+breadcrumb_path: /microsoftteams/breadcrumb/toc.json\n+uhfHeaderId: MSDocsHeader-MicrosoftTeams\n+ms.suite: office\n+feedback_system: Standard\n+feedback_product_url: https://aka.ms/TeamsFeedback\n+recommendations: true\n+author: LanaChin8\n+ms.author: v-lanchin\n+manager: v-jesserowe\n+ms.reviewer: nijait\n+ms.date: 2026-11-17T00:00:00.0000000Z\n+ms.topic: how-to\n+ms.service: msteams\n+ms.subservice: teams-calling\n+audience: admin\n+f1.keywords:\n+- NOCSH\n+- System.Collections.Generic.Dictionary`2[System.String,System.Object]\n+description: Learn how to manage intelligent call delegation for users in your organization using Teams personal attendant policies.\n+locale: en-us\n+document_id: 8f2b039c-ee67-f2e8-daaf-357f56e8ffa1\n+document_version_independent_id: 8f2b039c-ee67-f2e8-daaf-357f56e8ffa1\n+original_content_git_url: https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness-pr/blob/live/Teams/intelligent-call-delegation.md\n+site_name: Docs\n+depot_name: office.OfficeDocs-MicrosoftTeams\n+page_type: conceptual\n+toc_rel: toc.json\n+pdf_url_template: https://learn.microsoft.com/pdfstore/en-us/office.OfficeDocs-MicrosoftTeams/{branchName}{pdfName}\n+feedback_help_link_type: ''\n+feedback_help_link_url: ''\n+asset_id: intelligent-call-delegation\n+moniker_range_name: \n+monikers: []\n+item_type: Content\n+source_path: Teams/intelligent-call-delegation.md\n+cmProducts:\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/63959238-cb90-4871-a33d-4a5519097e47\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/46e3c7c4-fe77-4a6e-b40a-44c569819fa5\n+spProducts:\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/78d87f42-5582-4a6b-90be-7db2f12b34e6\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/d0c6fab8-2d7d-4bb0-bf40-589e08d7c132\n+platformId: d2198986-f4ec-0717-be80-08c8edafeefe\n+---\n+\n+# Manage intelligent call delegation in Microsoft Teams - Microsoft Teams | Microsoft Learn\n+\n+**APPLIES TO:**![Image of an x for No](/en-us/office/media/icons/cancel-teams.png)Meetings ![Image of an x for No](/en-us/office/media/icons/cancel-teams.png)Events ![Image of a checkmark for Yes](/en-us/office/media/icons/success-teams.png)Calls\r\n+\r\n+Note\r\n+\r\n+This feature is currently in public preview.\r\n+\r\n+## Overview\r\n+\r\n+Intelligent call delegation in Microsoft Teams is an AI-powered voice agent that helps users manage incoming calls. It answers calls on users' behalf, gathers context about the caller's intent, and takes action based on users' availability and settings. It can screen calls, route urgent calls to users, and schedule follow-up appointments through Microsoft Bookings.\r\n+\r\n+As an admin, you use Teams personal attendant policies to control whether users in your organization can use intelligent call delegation, and which settings are available to them.\r\n+\r\n+## Prerequisites\r\n+\r\n+- Users must have a Microsoft Copilot license.\r\n+- Intelligent call delegation uses usage-based billing with Copilot Credits. Admins must [set up usage-based billing for Copilot Credits](/en-us/copilot/implement/usage-based-billing-copilot-credits-setup) and [create a spending policy](/en-us/copilot/implement/usage-based-billing-manage-copilot-credits) for intelligent call delegation in the Microsoft 365 admin center.\r\n+\r\n+    Note\r\n+\r\n+    When you create the spending policy, under **Agents and services**, ensure that only **Intelligent call delegation** is selected. Clear the checkboxes for all other services. When you select users and groups, choose the appropriate scope before assigning the policy.\r\n+\r\n+## How intelligent call delegation works\r\n+\r\n+When users turn on intelligent call delegation, the voice agent answers calls on their behalf. Depending on the user's settings, it can perform actions including:\r\n+\r\n+- Screen incoming calls and collect the caller's reason for calling.\r\n+- Route urgent calls to the user and provide context about the call.\r\n+- Route suspected spam calls to voicemail when spam filtering is enabled.\r\n+- Schedule callbacks and follow-up meetings when the user is unavailable, including after the user returns from out of office.\r\n+- Notify the user when it answers or takes action on a call. Users can monitor calls through a live preview and join at any time.\r\n+- Provide a post-call summary in call history when available.\r\n+\r\n+Callers are informed that they're speaking with an attendant rather than a person. When intelligent call delegation is turned on, it replaces the user's existing call routing settings. For more information about the user experience, see [Use intelligent call delegation in Microsoft Teams](https://support.microsoft.com/teams/copilot/use-copilot-call-delegation-in-microsoft-teams).\r\n+\r\n+## Manage intelligent call delegation\r\n+\r\n+You can use the Teams admin center or PowerShell to manage intelligent call delegation for your users. By default, intelligent call delegation is enabled in Teams personal attendant policy, and users with the policy can choose whether to turn it on or off in their Teams settings. Individual settings, such as call screening and scheduling follow-ups, are also enabled by default, and users can change them. Depending on the setting, users can turn it on or off or choose from available options.\r\n+\r\n+### Use the Teams admin center\r\n+\r\n+1. In the left navigation of the Teams admin center, go to **Voice** &gt; **Personal attendant policies**.\r\n+2. Select an existing policy or create a new one.\r\n+3. Under **General**, turn **Enable Personal Attendant** on or off.\r\n+4. If you turned on **Enable Personal Attendant**, configure the remaining policy settings under the following sections:\r\n+\r\n+    - **Choose how Personal Attendant speaks**\r\n+    - **Choose which calls Personal Attendant answers**\r\n+    - **Choose what Personal Attendant can do**\r\n+    - **Manage recording and transcription**\r\n+\r\n+    For more information about each policy setting, see the Policy settings table.\r\n+5. Select **Save**.\r\n+\r\n+#### Policy settings\r\n+\r\n+The following table describes personal attendant policy settings for intelligent call delegation in the Teams admin center.\r\n+\r\n+| Policy setting | Description |\r\n+| --- | --- |\r\n+| **Choose how Personal Attendant speaks** |  |\r\n+| User's preferred name | Specifies the name Personal Attendant uses when referring to the user. |\r\n+| Assistant voice | Specifies the voice callers hear when Personal Attendant answers calls. |\r\n+| Language | Specifies the language Personal Attendant uses to communicate with callers. |\r\n+| Conversation tone | Specifies the tone Personal Attendant uses when communicating with callers. |\r\n+| **Choose which calls Personal Attendant answers** |  |\r\n+| Internal Teams calls | Controls whether Personal Attendant answers calls from users in the same organization. |\r\n+| Federated Teams calls | Controls whether Personal Attendant answers calls from other organizations. |\r\n+| External PSTN calls | Controls whether Personal Attendant answers calls from the public telephone network. |\r\n+| **Choose what Personal Attendant can do** |  |\r\n+| Screen calls before connecting | Controls whether Personal Attendant screens calls and provides context before connecting. |\r\n+| Calendar integration | Controls whether Personal Attendant can access the user's personal Bookings calendar to check availability and schedule follow-ups. |\r\n+| Callbacks for people outside the user's contacts | Controls whether Personal Attendant uses calendar integration for callbacks to people outside the user's contacts. |\r\n+| **Manage recording and transcription** |  |\r\n+| Automatically save transcription | Controls whether transcripts are automatically saved for calls handled by Personal Attendant. |\r\n+| Automatically save recording | Controls whether recordings are automatically saved for calls handled by Personal Attendant. |\r\n+\r\n+### Use PowerShell\r\n+\r\n+Use the following PowerShell cmdlets to create, manage, and assign personal attendant policies:\r\n+\r\n+- [New-CsTeamsPersonalAttendantPolicy](/en-us/powershell/module/microsoftteams/new-csteamspersonalattendantpolicy)\r\n+- [Set-CsTeamsPersonalAttendantPolicy](/en-us/powershell/module/microsoftteams/set-csteamspersonalattendantpolicy)\r\n+- [Get-CsTeamsPersonalAttendantPolicy](/en-us/powershell/module/microsoftteams/get-csteamspersonalattendantpolicy)\r\n+- [Grant-CsTeamsPersonalAttendantPolicy](/en-us/powershell/module/microsoftteams/grant-csteamspersonalattendantpolicy)\r\n+- [Remove-CsTeamsPersonalAttendantPolicy](/en-us/powershell/module/microsoftteams/remove-csteamspersonalattendantpolicy)\r\n+\r\n+Example:\r\n+\r\n+The following command creates a new policy named SalesPersonalAttendantPolicy with calendar integration for scheduling follow-ups disabled.\r\n+\r\n+```powershell\r\n+New-CsTeamsPersonalAttendantPolicy -Identity SalesPersonalAttendantPolicy -CalendarBookings Disabled\r\n+```\n\\ No newline at end of file\n",
+      "baseCommitSha": "2b12a8ce61eb33ebb3f6ab4cc2b0e807dd6cf27b",
+      "commitSha": "17a82dd925708705fe922c00838029df9305e2fe",
+      "commitMessage": "Mirror Learn: 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-17 23:38:25 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/intelligent-call-delegation.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/intelligent-call-delegation",
+      "eventId": "teams-docs:17a82dd925708705fe922c00838029df9305e2fe:added:Teams/intelligent-call-delegation.md",
+      "firstSeenAt": "2026-11-18T10:20:13.838Z",
+      "englishSummary": {
+        "category": "Public preview",
+        "headline": "Intelligent call delegation documentation added",
+        "summary": "A new guide describes intelligent call delegation, an AI-powered voice agent for handling incoming calls, and explains how administrators manage it through Teams personal attendant policies. The feature is in public preview.",
+        "adminImpact": "To enable use, administrators must provide eligible users with a Microsoft Copilot license, set up Copilot Credits usage-based billing and a spending policy, and configure the relevant personal attendant policy.",
+        "actionRequired": true,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "modifiedFiles": [],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1558032",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-17",
+      "title": "Microsoft Teams: Intelligent call recap for call queues in the Queues app on mobile",
+      "summary": "Microsoft Teams mobile's Queues app will add intelligent call recap for recorded and transcribed call queue calls starting early December 2026. Users can view AI-generated notes, key points, and follow-up tasks without replaying calls. No admin action is needed, but recording, transcription, and licenses should be confirmed.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "ai",
+        "name": "AI and Copilot",
+        "icon": "/assets/topics/ai.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1558032/",
+      "originalUrl": "https://mc.merill.net/message/MC1558032",
+      "body": "<p><b><b>What and why</b></b></p><p>We're introducing intelligent call recap for call queue calls in the<i> Queues app</i> on Microsoft Teams mobile. This update extends the experience already available on desktop, allowing calling representatives and supervisors to review AI-generated notes, key discussion points, and recommended follow-up tasks without replaying recordings or reading full transcripts.</p><p></p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide):</b> Beginning in <b>early December 2026</b> and expected to complete by <b>mid-December 2026</b></li></ul><p></p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Calling representatives and supervisors who use the Queues app on Microsoft Teams mobile and have access to recorded and transcribed call queue calls</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams mobile</li><li>Queues app</li></ul><p><i>What will happen</i></p><p>After rollout:</p><ul><li>Users can open a recorded call from shared call history and select <b>View recap</b> to review AI-generated notes, key discussion points, and recommended follow-up tasks.</li></ul><p><i>Screenshot 1:&nbsp;</i></p><p></p><p><i>Screenshot 2:</i></p><p></p><p><i>Screenshot 3:</i></p><p></p><ul><li>Recap is available only for recorded and transcribed call queue calls and to users who already have access to the recording.</li><li>The feature does not change how call recordings are created, stored, or accessed.</li></ul><p></p><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required before rollout.</p><p>We recommend that you:</p><ul><li>Confirm that recording and transcription are enabled for call queues where you want users to access intelligent call recap.</li><li>Review license assignments for users who will use the feature.</li></ul><p></p><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/microsoftteams/intelligent-recap-calls-meetings\" rel=\"noopener noreferrer\">Intelligent recap for Teams calls, meetings, and events - Microsoft Teams | Microsoft Learn</a></li></ul><p></p><p><b><b>Compliance considerations</b></b></p><p>Organizations should review their existing recording, transcription, and AI-related compliance requirements as appropriate.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-17T23:00:30Z",
+      "endDate": "2027-01-18T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-17T23:00:41.667Z",
+      "version": "2026-11-17T23:00:41.667Z",
+      "eventId": "message-center:MC1558032:2026-11-17T23:00:41.667Z",
+      "firstSeenAt": "2026-11-18T10:20:20.861Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 1,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 1 new, 0 updated, and 0 removed Microsoft Teams documentation files across 1 documentation area.",
+    "groups": [
+      {
+        "category": "Public preview",
+        "title": "Microsoft Teams",
+        "summary": "A new guide describes intelligent call delegation, an AI-powered voice agent for handling incoming calls, and explains how administrators manage it through Teams personal attendant policies. The feature is in public preview.",
+        "sourceFiles": [
+          "Teams/intelligent-call-delegation.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Public preview",
+        "headline": "Microsoft Teams",
+        "detail": "A new guide describes intelligent call delegation, an AI-powered voice agent for handling incoming calls, and explains how administrators manage it through Teams personal attendant policies. The feature is in public preview."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

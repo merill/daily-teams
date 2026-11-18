@@ -453,25 +453,49 @@
       }
     },
     "2026-11-18": {
-      "headline": "Intelligent call delegation gets public-preview guidance with Copilot billing prerequisites",
-      "overview": "Teams Phone added guidance for intelligent call delegation, an AI-powered voice agent that handles incoming calls. The public-preview feature is managed through Teams personal attendant policies.",
-      "adminImpact": "Before enabling it, administrators must provide eligible users with a Microsoft Copilot license, configure Copilot Credits usage-based billing and a spending policy, and set the relevant personal attendant policy.",
+      "headline": "Teams support for iOS 17 and iPadOS 17 ends in mid-December 2026",
+      "overview": "The clearest administrator deadline is Teams ending support for iOS 17 and iPadOS 17 in mid-December 2026; new releases will then require version 18 or later, while existing versions continue working without support. New Teams Phone guidance details Frontier-only personal and shared voicemail AI triage, including transcript summaries, categories, suggested actions, urgency indicators, billing, and policy controls. A separate guide places intelligent call delegation in public preview. Updated meeting guidance covers consecutive interpretation with Copilot Credits, while a Message Center notice schedules external presenters for event group chat in late March 2027.",
+      "adminImpact": "Notify users about the iOS and iPadOS upgrade requirement, encourage upgrades, and update support documentation and policies. For Teams Phone AI, review Frontier access, licensing, usage-based billing, Copilot Credits where applicable, spending policies, and the relevant voicemail, personal attendant, or template controls; no GA timing is announced for voicemail triage. If event group chat is in scope, confirm that Enable Green room and external collaboration are configured before the March 2027 change. Review Interpreter licensing, meeting-policy, and spending-policy prerequisites before enabling consecutive interpretation.",
       "keyChanges": [
         {
-          "title": "Teams Phone documents intelligent call delegation",
-          "detail": "The new guide explains how administrators manage the AI-powered incoming-call agent through Teams personal attendant policies. Use requires an eligible user’s Microsoft Copilot license, Copilot Credits usage-based billing with a spending policy, and the applicable policy configuration.",
+          "title": "iOS 17 and iPadOS 17 leave the supported Teams baseline",
+          "detail": "Microsoft says Teams support for iOS 17 and iPadOS 17 ends starting in mid-December 2026. New Teams releases will require iOS or iPadOS 18 or later; existing app versions will continue working without support.",
+          "product": "Teams",
+          "sourceId": "MC1556088"
+        },
+        {
+          "title": "Frontier-only voicemail AI triage gets setup and billing guidance",
+          "detail": "The new Teams Phone overview describes AI analysis of voicemail transcripts to produce summaries, categories, suggested actions, and urgency indicators. Personal triage can be configured in the Teams admin center or with PowerShell; shared triage uses the AI triage template, and the shared voicemail Queues app requires Teams Premium. Availability is limited to the Microsoft Frontier Program, with no GA timing announced.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-18-automatic-voicemail-triage-with-ai-microsoft-teams-04"
+        },
+        {
+          "title": "Intelligent call delegation enters public preview",
+          "detail": "A new guide describes intelligent call delegation as an AI-powered voice agent for handling incoming calls, managed through Teams personal attendant policies. Eligible users need a Microsoft Copilot license, Copilot Credits usage-based billing and a spending policy, plus the applicable personal attendant policy.",
           "product": "Teams Phone",
           "sourceId": "doc-2026-11-18-manage-intelligent-call-delegation-in-microsoft-teams-microsoft-teams-01"
+        },
+        {
+          "title": "Interpreter adds consecutive interpretation with Copilot Credits controls",
+          "detail": "Updated Teams Interpreter guidance says the capability supports both simultaneous and consecutive interpretation. Consecutive interpretation uses Copilot Credits, requires an eligible meeting organizer and spending policy, and provides interpreted audio to all participants.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-18-interpreter-agent-teams-06"
+        },
+        {
+          "title": "External presenters are coming to event group chat in March 2027",
+          "detail": "Teams event group chat will support external presenters starting in late March 2027. The scenario requires Enable Green room and external collaboration, introduces cross-tenant chat, and does not store new customer data.",
+          "product": "Teams",
+          "sourceId": "MC1528011"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-18T10:20:21.064Z",
+      "generatedAt": "2026-11-18T22:06:46.734Z",
       "usage": {
-        "inputTokens": 1050,
-        "outputTokens": 628,
-        "costUsd": 0.000964
+        "inputTokens": 2170,
+        "outputTokens": 9576,
+        "costUsd": 0.011925
       }
     }
   },
@@ -569,85 +593,85 @@
       }
     },
     "2026-11-16": {
-      "headline": "Teams adds AI call delegation and synthetic-media defenses while ending iOS 17 support",
-      "overview": "The period’s main administrator changes span Teams Phone, meeting security, and mobile support. Intelligent call delegation is entering public preview; certified third-party synthetic audio and video detection is due in meetings in late November; and new Teams releases will require iOS/iPadOS 18 or later from mid-December. Security teams also gain a new Advanced Hunting table for Teams message snippets and metadata, while recording announcements become configurable through meeting and calling policies.",
-      "adminImpact": "Plan user communications and support updates for the iOS/iPadOS 18 requirement. For intelligent call delegation, eligible users need Microsoft Copilot licenses, Copilot Credits usage-based billing with a spending policy, and the relevant personal attendant policy. Synthetic-media detection requires provider apps, permissions, and meeting-policy configuration. Review access for analysts using the new MessageContents table. Recording announcements are optional and off by default; compliance recording is unsupported.",
+      "headline": "Teams will require iOS/iPadOS 18 for new releases starting mid-December",
+      "overview": "Teams will end support for iOS 17 and iPadOS 17 in mid-December 2026; new releases will require version 18 or later, while existing app versions will continue working without support. The week also brought Frontier-only personal voicemail AI triage guidance, a late-2026 general availability path for consecutive interpretation, a new Teams MessageContents table in Defender Advanced Hunting, and certified third-party synthetic-media detection for meetings.",
+      "adminImpact": "Endpoint administrators should notify users, encourage OS upgrades, update device policies, and revise support documentation before the cutoff. Administrators evaluating AI capabilities should review the stated licensing, Copilot Credits or usage-based billing, spending-policy, and Teams policy requirements. Security teams should review MessageContents permissions and deploy provider apps, grant permissions, and configure meeting policies if adopting synthetic-media detection.",
       "keyChanges": [
         {
-          "title": "iOS 17 and iPadOS 17 support ends in December",
-          "detail": "Starting in mid-December 2026, new Teams releases will require iOS/iPadOS 18 or later. Existing Teams versions will continue working but without support. Microsoft recommends notifying users, encouraging OS upgrades, updating policies, and revising support documentation.",
+          "title": "Teams ends iOS 17 and iPadOS 17 support in mid-December",
+          "detail": "From mid-December 2026, new Teams releases will require iOS/iPadOS 18 or later. Existing Teams versions will continue to work, but without support.",
           "product": "Teams",
           "sourceId": "MC1556088"
         },
         {
-          "title": "Intelligent call delegation enters Teams Phone public preview",
-          "detail": "A new guide describes intelligent call delegation, an AI-powered voice agent for handling incoming calls. Enabling it requires eligible users to have a Microsoft Copilot license, Copilot Credits usage-based billing and a spending policy, plus the relevant personal attendant policy.",
+          "title": "New guidance details Frontier-only personal voicemail AI triage controls",
+          "detail": "A new Teams Phone article documents licensing, usage-based billing, security-group scoping, spending policies, limits, and alerts for personal voicemail AI triage. The capability is available only through the Microsoft Frontier Program, and GA timing is not announced.",
           "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-manage-intelligent-call-delegation-in-microsoft-teams-microsoft-teams-01"
+          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
         },
         {
-          "title": "Teams meetings add certified third-party synthetic-media detection",
-          "detail": "Starting in late November 2026, organizations can integrate certified third-party solutions that detect synthetic audio and video in meetings. Administrators must deploy provider apps, grant permissions, and configure meeting policies; detection is performed by the third-party providers.",
+          "title": "Consecutive interpretation is scheduled to reach general availability by late 2026",
+          "detail": "Teams Interpreter's consecutive interpretation, currently in public preview, will provide turn-by-turn AI-generated spoken translation. The capability uses Copilot Credits with usage-based billing and requires eligible meeting organizers with Copilot licenses.",
           "product": "Teams",
-          "sourceId": "MC1509787"
+          "sourceId": "MC1239927"
         },
         {
           "title": "Defender Advanced Hunting adds a MessageContents table for Teams",
-          "detail": "Microsoft Defender for Office 365 is introducing a MessageContents table containing Teams message snippets and metadata, with rollout running from late September through late November 2026. Access is controlled by specific permissions for authorized security analysts.",
+          "detail": "Microsoft Defender for Office 365 is introducing a MessageContents table that gives authorized security analysts access to Teams message snippets and metadata for threat investigations. Rollout runs from late September through late November 2026 and is controlled by specific permissions.",
           "product": "Teams",
           "sourceId": "MC1474106"
         },
         {
-          "title": "Recording and transcription announcements become policy-controlled",
-          "detail": "Teams supports an optional audio announcement when recording or transcription starts. Administrators control it through meeting and calling policies; the setting is off by default, rolls out worldwide from May 2026 through January 2027, and does not support compliance recording.",
+          "title": "Teams meetings add certified third-party synthetic-media detection",
+          "detail": "Starting in late November 2026, organizations can integrate certified third-party solutions that detect synthetic audio and video in meetings. Teams enables the integration, while detection is performed by the providers.",
           "product": "Teams",
-          "sourceId": "MC1556096"
+          "sourceId": "MC1509787"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-18T10:20:21.064Z",
+      "generatedAt": "2026-11-18T22:06:46.734Z",
       "usage": {
-        "inputTokens": 4553,
-        "outputTokens": 4242,
-        "costUsd": 0.006001
+        "inputTokens": 5525,
+        "outputTokens": 8869,
+        "costUsd": 0.011748
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "AI call delegation in preview as Teams lifts mobile support to iOS 18",
-      "overview": "Teams Phone’s intelligent call delegation is in public preview: an AI voice agent handles incoming calls through personal attendant policies, with Microsoft Copilot licensing, Copilot Credits usage-based billing, and a spending policy required. Facilitator is slated for February 2027 to detect meeting knowledge gaps and provide relevant web-search answers in chat. Teams meetings will also support certified third-party synthetic-audio and synthetic-video detection from late November, while new releases require iOS/iPadOS 18 or later from mid-December. For town halls and webinars, recording/transcript access is shifting to RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording.",
-      "adminImpact": "Organizations evaluating call delegation must provide eligible users a Microsoft Copilot license, set up Copilot Credits usage-based billing and a spending policy, and configure the relevant personal attendant policy. Facilitator requires Microsoft 365 Copilot (Premium) and manual enablement. Synthetic-media detection requires deploying provider apps, granting permissions, and configuring meeting policies. Before mid-December, notify users, encourage iOS/iPadOS 18 upgrades, and update policies and support documentation; existing Teams versions continue working without support. The recording-access change needs no admin action; its governing controls are the event-specific settings named above.",
+      "headline": "Teams sets an iOS 18 cutoff as off-network Teams Free invitations retire",
+      "overview": "November’s most consequential Teams changes are two December deadlines: new Teams releases will require iOS/iPadOS 18 from mid-December, while off-network invitations that create Teams Free accounts will retire in December. The period also brought an unpausable PMP device-agent requirement ahead of TAC management deprecation, scheduled Facilitator for February 2027, and changed town-hall and webinar recording access to event-specific policy settings.",
+      "adminImpact": "Prioritize endpoint upgrade notices, policy updates, and support-document changes before the iOS cutoff; existing Teams versions will continue working without support. Update user guidance for Teams Free, but no tenant action is required. For Teams-certified devices, allow for the Admin Agent 901 update—it cannot be paused and is required for PMP management—and prepare for TAC device-management deprecation. If adopting Facilitator, plan for Microsoft 365 Copilot (Premium), manual enablement, and the available admin and user controls. For events, use RecordingForTownhall or RecordingForWebinar when checking access instead of AllowCloudRecording.",
       "keyChanges": [
         {
-          "title": "Intelligent call delegation is in Teams Phone public preview",
-          "detail": "An AI-powered voice agent handles incoming calls and is managed through Teams personal attendant policies. The preview requires eligible users to have a Microsoft Copilot license, Copilot Credits usage-based billing with a spending policy, and the relevant personal attendant policy configured.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-manage-intelligent-call-delegation-in-microsoft-teams-microsoft-teams-01"
-        },
-        {
-          "title": "Facilitator will address meeting knowledge gaps from February 2027",
-          "detail": "Facilitator will detect meeting knowledge gaps and provide relevant answers through web search in chat. It requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports administrator controls and user opt-out.",
-          "product": "Teams",
-          "sourceId": "MC1409304"
-        },
-        {
-          "title": "Teams releases require iOS and iPadOS 18 from mid-December",
-          "detail": "Microsoft will end Teams support for iOS 17 and iPadOS 17 starting in mid-December 2026, requiring version 18 or later for new releases. Existing Teams versions will continue to work without support; organizations should notify users, encourage upgrades, and update policies and support documentation.",
+          "title": "New Teams releases will require iOS and iPadOS 18",
+          "detail": "Starting in mid-December 2026, new Teams releases will require iOS/iPadOS 18 or later. Existing app versions will continue working but without support. Microsoft recommends notifying users, encouraging OS upgrades, updating policies, and revising support documentation.",
           "product": "Teams",
           "sourceId": "MC1556088"
         },
         {
-          "title": "Certified third-party synthetic-media detection reaches Teams meetings",
-          "detail": "Starting in late November 2026, Teams will support certified third-party detection of synthetic audio and video in meetings. Organizations integrating a provider must deploy its app, grant permissions, and configure meeting policies; the third party performs the detection.",
+          "title": "Off-network invitations to Teams Free will retire",
+          "detail": "Beginning in December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; no admin action is required, but user guidance should be updated.",
           "product": "Teams",
-          "sourceId": "MC1509787"
+          "sourceId": "MC1546409"
         },
         {
-          "title": "Town hall and webinar recording access shifts to event-specific policies",
-          "detail": "For Events App town halls and webinars, the “Who has access to the recording or transcript” option is being tied to RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The worldwide change rolls out in early to mid-November 2026, with no administrator action required.",
+          "title": "PMP management now requires the unpausable Admin Agent 901 update",
+          "detail": "Certified-device guidance identifies version 1.0.0.202610190119, Admin Agent 901, as adding Android 15 connectivity and provisioning fixes for PMP across Teams-certified devices. The update cannot be paused and is required to manage devices in PMP; it also prepares for TAC device-management deprecation targeted for mid-November 2026.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-11-certified-device-apps-12"
+        },
+        {
+          "title": "Facilitator will resolve meeting knowledge gaps through web search",
+          "detail": "Available from February 2027, Facilitator will detect knowledge gaps in meetings and provide relevant web-search answers in chat. It requires Microsoft 365 Copilot (Premium), must be manually enabled, and supports administrator controls and user opt-out.",
+          "product": "Teams",
+          "sourceId": "MC1409304"
+        },
+        {
+          "title": "Town-hall and webinar recording access is moving to event-specific policies",
+          "detail": "The “Who has access to the recording or transcript” option for Events App town halls and webinars will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The worldwide change rolls out in early to mid-November 2026 and requires no action.",
           "product": "Teams",
           "sourceId": "MC1550542"
         }
@@ -655,16 +679,16 @@
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-18T10:20:21.064Z",
+      "generatedAt": "2026-11-18T22:06:46.734Z",
       "usage": {
-        "inputTokens": 6219,
-        "outputTokens": 11745,
-        "costUsd": 0.015338
+        "inputTokens": 6352,
+        "outputTokens": 9482,
+        "costUsd": 0.012649
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-18T10:20:21.064Z",
+  "generatedAt": "2026-11-18T22:06:46.734Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -725,22 +749,22 @@
       "costUsd": 0.04054
     },
     "2026-11-18": {
-      "inputTokens": 11822,
-      "outputTokens": 16615,
-      "requests": 3,
-      "costUsd": 0.022302
+      "inputTokens": 28039,
+      "outputTokens": 56542,
+      "requests": 7,
+      "costUsd": 0.073458
     }
   },
   "lastRun": {
-    "inputTokens": 11822,
-    "outputTokens": 16615,
-    "requests": 3,
-    "costUsd": 0.022302
+    "inputTokens": 16217,
+    "outputTokens": 39927,
+    "requests": 4,
+    "costUsd": 0.051156
   },
   "totalUsage": {
-    "inputTokens": 143197,
-    "outputTokens": 171031,
-    "requests": 41,
-    "costUsd": 0.233874
+    "inputTokens": 159414,
+    "outputTokens": 210958,
+    "requests": 45,
+    "costUsd": 0.28503
   }
 }

@@ -1,0 +1,482 @@
+{
+  "newFiles": [
+    {
+      "filename": "Teams/third-party-synthetic-audio-video-detection-meetings.md",
+      "status": "added",
+      "additions": 281,
+      "deletions": 0,
+      "changes": 281,
+      "patch": "diff --git a/Teams/third-party-synthetic-audio-video-detection-meetings.md b/Teams/third-party-synthetic-audio-video-detection-meetings.md\nnew file mode 100644\nindex 0000000..0a53677\n--- /dev/null\n+++ b/Teams/third-party-synthetic-audio-video-detection-meetings.md\n@@ -0,0 +1,281 @@\n+---\n+layout: Conceptual\n+title: Certified third-party synthetic audio and video detection in Microsoft Teams meetings - Microsoft Teams | Microsoft Learn\n+canonicalUrl: https://learn.microsoft.com/en-us/microsoftteams/third-party-synthetic-audio-video-detection-meetings\n+breadcrumb_path: /microsoftteams/breadcrumb/toc.json\n+uhfHeaderId: MSDocsHeader-MicrosoftTeams\n+ms.suite: office\n+feedback_system: Standard\n+feedback_product_url: https://aka.ms/TeamsFeedback\n+recommendations: true\n+author: LanaChin8\n+ms.author: v-lanchin\n+manager: v-jesserowe\n+ms.reviewer: smahadevan\n+ms.date: 2026-11-18T00:00:00.0000000Z\n+ms.topic: how-to\n+ms.service: msteams\n+ms.subservice: meetings\n+audience: admin\n+f1.keywords:\n+- NOCSH\n+ms.custom:\n+- security\n+description: Learn how to set up and configure third-party synthetic audio and video detection for Teams meetings.\n+locale: en-us\n+document_id: 2b3d74b3-ca2c-b2a3-47a7-992fbf638549\n+document_version_independent_id: 2b3d74b3-ca2c-b2a3-47a7-992fbf638549\n+original_content_git_url: https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness-pr/blob/live/Teams/third-party-synthetic-audio-video-detection-meetings.md\n+site_name: Docs\n+depot_name: office.OfficeDocs-MicrosoftTeams\n+page_type: conceptual\n+toc_rel: toc.json\n+pdf_url_template: https://learn.microsoft.com/pdfstore/en-us/office.OfficeDocs-MicrosoftTeams/{branchName}{pdfName}\n+feedback_help_link_type: ''\n+feedback_help_link_url: ''\n+asset_id: third-party-synthetic-audio-video-detection-meetings\n+moniker_range_name: \n+monikers: []\n+item_type: Content\n+source_path: Teams/third-party-synthetic-audio-video-detection-meetings.md\n+cmProducts:\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/63959238-cb90-4871-a33d-4a5519097e47\n+spProducts:\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/78d87f42-5582-4a6b-90be-7db2f12b34e6\n+platformId: 5f68e1e7-e86e-b1ab-4252-bcaedee62ef4\n+---\n+\n+# Certified third-party synthetic audio and video detection in Microsoft Teams meetings - Microsoft Teams | Microsoft Learn\n+\n+**APPLIES TO:**![Image of a checkmark for yes](/en-us/office/media/icons/success-teams.png)Meetings ![Image of an x for No](/en-us/office/media/icons/cancel-teams.png)Events ![Image of an x for No](/en-us/office/media/icons/cancel-teams.png)Calls\r\n+\r\n+Note\r\n+\r\n+This feature is currently in public preview.\r\n+\r\n+## Overview\r\n+\r\n+As AI-generated audio and video become more sophisticated, attackers can convincingly impersonate executives, colleagues, job candidates, or vendors during live meetings. These attacks typically target the moments where money moves or access is granted, such as payment approvals, remote hiring interviews, and live social engineering.\r\n+\r\n+Microsoft Teams supports certified third-party synthetic audio and video detection solutions directly within Teams meetings. As an admin, you choose a detection provider that meets your organization's needs and turn on detection through a Teams meeting policy. When detection is on for a meeting, Teams automatically adds the provider's detection bot to the meeting. The provider analyzes meeting media for signs of synthetic or manipulated audio and video. In public preview, detection results are surfaced through the provider's experience. Native Teams detection alerts, participant indicators, and associated actions are available separately in private preview.\r\n+\r\n+Important\r\n+\r\n+This feature is in public preview. Features, user interface labels, and supported scenarios can change before general availability.\r\n+\r\n+## How it works\r\n+\r\n+Third-party synthetic audio and video detection uses a partner ecosystem model. Certified partners provide the detection models. Microsoft provides the platform, the admin policy controls, a standardized API for reporting detections, and the in-meeting experience.\r\n+\r\n+1. An admin allows the provider's Teams app and grants admin consent to the permissions it needs.\r\n+2. The admin turns on synthetic audio and video detection in a Teams meeting policy, selects one provider, and assigns the policy to organizers.\r\n+3. Organizers who have the policy see a **Detect synthetic audio and video** option in meeting options for supported meetings.\r\n+4. When the option is on, Teams automatically adds the provider's detection bot to the meeting when it starts.\r\n+5. The provider's service analyzes participant audio and video and reports detections back to Teams through the Microsoft Graph API.\r\n+6. Teams shows the detection to the organizer in the meeting, identifies the flagged participant, and lets the organizer take action.\r\n+\r\n+## Key terms\r\n+\r\n+| Term | Description |\r\n+| --- | --- |\r\n+| Detection provider | An independent software vendor (ISV) whose synthetic media detection solution integrates with Teams through the Teams synthetic audio and video detection certification program. |\r\n+| Detection bot | The provider's media bot that Teams adds to detection-enabled meetings to receive audio and video for analysis. |\r\n+| Detection (verdict) | The provider's assessment that a specific participant's audio, video, or both appear to be synthetic or manipulated. |\r\n+| Modality | The media type that a detection applies to: audio, video, or audio and video. |\r\n+| Detection-enabled meeting | A supported meeting where the synthetic audio and video detection meeting option is on. |\r\n+\r\n+## What certification means\r\n+\r\n+Providers that are available in Teams have gone through the Teams synthetic audio and video detection certification program. Certification validates how a provider's solution integrates with and surfaces detections in Teams at enterprise scale, including integration quality, scale, reliability, security, compliance, and consistent disclosure to users.\r\n+\r\n+Certification doesn't validate the accuracy of a provider's detection models. Detection results are produced by the provider, and the provider is responsible for its detection quality. Evaluate each provider's accuracy claims, privacy statement, and terms against your organization's requirements before you deploy.\r\n+\r\n+## Available detection providers (coming soon)\r\n+\r\n+Each provider has its own licensing, service activation, data handling, and support model. Contact the provider directly to purchase or activate its service.\r\n+\r\n+## Prerequisites\r\n+\r\n+Before you set up synthetic audio and video detection, make sure that:\r\n+\r\n+- Your organization has an agreement with a supported detection provider and has completed any provider-side licensing or service activation.\r\n+- You have the provider's exact Teams app name or app ID, its requested permissions and their purpose, and its support contact.\r\n+- You have the Teams Administrator role (or higher) to manage the app and meeting policies.\r\n+- A Global Administrator or Privileged Role Administrator is available to grant admin consent to the provider app. For more information, see [Grant tenant-wide admin consent to an application](/en-us/entra/identity/enterprise-apps/grant-admin-consent?#prerequisites).\r\n+- You reviewed the provider's privacy statement, terms of service, media processing behavior, data retention and residency, and any participant consent requirements that apply in your jurisdictions.\r\n+\r\n+Users don't need to install the provider's app themselves. The policy-driven experience relies on admin consent, provider selection, and meeting policy assignment.\r\n+\r\n+## Supported scenarios\r\n+\r\n+| Scenario | Supported in preview |\r\n+| --- | --- |\r\n+| Scheduled Teams meetings | Yes |\r\n+| Recurring Teams meetings | Yes |\r\n+| End-to-end encrypted (E2EE) meetings | No |\r\n+| Events (such as town halls and webinars) | No |\r\n+| 1:1 and group calls, including PSTN calls | No |\r\n+\r\n+## Set up synthetic audio and video detection\r\n+\r\n+### Step 1: Allow the provider app\r\n+\r\n+1. In the left navigation of the Teams admin center, go to **Teams apps** &gt; **Manage apps**.\r\n+2. Search for the provider's app by its exact name or app ID.\r\n+3. Open the app and confirm that it's the provider's synthetic audio and video detection app, published by the expected publisher.\r\n+4. Make sure the app is **Allowed** for your organization. If your organization uses app-centric management, make the app available to the users or groups that will receive the detection meeting policy. If your organization uses app permission policies, make sure the applicable policy allows the app.\r\n+\r\n+We recommend one of the following scoping approaches:\r\n+\r\n+- Make the app available to all users, and assign the detection meeting policy to all or a subset of users and groups.\r\n+- Scope the app and the detection meeting policy to the same users and groups.\r\n+\r\n+If an organizer has the detection meeting policy but the provider app isn't available to them, the detection bot doesn't join their meetings.\r\n+\r\n+### Step 2: Grant admin consent\r\n+\r\n+Detection providers typically request the following Microsoft Graph permissions:\r\n+\r\n+| Permission | Why it's needed |\r\n+| --- | --- |\r\n+| Join group calls and meetings as an app | Lets the detection bot join detection-enabled meetings. |\r\n+| Join group calls and meetings as a guest | Lets the detection bot join meetings as a guest participant. |\r\n+| Access media streams in a call as an app | Lets the provider receive meeting audio and video for analysis. |\r\n+| Read online meeting details | Lets the provider identify the meeting it's analyzing. |\r\n+| Read user's online meetings | Lets the provider read meeting information for in-scope organizers. |\r\n+| Sign in and read user profile | Standard sign-in permission for the app. |\r\n+\r\n+1. From the **Manage apps** page, open the provider app and select the **Permissions** tab.\r\n+2. Select **Grant admin consent**. Alternatively, use the consent link that the provider supplies.\r\n+3. Review each requested permission before you accept it.\r\n+\r\n+    [![Screenshot of permissions on the Permission tab for granting admin consent.](media/third-party-synthetic-audio-video-detection-consent.png)](media/third-party-synthetic-audio-video-detection-consent.png#lightbox)\r\n+\r\n+Caution\r\n+\r\n+Don't grant consent if the app identity, publisher, requested permissions, or sign-in experience don't match the provider's documentation. Contact the provider to resolve the discrepancy first.\r\n+4. Confirm with the provider that the service reports successful activation for your tenant.\r\n+\r\n+### Step 3: Turn on detection in a meeting policy\r\n+\r\n+You can use the Teams admin center or PowerShell to turn on synthetic audio and video detection in a meeting policy.\r\n+\r\n+#### Use the Teams admin center\r\n+\r\n+1. In the left navigation of the Teams admin center, go to **Meetings** &gt; **Meeting policies**.\r\n+2. Select an existing meeting policy, such as the Global (Org-wide default) policy, or create a custom policy.\r\n+3. Under **Meeting protection**, select a provider from the **Synthetic audio and video detection provider** dropdown list.\r\n+\r\n+    [![Screenshot of the Synthetic audio and video detection provider option to select a provider.](media/third-party-synthetic-audio-video-detection-provider.png)](media/third-party-synthetic-audio-video-detection-provider.png#lightbox)\r\n+\r\n+    The provider list shows the providers currently available through this feature for your organization. A provider appearing in the list doesn't mean that app availability, admin consent, or provider-side activation is complete.\r\n+4. The **Turn on synthetic audio and video protection** setting appears and is on by default. If you're editing a policy in which it was previously turned off, make sure you turn it on.\r\n+5. Select **Save**.\r\n+\r\n+Note\r\n+\r\n+If the provider isn't listed, verify feature and provider availability and app configuration. If the provider appears but detection doesn't start, verify consent, provider-side activation, the organizer's effective policy, and the meeting option.\r\n+\r\n+#### Use PowerShell\r\n+\r\n+Use the [Set-CsTeamsMeetingPolicy](/en-us/powershell/module/microsoftteams/set-csteamsmeetingpolicy) cmdlet with the `-SyntheticMediaDetection` and `-SyntheticMediaDetectionAppId` parameters.\r\n+\r\n+Here are some examples.\r\n+\r\n+##### Enable detection and select the provider\r\n+\r\n+```powershell\r\n+Set-CsTeamsMeetingPolicy -Identity \"<policy name>\" -SyntheticMediaDetection Enabled -SyntheticMediaDetectionAppId \"<provider bot application ID>\"\r\n+```\r\n+\r\n+##### Verify the saved policy settings\r\n+\r\n+```powershell\r\n+Get-CsTeamsMeetingPolicy -Identity \"<policy name>\" | Select-Object Identity, SyntheticMediaDetection, SyntheticMediaDetectionAppId\r\n+```\r\n+\r\n+##### Disable detection\r\n+\r\n+```powershell\r\n+Set-CsTeamsMeetingPolicy -Identity \"<policy name>\" -SyntheticMediaDetection Disabled\r\n+```\r\n+\r\n+### Step 4: Assign the policy\r\n+\r\n+Assign the meeting policy to the organizers or groups you want to protect. Policy assignment can take up to 24 hours to take effect, although it typically completes within an hour. To check a user's effective policy, go to **Users** &gt; **Manage users** in the Teams admin center, select the user, and review their assigned policies.\r\n+\r\n+Detection applies to meetings based on the organizer's meeting policy. Attendees, including people from outside your organization, don't need the policy for their media to be analyzed in a detection-enabled meeting.\r\n+\r\n+## Organizer experience\r\n+\r\n+Note\r\n+\r\n+This experience is available in private preview on Teams desktop and web only.\r\n+\r\n+Organizers who are assigned the detection meeting policy see the **Detect synthetic audio and video** option in **Meeting options** &gt; **Advanced protection** for supported meetings.\r\n+\r\n+- When the option is on, Teams adds the provider's detection bot to the meeting automatically.\r\n+- When the option is off, the bot doesn't join and the meeting isn't analyzed.\r\n+\r\n+## In-meeting experience\r\n+\r\n+Note\r\n+\r\n+This experience is available only in private preview.\r\n+\r\n+### Detection bot\r\n+\r\n+When a detection-enabled meeting starts, the provider's detection bot joins automatically and appears as a participant in the meeting roster. The bot receives meeting media for analysis. It doesn't speak, present, or share content.\r\n+\r\n+### Detection alerts\r\n+\r\n+When the provider detects synthetic or manipulated media from a participant, it reports the detection to Teams. Teams then:\r\n+\r\n+- Shows an in-meeting alert to the organizer that identifies the flagged participant and the provider that made the detection.\r\n+- Shows an indicator next to the flagged participant in the roster.\r\n+\r\n+### Organizer actions\r\n+\r\n+From the alert or the roster, the organizer can:\r\n+\r\n+- **Remove** the flagged participant from the meeting.\r\n+- **Mark as not a concern** to dismiss the alert when the organizer has verified the participant.\r\n+\r\n+Teams doesn't remove participants automatically. The organizer decides what action to take.\r\n+\r\n+## Interaction with other Teams features\r\n+\r\n+The following table describes how other Teams features and settings affect synthetic audio and video detection.\r\n+\r\n+| Feature or setting | Behavior |\r\n+| --- | --- |\r\n+| End-to-end encryption (E2EE) | E2EE meetings aren't supported. When E2EE is on for a meeting, the detection bot can't receive media, so detection doesn't run. |\r\n+| App blocked or consent removed | App availability and required consent must remain in place for the integration to function. A provider appearing in the dropdown doesn't confirm that these prerequisites are met. |\r\n+| Recording and transcription | Enabling this feature doesn't itself start a Teams recording or transcription. |\r\n+| Meeting templates and sensitivity labels | A template or label that enforces E2EE prevents detection for that meeting. |\r\n+\r\n+## Privacy and data handling\r\n+\r\n+- **Media processing**: In a detection-enabled meeting, participant audio and video are sent to the detection provider's service for analysis. Processing, retention, and residency of that media are governed by the provider's terms and privacy statement.\r\n+- **Participant notice**: The detection bot is visible in the meeting roster so participants can see that the meeting is being analyzed.\r\n+- **Consent**: Detection follows the participant consent model for the preview and is controlled by the detection provider\r\n+- **Microsoft data**: Teams doesn't store raw media or biometric artifacts from detections.\r\n+- **Trust boundary**: Detections are the provider's verdicts. Teams shows provider attribution alongside every detection.\r\n+\r\n+## FAQ\r\n+\r\n+### Does Microsoft perform the detection?\r\n+\r\n+No. The certified provider that your organization selects performs the analysis. Microsoft provides the platform, policy controls, API, and integration framework for doing that.\r\n+\r\n+### Are external participants analyzed?\r\n+\r\n+Yes. In a detection-enabled meeting, the provider analyzes media from participants, including guests, external users, and anonymous users, subject to the consent model.\r\n+\r\n+### Does the provider record my meeting?\r\n+\r\n+The detection bot receives media for analysis but doesn't create a Teams recording or transcript. Review the provider's terms for how it processes and retains media.\r\n+\r\n+### What happens if the provider's service goes down?\r\n+\r\n+The meeting continues normally without detection.\n\\ No newline at end of file\n",
+      "baseCommitSha": "8c21c6ee35587df8b40b8a7db8f4a1ee5988355b",
+      "commitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-18 23:02:33 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/third-party-synthetic-audio-video-detection-meetings.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/third-party-synthetic-audio-video-detection-meetings",
+      "eventId": "teams-docs:eab7fac91c32755e566fa165d02b92d7474c716d:added:Teams/third-party-synthetic-audio-video-detection-meetings.md",
+      "firstSeenAt": "2026-11-19T10:29:15.533Z",
+      "englishSummary": {
+        "category": "Public preview",
+        "headline": "Third-party synthetic audio and video detection documented for Teams meetings",
+        "summary": "The new article explains how certified providers integrate with Teams, including app consent, provider selection, meeting policy configuration, and in-meeting detection reporting.",
+        "adminImpact": "Admins can use the documented setup to evaluate providers and make detection available to organizers through meeting policies.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/aa-cq-direct-mcs.md",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 3,
+      "changes": 10,
+      "patch": "diff --git a/Teams/aa-cq-direct-mcs.md b/Teams/aa-cq-direct-mcs.md\nindex c42a9c1..a2622b4 100644\n--- a/Teams/aa-cq-direct-mcs.md\n+++ b/Teams/aa-cq-direct-mcs.md\n@@ -12,7 +12,7 @@ author: iris-su\n ms.author: irisasu\n manager: roykuntz\n ms.reviewer: colongma\n-ms.date: 2026-10-22T00:00:00.0000000Z\n+ms.date: 2026-11-17T00:00:00.0000000Z\n ms.topic: how-to\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -51,12 +51,12 @@ item_type: Content\n source_path: Teams/aa-cq-direct-mcs.md\n cmProducts:\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/c389ea6b-b6a0-46df-93a1-1e21f25e19e7\n-- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/b5267373-9b61-4d5a-a4ac-5d03f8f8800f\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/46e3c7c4-fe77-4a6e-b40a-44c569819fa5\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/b5267373-9b61-4d5a-a4ac-5d03f8f8800f\n spProducts:\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/19ada1b6-705b-4ed7-aad0-bffd1bd03dfa\n-- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/bcd4f3ef-c612-47a8-aa4a-7f9bedc3a98c\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/d0c6fab8-2d7d-4bb0-bf40-589e08d7c132\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/bcd4f3ef-c612-47a8-aa4a-7f9bedc3a98c\n platformId: b395d135-7481-fe0b-75df-942e41400b1a\n ---\n \n@@ -85,6 +85,10 @@ None.\n \r\n ## Overview\r\n \r\n+Note\r\n+\r\n+Teams Phone supports Contact Center Intelligence voice agents (also referred to as the Customer conversation agents in Microsoft Copilot Studio) and Microsoft Copilot Studio agents built using the standard harness.\r\n+\r\n Voice enabling Microsoft Copilot Studio voice agents through Microsoft Teams Phone allow you to create conversational AI bots and attach them directly to a phone number via Teams Phone's resource accounts. By using these first-party conversational voice agents, you can significantly enhance your current Interactive Voice Response experiences or upgrade your current call flows.\r\n \r\n Copilot Studio provides a powerful platform to build custom workflows tailored to your business. Key capabilities include:\r\n",
+      "baseCommitSha": "8c21c6ee35587df8b40b8a7db8f4a1ee5988355b",
+      "commitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-18 23:02:33 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-direct-mcs.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-direct-mcs",
+      "eventId": "teams-docs:eab7fac91c32755e566fa165d02b92d7474c716d:modified:Teams/aa-cq-direct-mcs.md",
+      "firstSeenAt": "2026-11-19T10:29:15.492Z",
+      "englishSummary": {
+        "category": "New feature",
+        "headline": "Teams Phone support for Copilot Studio voice agents documented",
+        "summary": "The documentation now states that Teams Phone supports Contact Center Intelligence voice agents, also called Customer conversation agents in Microsoft Copilot Studio, and agents built with the standard harness.",
+        "adminImpact": "Administrators should consider this support when planning Teams Phone and Copilot Studio agent scenarios. No required action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-plan-teams-phone-agent-agents-queues.md",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 1,
+      "changes": 6,
+      "patch": "diff --git a/Teams/aa-cq-plan-teams-phone-agent-agents-queues.md b/Teams/aa-cq-plan-teams-phone-agent-agents-queues.md\nindex a73e792..abf4af8 100644\n--- a/Teams/aa-cq-plan-teams-phone-agent-agents-queues.md\n+++ b/Teams/aa-cq-plan-teams-phone-agent-agents-queues.md\n@@ -12,7 +12,7 @@ author: CLYVR\n ms.author: colongma\n manager: roykuntz\n ms.reviewer: colongma\n-ms.date: 2026-11-03T00:00:00.0000000Z\n+ms.date: 2026-11-17T00:00:00.0000000Z\n ms.topic: concept-article\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -77,6 +77,10 @@ This article is for IT pros and Teams administrators who want to learn about the\n \r\n ### Microsoft Copilot Studio\r\n \r\n+Note\r\n+\r\n+Teams Phone supports Contact Center Intelligence voice agents (also referred to as the Customer conversation agents in Microsoft Copilot Studio) and Microsoft Copilot Studio agents built using the standard harness.\r\n+\r\n With Teams Phone Agent's integration with [Microsoft Copilot Studio (MCS)](/en-us/microsoft-copilot-studio/), organizations can create custom voice agents in MCS to attach to their Teams Phone Agent.\r\n \r\n - Create specialized workflows, such as billing, prescription refill, and order status.\r\n",
+      "baseCommitSha": "8c21c6ee35587df8b40b8a7db8f4a1ee5988355b",
+      "commitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-18 23:02:33 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-plan-teams-phone-agent-agents-queues.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-plan-teams-phone-agent-agents-queues",
+      "eventId": "teams-docs:eab7fac91c32755e566fa165d02b92d7474c716d:modified:Teams/aa-cq-plan-teams-phone-agent-agents-queues.md",
+      "firstSeenAt": "2026-11-19T10:29:15.503Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Teams Phone agent support expanded in planning guidance",
+        "summary": "The page now states that Teams Phone supports Contact Center Intelligence voice agents, also called Customer conversation agents in Microsoft Copilot Studio, and Copilot Studio agents built with the standard harness.",
+        "adminImpact": "Administrators can use the guidance to identify supported agent types when planning Teams Phone agents and queues.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 1,
+      "changes": 6,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md b/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\nindex c09e3e6..bc337ce 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md\n@@ -12,7 +12,7 @@ author: CLYVR\n ms.author: colongma\n manager: roykuntz\n ms.reviewer: colongma\n-ms.date: 2026-10-21T00:00:00.0000000Z\n+ms.date: 2026-11-17T00:00:00.0000000Z\n ms.topic: how-to\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -155,6 +155,10 @@ None.\n - June 15, 2026\r\n     - Entered Frontier Public Preview\r\n \r\n+Note\r\n+\r\n+Teams Phone supports Contact Center Intelligence voice agents (also referred to as the Customer conversation agents in Microsoft Copilot Studio) and Microsoft Copilot Studio agents built using the standard harness.\r\n+\r\n ## Microsoft Copilot Studio voice agent setup and configuration\r\n \r\n For detailed steps on how to create a Microsoft Copilot Studio voice agent, see [Integrate voice agents with Teams Phone](/en-us/microsoft-copilot-studio/voice-teams-phone-agent).\r\n",
+      "baseCommitSha": "8c21c6ee35587df8b40b8a7db8f4a1ee5988355b",
+      "commitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-18 23:02:33 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-agents-queues",
+      "eventId": "teams-docs:eab7fac91c32755e566fa165d02b92d7474c716d:modified:Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+      "firstSeenAt": "2026-11-19T10:29:15.514Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Teams Phone documentation adds supported agent types",
+        "summary": "The page now states that Teams Phone supports Contact Center Intelligence voice agents, also called Customer conversation agents in Microsoft Copilot Studio, and Microsoft Copilot Studio agents built with the standard harness.",
+        "adminImpact": "Administrators can use this information when identifying supported agent options. No action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/aa-cq-setup-teams-phone-agent-ubb.md b/Teams/aa-cq-setup-teams-phone-agent-ubb.md\nindex fa77c96..4411eed 100644\n--- a/Teams/aa-cq-setup-teams-phone-agent-ubb.md\n+++ b/Teams/aa-cq-setup-teams-phone-agent-ubb.md\n@@ -12,7 +12,7 @@ author: CLYVR\n ms.author: colongma\n manager: roykuntz\n ms.reviewer: colongma\n-ms.date: 2026-10-19T00:00:00.0000000Z\n+ms.date: 2026-11-17T00:00:00.0000000Z\n ms.topic: how-to\n ms.tgt.pltfrm: cloud\n ms.service: msteams\n@@ -184,7 +184,7 @@ For more information, see [Create, edit, or delete a security group](/en-us/micr\n \r\n Note\r\n \r\n-These steps require the **AI Administrator** role.\r\n+To create, edit, and manage spending policies, **Global administrator** and **Billing administrator** roles are needed. To edit existing spending policies, the **AI Administrator** role is needed.\r\n \r\n ### Add spending policy\r\n \r\n",
+      "baseCommitSha": "8c21c6ee35587df8b40b8a7db8f4a1ee5988355b",
+      "commitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-18 23:02:33 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/aa-cq-setup-teams-phone-agent-ubb",
+      "eventId": "teams-docs:eab7fac91c32755e566fa165d02b92d7474c716d:modified:Teams/aa-cq-setup-teams-phone-agent-ubb.md",
+      "firstSeenAt": "2026-11-19T10:29:15.522Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Spending-policy role requirements updated",
+        "summary": "Creating, editing, and managing spending policies now requires Global administrator and Billing administrator roles. Editing existing policies requires the AI Administrator role.",
+        "adminImpact": "Review role assignments to ensure administrators have the appropriate access for the spending-policy tasks they perform.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/teams-phones-certified-hardware.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "patch": "diff --git a/Teams/devices/teams-phones-certified-hardware.md b/Teams/devices/teams-phones-certified-hardware.md\nindex 6b0934b..e974f3c 100644\n--- a/Teams/devices/teams-phones-certified-hardware.md\n+++ b/Teams/devices/teams-phones-certified-hardware.md\n@@ -88,6 +88,7 @@ For updates regarding certification and/or Microsoft support end dates, see [And\n | Poly CCX600 | `9.0.0.10315` | August 15, 2028 | 12 |\r\n | Poly Trio C60, Trio C60 NR, Trio C60 ND | `9.0.0.10315` | August 15, 2028 | 12 |\r\n | Poly EM60 supported on CCX505 and CCX600 | `9.0.0.10315` | August 15, 2027 | N/A |\r\n+| Yealink CP965 E2 | ` 200.15.0.12` | October 15, 2029 | 15 |\r\n | Yealink MP52 E2 | `176.15.0.182` | October 15, 2029 | 15 |\r\n | Yealink MP54 E2 | `176.15.0.182` | October 15, 2029 | 15 |\r\n | Yealink MP55 E2 | `176.15.0.182` | October 15, 2029 | 15 |\r\n",
+      "baseCommitSha": "8c21c6ee35587df8b40b8a7db8f4a1ee5988355b",
+      "commitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-18 23:02:33 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/teams-phones-certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/teams-phones-certified-hardware",
+      "eventId": "teams-docs:eab7fac91c32755e566fa165d02b92d7474c716d:modified:Teams/devices/teams-phones-certified-hardware.md",
+      "firstSeenAt": "2026-11-19T10:29:15.530Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Yealink CP965 E2 added to certified hardware",
+        "summary": "The certified hardware list now includes the Yealink CP965 E2, software version 200.15.0.12, with certification through October 15, 2029.",
+        "adminImpact": "No administrator action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1532259",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-19",
+      "title": "Microsoft Teams: Retirement of Translate slides in PowerPoint Live",
+      "summary": "Starting November 30, 2026, the Translate slides feature in PowerPoint Live during Microsoft Teams meetings will be retired worldwide. Attendees will no longer translate slides; slides will display in their original language. No admin action is needed, but organizations should notify users and update related training materials.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1532259/",
+      "originalUrl": "https://mc.merill.net/message/MC1532259",
+      "body": "<p><b><b>What and why</b></b></p><p>Starting November 30, 2026, attendees in <i>Microsoft Teams meetings</i> will no longer be able to translate slides into another language in <i>PowerPoint Live</i> by using <b><i>Change view &gt; Translate slides</i></b>. Other PowerPoint Live features for presenters and attendees are not affected.</p><p></p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Retirement (Worldwide):</b> Beginning and completing in <b>late November 2026</b></li><li>Translate slides will be removed for all attendees on <b>November 30, 2026</b></li></ul><p></p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Attendees who use Translate slides in <i>PowerPoint Live</i> during Microsoft Teams meetings</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams meetings</li><li>PowerPoint Live</li></ul><p><i>What will happen</i></p><ul><li>Attendees will no longer see the <b>Translate slides</b> option in <i>PowerPoint Live</i> under <b><i>Change view &gt; Translate slides</i></b>.</li><li>Attendees will see slides in the language in which they were created.</li><li>Presenting with PowerPoint Live and other attendee viewing options are not affected.</li><li>There is no admin setting to manage this change.</li><li>No admin action is required.</li><li>Most organizations will see little impact because only a very small share of PowerPoint Live sessions use this option.</li></ul><p></p><p><b><b>Action required and recommendations</b></b></p><p>No action is required to prepare for this change. Translate slides will be removed automatically for all attendees on November 30, 2026.</p><p>We recommend that you:</p><ul><li>Notify presenters and users in your organization about this change, especially teams that present to audiences who speak different languages.</li><li>Ask presenters to share slides in the languages their audiences need ahead of time.</li><li>Update internal training or help content that mentions Translate slides in <i>PowerPoint Live</i>.</li></ul><p></p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft 365 apps"
+      ],
+      "tags": [
+        "User impact",
+        "Admin impact",
+        "Retirement"
+      ],
+      "startDate": "2026-10-30T22:11:35Z",
+      "endDate": "2026-12-28T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-19T00:56:54.563Z",
+      "version": "2026-11-19T00:56:54.563Z",
+      "eventId": "message-center:MC1532259:2026-11-19T00:56:54.563Z",
+      "firstSeenAt": "2026-11-19T10:29:29.851Z"
+    },
+    {
+      "id": "MC1518033",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-19",
+      "title": "Microsoft Teams: Onboarding workflow for new team members",
+      "summary": "Microsoft Teams will introduce an onboarding workflow to automatically connect new members to relevant channels, improving engagement and onboarding speed. Rollout starts November 2026 (targeted) and general availability in March 2027. No admin action is needed, but team owners should be informed.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1518033/",
+      "originalUrl": "https://mc.merill.net/message/MC1518033",
+      "body": "<p>Updated November 18, 2026: We have clarified the supported channel types and updated the rollout timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Microsoft Teams is introducing an onboarding workflow that helps new team members get started faster by automatically connecting them to relevant channels when they join a team. This can improve engagement, accelerate onboarding, and make important information easier to find from the start.</p><p>This message is associated with Microsoft 365 Roadmap ID 573452.</p><p><b><b>Rollout Schedule:</b></b></p><ul><li><b>Targeted Release (R3.6):</b> Rollout will proceed gradually from November 2026 through January 2027.</li><li><b>General Availability (Worldwide):</b> We will begin rolling out in mid-March 2027 (previously early December 2026) and expect to complete by end of March 2027 (previously mid-December 2026).</li></ul><p><b><b>Impact on Your Organization:</b></b></p><p>Today, new team members may need to manually discover and join the channels that are most relevant to their work. With this update, team owners can automatically add new members to relevant channels through the onboarding workflow when they are added to a team.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required. You may want to inform team owners about this upcoming improvement so they understand how to connect new members to relevant channels more efficiently during onboarding.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact"
+      ],
+      "startDate": "2026-10-20T23:00:34Z",
+      "endDate": "2027-04-30T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-19T00:33:38.14Z",
+      "version": "2026-11-19T00:33:38.14Z",
+      "eventId": "message-center:MC1518033:2026-11-19T00:33:38.14Z",
+      "firstSeenAt": "2026-11-19T10:29:29.851Z"
+    },
+    {
+      "id": "MC1540351",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-19",
+      "title": "Microsoft Teams: Automatically add tag members to channels with Workflows",
+      "summary": "Microsoft Teams will introduce a Workflows app template to automatically add users to standard or shared channels when added to a team tag. Rollout starts November 2026 (Targeted Release) and completes by March 2027 (General Availability). The feature is optional and requires team owner configuration.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1540351/",
+      "originalUrl": "https://mc.merill.net/message/MC1540351",
+      "body": "<p>Updated November 18, 2026: We have clarified the supported channel types and updated the rollout timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>We are introducing the <b><i>Join member to channel when user is added to tag</i></b> template in the Workflows app to automatically add users to selected channels when they are added to a team tag. Once configured, the workflow runs whenever a user is added to the tag, eliminating the need to add members to each channel manually. This is especially useful for location-based or project-based groups where tags correspond to specific sites, regions, or projects, helping new members access relevant channels promptly.</p><p>This applies to channels that all team members can access by default: standard channels and shared channels that are shared with everyone on the team.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Targeted Release (R3.6):</b> Rollout will proceed gradually from November 2026 through January 2027.</li><li><b>General Availability (Worldwide):</b> Rollout will begin in mid-March 2027 (previously mid-December 2026) and is expected to complete by end of March 2027 (previously mid-December 2026).</li></ul><p><b><b>Impact on your organization</b></b></p><p><b>Who is affected</b></p><ul><li>Microsoft Teams users who are added to team tags associated with configured workflows.</li><li>Team owners who choose to configure the workflow.</li></ul><p><b>Platforms and services</b></p><ul><li>Microsoft Teams</li><li>Workflows app</li><li>Power Automate</li></ul><p><b>What will happen</b></p><ul><li>The <b><i>Join member to channel when user is added to tag</i></b> template will be available in the Workflows app.</li><li>When configured, the workflow will automatically add users to selected channels when they are added to a team tag.</li><li><b>Nothing changes by default.</b> The template is <b>optional </b>and does not run until someone in a team configures it.</li></ul><p><i>Joining new tag members to channels</i></p><p></p><p><b><b>Action required and recommendations</b></b></p><p>No action is required. If your organization plans to use this template, we recommend reviewing your Power Automate and Workflows policies to confirm that it is permitted. Team owners can configure the workflow at any time if desired.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-05T21:23:13Z",
+      "endDate": "2027-04-30T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-19T00:30:26.92Z",
+      "version": "2026-11-19T00:30:26.92Z",
+      "eventId": "message-center:MC1540351:2026-11-19T00:30:26.92Z",
+      "firstSeenAt": "2026-11-19T10:29:29.851Z"
+    },
+    {
+      "id": "MC796790",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-19",
+      "title": "Unified management of app and agent availability and installation in Teams, Outlook, and the Microsoft 365 app",
+      "summary": "Microsoft has unified app and agent availability and installation management across Teams, Outlook, and Microsoft 365 admin centers. Starting September 2025, availability unification occurs in phases, with installation unification generally available since November 2026, synchronizing settings within 24–48 hours after availability unification.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "ai",
+        "name": "AI and Copilot",
+        "icon": "/assets/topics/ai.svg"
+      },
+      "changeType": "Major update",
+      "url": "/message-center/MC796790/",
+      "originalUrl": "https://mc.merill.net/message/MC796790",
+      "body": "<p>Updated November 18, 2026: Unified app and agent installation management is now generally available. For any tenant that unifies app/agent availability through Phase 1, Phase 2, or Phase 3, app and agent installations are also unified across the Microsoft 365 admin center (MAC) and Teams admin center (TAC) within 24–48 hours of completing availability unification.</p><p><b>What it is</b></p><p>Microsoft is rolling out a new feature to streamline how app and agent availability and installation is managed across Teams, Outlook, and Microsoft 365 Copilot. Until now, IT admins configured availability and installation settings separately in both the Microsoft 365 Admin Center (MAC) and the Teams Admin Center (TAC), which led to mismatches. With this update, you’ll be able to unify availability and installation policies for apps and agents across both portals, making app management more consistent and efficient.</p><p>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=393931\" rel=\"noopener noreferrer\">393931</a>, <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=485712\" rel=\"noopener noreferrer\">485712</a> and <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=503105\" rel=\"noopener noreferrer\">503105</a>.</p><p><b>When this will happen:&nbsp;</b></p><ul><li>App and agent availability unification (Section A): Rollout began in late September 2025. The Phase 3 timeline will be announced separately, at least 60 days before that phase begins.</li><li>App and agent installation unification (Section B): Released. Installation unification completes within 24–48 hours after a tenant completes app availability unification(Section A) in Phase 1, 2, or 3</li></ul><p><b>A: Unify app availability across admin centers</b></p><p>1. <b>Phase 1 – Default Tenant Unification of App/Agent Availability</b></p><p>We will begin rolling out this feature at the end of September 2025. This initial phase targets tenants that have never modified their organization-wide defaults, app availability, or block/unblock in either the Microsoft 365 admin center or the Teams admin center. At the end of this phase, agent and app manageability will be unified across both Microsoft 365 admin center and Teams admin center ensuring agent and Microsoft 365 <b>apps availability</b> policies are in alignment for all future administrative changes. This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=393931\" rel=\"noopener noreferrer\">393931.</a></p><p>2.<b>Phase 2 – Modified Tenants Unification of App/Agent Availability</b></p><p>This phase targets tenants that have previously modified their organization-wide defaults, app availability, or block/unblock settings in either admin center. These tenants will be transitioned to a unified management experience across both Microsoft 365 and Teams admin centers.</p><ul><li><b>For tenants with no agent or app availability differences across both admin centers</b>, guidance will be provided to help maintain unified availability policy for all future changes.</li></ul><p><b>For tenants with agent or app availability differences across both admin centers, </b>a <b>wizard </b>in the Teams admin center will help identify affected agents and apps and guide through resolving discrepancies.</p><ul><li>As part of this phase we will also enable administrators to manage Microsoft 365 certified SaaS applications within their tenant through org-wide settings for third-party apps. This has been rolled out completely for all tenants.</li><li>This message is associated with Microsoft 365 Roadmap ID <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=485712\" rel=\"noopener noreferrer\">485712</a> &amp; <a href=\"https://www.microsoft.com/microsoft-365/roadmap?filters=&amp;searchterms=503105\" rel=\"noopener noreferrer\">503105</a>.</li></ul><p>This phase has been fully rolled out to all tenants. Tenants can choose to align through the wizard experience available in Teams admin center.</p><p><b>Note:</b> In this phase, no changes will be applied to org-wide settings or app-level settings without administrator action.</p><p>3. <b>Phase 3 – Automatic Unification (Future)</b></p><p><span>Tenants that have not taken action to unify availability through the wizard experience released in Phase 1 and Phase 2 will have their availability automatically unified across MAC and TAC as part of this phase. We will inform customers of the timeline and additional details at least </span><b>60 days in advance</b><span> before this phase begins.</span></p><p><b>B: Unified app and agent installation management&nbsp;</b></p><p>This capability unifies installation management across the Teams admin center and Microsoft 365 admin center. Administrators can manage supported app and agent installations from either portal, with changes synchronized across both admin centers.&nbsp;</p><p><b>Who receives this capability?</b>&nbsp;</p><p>Tenants whose app and agent availability has been unified through any of the phases described in section A are eligible. Once rollout begins, this capability will be automatically enabled for tenants whose availability is already unified as part of Section A. Tenants that unify their availability later will receive this capability automatically once unified.&nbsp;</p><p><b>Note:</b> This capability is separate from availability unification described in section A . It does not automatically unify app or agent availability.&nbsp;</p><p><b>When will it roll out?</b>&nbsp;</p><p>Rollout will begin at the end of September 2026 for eligible tenants. This date applies only to installation management (section B).&nbsp;</p><p><b>Is administrator action required?</b>&nbsp;</p><p>No additional action is required to enable installation unification for eligible tenants. Existing installation assignments for supported apps and agents will be synchronized across both admin centers.&nbsp;</p><p><b>Important:</b> App installation is no longer managed through Teams app setup policies. Installations previously made through those policies are not unified as part of this change.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams",
+        "Microsoft 365 apps"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "Admin impact"
+      ],
+      "startDate": "2024-05-29T22:15:48Z",
+      "endDate": "2026-12-31T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-19T00:24:35.017Z",
+      "version": "2026-11-19T00:24:35.017Z",
+      "eventId": "message-center:MC796790:2026-11-19T00:24:35.017Z",
+      "firstSeenAt": "2026-11-19T10:29:29.851Z"
+    },
+    {
+      "id": "MC1559642",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-18",
+      "title": "Continuous interpreter visibility with pop out video in Teams",
+      "summary": "Microsoft Teams will allow users to pop out sign language interpreters' videos into a resizable, movable window to keep interpreters visible while multitasking. Rolling out December 2026–January 2027 on Windows and Mac. Users enable this via Accessibility settings; no admin action needed.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1559642/",
+      "originalUrl": "https://mc.merill.net/message/MC1559642",
+      "body": "<p><b><b>What and Why:</b></b></p><p>Users who work with sign language interpreters in Microsoft Teams meetings will be able to pop out their paired interpreters' video into a separate window. The window can be resized and moved anywhere on the screen, including to another monitor. Interpreters stay in view while users multitask, share content, or change meeting layouts. This is designed for Deaf and hard-of-hearing (D/HH) users, for whom losing sight of an interpreter means losing access to the conversation.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out on early December 2026 and expect to complete by late December 2026.</p><p>General Availability (Worldwide): We will begin rolling out on mid January 2027 and expect to complete by late January 2027.</p><p><b><b>Impact on Your Organization:</b></b></p><p>This applies to Teams desktop on Windows and Mac. After this rollout, users can:</p><ul><li>Pop out their paired sign language interpreters' video into a dedicated window that stays on top of other apps.</li><li>Resize the window and move it anywhere on their screen or to another monitor.</li><li>Keep interpreters in view while presenting, viewing shared content, using chat or captions, or with the main meeting window minimized.</li></ul><p>The pop-out window only changes the user's own view, and interpreters stay in the main meeting gallery for everyone else. The window isn't visible to other participants when the user shares their screen.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>You don't need to do anything to prepare. Consider telling D/HH users and the interpreters who support them about this feature, and update your training and accessibility documentation as needed. To use the feature:</p><ol><li>In Teams Accessibility settings, turn on Sign language mode and select I am a Signer.</li><li>Select Manage interpreters and add the people who interpret for you.</li><li>Select View &gt; Pop out interpreters during a meeting.</li><li>Users open the pop-out window in each meeting. For faster access, they can pin the Pop out interpreters button to the meeting toolbar. There is no admin policy for this feature.</li></ol><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature"
+      ],
+      "startDate": "2026-11-18T23:41:22Z",
+      "endDate": "2027-03-15T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-18T23:41:27.863Z",
+      "version": "2026-11-18T23:41:27.863Z",
+      "eventId": "message-center:MC1559642:2026-11-18T23:41:27.863Z",
+      "firstSeenAt": "2026-11-19T10:29:29.851Z"
+    },
+    {
+      "id": "MC1559637",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-18",
+      "title": "Microsoft Teams: Real-time queue metrics in the Queues app on Mobile",
+      "summary": "Microsoft Teams is introducing real-time call queue metrics in the Queues app on Mobile, allowing calling representatives and supervisors to monitor queue activity and performance on the go. This rollout begins in December 2026, requires no admin action, and enhances visibility without changing queue management.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1559637/",
+      "originalUrl": "https://mc.merill.net/message/MC1559637",
+      "body": "<p><b><b>What and Why:</b></b></p><p>For calling representatives and supervisors, staying informed about call queue activity is important to managing incoming calls and maintaining timely customer service. However, when working away from their desks, they may not have visibility into current queue conditions, such as how many calls are waiting or how effectively calls are being handled. Without this information, it becomes harder to respond to changing call volumes and make informed decisions about queue participation.</p><p>We're introducing real-time call queue metrics in the Queues app on Microsoft Teams Mobile. Calling representatives and supervisor leads can now monitor key operational metrics directly from their mobile devices, giving them greater visibility into queue activity and performance while on the go.</p><p>Users can quickly understand the state of their queues, monitor incoming call demand, and make informed decisions about their availability and queue participation without needing to switch to desktop.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out in early December 2026 and expect to complete by mid-December 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Once available, eligible calling representatives and supervisor leads will be able to view real-time call queue metrics directly from the Queues app on Mobile. Users will be able to:</p><ul><li>Monitor queue activity: View real-time metrics to understand current call volumes and queue conditions.</li><li>Track incoming call demand: See key metrics such as calls waiting, calls presented, and calls answered.</li><li>Stay informed about queue performance: Access operational metrics for their assigned call queues without switching to desktop.</li><li>Make informed decisions: Use real-time queue information to better understand call demand and manage their availability and queue participation.</li></ul><p>The metrics available to users will depend on their role and existing permissions. Calling representatives will have visibility into the metrics available to them, while supervisor leads will have access to additional queue information based on their permissions.</p><p>This feature extends the existing real-time queue metrics experience to Mobile and does not change how call queues are configured or managed.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No new admin action is required before rollout. We recommend that you:</p><ul><li>Review the license assignments for users who need access to the Queues app on Mobile.</li><li>Ensure that calling representatives and supervisor leads have the appropriate permissions to view queue metrics.</li><li>Inform your help desk and users about the availability of real-time queue metrics on Mobile, and update internal training and support materials as needed.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-18T23:34:46Z",
+      "endDate": "2027-01-31T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-18T23:35:21.04Z",
+      "version": "2026-11-18T23:35:21.04Z",
+      "eventId": "message-center:MC1559637:2026-11-18T23:35:21.04Z",
+      "firstSeenAt": "2026-11-19T10:29:29.851Z"
+    },
+    {
+      "id": "MC1559628",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-18",
+      "title": "Choose how your presenter view is laid out in PowerPoint Live in Microsoft Teams",
+      "summary": "PowerPoint Live in Microsoft Teams now lets presenters choose from four presenter view layouts to suit their style, without affecting attendees' view. This feature, available on Windows, Mac, and web, rolls out worldwide from mid to late November 2026 and requires no admin action.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1559628/",
+      "originalUrl": "https://mc.merill.net/message/MC1559628",
+      "body": "<p><b><b>What and Why:</b></b></p><p>Presenters using PowerPoint Live in Microsoft Teams can now choose a layout for their presenter view. They can pick the one that best fits how they like to present, whether that's focusing on speaker notes, moving between slides quickly, looking ahead to what's next, or keeping the view simple.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on mid November 2026 and expect to complete by late November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>Presenters can switch between these layouts while they present:</p><p>Notes and thumbnails (default): Speaker notes and slide thumbnails, the same view presenters have today.</p><p>&nbsp;Thumbnails on the left: Slide thumbnails along the left side for quick navigation.</p><p>&nbsp;Next slide preview: A preview of the next slide or animation, so presenters can see what's coming.</p><p>&nbsp;Slides only: A simpler view focused on the current slide.</p><p>&nbsp;To change the layout, the presenter selects \"Change layout\" while presenting. Layouts only change what the presenter sees. Attendees' view of the presentation isn't affected.</p><p>This feature is available in Teams on Windows, Mac and the web.</p><p>This feature is on by default.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required. You may want to let presenters in your organization know about the new layout options and update any internal training or documentation as needed.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact"
+      ],
+      "startDate": "2026-11-18T23:29:39Z",
+      "endDate": "2027-01-31T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-18T23:29:49.333Z",
+      "version": "2026-11-18T23:29:49.333Z",
+      "eventId": "message-center:MC1559628:2026-11-18T23:29:49.333Z",
+      "firstSeenAt": "2026-11-19T10:29:29.851Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 6,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 1 new, 5 updated, and 0 removed Microsoft Teams documentation files across 2 documentation areas.",
+    "groups": [
+      {
+        "category": "Public preview",
+        "title": "Microsoft Teams",
+        "summary": "The new article explains how certified providers integrate with Teams, including app consent, provider selection, meeting policy configuration, and in-meeting detection reporting. The documentation now states that Teams Phone supports Contact Center Intelligence voice agents, also called Customer conversation agents in Microsoft Copilot Studio, and agents built with the standard harness. The page now states that Teams Phone supports Contact Center Intelligence voice agents, also called Customer conversation agents in Microsoft Copilot Studio, and Copilot Studio agents built with the standard harness. The page now states that Teams Phone supports Contact Center Intelligence voice agents, also",
+        "sourceFiles": [
+          "Teams/third-party-synthetic-audio-video-detection-meetings.md",
+          "Teams/aa-cq-direct-mcs.md",
+          "Teams/aa-cq-plan-teams-phone-agent-agents-queues.md",
+          "Teams/aa-cq-setup-teams-phone-agent-agents-queues.md",
+          "Teams/aa-cq-setup-teams-phone-agent-ubb.md"
+        ]
+      },
+      {
+        "category": "Feature update",
+        "title": "Teams devices",
+        "summary": "The certified hardware list now includes the Yealink CP965 E2, software version 200.15.0.12, with certification through October 15, 2029.",
+        "sourceFiles": [
+          "Teams/devices/teams-phones-certified-hardware.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Public preview",
+        "headline": "Microsoft Teams",
+        "detail": "The new article explains how certified providers integrate with Teams, including app consent, provider selection, meeting policy configuration, and in-meeting detection reporting. The documentation now states that Teams Phone supports Contact Center Intelligence voice agents, also called Customer conversation agents in Microsoft Copilot Studio, and agents built with the standard harness. The page now states that Teams Phone supports Contact Center Intelligence voice agents, also called Customer conversation agents in Microsoft Copilot Studio, and Copilot Studio agents built with the standard harness. The page now states that Teams Phone supports Contact Center Intelligence voice agents, also"
+      },
+      {
+        "category": "Feature update",
+        "headline": "Teams devices",
+        "detail": "The certified hardware list now includes the Yealink CP965 E2, software version 200.15.0.12, with certification through October 15, 2029."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

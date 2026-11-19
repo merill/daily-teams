@@ -499,37 +499,37 @@
       }
     },
     "2026-11-19": {
-      "headline": "PowerPoint Live translation retires November 30 as Teams unifies app and agent management",
-      "overview": "PowerPoint Live will lose slide translation worldwide on November 30, 2026, leaving attendees viewing slides in their original language. Teams is also unifying app and agent availability and installation management across Teams, Outlook, and the Microsoft 365 admin centers. Other notable changes include setup guidance for certified synthetic audio and video detection, an upcoming channel-automation workflow, and revised Teams Phone spending-policy roles.",
-      "adminImpact": "Notify meeting users and update training materials for the PowerPoint Live retirement. Account for 24–48-hour synchronization when managing unified app and agent settings. Admins can evaluate certified detection providers through the documented consent, provider-selection, and meeting-policy steps. Team owners must configure the optional channel workflow, and Teams Phone administrators should verify the required Global administrator, Billing administrator, and AI Administrator role assignments.",
+      "headline": "Teams device management shifts to Teams Rooms Pro portal as Translate slides retires",
+      "overview": "A November 2026 deadline now dominates Teams device administration: management in the Teams admin center is moving to the Teams Rooms Pro Management Portal, while PowerPoint Live’s Translate slides retires worldwide on November 30. Microsoft also says unified app and agent installation management is generally available across Teams, Outlook, and Microsoft 365 admin centers; an optional channel workflow is beginning its targeted rollout.",
+      "adminImpact": "Complete the TAC migration steps, update device software, and verify prerequisites, with the path varying by device type and cloud environment. No admin action is required for Translate slides’ retirement, but users should be notified and related training updated. Account for 24–48-hour synchronization after availability unification, have team owners configure the optional tag-to-channel workflow if they adopt it, and review Teams Phone spending-policy role assignments against the specified Global administrator, Billing administrator, and AI Administrator requirements.",
       "keyChanges": [
         {
-          "title": "PowerPoint Live slide translation retires November 30",
-          "detail": "Worldwide retirement begins November 30, 2026. Attendees will no longer translate slides during Teams meetings; slides will remain in their original language. Microsoft says no admin action is needed, but organizations should notify users and update related training.",
+          "title": "Teams device management is moving out of TAC",
+          "detail": "Teams device management in the Teams admin center will be deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal. Admins must complete migration steps, update device software, and ensure prerequisites are met; rollout details vary by device type and cloud environment.",
+          "product": "Teams",
+          "sourceId": "MC1448373"
+        },
+        {
+          "title": "PowerPoint Live’s Translate slides retires worldwide November 30",
+          "detail": "Starting November 30, 2026, attendees will no longer translate slides during Teams meetings, and slides will display in their original language. No admin action is required, but organizations should notify users and update related training.",
           "product": "Teams",
           "sourceId": "MC1532259"
         },
         {
-          "title": "App and agent availability and installation management is unified",
-          "detail": "Management is being unified across Teams, Outlook, and the Microsoft 365 admin centers. Availability unification is phased, while installation unification is generally available since November 2026; settings synchronize within 24–48 hours after availability unification.",
+          "title": "Unified app and agent installation management reaches general availability",
+          "detail": "Installation management is generally available across Teams, Outlook, and Microsoft 365 admin centers as of November 2026. Availability unification remains phased, and settings synchronize within 24–48 hours after availability unification.",
           "product": "Teams",
           "sourceId": "MC796790"
         },
         {
-          "title": "New guidance details certified third-party synthetic audio and video detection",
-          "detail": "The new Teams meetings article covers certified-provider integration, app consent, provider selection, meeting-policy configuration, and in-meeting detection reporting. Admins can use the documented setup to evaluate providers and make detection available to organizers through meeting policies.",
-          "product": "Meetings and events",
-          "sourceId": "doc-2026-11-19-certified-third-party-synthetic-audio-and-video-detection-in-microsoft-teams-meetings-microsoft--01"
-        },
-        {
-          "title": "Workflows will add team-tag members automatically to channels",
-          "detail": "An optional Workflows app template will add users to standard or shared channels when they are added to a team tag. Targeted Release starts in November 2026 and General Availability is planned for March 2027; team owner configuration is required.",
+          "title": "Workflows will automatically add tag members to channels",
+          "detail": "An optional Workflows app template will add users to standard or shared channels when they are added to a team tag. Targeted Release starts in November 2026, general availability is planned for March 2027, and team-owner configuration is required.",
           "product": "Teams",
           "sourceId": "MC1540351"
         },
         {
-          "title": "Teams Phone spending policies now specify administrator roles",
-          "detail": "Creating, editing, and managing spending policies requires Global administrator and Billing administrator roles. Editing existing policies requires the AI Administrator role.",
+          "title": "Teams Phone guidance specifies spending-policy administrator roles",
+          "detail": "The updated guidance states that creating, editing, and managing spending policies requires Global administrator and Billing administrator roles. Editing existing policies requires the AI Administrator role.",
           "product": "Teams Phone",
           "sourceId": "doc-2026-11-19-aa-cq-setup-teams-phone-agent-ubb-05"
         }
@@ -537,11 +537,11 @@
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-19T10:29:30.075Z",
+      "generatedAt": "2026-11-19T22:16:45.655Z",
       "usage": {
-        "inputTokens": 2145,
-        "outputTokens": 2857,
-        "costUsd": 0.003857
+        "inputTokens": 2270,
+        "outputTokens": 7997,
+        "costUsd": 0.01005
       }
     }
   },
@@ -639,37 +639,37 @@
       }
     },
     "2026-11-16": {
-      "headline": "Frontier-only AI voicemail triage brings usage-based billing to Teams Phone",
-      "overview": "Teams Phone’s personal voicemail AI triage is documented as a Microsoft Frontier Program capability, with general availability timing unannounced and setup tied to Copilot licensing, usage-based billing, spending controls, and voicemail policies. The week also brought a new Teams investigation data source, third-party synthetic-media detection support, and a November 30 retirement date for PowerPoint Live’s Translate slides. Much of the remaining activity was documentation maintenance around duplicate-name search context, recording announcements, and certified hardware.",
-      "adminImpact": "Administrators evaluating voicemail triage or intelligent call delegation should validate licensing, Copilot Credits billing, spending policies, and the relevant voicemail or personal attendant policies; triage remains Frontier-only and delegation is in public preview. Security teams can review access requirements for the Defender table and deploy provider apps and meeting policies if using synthetic-media detection. No administrative change is required for the Translate slides retirement, but user communications and related training should be updated.",
+      "headline": "Teams device management shifts from TAC to Teams Rooms Pro portal",
+      "overview": "Microsoft says Teams device management in the Teams Admin Center will be deprecated by November 2026 as it transitions to the Teams Rooms Pro Management Portal. Other high-impact changes include a mid-December mobile OS support cutoff, Frontier-only personal voicemail AI triage guidance, certified third-party synthetic-media detection for meetings, and the November 30 retirement of PowerPoint Live’s Translate slides.",
+      "adminImpact": "Prioritize the TAC-to-portal migration, including required device software updates and device-type or cloud-environment prerequisites. Prepare users for the iOS 17 and iPadOS 17 support cutoff by encouraging upgrades and updating support materials. For the Frontier voicemail feature or synthetic-media detection, review billing, policies, provider apps, permissions, and meeting-policy requirements before adoption. Translate slides requires user notification and training updates rather than tenant configuration.",
       "keyChanges": [
         {
-          "title": "Personal voicemail AI triage is Frontier-only and tied to usage billing",
-          "detail": "A new Teams Phone article says personal voicemail AI triage is available only through the Microsoft Frontier Program; general availability timing is not announced. Enablement planning must account for Copilot licensing, usage-based billing, security-group scoping, spending policies, voicemail policies, limits, and alerts. No mandatory migration or deadline is stated.",
+          "title": "TAC device management deprecation requires a portal migration",
+          "detail": "Teams device management in the Teams Admin Center will be deprecated by November 2026 as it transitions to the Teams Rooms Pro Management Portal. Administrators must follow migration steps, update device software, and verify prerequisites that vary by device type and cloud environment to avoid management disruption.",
+          "product": "Teams",
+          "sourceId": "MC1448373"
+        },
+        {
+          "title": "Personal voicemail AI triage is limited to Frontier and usage-based billing",
+          "detail": "New Teams Phone guidance covers Copilot licensing, usage-based billing, security-group scoping, spending policies, limits, and alerts for personal voicemail AI triage. The capability is available only through the Microsoft Frontier Program, with no GA timing announced; administrators planning to enable it must configure both spending and voicemail policies.",
           "product": "Teams Phone",
           "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
         },
         {
-          "title": "Intelligent call delegation enters Teams Phone public preview",
-          "detail": "The new guide describes an AI-powered voice agent for incoming calls managed through Teams personal attendant policies. The public preview requires eligible users to have a Microsoft Copilot license, Copilot Credits usage-based billing and a spending policy, plus the relevant personal attendant policy configuration.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-manage-intelligent-call-delegation-in-microsoft-teams-microsoft-teams-01"
-        },
-        {
-          "title": "Defender adds a MessageContents table for Teams investigations",
-          "detail": "Microsoft Defender for Office 365 is rolling out a MessageContents table in Advanced Hunting from late September through late November 2026. Authorized security analysts can access Teams message snippets and metadata, with access controlled by specific permissions.",
-          "product": "Teams",
-          "sourceId": "MC1474106"
-        },
-        {
-          "title": "Teams will support certified third-party synthetic-media detection",
-          "detail": "Starting in late November 2026, Teams will support certified third-party synthetic audio and video detection in meetings. Organizations that use it must deploy provider apps, grant permissions, and configure meeting policies; detection is performed by third parties while Teams supplies the integration.",
+          "title": "Teams opens meetings to certified third-party synthetic-media detection",
+          "detail": "Starting in late November 2026, organizations can integrate certified third-party detection for synthetic audio and video in Teams meetings. Adoption requires deploying provider apps, granting permissions, selecting providers, and configuring meeting policies; detection is performed by the third-party providers.",
           "product": "Teams",
           "sourceId": "MC1509787"
         },
         {
-          "title": "PowerPoint Live will retire Translate slides worldwide November 30",
-          "detail": "Beginning November 30, 2026, attendees will no longer be able to translate slides in PowerPoint Live during Teams meetings; slides will remain in their original language. No admin action is required, but organizations should notify users and update related training.",
+          "title": "New Teams releases require iOS 18 or later in December",
+          "detail": "Teams support for iOS 17 and iPadOS 17 ends starting in mid-December 2026, making iOS/iPadOS 18 or later necessary for new releases. Existing Teams versions will continue working without support, so Microsoft recommends user notification, OS upgrades, policy updates, and revised support documentation.",
+          "product": "Teams",
+          "sourceId": "MC1556088"
+        },
+        {
+          "title": "PowerPoint Live retires Translate slides worldwide on November 30",
+          "detail": "Beginning November 30, 2026, attendees will no longer be able to translate slides in PowerPoint Live during Teams meetings; slides will remain in their original language. Microsoft says no admin action is required, but organizations should notify users and update related training materials.",
           "product": "Teams",
           "sourceId": "MC1532259"
         }
@@ -677,64 +677,64 @@
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-19T10:29:30.075Z",
+      "generatedAt": "2026-11-19T22:16:45.655Z",
       "usage": {
-        "inputTokens": 6980,
-        "outputTokens": 4048,
-        "costUsd": 0.006254
+        "inputTokens": 7105,
+        "outputTokens": 6341,
+        "costUsd": 0.00903
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Frontier-only Teams Phone voicemail triage details usage-based billing controls",
-      "overview": "November paired a Frontier-only Teams Phone capability with a February 2027 Copilot-dependent rollout, a December Teams Free invitation retirement, changed event recording-access logic, and a mid-December mobile OS support cutoff. The practical work centers on licensing and spending controls, event-policy validation, user communications, and device upgrade planning.",
-      "adminImpact": "Admins evaluating personal voicemail AI triage should confirm Copilot licensing, usage-based billing, security-group scope, spending policies, limits and alerts, and the required voicemail policy. Facilitator will require Microsoft 365 Copilot (Premium) and manual enablement. Validate RecordingForTownhall or RecordingForWebinar settings for event access; for the Teams Free retirement, update user guidance rather than changing collaboration settings. Before mid-December, notify mobile users, encourage iOS/iPadOS 18 or later, and update support policies and documentation.",
+      "headline": "Teams device management transitions from TAC to the Teams Rooms Pro portal",
+      "overview": "November’s main administrator story is the move from Teams Admin Center device management to the Teams Rooms Pro Management Portal, with TAC management scheduled for deprecation by November 2026. Teams will also end support for iOS 17 and iPadOS 17 for new releases in mid-December, change town hall and webinar recording access to event-specific settings, add integrations for certified third-party synthetic-media detection, and retire off-network invitations to Teams Free in December.",
+      "adminImpact": "Complete the TAC-to-portal migration, including required device software updates and prerequisite checks that vary by device type and cloud environment. Recheck town hall and webinar procedures against the RecordingForTownhall and RecordingForWebinar settings rather than AllowCloudRecording. Communicate the iOS/iPadOS 18 requirement and revise support guidance before mid-December, while noting that existing Teams versions continue to work without support. If adopting synthetic-media detection, deploy the provider app, grant permissions, and configure meeting policies. Update Teams Free user guidance; no administrator action is required for that retirement itself.",
       "keyChanges": [
         {
-          "title": "Frontier availability is paired with licensing, scope, and spend controls",
-          "detail": "A new Teams Phone article covers personal voicemail AI triage licensing, usage-based billing, security-group scoping, spending policies, limits, and alerts. The capability is available only through the Microsoft Frontier Program, with no GA timing announced; enabling it requires a spending policy and voicemail policy.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
-        },
-        {
-          "title": "Facilitator is scheduled to close meeting knowledge gaps in February 2027",
-          "detail": "Facilitator will detect knowledge gaps and provide relevant web-search answers in meeting chat. The rollout requires Microsoft 365 Copilot (Premium), manual enablement, administrator controls, and user opt-out support.",
+          "title": "TAC device management is moving to the Teams Rooms Pro Management Portal",
+          "detail": "Teams device management in the Teams Admin Center will be deprecated by November 2026. Administrators must complete migration steps, update device software, and verify prerequisites, with the rollout varying by device type and cloud environment.",
           "product": "Teams",
-          "sourceId": "MC1409304"
+          "sourceId": "MC1448373"
         },
         {
-          "title": "Teams Free will lose off-network invitations in December",
-          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, and Microsoft says no administrator action is required beyond updating user guidance.",
+          "title": "New Teams releases will require iOS 18 or iPadOS 18",
+          "detail": "Support for iOS 17 and iPadOS 17 ends starting in mid-December 2026 for new Teams releases. Existing versions will continue to work without support, so organizations should notify users, encourage OS upgrades, and update support documentation and policies.",
           "product": "Teams",
-          "sourceId": "MC1546409"
+          "sourceId": "MC1556088"
         },
         {
-          "title": "Town halls and webinars switch to event-specific recording-access controls",
-          "detail": "For Events App town halls and webinars, the “Who has access to the recording or transcript” option will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The behavior rolls out worldwide in early to mid-November 2026.",
+          "title": "Event-specific policies now control town hall and webinar recording access",
+          "detail": "For Events App town halls and webinars, the “Who has access to the recording or transcript” option will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The worldwide change rolls out in early to mid-November 2026.",
           "product": "Teams",
           "sourceId": "MC1550542"
         },
         {
-          "title": "Teams ends support for iOS 17 and iPadOS 17",
-          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing Teams versions will continue working without support, so organizations should notify users, encourage OS upgrades, and revise policies and support documentation.",
+          "title": "Teams adds integration support for certified third-party synthetic-media detection",
+          "detail": "Starting in late November 2026, organizations can integrate certified providers that detect synthetic audio and video in meetings. Administrators must deploy provider apps, grant permissions, and configure meeting policies; detection is performed by the third-party providers.",
           "product": "Teams",
-          "sourceId": "MC1556088"
+          "sourceId": "MC1509787"
+        },
+        {
+          "title": "Off-network invitations to Teams Free accounts will end in December",
+          "detail": "Users will no longer be able to invite external people by email or chat links to create Teams Free accounts starting in December 2026. Existing Teams Free collaboration and federation remain unchanged, but user guidance should be updated.",
+          "product": "Teams",
+          "sourceId": "MC1546409"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-19T10:29:30.075Z",
+      "generatedAt": "2026-11-19T22:16:45.655Z",
       "usage": {
-        "inputTokens": 6258,
-        "outputTokens": 7803,
-        "costUsd": 0.010615
+        "inputTokens": 6242,
+        "outputTokens": 5664,
+        "costUsd": 0.008045
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-19T10:29:30.075Z",
+  "generatedAt": "2026-11-19T22:16:45.655Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -801,22 +801,22 @@
       "costUsd": 0.073458
     },
     "2026-11-19": {
-      "inputTokens": 15383,
-      "outputTokens": 14708,
-      "requests": 3,
-      "costUsd": 0.020726
+      "inputTokens": 31000,
+      "outputTokens": 34710,
+      "requests": 6,
+      "costUsd": 0.047852
     }
   },
   "lastRun": {
-    "inputTokens": 15383,
-    "outputTokens": 14708,
+    "inputTokens": 15617,
+    "outputTokens": 20002,
     "requests": 3,
-    "costUsd": 0.020726
+    "costUsd": 0.027126
   },
   "totalUsage": {
-    "inputTokens": 174797,
-    "outputTokens": 225666,
-    "requests": 48,
-    "costUsd": 0.305756
+    "inputTokens": 190414,
+    "outputTokens": 245668,
+    "requests": 51,
+    "costUsd": 0.332882
   }
 }

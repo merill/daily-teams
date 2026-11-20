@@ -1,0 +1,326 @@
+{
+  "newFiles": [
+    {
+      "filename": "Teams/agents-existing-applications.md",
+      "status": "added",
+      "additions": 138,
+      "deletions": 0,
+      "changes": 138,
+      "patch": "diff --git a/Teams/agents-existing-applications.md b/Teams/agents-existing-applications.md\nnew file mode 100644\nindex 0000000..c4f91ca\n--- /dev/null\n+++ b/Teams/agents-existing-applications.md\n@@ -0,0 +1,138 @@\n+---\n+layout: Conceptual\n+title: Manage recommended agents for existing applications in Teams - Microsoft Teams | Microsoft Learn\n+canonicalUrl: https://learn.microsoft.com/en-us/microsoftteams/agents-existing-applications\n+breadcrumb_path: /microsoftteams/breadcrumb/toc.json\n+uhfHeaderId: MSDocsHeader-MicrosoftTeams\n+ms.suite: office\n+feedback_system: Standard\n+feedback_product_url: https://aka.ms/TeamsFeedback\n+recommendations: true\n+description: Learn how to review agent recommendations based on application sign-in activity and manage user access to recommended agents in the Teams admin center.\n+ms.topic: how-to\n+author: NickWalk\n+ms.author: nickwalk\n+manager: prkosh\n+ms.service: msteams\n+ms.subservice: teams-apps\n+audience: admin\n+ms.date: 2026-11-19T00:00:00.0000000Z\n+ms.collection:\n+- M365-collaboration\n+search.appverid: MET150\n+f1.keywords:\n+- NOCSH\n+ms.localizationpriority: high\n+locale: en-us\n+document_id: cb3164ea-ca04-9336-234e-32ba33bf2dd5\n+document_version_independent_id: cb3164ea-ca04-9336-234e-32ba33bf2dd5\n+original_content_git_url: https://github.com/MicrosoftDocs/OfficeDocs-SkypeForBusiness-pr/blob/live/Teams/agents-existing-applications.md\n+site_name: Docs\n+depot_name: office.OfficeDocs-MicrosoftTeams\n+page_type: conceptual\n+toc_rel: toc.json\n+pdf_url_template: https://learn.microsoft.com/pdfstore/en-us/office.OfficeDocs-MicrosoftTeams/{branchName}{pdfName}\n+feedback_help_link_type: ''\n+feedback_help_link_url: ''\n+asset_id: agents-existing-applications\n+moniker_range_name: \n+monikers: []\n+item_type: Content\n+source_path: Teams/agents-existing-applications.md\n+cmProducts:\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/63959238-cb90-4871-a33d-4a5519097e47\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/fcc3cd4a-59ea-47a2-9cc1-784142a5a25d\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/68e4b2d8-b70c-4019-b49a-d1f8881e2aea\n+spProducts:\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/78d87f42-5582-4a6b-90be-7db2f12b34e6\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/d7a55faf-a992-4e27-aa3a-eadc9830e778\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/67b2ba1a-6f74-4044-a48a-f0f8ad076b8f\n+platformId: bfa4b772-c0d0-8256-811b-b89d1f5cd1fd\n+---\n+\n+# Manage recommended agents for existing applications in Teams - Microsoft Teams | Microsoft Learn\n+\n+Admins can now use agent recommendations in the Teams admin center to identify Teams apps associated with applications your users already access with their work accounts.\r\n+\r\n+From the recommendations, you can make an app available or deploy it to users in your organization who accessed or signed in to applications using their work accounts outside Teams.\r\n+\r\n+This helps you bring relevant apps into Teams so users can access the services they already use without switching between applications.\r\n+\r\n+Note\r\n+\r\n+Agent recommendations are turned off by default. To enable them, your organization must consent to sharing sign-in activity data. For more information, see Enable agent recommendations.\r\n+\r\n+## Find agent recommendations\r\n+\r\n+To find agent recommendations for existing applications in your organization:\r\n+\r\n+1. Navigate to the Teams admin center.\r\n+2. In the left navigation, select **Teams apps** &gt; **Manage apps**.\r\n+3. In the **Filter by action** dropdown, select **Agents from applications used in your org**. A card titled **Agents from applications used in your org** appears at the top of the page and shows how many agents are available and how many users are active in the related applications.\r\n+4. Select **Review** on the card to see the list of recommended agents based on your users' sign-in activity.\r\n+\r\n+## Enable agent recommendations\r\n+\r\n+Agent recommendations are turned off by default. To generate recommendations, the Teams admin center uses sign-in activity data from Microsoft Purview Audit to identify applications that users in your organization access with their work accounts. You must consent to the use of this data before recommendations are generated. The data is used only to recommend Teams agents associated with applications already used in your organization.\r\n+\r\n+To enable agent recommendations:\r\n+\r\n+1. In the Teams admin center, go to **Teams apps** &gt; **Manage apps**.\r\n+2. Next:\r\n+\r\n+- On the **Get relevant agent recommendations** card, select **Agree and unlock insights**.\r\n+- Alternatively, select the **Agents from applications used in your org** filter, and then select the option to opt in to agent recommendations.\r\n+\r\n+[![Screenshot showing the option to enable agent recommendations in the Teams admin center.](media/enable-agent-recommendation.png)](media/enable-agent-recommendation.png#lightbox)\r\n+\r\n+Note\r\n+\r\n+You can change this setting at any time. To opt out of agent recommendations, go to **Manage apps** &gt; **Actions** &gt; **Org-wide app settings** &gt; **Privacy and data usage**. After you opt out, agent recommendations are no longer displayed.\r\n+\r\n+## Review recommended agents\r\n+\r\n+After you enable agent recommendations, the list shows Teams agents for applications that users in your organization actively sign in to but don't yet have access to in Teams.\r\n+\r\n+The list provides the following details for each recommended agent.\r\n+\r\n+| Column | Description |\r\n+| --- | --- |\r\n+| Name | The Teams agent or app. |\r\n+| App status | Whether the agent is unblocked or blocked in your organization. |\r\n+| User opportunity | The number of users who sign in to the application but don't have the agent available in Teams. Select the download icon to export the list of users. |\r\n+| Application name | The application that users sign in to with their work accounts. |\r\n+\r\n+## Enable an agent for users\r\n+\r\n+You can make a recommended agent available to everyone, specific users or groups, or users who recently accessed the related application.\r\n+\r\n+To enable an agent:\r\n+\r\n+1. In the recommended agents list, select the agent, and then select **Add users** to proceed to the **Users** step.\r\n+2. Select the users you want to:\r\n+\r\n+- Install the agent for.\r\n+- Make the agent available to, so they can install it themselves.\r\n+\r\n+[![Screenshot showing how to enable an agent for users in the Teams admin center.](media/enable-an-agent.png)](media/enable-an-agent.png#lightbox)\r\n+\r\n+You can target specific users who accessed the related application in the last month.\r\n+\r\n+1. Select **Next** to proceed to the **Permissions** step.\r\n+2. Review the required permissions and grant consent. If you're a Teams Administrator, ask a Global Administrator to grant consent.\r\n+3. On the **Review and finish** step, review your selections.\r\n+4. Select **Apply**. Your selections are applied, and the agent is enabled for the specified users. It might take a few hours for the changes to take effect.\r\n+\r\n+## Enable users to be added automatically\r\n+\r\n+When you select users who access an application in your organization, the Teams admin center creates a security group for those users. You can review the group on the **Review and finish** step and on the agent's **Users and groups** tab.\r\n+\r\n+Note\r\n+\r\n+These selections are added to the agent's existing availability and installation settings. Existing assignments aren't affected.\r\n+\r\n+To automatically add future users to the group, select **Add new users to this group when they sign in to the application** on the **Review and finish** step for an app. The agent is then made available to or installed for those users based on your configuration.\r\n+\r\n+Clear this option to limit the group to users identified when you configure the agent.\r\n+\r\n+**You can turn off automatic addition at any time**. In the Teams admin center, go to **Manage apps** &gt; Select the app &gt; **Users and Groups** tab. Turn off automatic addition to prevent future users who sign in to the related application from being added automatically.\n\\ No newline at end of file\n",
+      "baseCommitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitSha": "5a4d24e8878b85a74425f5f67f42c50d5d520ad4",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-19 23:10:31 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/agents-existing-applications.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/agents-existing-applications",
+      "eventId": "teams-docs:5a4d24e8878b85a74425f5f67f42c50d5d520ad4:added:Teams/agents-existing-applications.md",
+      "firstSeenAt": "2026-11-20T10:10:16.190Z",
+      "englishSummary": {
+        "category": "New feature",
+        "headline": "Manage recommended agents for applications already used by your organization",
+        "summary": "Teams admins can review agent recommendations based on users’ application sign-in activity and make recommended apps available or deploy them. Recommendations are off by default and require organizational consent to use sign-in activity data.",
+        "adminImpact": "Review whether to enable this optional capability in Teams admin center; no mandatory action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/devices/bluetooth-devices.md",
+      "status": "modified",
+      "additions": 12,
+      "deletions": 3,
+      "changes": 15,
+      "patch": "diff --git a/Teams/devices/bluetooth-devices.md b/Teams/devices/bluetooth-devices.md\nindex e14edc4..e47eada 100644\n--- a/Teams/devices/bluetooth-devices.md\n+++ b/Teams/devices/bluetooth-devices.md\n@@ -46,12 +46,12 @@ item_type: Content\n source_path: Teams/devices/bluetooth-devices.md\n cmProducts:\n - https://authoring-docs-microsoft.poolparty.biz/devrel/63959238-cb90-4871-a33d-4a5519097e47\n-- https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/19ec6774-09b8-473e-a17e-b17b518bbad7\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8\n spProducts:\n - https://authoring-docs-microsoft.poolparty.biz/devrel/78d87f42-5582-4a6b-90be-7db2f12b34e6\n-- https://authoring-docs-microsoft.poolparty.biz/devrel/43b2e5aa-8a6d-4de2-a252-692232e5edc8\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/ade36b61-c646-4bd8-87ee-f3a843461962\n+- https://authoring-docs-microsoft.poolparty.biz/devrel/43b2e5aa-8a6d-4de2-a252-692232e5edc8\n platformId: f1093c9c-73e7-90ba-7fed-3eda1d850741\n ---\n \n@@ -89,6 +89,7 @@ We recommend the following processors:\n - **Intel - Intel® Core™ 12th Gen processors or newer**\r\n     - See the OS and software requirements section for recommended driver versions\r\n - **Qualcomm - Snapdragon X or newer**\r\n+- **NVIDIA RTX Spark or newer**\r\n \r\n PCs using aftermarket USB Bluetooth adapters are not recommended or certified. USB Bluetooth audio dongles that connect to the PC as a USB Audio device instead of a Bluetooth controller cannot support the Native Bluetooth experience in Microsoft Teams.\r\n \r\n@@ -146,10 +147,18 @@ On Windows 11 PCs with Intel processors, we recommend the following minimum driv\n \r\n ## Certified Native Bluetooth peripherals\r\n \r\n-This certification is currently for Classic Bluetooth devices. The Microsoft Teams Certification Program has not started certifying Bluetooth Low Energy (LE) Audio headsets yet. We will update this article when the time comes. We do not anticipate issues with headsets that support both Classic Bluetooth and Bluetooth LE Audio, but the latter mode is not certified for Teams.\r\n+Native Bluetooth peripherals can be certified either for Bluetooth Classic Audio, or as Dual Mode with support for both Classic Audio and LE Audio.\r\n+\r\n+Certified Dual Mode devices deliver improved voice fidelity in Teams calls when connected to a Windows 11 PC that supports LE Audio. When connected to a Windows 11 PC that only supports Classic Audio, these devices continue to deliver a certified experience with Teams.\r\n+\r\n+To check if your PC supports Bluetooth LE Audio, see [Check if a Windows 11 device supports Bluetooth Low Energy Audio](https://support.microsoft.com/windows/hardware/bluetooth/check-if-a-windows-11-device-supports-bluetooth-low-energy-audio)\r\n \r\n To see a list of supported Bluetooth personal peripherals, see [Certified personal peripherals](/en-us/microsoftteams/devices/usb-devices?tabs=bluetooth).\r\n \r\n+## Requirements for Spatial Audio on Native Bluetooth devices\r\n+\r\n+Spatial Audio is only available for Bluetooth LE Audio connections, and only when the PC supports Super Wideband Stereo. To check if your PC supports Super Wideband Stereo, visit [Configuring Bluetooth LE Audio quality settings on Windows 11](https://support.microsoft.com/windows/hardware/bluetooth/configuring-bluetooth-le-audio-quality-settings-on-windows-11)\r\n+\r\n ## Troubleshooting\r\n \r\n The performance of a peripheral in Native Bluetooth mode is impacted by the Bluetooth radio on the host PC. We recommend installing the latest firmware updates for both peripherals and Bluetooth radio.\r\n",
+      "baseCommitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitSha": "5a4d24e8878b85a74425f5f67f42c50d5d520ad4",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-19 23:10:31 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/bluetooth-devices.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/bluetooth-devices",
+      "eventId": "teams-docs:5a4d24e8878b85a74425f5f67f42c50d5d520ad4:modified:Teams/devices/bluetooth-devices.md",
+      "firstSeenAt": "2026-11-20T10:10:16.198Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Bluetooth LE Audio and Spatial Audio requirements added",
+        "summary": "The documentation now covers certified dual-mode Bluetooth peripherals, improved voice fidelity on compatible Windows 11 PCs, and Spatial Audio requirements including LE Audio and Super Wideband Stereo support.",
+        "adminImpact": "Administrators can use these requirements to evaluate Bluetooth peripherals and Windows 11 PC compatibility for Teams audio experiences.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/certified-hardware-android.md",
+      "status": "modified",
+      "additions": 15,
+      "deletions": 0,
+      "changes": 15,
+      "patch": "diff --git a/Teams/devices/certified-hardware-android.md b/Teams/devices/certified-hardware-android.md\nindex be07461..d1253fc 100644\n--- a/Teams/devices/certified-hardware-android.md\n+++ b/Teams/devices/certified-hardware-android.md\n@@ -258,6 +258,21 @@ Devices must be updated to newer application releases (when available) to remain\n \r\n | Device model | Latest firmware version | Minimum version details | Included Microsoft applications | Release date |\r\n | --- | --- | --- | --- | --- |\r\n+| Cisco Desk Pro G2 | `ce ce 27.0.1.5 (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` MDEP: `VPA1.250815.074  ` | November 18, 2026 |\r\n+| Cisco Room Kit Pro G2 | `ce ce 27.0.1.5 (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` MDEP: `VPA1.250815.074  ` | November 18, 2026 |\r\n+| Cisco Board Pro G3 55 | `ce ce 27.0.1.5 (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` MDEP: `VPA1.250815.074  ` | November 18, 2026 |\r\n+| Cisco Board Pro G3 75 | `ce ce 27.0.1.5 (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` MDEP: `VPA1.250815.074  ` | November 18, 2026 |\r\n+| Cisco Board Pro 55 | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Board Pro 75 | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Room Bar | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Room Kit Pro | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Desk Pro | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Room Bar Pro | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Room Kit EQ | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Navigator | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Room Kit EQX | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Board Pro G2 55 | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n+| Cisco Board Pro G2 75 | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026261804 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n | Cisco Desk Pro G2 | `ce 26.9.1.10  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026144512 ` Microsoft Intune: `26.03.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` MDEP: `VPA1.250815.074  ` | November 03, 2026 |\r\n | Cisco Room Kit Pro G2 | `ce 26.9.1.10  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026144512 ` Microsoft Intune: `26.03.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` MDEP: `VPA1.250815.074  ` | November 03, 2026 |\r\n | Cisco Board Pro G3 55 | `ce 26.9.1.10  (AOSP)` | N/A | Teams client: `1449/1.0.96.2026144512 ` Microsoft Intune: `26.03.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` MDEP: `VPA1.250815.074  ` | November 03, 2026 |\r\n",
+      "baseCommitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitSha": "5a4d24e8878b85a74425f5f67f42c50d5d520ad4",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-19 23:10:31 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/certified-hardware-android.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/certified-hardware-android",
+      "eventId": "teams-docs:5a4d24e8878b85a74425f5f67f42c50d5d520ad4:modified:Teams/devices/certified-hardware-android.md",
+      "firstSeenAt": "2026-11-20T10:10:16.560Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Additional Cisco devices added to the Android certified hardware list",
+        "summary": "The documentation now lists 14 additional Cisco devices, including Board, Desk, Room Kit, Room Bar, Navigator, and Room Kit EQ models, with their software versions and a November 18, 2026 date.",
+        "adminImpact": "Administrators can use the updated list when evaluating supported Cisco Teams hardware and device versions.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/devices-release-notes.md",
+      "status": "modified",
+      "additions": 13,
+      "deletions": 0,
+      "changes": 13,
+      "patch": "diff --git a/Teams/devices/devices-release-notes.md b/Teams/devices/devices-release-notes.md\nindex 52f8e9b..0002948 100644\n--- a/Teams/devices/devices-release-notes.md\n+++ b/Teams/devices/devices-release-notes.md\n@@ -321,6 +321,19 @@ To add a mobile system OS scanner:\n - Hide meeting names for sensitive spaces. This setting is off by default (the **Show meeting names** setting is on). The tenant admin can enable it through **Settings** &gt; **Device settings** &gt; **Admin Settings** &gt; **Panels App Settings** &gt; **Meetings** &gt; **Show meeting names**. When meeting names is turned off, the meeting name is replaced with the meeting organizer's name.\r\n \r\n # [Teams phones](#tab/phones)\r\n+## November 19, 2026\r\n+\r\n+**Applies to**: *Teams app version*: 1449/1.0.94.2026381202 (Poly, Yealink, Audiocodes)\r\n+\r\n+- **Assign call transfer line keys from PMP or the phone**: Admins can now assign a Call transfer line key in the Pro Management Portal (PMP), either in a phone's individual settings or through a settings template. You can also assign one directly on your phone. Set the key up as a blind or consult transfer. Then, during a call, press the key to start a transfer right away and pick who to transfer the call to.\r\n+- **Configure auto dial from PMP**: Admins can now turn auto dial on or off and set the auto dial timer (5 to 20 seconds) for personal, conference and common area phones in the Pro Management Portal (PMP). When auto dial is turned off, users press Call to place a call, which helps prevent incomplete or accidental calls, including accidental emergency calls, caused by pausing mid-number. Minimum Admin Agent version needed for this feature to work on PMP: 901/1.0.0.202610190119.\r\n+- **Streamlined call park and retrieval**: When you park a call, a notification now shows the pickup code \"Call Park: code\". Parked call banners on the home screen and in call history include a Retrieve option so you can pick the call back up in one tap. When a parked call is retrieved, the parked call banner is dismissed automatically across the home screen and call history. If a parked call isn't retrieved before your organization's park timeout as defined in the call park policy, the call rings back to the phone that parked it and shows as \"Parked call\".\r\n+- **Reorder in-call actions**: You can now reorder the actions on your call screen so the ones you use most stay at the top instead of getting lost in the More menu. The actions you can use haven't changed and still depend on your policies and licenses. To turn it on: On the phone, select **Settings &gt; Calling settings &gt; Quick actions**. Turn on **Allow call screen reorder**. Move actions up or down to set the order you want on your call screen.\r\n+- **Faster navigation on non-touch phones**: Navigating to the Calls app and the dial pad is now faster on non-touch phones.\r\n+- **Call queue context on incoming call banners**: When you're already on a call and a call queue call arrives, the incoming call banner now shows that the call is for the call queue, while still showing the caller's name or number.\r\n+- **Let users manage line keys on common area phones**: A new setting lets you allow users to manage line keys on common area phones. Turn it on in line key settings: go to **Settings &gt; Line key settings** and turn on **Allow User Override.** Once enabled, users can do a long-press a line key to assign, edit or remove it, or to set a custom ringtone. When the setting is off, line keys on common area phones stay locked to how the admin set them up.\r\n+- App also includes multiple bug fixes and improvements\r\n+\r\n ## September 30, 2026\r\n \r\n **Applies to**: *Teams app version*: 1449/1.0.94.2026226711 (Poly, Yealink, Audiocodes)\r\n",
+      "baseCommitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitSha": "5a4d24e8878b85a74425f5f67f42c50d5d520ad4",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-19 23:10:31 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/devices-release-notes.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/devices-release-notes",
+      "eventId": "teams-docs:5a4d24e8878b85a74425f5f67f42c50d5d520ad4:modified:Teams/devices/devices-release-notes.md",
+      "firstSeenAt": "2026-11-20T10:10:16.570Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Teams phone devices add new call controls and management settings",
+        "summary": "For Teams app version 1449/1.0.94.2026381202 on Poly, Yealink, and Audiocodes devices, the documentation adds call-transfer line-key assignment, PMP auto-dial controls, improved call-park retrieval, reorderable in-call actions, faster navigation, call-queue context, and user-managed line keys for common area phones.",
+        "adminImpact": "Admins can configure the new line-key and auto-dial options in the Pro Management Portal, but no mandatory change is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/intelligent-call-delegation.md",
+      "status": "modified",
+      "additions": 36,
+      "deletions": 34,
+      "changes": 70,
+      "patch": "diff --git a/Teams/intelligent-call-delegation.md b/Teams/intelligent-call-delegation.md\nindex 91b00d5..b3237c6 100644\n--- a/Teams/intelligent-call-delegation.md\n+++ b/Teams/intelligent-call-delegation.md\n@@ -1,6 +1,6 @@\n ---\n layout: Conceptual\n-title: Manage intelligent call delegation in Microsoft Teams - Microsoft Teams | Microsoft Learn\n+title: Manage Intelligent call delegation in Microsoft Teams - Microsoft Teams | Microsoft Learn\n canonicalUrl: https://learn.microsoft.com/en-us/microsoftteams/intelligent-call-delegation\n breadcrumb_path: /microsoftteams/breadcrumb/toc.json\n uhfHeaderId: MSDocsHeader-MicrosoftTeams\n@@ -12,7 +12,7 @@ author: LanaChin8\n ms.author: v-lanchin\n manager: v-jesserowe\n ms.reviewer: nijait\n-ms.date: 2026-11-17T00:00:00.0000000Z\n+ms.date: 2026-11-18T00:00:00.0000000Z\n ms.topic: how-to\n ms.service: msteams\n ms.subservice: teams-calling\n@@ -20,7 +20,7 @@ audience: admin\n f1.keywords:\n - NOCSH\n - System.Collections.Generic.Dictionary`2[System.String,System.Object]\n-description: Learn how to manage intelligent call delegation for users in your organization using Teams personal attendant policies.\n+description: Learn how to manage Intelligent call delegation for users in your organization.\n locale: en-us\n document_id: 8f2b039c-ee67-f2e8-daaf-357f56e8ffa1\n document_version_independent_id: 8f2b039c-ee67-f2e8-daaf-357f56e8ffa1\n@@ -40,13 +40,15 @@ source_path: Teams/intelligent-call-delegation.md\n cmProducts:\n - https://authoring-docs-microsoft.poolparty.biz/devrel/63959238-cb90-4871-a33d-4a5519097e47\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/46e3c7c4-fe77-4a6e-b40a-44c569819fa5\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/68e4b2d8-b70c-4019-b49a-d1f8881e2aea\n spProducts:\n - https://authoring-docs-microsoft.poolparty.biz/devrel/78d87f42-5582-4a6b-90be-7db2f12b34e6\n - https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/d0c6fab8-2d7d-4bb0-bf40-589e08d7c132\n+- https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/67b2ba1a-6f74-4044-a48a-f0f8ad076b8f\n platformId: d2198986-f4ec-0717-be80-08c8edafeefe\n ---\n \n-# Manage intelligent call delegation in Microsoft Teams - Microsoft Teams | Microsoft Learn\n+# Manage Intelligent call delegation in Microsoft Teams - Microsoft Teams | Microsoft Learn\n \n **APPLIES TO:**![Image of an x for No](/en-us/office/media/icons/cancel-teams.png)Meetings ![Image of an x for No](/en-us/office/media/icons/cancel-teams.png)Events ![Image of a checkmark for Yes](/en-us/office/media/icons/success-teams.png)Calls\r\n \r\n@@ -58,20 +60,20 @@ This feature is currently in public preview.\n \r\n Intelligent call delegation in Microsoft Teams is an AI-powered voice agent that helps users manage incoming calls. It answers calls on users' behalf, gathers context about the caller's intent, and takes action based on users' availability and settings. It can screen calls, route urgent calls to users, and schedule follow-up appointments through Microsoft Bookings.\r\n \r\n-As an admin, you use Teams personal attendant policies to control whether users in your organization can use intelligent call delegation, and which settings are available to them.\r\n+As an admin, you use Teams intelligent call delegation policies to control whether users in your organization can use Intelligent call delegation, and which settings are available to them.\r\n \r\n ## Prerequisites\r\n \r\n - Users must have a Microsoft Copilot license.\r\n-- Intelligent call delegation uses usage-based billing with Copilot Credits. Admins must [set up usage-based billing for Copilot Credits](/en-us/copilot/implement/usage-based-billing-copilot-credits-setup) and [create a spending policy](/en-us/copilot/implement/usage-based-billing-manage-copilot-credits) for intelligent call delegation in the Microsoft 365 admin center.\r\n+- Intelligent call delegation uses usage-based billing with Copilot Credits. Admins must [set up usage-based billing for Copilot Credits](/en-us/copilot/implement/usage-based-billing-copilot-credits-setup) and [create a spending policy](/en-us/copilot/implement/usage-based-billing-manage-copilot-credits) for Intelligent call delegation in the Microsoft 365 admin center.\r\n \r\n     Note\r\n \r\n     When you create the spending policy, under **Agents and services**, ensure that only **Intelligent call delegation** is selected. Clear the checkboxes for all other services. When you select users and groups, choose the appropriate scope before assigning the policy.\r\n \r\n-## How intelligent call delegation works\r\n+## How Intelligent call delegation works\r\n \r\n-When users turn on intelligent call delegation, the voice agent answers calls on their behalf. Depending on the user's settings, it can perform actions including:\r\n+When users turn on Intelligent call delegation, the voice agent answers calls on their behalf. Depending on the user's settings, it can perform actions including:\r\n \r\n - Screen incoming calls and collect the caller's reason for calling.\r\n - Route urgent calls to the user and provide context about the call.\r\n@@ -80,22 +82,22 @@ When users turn on intelligent call delegation, the voice agent answers calls on\n - Notify the user when it answers or takes action on a call. Users can monitor calls through a live preview and join at any time.\r\n - Provide a post-call summary in call history when available.\r\n \r\n-Callers are informed that they're speaking with an attendant rather than a person. When intelligent call delegation is turned on, it replaces the user's existing call routing settings. For more information about the user experience, see [Use intelligent call delegation in Microsoft Teams](https://support.microsoft.com/teams/copilot/use-copilot-call-delegation-in-microsoft-teams).\r\n+Callers are informed that they're speaking with an attendant rather than a person. When Intelligent call delegation is turned on, it replaces the user's existing call routing settings. For more information about the user experience, see [Use Intelligent call delegation in Microsoft Teams](https://support.microsoft.com/teams/copilot/use-copilot-call-delegation-in-microsoft-teams).\r\n \r\n-## Manage intelligent call delegation\r\n+## Manage Intelligent call delegation\r\n \r\n-You can use the Teams admin center or PowerShell to manage intelligent call delegation for your users. By default, intelligent call delegation is enabled in Teams personal attendant policy, and users with the policy can choose whether to turn it on or off in their Teams settings. Individual settings, such as call screening and scheduling follow-ups, are also enabled by default, and users can change them. Depending on the setting, users can turn it on or off or choose from available options.\r\n+You can use the Teams admin center or PowerShell to manage Intelligent call delegation for your users. By default, Intelligent call delegation is enabled in the policy, and users with the policy can choose whether to turn it on or off in their Teams settings. Individual settings, such as call screening and scheduling follow-ups, are also enabled by default, and users can change them. Depending on the setting, users can turn it on or off or choose from available options.\r\n \r\n ### Use the Teams admin center\r\n \r\n-1. In the left navigation of the Teams admin center, go to **Voice** &gt; **Personal attendant policies**.\r\n+1. In the left navigation of the Teams admin center, go to **Voice** &gt; **Intelligent call delegation policies**.\r\n 2. Select an existing policy or create a new one.\r\n-3. Under **General**, turn **Enable Personal Attendant** on or off.\r\n-4. If you turned on **Enable Personal Attendant**, configure the remaining policy settings under the following sections:\r\n+3. Under **General**, turn **Enable Intelligent call delegation** on or off.\r\n+4. If you turned on **Enable Intelligent call delegation**, configure the remaining policy settings under the following sections:\r\n \r\n-    - **Choose how Personal Attendant speaks**\r\n-    - **Choose which calls Personal Attendant answers**\r\n-    - **Choose what Personal Attendant can do**\r\n+    - **Choose how Intelligent call delegation speaks**\r\n+    - **Choose which calls Intelligent call delegation answers**\r\n+    - **Choose what Intelligent call delegation can do**\r\n     - **Manage recording and transcription**\r\n \r\n     For more information about each policy setting, see the Policy settings table.\r\n@@ -103,30 +105,30 @@ You can use the Teams admin center or PowerShell to manage intelligent call dele\n \r\n #### Policy settings\r\n \r\n-The following table describes personal attendant policy settings for intelligent call delegation in the Teams admin center.\r\n+The following table describes policy settings for Intelligent call delegation in the Teams admin center.\r\n \r\n | Policy setting | Description |\r\n | --- | --- |\r\n-| **Choose how Personal Attendant speaks** |  |\r\n-| User's preferred name | Specifies the name Personal Attendant uses when referring to the user. |\r\n-| Assistant voice | Specifies the voice callers hear when Personal Attendant answers calls. |\r\n-| Language | Specifies the language Personal Attendant uses to communicate with callers. |\r\n-| Conversation tone | Specifies the tone Personal Attendant uses when communicating with callers. |\r\n-| **Choose which calls Personal Attendant answers** |  |\r\n-| Internal Teams calls | Controls whether Personal Attendant answers calls from users in the same organization. |\r\n-| Federated Teams calls | Controls whether Personal Attendant answers calls from other organizations. |\r\n-| External PSTN calls | Controls whether Personal Attendant answers calls from the public telephone network. |\r\n-| **Choose what Personal Attendant can do** |  |\r\n-| Screen calls before connecting | Controls whether Personal Attendant screens calls and provides context before connecting. |\r\n-| Calendar integration | Controls whether Personal Attendant can access the user's personal Bookings calendar to check availability and schedule follow-ups. |\r\n-| Callbacks for people outside the user's contacts | Controls whether Personal Attendant uses calendar integration for callbacks to people outside the user's contacts. |\r\n+| **Choose how Intelligent call delegation speaks** |  |\r\n+| User's preferred name | Specifies the name Intelligent call delegation uses when referring to the user. |\r\n+| Assistant voice | Specifies the voice callers hear when Intelligent call delegation answers calls. |\r\n+| Language | Specifies the language Intelligent call delegation uses to communicate with callers. |\r\n+| Conversation tone | Specifies the tone Intelligent call delegation uses when communicating with callers. |\r\n+| **Choose which calls Intelligent call delegation answers** |  |\r\n+| Internal Teams calls | Controls whether Intelligent call delegation answers calls from users in the same organization. |\r\n+| Federated Teams calls | Controls whether Intelligent call delegation answers calls from other organizations. |\r\n+| External PSTN calls | Controls whether Intelligent call delegation answers calls from the public telephone network. |\r\n+| **Choose what Intelligent call delegation can do** |  |\r\n+| Screen calls before connecting | Controls whether Intelligent call delegation screens calls and provides context before connecting. |\r\n+| Calendar integration | Controls whether Intelligent call delegation can access the user's personal Bookings calendar to check availability and schedule follow-ups. |\r\n+| Callbacks for people outside the user's contacts | Controls whether Intelligent call delegation uses calendar integration for callbacks to people outside the user's contacts. |\r\n | **Manage recording and transcription** |  |\r\n-| Automatically save transcription | Controls whether transcripts are automatically saved for calls handled by Personal Attendant. |\r\n-| Automatically save recording | Controls whether recordings are automatically saved for calls handled by Personal Attendant. |\r\n+| Automatically save transcription | Controls whether transcripts are automatically saved for calls handled by Intelligent call delegation. |\r\n+| Automatically save recording | Controls whether recordings are automatically saved for calls handled by Intelligent call delegation. |\r\n \r\n ### Use PowerShell\r\n \r\n-Use the following PowerShell cmdlets to create, manage, and assign personal attendant policies:\r\n+Use the following PowerShell cmdlets to create, manage, and assign personal attendant policies for Intelligent call delegation:\r\n \r\n - [New-CsTeamsPersonalAttendantPolicy](/en-us/powershell/module/microsoftteams/new-csteamspersonalattendantpolicy)\r\n - [Set-CsTeamsPersonalAttendantPolicy](/en-us/powershell/module/microsoftteams/set-csteamspersonalattendantpolicy)\r\n",
+      "baseCommitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitSha": "5a4d24e8878b85a74425f5f67f42c50d5d520ad4",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-19 23:10:31 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/intelligent-call-delegation.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/intelligent-call-delegation",
+      "eventId": "teams-docs:5a4d24e8878b85a74425f5f67f42c50d5d520ad4:modified:Teams/intelligent-call-delegation.md",
+      "firstSeenAt": "2026-11-20T10:10:16.577Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Admin documentation now uses Intelligent call delegation terminology",
+        "summary": "The page replaces Personal Attendant terminology with Intelligent call delegation, including the Teams admin center path, policy name, enablement setting, and configuration labels. Metadata and taxonomy were also updated.",
+        "adminImpact": "Administrators should use Voice > Intelligent call delegation policies and the Enable Intelligent call delegation setting when configuring the capability.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/migration-from-teams.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "patch": "diff --git a/Teams/migration-from-teams.md b/Teams/migration-from-teams.md\nindex fb634bb..2735d0d 100644\n--- a/Teams/migration-from-teams.md\n+++ b/Teams/migration-from-teams.md\n@@ -88,6 +88,10 @@ When you start exporting data or when an export is in progress, any new data cre\n \r\n ### Step-by-step: Using the Teams data export tool\r\n \r\n+Note\r\n+\r\n+The **Teams data export tool** widget is only available for the classic Microsoft Teams admin center dashboard. To switch to the classic portal, toggle off the 'New Dashboard' option:\r\n+\r\n 1. Locate the **Teams data export tool** in the **Teams admin center**. Sign in to the **Microsoft Teams admin center** as a Global Administrator. On the **Dashboard**, locate the **Teams data export card**.\r\n \r\n     [![Screenshot of the Microsoft Teams admin center, showing the Teams data export experience.](media/export/teams-data-export-1.png)](media/export/teams-data-export-1.png#lightbox)\r\n",
+      "baseCommitSha": "eab7fac91c32755e566fa165d02b92d7474c716d",
+      "commitSha": "5a4d24e8878b85a74425f5f67f42c50d5d520ad4",
+      "commitMessage": "Mirror Learn: 5 changed, 1 added",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-19 23:10:31 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/migration-from-teams.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/migration-from-teams",
+      "eventId": "teams-docs:5a4d24e8878b85a74425f5f67f42c50d5d520ad4:modified:Teams/migration-from-teams.md",
+      "firstSeenAt": "2026-11-20T10:10:16.585Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Teams data export tool is available only in the classic admin center dashboard",
+        "summary": "The documentation now states that the Teams data export tool widget is unavailable in the new dashboard.",
+        "adminImpact": "Administrators who need the widget must turn off the “New Dashboard” option to switch to the classic portal.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1560924",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-20",
+      "title": "Microsoft Teams: Tenant policy controls who can record and transcribe",
+      "summary": "Microsoft Teams will introduce a tenant policy controlling who can record and transcribe meetings, allowing admins to set permissions for organizers, co-organizers, and presenters with options to lock or allow changes. Rollout begins December 2026, with no action required unless restricting presenter recording is needed.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "policies",
+        "name": "Policies and settings",
+        "icon": "/assets/topics/policies.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1560924/",
+      "originalUrl": "https://mc.merill.net/message/MC1560924",
+      "body": "<p><b><b>What and Why:</b></b></p><p>Teams administrators can use a policy to configure who may start recording and transcription. The policy supports two participant scopes: organizers and co-organizers, or organizers, co-organizers, and presenters. For each scope, administrators can specify whether meeting organizers can or cannot change the setting.</p><p>This provides a centrally managed default or enforced restriction for meetings organized by users assigned the policy, reducing the need for per-meeting configuration.</p><p><b><b>Rollout Schedule:</b></b></p><p>Targeted Release (Worldwide): We will begin rolling out in mid-December 2026 and expect to complete by mid-December 2026.</p><p>General Availability (Worldwide): We will begin rolling out in late December 2026 and expect to complete by late December 2026.</p><p>General Availability (GCC): We will begin rolling out in late December 2026 and expect to complete by late January 2027.</p><p>General Availability (GCC High): We will begin rolling out in mid-February 2027 and expect to complete by late February 2027.</p><p>General Availability (DoD): We will begin rolling out in mid-February 2027 and expect to complete by early March 2027.</p><p><b><b>Impact on Your Organization:</b></b></p><p>A new <b>Who can record and transcribe</b> policy control will be available in the <b>Recording &amp; transcription</b> section of the applicable Teams meeting policy in the Teams admin center.</p><p>The default value is <b>Organizers, co-organizers, and presenters. Organizers can change</b>, which preserves the current behavior.</p><p>Administrators can select one of the following four options in a single dropdown:</p><table><tbody><tr><td><b>Who can record and transcribe - policy option</b></td><td><b>Behavior</b></td></tr><tr><td>Organizers and co-organizers. Organizers can change</td><td>Defaults to organizers and co-organizers. Organizers can also allow presenters through the existing meeting option.</td></tr><tr><td>Organizers and co-organizers. Organizers can't change</td><td>Locks the policy value. Presenters and attendees cannot start recording or transcription.</td></tr><tr><td>Organizers, co-organizers, and presenters. Organizers can change</td><td>Defaults to organizers, co-organizers, and presenters. Organizers can restrict the roles through the existing meeting option.</td></tr><tr><td>Organizers, co-organizers, and presenters. Organizers can't change</td><td>Locks the policy value. The organizer cannot change the role selection.</td></tr></tbody></table><p>These configurations remain subject to existing recording and transcription availability controls and any sensitivity label that configures this option.</p><ul><li><b>Enforcement:</b> When organizer changes are blocked, Meeting options shows the policy value as read-only with a notice that it is locked by meeting policy. The effective role restriction is also enforced when a participant tries to start recording or transcription.</li><li><b>Sensitivity labels and templates:</b> A sensitivity label that configures this option takes precedence over the meeting policy. A locked meeting policy takes precedence over a meeting template. An unlocked policy supplies a default.</li><li><b>Related meeting options:</b> The existing <b>Who can record and transcribe</b> meeting option remains a Teams Premium or Microsoft 365 Copilot feature.</li></ul><p><b><b>Action Required/Recommendations:</b></b></p><ul><li>No action is required. If you do not configure the new policy, existing recording and transcription behavior remains unchanged.</li><li>If your organization needs to prevent presenters from starting recording or transcription, consider using the new Who can record and transcribe policy.</li><li>Review policy assignments, sensitivity labels, and meeting templates to confirm the effective behavior.</li><li>Notify meeting organizers and helpdesk teams of any changes and update internal guidance.</li></ul><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-20T00:04:43Z",
+      "endDate": "2027-04-06T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-20T00:04:57.37Z",
+      "version": "2026-11-20T00:04:57.37Z",
+      "eventId": "message-center:MC1560924:2026-11-20T00:04:57.37Z",
+      "firstSeenAt": "2026-11-20T10:10:31.568Z"
+    },
+    {
+      "id": "MC1560919",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-20",
+      "title": "Microsoft Teams mobile: Updated app bar and More menu on iOS and iPadOS",
+      "summary": "Microsoft Teams for iOS/iPadOS will update the app bar and More menu to align with iOS 26 design, showing four apps plus a categorized More menu. Rollout is from December 10-16, 2026. Users can reorder and pin apps; no apps are removed. No action required.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1560919/",
+      "originalUrl": "https://mc.merill.net/message/MC1560919",
+      "body": "<p><b><b>What and Why:</b></b></p><p>To align with Apple's updated design guidance for tab bars in iOS and iPadOS 26, we're updating the app bar and More menu in Microsoft Teams for iOS and iPadOS.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on December 10, 2026 and expect to complete by December 16, 2026.</p><p>General Availability (GCC): We will begin rolling out on December 10, 2026 and expect to complete by December 16, 2026.</p><p>General Availability (GCC High): We will begin rolling out on December 10, 2026 and expect to complete by December 16, 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><ul><li>The app bar will show up to four apps plus <b>More</b> (previously up to five).</li><li>The More menu will become a list with two sections: <b>Pinned</b>, for the apps users pin, and <b>All</b>, for every other app, sorted by most recently used.</li><li>Nothing is removed. The first time the updated app bar loads, any app that no longer fits in the four slots, including apps pinned by an admin, moves automatically to the top of the Pinned section in its existing order.</li><li>Users can reorder apps on the app bar and in Pinned, pin or unpin apps from More, and uninstall apps and agents they no longer need.</li></ul><p>This change applies to devices running iOS/iPadOS 26 or later. Devices on earlier versions will continue to see the current experience.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No action is required. If your organization pins apps through app setup policies, consider reviewing their order so the four most important apps appear first on mobile. You may also want to update internal help documentation and let your users know about the change.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact"
+      ],
+      "startDate": "2026-11-20T00:00:10Z",
+      "endDate": "2027-01-15T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-20T00:00:19Z",
+      "version": "2026-11-20T00:00:19Z",
+      "eventId": "message-center:MC1560919:2026-11-20T00:00:19Z",
+      "firstSeenAt": "2026-11-20T10:10:31.568Z"
+    },
+    {
+      "id": "MC1532253",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-19",
+      "title": "Enhanced Copilot and AI controls for meetings",
+      "summary": "Microsoft Teams is replacing the Copilot meeting policy with two policies—MeetingAI and TranscriptionWithMeetingAI—for clearer control over AI and transcription in meetings. New meeting options provide granular management of AI use. Rollout begins December 2026; existing settings will be automatically mapped with no admin action required.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "ai",
+        "name": "AI and Copilot",
+        "icon": "/assets/topics/ai.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1532253/",
+      "originalUrl": "https://mc.merill.net/message/MC1532253",
+      "body": "<p>Updated November 19, 2026: We have updated the content. Thank you for your patience.&nbsp;</p><p><b>What and Why:</b></p><p>Microsoft Teams is updating how administrators and meeting organizers configure AI for Teams meetings. The existing Copilot meeting policy is being replaced by two more specific policies:</p><ul><li><b>MeetingAI</b> - controls whether Copilot, Facilitator, Intelligent Recap, and other AI features are available in meetings.</li><li><b>TranscriptionWithMeetingAI</b> - controls whether transcription starts automatically when meeting AI is turned on.</li></ul><p>This gives administrators clearer, more predictable control over whether AI is available and whether it requires (or works without) transcription, including the ability to enforce Copilot off. Organizers also gain more visibility into, and in some cases control over, these settings directly from the meeting options.</p><p>Meeting options are also being updated to make AI controls easier to understand and to provide more granular control over who can enable, manage, and use AI capabilities, including a new who can manage option that replaces the existing Allow Copilot and Facilitator meeting option:</p><ul><li><b>Who can manage AI</b> - replaces the existing Allow Copilot and Facilitator option and determines who can turn Copilot and other AI features on or off during a meeting. If an admin turns Meeting AI off, this option is set to No one.</li><li><b>Who can use AI</b> - provides more granular control over which meeting participants can use Copilot and other AI capabilities.</li><li><b>Start Transcription with AI</b> - lets organizers choose whether transcription starts with AI. Administrators can also control this option through Teams admin center.</li><li><b>Intelligent Recap controls</b> - lets organizers decide whether an Intelligent Recap is created when Copilot is turned on, including for meetings where a transcript is not created.</li></ul><p></p><p><b>Rollout Schedule:</b></p><p>Targeted Release (Worldwide): We will begin rolling out in early December 2026 (previously mid-November) and expect to complete by mid-December 2026 (previously early December).</p><p>General Availability (Worldwide): We will begin rolling out in early January 2027 (previously late November 2026) and expect to complete by mid-January 2027 (previously early December 2026).</p><p></p><p><b>Impact on Your Organization:</b></p><p>Today, the Copilot policy combines whether AI is available in a meeting with whether a saved transcript is required. After this update, these behaviors are represented by two separate settings:</p><ul><li>Allow AI in meetings: On / Off, but organizers can change / Off, and organizers cannot change</li><li>Start transcription when AI is turned on: On, but organizers can change / On, and organizers cannot change / Off</li></ul><p>To keep the experience predictable and avoid invalid combinations: if MeetingAI is set to enforced off, transcription will also be turned off; if transcription is then turned back on, MeetingAI will no longer be enforced off.</p><p>In PowerShell, administrators will use <code>MeetingAI</code> and <code>TranscriptionWithMeetingAI</code> instead of the existing Copilot policy. Once the new controls are enabled, the Copilot policy can no longer be updated directly - attempts will return guidance to use the new policies.</p><p>What happens to existing configurations: Microsoft will perform a one-time update mapping each existing Copilot value to the corresponding <code>MeetingAI</code> and <code>TranscriptionWithMeetingAI</code> values, preserving the current effective behavior for your organization. Administrators do not need to recreate their policies. Examples include:</p><table><tbody><tr><td><b>Existing configuration</b></td><td><b>MeetingAI</b></td><td><b>TranscriptionWithMeetingAI</b></td></tr><tr><td>Copilot is on and uses a saved transcript by default</td><td>On</td><td>On, but organizers can change</td></tr><tr><td>Copilot is on and a saved transcript is required</td><td>On</td><td>On, and organizers cannot change</td></tr><tr><td>Copilot is available without transcription</td><td>On</td><td>Off</td></tr><tr><td>Copilot is off, but organizers can enable it</td><td>Off, but organizers can change</td><td>Based on the existing transcription configuration</td></tr><tr><td>Copilot is enforced off</td><td>Off, and organizers cannot change</td><td>Off</td></tr></tbody></table><p>The <code>Transcription</code> policy remains available and continues to control whether transcription is allowed. The new <code>TranscriptionWithMeetingAI</code> policy controls whether transcription starts when meeting AI is turned on.</p><p>The new settings will appear in the Teams admin center meeting policy under <b>Recording and transcription</b> and <b>Copilot and other AI:</b></p><p><i>Screenshot 1 - Teams Admin Center: Meeting Policies</i></p><p></p><p><i>Screenshot 2 - Meeting options: Recording &amp; Transcription&nbsp;</i></p><p></p><p><i>Screenshot 3 - Meeting options: Copilot and other AI</i></p><p></p><p><i>Screenshot 4 - Teams Admin Center: Meeting Templates</i></p><p></p><p>These screenshots show the new <b>Start transcription when AI is turned on</b> control and <b>Allow AI in all meetings</b> control, including the Teams Admin Center options administrators can use to set defaults or prevent organizers from changing the configured behavior.</p><p></p><p><b>Action Required/Recommendations:</b></p><p>No admin action is required to migrate existing configurations. Before rollout, we recommend admins:</p><ul><li>Review any automation or scripts that read or update the Copilot meeting policy, and update them to use MeetingAI and TranscriptionWithMeetingAI.</li><li>Review custom tooling, runbooks, or documentation referencing the Copilot policy.</li><li>Inform Teams administrators that existing behavior will now be represented by two settings in Teams admin center.</li><li>Confirm the mapped configuration reflects intended behavior once the new controls are available.</li></ul><p>If you do not use PowerShell or custom automation to manage Teams meeting policies, no action is required. Existing configurations will be mapped automatically.</p><p></p><p><b>Compliance considerations:</b></p><p>This change affects administrative controls over AI and transcription availability in meetings but does not alter how existing customer data is processed or stored. Review AI and transcription governance policies for your organization as appropriate.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "Feature update",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-30T22:07:08Z",
+      "endDate": "2027-02-22T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-19T22:31:02.813Z",
+      "version": "2026-11-19T22:31:02.813Z",
+      "eventId": "message-center:MC1532253:2026-11-19T22:31:02.813Z",
+      "firstSeenAt": "2026-11-20T10:10:31.568Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 6,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 1 new, 5 updated, and 0 removed Microsoft Teams documentation files across 2 documentation areas.",
+    "groups": [
+      {
+        "category": "New feature",
+        "title": "Microsoft Teams",
+        "summary": "Teams admins can review agent recommendations based on users’ application sign-in activity and make recommended apps available or deploy them. Recommendations are off by default and require organizational consent to use sign-in activity data. The page replaces Personal Attendant terminology with Intelligent call delegation, including the Teams admin center path, policy name, enablement setting, and configuration labels. Metadata and taxonomy were also updated. The documentation now states that the Teams data export tool widget is unavailable in the new dashboard.",
+        "sourceFiles": [
+          "Teams/agents-existing-applications.md",
+          "Teams/intelligent-call-delegation.md",
+          "Teams/migration-from-teams.md"
+        ]
+      },
+      {
+        "category": "Feature update",
+        "title": "Teams devices",
+        "summary": "The documentation now covers certified dual-mode Bluetooth peripherals, improved voice fidelity on compatible Windows 11 PCs, and Spatial Audio requirements including LE Audio and Super Wideband Stereo support. The documentation now lists 14 additional Cisco devices, including Board, Desk, Room Kit, Room Bar, Navigator, and Room Kit EQ models, with their software versions and a November 18, 2026 date. For Teams app version 1449/1.0.94.2026381202 on Poly, Yealink, and Audiocodes devices, the documentation adds call-transfer line-key assignment, PMP auto-dial controls, improved call-park retrieval, reorderable in-call actions, faster navigation, call-queue context, and user-managed line keys f",
+        "sourceFiles": [
+          "Teams/devices/bluetooth-devices.md",
+          "Teams/devices/certified-hardware-android.md",
+          "Teams/devices/devices-release-notes.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "New feature",
+        "headline": "Microsoft Teams",
+        "detail": "Teams admins can review agent recommendations based on users’ application sign-in activity and make recommended apps available or deploy them. Recommendations are off by default and require organizational consent to use sign-in activity data. The page replaces Personal Attendant terminology with Intelligent call delegation, including the Teams admin center path, policy name, enablement setting, and configuration labels. Metadata and taxonomy were also updated. The documentation now states that the Teams data export tool widget is unavailable in the new dashboard."
+      },
+      {
+        "category": "Feature update",
+        "headline": "Teams devices",
+        "detail": "The documentation now covers certified dual-mode Bluetooth peripherals, improved voice fidelity on compatible Windows 11 PCs, and Spatial Audio requirements including LE Audio and Super Wideband Stereo support. The documentation now lists 14 additional Cisco devices, including Board, Desk, Room Kit, Room Bar, Navigator, and Room Kit EQ models, with their software versions and a November 18, 2026 date. For Teams app version 1449/1.0.94.2026381202 on Poly, Yealink, and Audiocodes devices, the documentation adds call-transfer line-key assignment, PMP auto-dial controls, improved call-park retrieval, reorderable in-call actions, faster navigation, call-queue context, and user-managed line keys f"
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

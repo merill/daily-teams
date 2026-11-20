@@ -545,49 +545,49 @@
       }
     },
     "2026-11-20": {
-      "headline": "Tenant controls will govern Teams meeting recording and transcription permissions in December 2026",
-      "overview": "Teams’ most consequential item is a December 2026 rollout for role-based recording and transcription controls. Other notable updates provide consent-based recommended-agent management, rename and relocate Intelligent call delegation controls, document a migration-dashboard limitation, and expand Teams phone management guidance.",
-      "adminImpact": "No immediate action is required for the recording policy unless the tenant needs to restrict presenter recording. Recommendations for agents are off by default and require organizational consent for sign-in activity data. Use Voice > Intelligent call delegation policies for the renamed setting, turn off New Dashboard when the Teams data export widget is needed, and review Pro Management Portal options for the newly documented phone controls.",
+      "headline": "Teams will add tenant controls for meeting recording and transcription permissions",
+      "overview": "The main product change is a December 2026 Teams policy rollout covering recording and transcription permissions for organizers, co-organizers, and presenters. The period also brings an operational device-management transition, a Teams data-export dashboard limitation, updated Intelligent call delegation terminology, and new guidance for consent-based agent recommendations.",
+      "adminImpact": "No immediate action is required for the recording policy unless the organization needs to restrict presenter recording. Device administrators should follow the transition guidance and use the Teams Rooms Pro Management Portal for current device operations. Administrators needing the Teams data export widget must turn off New Dashboard to return to the classic portal. For call delegation, use Voice > Intelligent call delegation policies and the Enable Intelligent call delegation setting. Agent recommendations remain off by default and require organizational consent to use sign-in activity data.",
       "keyChanges": [
         {
-          "title": "Tenant policy will set recording and transcription permissions by meeting role",
-          "detail": "Teams will introduce a tenant policy beginning in December 2026 that lets administrators set permissions for organizers, co-organizers, and presenters, with options to lock or allow changes. No action is required unless the tenant needs to restrict presenter recording.",
+          "title": "Tenant policy will govern meeting recording and transcription permissions",
+          "detail": "Microsoft Teams will introduce a tenant policy beginning in December 2026 that lets administrators set permissions for organizers, co-organizers, and presenters, with options to lock the policy or allow changes. No action is required unless presenter recording must be restricted.",
           "product": "Teams",
           "sourceId": "MC1560924"
         },
         {
-          "title": "Recommended-agent management guidance adds an optional, consent-based workflow",
-          "detail": "A new Teams page explains how admins can review recommendations based on users’ application sign-in activity, then make recommended apps available or deploy them. Recommendations are off by default and require organizational consent to use sign-in activity data.",
-          "product": "Teams",
-          "sourceId": "doc-2026-11-20-manage-recommended-agents-for-existing-applications-in-teams-microsoft-teams-01"
+          "title": "Teams device-management guidance points administrators to the Pro Management Portal",
+          "detail": "The Device Management page was removed. Its guidance directs administrators to the Teams Rooms Pro Management Portal as monitoring, management, and updating move there, with a transition guide for the change.",
+          "product": "Devices",
+          "sourceId": "doc-2026-11-20-device-management-14"
         },
         {
-          "title": "Personal Attendant terminology is replaced by Intelligent call delegation",
-          "detail": "Updated Teams Phone guidance now uses Intelligent call delegation, including the Voice > Intelligent call delegation policies path, the Enable Intelligent call delegation setting, and revised configuration labels.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-20-manage-intelligent-call-delegation-in-microsoft-teams-microsoft-teams-05"
-        },
-        {
-          "title": "New Dashboard omits the Teams data export widget",
-          "detail": "Migration guidance now states that the Teams data export tool widget is unavailable in the New Dashboard. Administrators who need the widget must turn off New Dashboard to switch to the classic portal.",
+          "title": "The Teams data export widget is unavailable in the new dashboard",
+          "detail": "The Migration From Teams guidance now states that the Teams data export tool widget is not available in the New Dashboard. Administrators who need the widget must turn off New Dashboard to use the classic portal.",
           "product": "Migration",
           "sourceId": "doc-2026-11-20-migration-from-teams-06"
         },
         {
-          "title": "Teams phone guidance documents new line-key and auto-dial controls",
-          "detail": "For Teams app version 1449/1.0.94.2026381202 on Poly, Yealink, and Audiocodes devices, the updated guidance adds call-transfer line-key assignment, PMP auto-dial controls, improved call-park retrieval, reorderable in-call actions, faster navigation, call-queue context, and user-managed line keys for common area phones. Admins can configure the line-key and auto-dial options in the Pro Management Portal.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-20-teams-phones-04"
+          "title": "Admin guidance replaces Personal Attendant with Intelligent call delegation",
+          "detail": "The Teams Phone page now uses Intelligent call delegation terminology, including the policy name, enablement setting, configuration labels, and the Teams admin center path: Voice > Intelligent call delegation policies. Administrators configuring the capability should use the Enable Intelligent call delegation setting.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-20-manage-intelligent-call-delegation-in-microsoft-teams-microsoft-teams-05"
+        },
+        {
+          "title": "New guidance covers consent-based recommended agents in Teams",
+          "detail": "A new admin page explains how to review recommendations based on users’ application sign-in activity and make recommended apps available or deploy them. Recommendations are off by default, and organizational consent is required before sign-in activity data is used.",
+          "product": "Teams",
+          "sourceId": "doc-2026-11-20-manage-recommended-agents-for-existing-applications-in-teams-microsoft-teams-01"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-20T10:10:31.757Z",
+      "generatedAt": "2026-11-20T21:52:43.997Z",
       "usage": {
-        "inputTokens": 1936,
-        "outputTokens": 4766,
-        "costUsd": 0.006106
+        "inputTokens": 3060,
+        "outputTokens": 2681,
+        "costUsd": 0.003829
       }
     }
   },
@@ -685,102 +685,102 @@
       }
     },
     "2026-11-16": {
-      "headline": "Teams device management moves to Rooms Pro as meeting AI controls split",
-      "overview": "The most consequential administrator task is the planned move of Teams device management from the Teams Admin Center to the Teams Rooms Pro Management Portal, with TAC deprecation due by November 2026. Meeting governance is also being reorganized ahead of December rollouts: the Copilot meeting policy is splitting into separate AI and transcription controls, alongside a tenant policy for recording and transcription permissions. Teams Phone adds tightly scoped Frontier-only voicemail AI triage guidance, while Teams mobile support for iOS 17 and iPadOS 17 ends in mid-December.",
-      "adminImpact": "Prioritize the Rooms Pro migration, including required device software updates and prerequisites, to avoid management disruption. Existing meeting AI settings will be mapped automatically, so no action is required for that change; review the new recording and transcription policy if presenters may need to be restricted. Treat voicemail AI triage as a controlled evaluation requiring licensing, usage-based billing, spending and voicemail policies. Prepare users and support documentation for iOS/iPadOS 18 or later.",
+      "headline": "Teams device management reaches November deadline as TAC gives way to Pro Management Portal",
+      "overview": "The highest-impact administrator change is the transition of Teams device monitoring, management, and updates from the Teams admin center to the Teams Rooms Pro Management Portal. Microsoft says migration steps, device software updates, and prerequisites must be completed, with timing varying by device type and cloud environment. December also brings more granular meeting recording, transcription, and AI controls, while Translate slides retires November 30 and Teams ends support for iOS 17 and iPadOS 17 in mid-December.",
+      "adminImpact": "Prioritize the device-management migration and verify software and environment prerequisites. Review the December meeting-policy changes before rollout, notify users about the PowerPoint Live retirement, and plan for iOS/iPadOS 18 upgrades. Existing meeting AI settings will be mapped automatically; no action is required for that transition unless tighter controls are desired.",
       "keyChanges": [
         {
-          "title": "TAC device management gives way to the Teams Rooms Pro portal",
-          "detail": "Teams device management in the Teams Admin Center will be deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and meet prerequisites; timing varies by device type and cloud environment, and incomplete migration can cause management disruptions.",
-          "product": "Teams Devices",
+          "title": "TAC device management is moving to the Teams Rooms Pro Management Portal",
+          "detail": "Teams device management in the Teams admin center will be deprecated by November 2026. Administrators must complete migration steps, update device software, and meet prerequisites to avoid management disruptions; rollout timing varies by device type and cloud environment.",
+          "product": "Teams",
           "sourceId": "MC1448373"
         },
         {
-          "title": "The Copilot meeting policy is being replaced by two controls",
-          "detail": "Microsoft is replacing the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI policies, while adding more granular meeting options for AI use. Rollout begins in December 2026, and existing settings will be mapped automatically.",
-          "product": "Teams",
-          "sourceId": "MC1532253"
-        },
-        {
-          "title": "Tenant policy will define who can record and transcribe meetings",
-          "detail": "A new tenant policy will let administrators set recording and transcription permissions for organizers, co-organizers, and presenters, with options to lock the setting or allow changes. Rollout begins in December 2026; action is only needed when restricting presenter recording is required.",
+          "title": "A tenant policy will control who can record and transcribe meetings",
+          "detail": "Beginning in December 2026, administrators will be able to set recording and transcription permissions for organizers, co-organizers, and presenters, with options to lock settings or allow changes. No action is required unless presenter recording needs to be restricted.",
           "product": "Teams",
           "sourceId": "MC1560924"
         },
         {
-          "title": "Personal voicemail AI triage is limited to the Frontier Program",
-          "detail": "The new Teams Phone guidance covers Copilot licensing, usage-based billing, security-group scoping, spending policies, limits, and alerts for personal voicemail AI triage. The capability is available only through the Microsoft Frontier Program, with no general-availability timing announced, and enablement requires both a spending policy and a voicemail policy.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
+          "title": "Meeting AI controls are splitting into two policies",
+          "detail": "Microsoft is replacing the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI policies, alongside more granular meeting options for AI and transcription. Existing settings will be mapped automatically as rollout begins in December 2026.",
+          "product": "Teams",
+          "sourceId": "MC1532253"
         },
         {
-          "title": "Teams mobile drops support for iOS 17 and iPadOS 17",
-          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing app versions will continue working without support, so organizations should notify users, encourage OS upgrades, update policies, and revise support documentation.",
-          "product": "Teams Mobile",
+          "title": "Translate slides in PowerPoint Live retires November 30",
+          "detail": "Starting November 30, 2026, attendees will no longer be able to translate PowerPoint Live slides during Teams meetings; slides will remain in their original language. Microsoft recommends notifying users and updating related training materials.",
+          "product": "Teams",
+          "sourceId": "MC1532259"
+        },
+        {
+          "title": "Teams ends support for iOS 17 and iPadOS 17",
+          "detail": "From mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing app versions will continue working without support, so organizations should encourage operating-system upgrades and update support documentation.",
+          "product": "Teams",
           "sourceId": "MC1556088"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-20T10:10:31.757Z",
+      "generatedAt": "2026-11-20T21:52:43.997Z",
       "usage": {
-        "inputTokens": 8243,
-        "outputTokens": 4665,
-        "costUsd": 0.007247
+        "inputTokens": 9367,
+        "outputTokens": 3676,
+        "costUsd": 0.006285
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams Rooms management shifts to PMP as meeting AI controls split",
-      "overview": "November’s biggest administrator changes are a Teams device-management transition and a meeting-governance reset. Teams Admin Center device management is moving to the Teams Rooms Pro Management Portal (PMP), with TAC deprecation by November 2026; separately, the Copilot meeting policy is being replaced by MeetingAI and TranscriptionWithMeetingAI as December rollouts begin. Teams Phone published Frontier-only personal voicemail AI triage guidance covering licensing and usage-based billing. The month also set a mid-December end to iOS/iPadOS 17 support and a December retirement for off-network invitations to Teams Free, while much of the remaining activity was incremental client, event, and documentation guidance.",
-      "adminImpact": "Prioritize the PMP migration by completing the migration steps, updating device software, and verifying prerequisites during the TAC transition window; missing requirements could disrupt management. Existing Copilot meeting policy settings will be mapped automatically. Review the new recording and transcription policy if presenters’ recording permissions need restricting. Treat personal voicemail AI triage as a controlled Frontier evaluation requiring review of Copilot licensing, usage-based billing, security-group scoping, spending policies, limits, alerts, and the voicemail policy. Prepare support teams for iOS/iPadOS 18 or later for new Teams releases, and update user guidance before off-network Teams Free invitations retire.",
+      "headline": "Teams device management moves to Pro Management Portal as meeting controls gain granularity",
+      "overview": "The month’s biggest administrator task is the transition from the Teams admin center to the Teams Rooms Pro Management Portal. Microsoft says migration steps, device software updates, and prerequisites must be completed, with timing varying by device type and cloud environment. December brings a policy split: the Copilot meeting policy becomes MeetingAI and TranscriptionWithMeetingAI, alongside tenant controls for recording and transcription permissions. Teams also ends support for iOS 17 and iPadOS 17 for new releases in mid-December. A new Teams Phone article documents billing and policy requirements for the Frontier-only personal voicemail AI triage capability.",
+      "adminImpact": "Prioritize the device-management migration and validate software and environment prerequisites. Existing meeting AI settings will map automatically, but review whether recording and transcription should be restricted for presenters or locked against changes. Notify iOS 17 and iPadOS 17 users to upgrade to version 18 or later and update support guidance. For personal voicemail AI triage pilots, review Copilot licensing, usage-based billing, security-group scoping, spending limits and alerts, and the voicemail policy.",
       "keyChanges": [
         {
-          "title": "Teams device management is moving from TAC to the Teams Rooms Pro Management Portal",
-          "detail": "The Teams Admin Center device-management path is slated for deprecation by November 2026. The transition requires migration steps, device software updates, and prerequisite checks; timing varies by device type and cloud environment, and missing requirements can disrupt management.",
-          "product": "Teams Rooms",
+          "title": "TAC device management is giving way to the Teams Rooms Pro Management Portal",
+          "detail": "Teams device management in the Teams admin center is slated for deprecation by November 2026. Administrators must complete migration steps, update device software, and meet prerequisites; timing varies by device type and cloud environment, with management disruptions possible if the work is not completed.",
+          "product": "Teams device management",
           "sourceId": "MC1448373"
         },
         {
-          "title": "Copilot meeting policy splits into MeetingAI and TranscriptionWithMeetingAI",
-          "detail": "The existing Copilot meeting policy will be replaced by two policies, with new meeting options for more granular AI and transcription control. Rollout begins December 2026, and existing settings will be mapped automatically, so no migration action is required.",
-          "product": "Teams",
+          "title": "The Copilot meeting policy is splitting into MeetingAI and TranscriptionWithMeetingAI",
+          "detail": "Microsoft is replacing the Copilot meeting policy with two policies and adding more granular meeting options for AI use. Rollout begins in December 2026, and existing settings will be mapped automatically; action is only needed if tighter controls are desired.",
+          "product": "Teams meetings and Copilot",
           "sourceId": "MC1532253"
         },
         {
-          "title": "A new tenant policy governs who can record and transcribe meetings",
-          "detail": "Starting December 2026, organizers, co-organizers, and presenters can receive distinct recording and transcription permissions, with options to lock the setting or allow changes. No action is needed unless the organization wants to restrict presenter recording.",
-          "product": "Teams",
+          "title": "A tenant policy will govern recording and transcription by meeting role",
+          "detail": "Beginning in December 2026, administrators can set permissions for organizers, co-organizers, and presenters, with options to lock the setting or allow changes. No action is required unless the tenant needs to restrict presenter recording.",
+          "product": "Teams meetings",
           "sourceId": "MC1560924"
         },
         {
-          "title": "Personal voicemail AI triage is documented for Frontier-only evaluation",
-          "detail": "The new Teams Phone article says the capability is available only through the Microsoft Frontier Program and provides no GA timing. It specifies Copilot licensing, usage-based billing, security-group scoping, spending policies, limits, and alerts; enabling it requires both a spending policy and a voicemail policy.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
+          "title": "New Teams releases will require iOS 18 or iPadOS 18 from mid-December",
+          "detail": "Teams ends support for iOS 17 and iPadOS 17 starting in mid-December 2026. Existing app versions will continue working without support, while organizations should notify users, encourage operating-system upgrades, and update policies and support documentation.",
+          "product": "Teams mobile",
+          "sourceId": "MC1556088"
         },
         {
-          "title": "Teams ends iOS 17 and iPadOS 17 support in mid-December",
-          "detail": "From mid-December 2026, new Teams releases require iOS/iPadOS 18 or later. Existing versions will continue working without support, so organizations should notify users, encourage OS upgrades, and update support documentation.",
-          "product": "Teams",
-          "sourceId": "MC1556088"
+          "title": "Personal voicemail AI triage guidance details Frontier billing and policy setup",
+          "detail": "A new Teams Phone article documents licensing, usage-based billing, security-group scoping, spending policies, limits, alerts, and voicemail-policy requirements for personal voicemail AI triage. The capability is available only through the Microsoft Frontier Program, and no general-availability timing is announced.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-20T10:10:31.757Z",
+      "generatedAt": "2026-11-20T21:52:43.997Z",
       "usage": {
-        "inputTokens": 6300,
-        "outputTokens": 5894,
-        "costUsd": 0.008333
+        "inputTokens": 6266,
+        "outputTokens": 5870,
+        "costUsd": 0.008297
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-20T10:10:31.757Z",
+  "generatedAt": "2026-11-20T21:52:43.997Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -853,22 +853,22 @@
       "costUsd": 0.047852
     },
     "2026-11-20": {
-      "inputTokens": 16479,
-      "outputTokens": 15325,
-      "requests": 3,
-      "costUsd": 0.021686
+      "inputTokens": 35172,
+      "outputTokens": 27552,
+      "requests": 6,
+      "costUsd": 0.040097
     }
   },
   "lastRun": {
-    "inputTokens": 16479,
-    "outputTokens": 15325,
+    "inputTokens": 18693,
+    "outputTokens": 12227,
     "requests": 3,
-    "costUsd": 0.021686
+    "costUsd": 0.018411
   },
   "totalUsage": {
-    "inputTokens": 206893,
-    "outputTokens": 260993,
-    "requests": 54,
-    "costUsd": 0.354568
+    "inputTokens": 225586,
+    "outputTokens": 273220,
+    "requests": 57,
+    "costUsd": 0.372979
   }
 }

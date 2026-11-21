@@ -1,0 +1,456 @@
+{
+  "newFiles": [],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/Exchange-Teams-interact.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "patch": "diff --git a/Teams/Exchange-Teams-interact.md b/Teams/Exchange-Teams-interact.md\nindex 3832636..deb7c26 100644\n--- a/Teams/Exchange-Teams-interact.md\n+++ b/Teams/Exchange-Teams-interact.md\n@@ -118,6 +118,10 @@ The following table provides a helpful quick reference to feature availability b\n \r\n Note\r\n \r\n+For users whose mailboxes are hosted on Exchange on-premises, Loop-based meeting notes in Teams are supported for single-instance meetings. Meeting notes for recurring meetings aren't supported.\r\n+\r\n+Note\r\n+\r\n Setting Out of Office (OOF) via the Teams client is currently not supported for users whose mailboxes are hosted on-premises; these users should perform this action via the Outlook client.\r\n \r\n ## Exchange on-premises and Teams Premium\r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/Exchange-Teams-interact.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/Exchange-Teams-interact",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/Exchange-Teams-interact.md",
+      "firstSeenAt": "2026-11-21T09:57:47.245Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Loop-based meeting notes support clarified for on-premises mailboxes",
+        "summary": "Teams supports Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes aren't supported.",
+        "adminImpact": "Administrators should set expectations that users with on-premises mailboxes can't use Loop-based meeting notes for recurring meetings.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/certified-hardware-android.md",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 0,
+      "changes": 8,
+      "patch": "diff --git a/Teams/devices/certified-hardware-android.md b/Teams/devices/certified-hardware-android.md\nindex d1253fc..c03bc2c 100644\n--- a/Teams/devices/certified-hardware-android.md\n+++ b/Teams/devices/certified-hardware-android.md\n@@ -695,6 +695,14 @@ Devices must be updated to newer application releases (when available) to remain\n \r\n | Device model | Latest firmware version | Minimum version details | Included Microsoft applications | Release date |\r\n | --- | --- | --- | --- | --- |\r\n+| Logi Rallybar (VR0019) | `2.2.181 (AOSP)` | Firmware: `2.1.204` | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| Logi Rallybar Mini (VR0020) | `2.2.181 (AOSP)` | Firmware: `2.1.204` | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| Logi TAP IP (VR0029) | `2.2.154 (AOSP)` | Firmware: `2.1.328` | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| Logi RoomMate (VR0030) | `2.2.148 (AOSP)` | Firmware: `2.1.186` | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| Logi Rallybar Huddle (VR0034) | `2.2.131 (AOSP)` | Firmware: `2.1.209` | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| Logitech Rally Board 65 (VR0039) | `2.2.154 (AOSP)` | Firmware: `2.1.268` | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| Logi Rallybar 2 (VR0050) | `2.2.96 (AOSP)` | NA | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| Logi TAP IP 2 (VR0053) | `2.2.112 (AOSP)` | NA | Teams client: `1449/1.0.96.2026264504` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n | Logi Rallybar (VR0019) | `2.1.204 (AOSP)` | Firmware: `2.1.176` Teams client: `1449/1.0.96.2026249711` | Teams client: `1449/1.0.96.2026129709` Microsoft Intune: `26.3.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | September 28, 2026 |\r\n | Logi Rallybar Mini (VR0020) | `2.1.204 (AOSP)` | Firmware: `2.1.176` Teams client: `1449/1.0.96.2026249711` | Teams client: `1449/1.0.96.2026129709` Microsoft Intune: `26.3.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | September 28, 2026 |\r\n | Logi TAP IP (VR0029) | `2.1.328(AOSP)` | Firmware: `2.1.303` Teams client: `1449/1.0.96.2026249711` | Teams client: `1449/1.0.96.2026129709` Microsoft Intune: `26.3.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | September 28, 2026 |\r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/certified-hardware-android.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/certified-hardware-android",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/devices/certified-hardware-android.md",
+      "firstSeenAt": "2026-11-21T09:57:47.347Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Eight Logitech Android devices added to certified hardware documentation",
+        "summary": "The table now lists eight Logitech devices with their AOSP, Teams client, Intune, Authenticator, and Admin Agent versions, plus November 19, 2026 dates. Firmware versions are included where available.",
+        "adminImpact": "Administrators can use the entries to verify supported device and software versions. No administrative action is stated.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/known-issues.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "patch": "diff --git a/Teams/devices/known-issues.md b/Teams/devices/known-issues.md\nindex cbbcba3..952a047 100644\n--- a/Teams/devices/known-issues.md\n+++ b/Teams/devices/known-issues.md\n@@ -81,6 +81,7 @@ platformId: 448a114f-8665-34fc-cbe8-e0c937d45911\n | Unable to join E2EE meeting using Teams Rooms on Android device. | When you use a Teams Rooms on Android device that is paired with a console, you're not able to join a Teams meeting that is set up with end-to-end encryption (E2EE). | Update to Teams Rooms on Android application [1449/1.0.96.2026249711](/en-us/MicrosoftTeams/rooms/rooms-release-note?tabs=Android#144910962026249711-september-2026) |\r\n | Devices may automatically exit meetings due to mismatched application versions. | Teams Rooms on Android devices with paired consoles may automatically exit meetings if the compute and console are operating on different Teams Rooms on Android application versions. | Review application versions installed on each device from the Pro Management Portal or on the device itself. Use the Pro Management Portal to force update the Teams Rooms application to the latest release on both devices. |\r\n | [DGJ] Unable to join future Google meet meetings on Teams Rooms on Android via One-Touch join | When using a Teams Rooms on Android device to join a Google Meet meeting **before its scheduled start time**, the meeting cannot be joined using the One-Touch Join button | If you need to join a Google Meet meeting before its scheduled start time, use the **Join by ID** option |\r\n+| Settings page may be unresponsive after language change | If the language change feature released in (1449/1.0.96.2026344105) is used on a Teams Rooms on Android device, the settings menu may become unresponsive until the device is restarted. | Restart the Teams Rooms on Android device to restore settings menu functionality, this will be resolved in a future release. |\r\n \r\n ## Issues affecting Teams panel devices\r\n \r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/known-issues.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/known-issues",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/devices/known-issues.md",
+      "firstSeenAt": "2026-11-21T09:57:47.355Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Known issue added for Teams Rooms language changes",
+        "summary": "The documentation now notes that changing the language on a Teams Rooms on Android device using version 1449/1.0.96.2026344105 may make the Settings menu unresponsive until the device is restarted.",
+        "adminImpact": "Admins should be aware that restarting an affected device restores access to Settings.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/teams-panels-certified-hardware.md",
+      "status": "modified",
+      "additions": 4,
+      "deletions": 0,
+      "changes": 4,
+      "patch": "diff --git a/Teams/devices/teams-panels-certified-hardware.md b/Teams/devices/teams-panels-certified-hardware.md\nindex f59c337..0463221 100644\n--- a/Teams/devices/teams-panels-certified-hardware.md\n+++ b/Teams/devices/teams-panels-certified-hardware.md\n@@ -126,6 +126,7 @@ Devices must be updated to newer application releases (when available) to remain\n \r\n | Device model | Latest firmware version | Minimum version details | Included Microsoft applications | Release date |\r\n | --- | --- | --- | --- | --- |\r\n+| Cisco Navigator | `ce 27.0.1.5  (AOSP)` | N/A | Teams client: `1449/1.0.97.2026286706 ` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202609172331.product (870)` | November 18, 2026 |\r\n | Cisco Navigator | `ce 26.9.1.10  (AOSP)` | N/A | Teams client: `1449/1.0.97.2026181101 ` Microsoft Intune: `26.03.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | November 03, 2026 |\r\n | Cisco Navigator | `ce 26.9.1.7  (AOSP)` | N/A | Teams client: `1449/1.0.97.2026181101 ` Microsoft Intune: `26.03.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | October 19, 2026 |\r\n | Cisco Navigator | `ce 26.8.1.7  (AOSP)` | N/A | Teams client: `1449/1.0.97.2026164101 ` Microsoft Intune: `26.03.1` Authenticator: `6.2605.3066` Admin Agent: `1.0.0.202607160723.product (856)` | September 25, 2026 |\r\n@@ -182,6 +183,9 @@ Devices must be updated to newer application releases (when available) to remain\n \r\n | Device model | Latest firmware version | Minimum version details | Included Microsoft applications | Release date |\r\n | --- | --- | --- | --- | --- |\r\n+| TAP Scheduler (VR0028) | ` 2.2.154 (AOSP)` | `2.1.328` | Teams client: `1449/1.0.97.2026286706` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| DockFlex (VR0035) | `2.2.143 (AOSP)` | `2.1.168` | Teams client: `1449/1.0.97.2026286706` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| TAP Scheduler 2 (VR0054) | `2.1.112 (AOSP)` | `NA` | Teams client: `1449/1.0.97.2026286706` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n | TAP Scheduler (VR0028) | ` 2.1.328 (AOSP)` | `2.1.303` | Teams client: `1449/1.0.97.2026181101` Microsoft Intune: `26.3.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | September 28, 2026 |\r\n | DockFlex (VR0035) | `2.1.168 (AOSP)` | `2.1.138` | Teams client: `1449/1.0.97.2026181101` Microsoft Intune: `26.3.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | September 28, 2026 |\r\n | TAP Scheduler (VR0028) | `2.1.303 (AOSP)` | `2.0.127` | Teams client: `1449/1.0.97.2026164101` Microsoft Intune: `25.02.1` Authenticator: `6.2605.3066` Admin Agent: `1.0.0.202604060507.product (820)` | August 10, 2026 |\r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/teams-panels-certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/teams-panels-certified-hardware",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/devices/teams-panels-certified-hardware.md",
+      "firstSeenAt": "2026-11-21T09:57:47.361Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Four device entries added to the certified hardware list",
+        "summary": "The documentation now lists Cisco Navigator, TAP Scheduler, DockFlex, and TAP Scheduler 2, including their AOSP, Teams client, Intune, Authenticator, Admin Agent versions, and November 18–19, 2026 dates.",
+        "adminImpact": "Administrators can use the updated version details when reviewing supported Teams panels hardware and software configurations.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/teams-phones-certified-hardware.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 0,
+      "changes": 1,
+      "patch": "diff --git a/Teams/devices/teams-phones-certified-hardware.md b/Teams/devices/teams-phones-certified-hardware.md\nindex e974f3c..f377c37 100644\n--- a/Teams/devices/teams-phones-certified-hardware.md\n+++ b/Teams/devices/teams-phones-certified-hardware.md\n@@ -155,6 +155,7 @@ Devices must be updated to newer application releases (when available) to remain\n \r\n | Device model | Latest firmware version | Minimum version details | Included Microsoft applications | Release date |\r\n | --- | --- | --- | --- | --- |\r\n+| CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.6.0.1666 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026224505` Microsoft Intune: `26.06.0` Authenticator: `6.2607.4685` Admin Agent: `1.0.0.202608280411.product (856)` | November 19, 2026 |\r\n | CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.5.1.0130 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026047602` Microsoft Intune: `25.02.1` Authenticator: `6.2601.189` Admin Agent: `1.0.0.202604060507.product (820)` | October 02, 2026 |\r\n | CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.5.1.0067 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026047602` Microsoft Intune: `25.02.1` Authenticator: `6.2601.189` Admin Agent: `1.0.0.202604060507.product (820)` | September 15, 2026 |\r\n | CCX350/CCX400/CCX500/CCX505/CCX600/Trio C60 | `9.5.0.1321 (AOSP)` | `N/A` | Teams client: `1449/1.0.94.2026047602` Microsoft Intune: `25.02.1` Authenticator: `6.2601.189` Admin Agent: `1.0.0.202604060507.product (820)` | July 20, 2026 |\r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/teams-phones-certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/teams-phones-certified-hardware",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/devices/teams-phones-certified-hardware.md",
+      "firstSeenAt": "2026-11-21T09:57:47.368Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Certified phone documentation adds updated software versions",
+        "summary": "The certified hardware table now lists CCX350, CCX400, CCX500, CCX505, CCX600, and Trio C60 with their Teams client, Intune, Authenticator, and Admin Agent versions, dated November 19, 2026.",
+        "adminImpact": "Administrators can use these details when validating supported device software; no action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/migration-from-teams.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/migration-from-teams.md b/Teams/migration-from-teams.md\nindex 2735d0d..7f5b79c 100644\n--- a/Teams/migration-from-teams.md\n+++ b/Teams/migration-from-teams.md\n@@ -92,6 +92,8 @@ Note\n \r\n The **Teams data export tool** widget is only available for the classic Microsoft Teams admin center dashboard. To switch to the classic portal, toggle off the 'New Dashboard' option:\r\n \r\n+[![Screenshot of the Microsoft Teams admin center, showing the New dashboard toggle.](media/export/teams-data-export-toggle-to-disable-classic-portal.png)](media/export/teams-data-export-toggle-to-disable-classic-portal.png#lightbox)\r\n+\r\n 1. Locate the **Teams data export tool** in the **Teams admin center**. Sign in to the **Microsoft Teams admin center** as a Global Administrator. On the **Dashboard**, locate the **Teams data export card**.\r\n \r\n     [![Screenshot of the Microsoft Teams admin center, showing the Teams data export experience.](media/export/teams-data-export-1.png)](media/export/teams-data-export-1.png#lightbox)\r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/migration-from-teams.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/migration-from-teams",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/migration-from-teams.md",
+      "firstSeenAt": "2026-11-21T09:57:47.374Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Added Teams admin center screenshot",
+        "summary": "The migration documentation now includes a screenshot showing the New dashboard toggle.",
+        "adminImpact": "Admins can use the screenshot as a visual reference when locating this toggle.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/certified-hardware.md",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3,
+      "changes": 6,
+      "patch": "diff --git a/Teams/rooms/certified-hardware.md b/Teams/rooms/certified-hardware.md\nindex 15832cd..b15308f 100644\n--- a/Teams/rooms/certified-hardware.md\n+++ b/Teams/rooms/certified-hardware.md\n@@ -346,12 +346,12 @@ The following devices are certified under the Microsoft Teams Rooms peripherals\n | [Bose ControlSpace EX-440C DSP + Bose P2600A AmpLink Amplifier + Sennheiser TCC2 Ceiling Microphone +  Bose DesignMax DM2C-P Ceiling Speaker](https://www.boseprofessional.com/en_us/solutions/work/es1-ceiling-audio-solution.html) | Bose DSP: 2.290  P2600A: 1.160  TCC2: 1.4.2 |  |  |  |  |\r\n | [Bose ControlSpace EX-1280C DSP](https://pro.bose.com/en_us/products/signal_processing_and_networking/controlspace_ex/cs_ex_1280c.html#v=cs_ex_1280c_black) +Bose P2600A AmpLink Amplifier +[Sennheiser TCC2 Ceiling Microphone](https://www.boseprofessional.com/en_us/solutions/work/es1-ceiling-audio-solution.html) +[DesignMax DM2C-LP Ceiling Speaker](https://pro.bose.com/en_us/products/loudspeakers/background_foreground/designmax/designmax_dm2c_lp.html#v=designmax_dm2c_lp_black) | Bose DSP: 2.290  P2600A: 1.160  TCC2: 1.4.2 |  |  |  |  |\r\n | [Bose ControlSpace EX-1280C DSP](https://pro.bose.com/en_us/products/signal_processing_and_networking/controlspace_ex/cs_ex_1280c.html#v=cs_ex_1280c_black) +Bose P2600A AmpLink Amplifier+[Sennheiser TCC2 Ceiling Microphone](https://www.boseprofessional.com/en_us/solutions/work/es1-ceiling-audio-solution.html) +[EdgeMax EM180 Ceiling Speaker](https://pro.bose.com/en_us/products/loudspeakers/background_foreground/edgemax/edgemax_em180.html#v=edgemax_em180_white) | Bose DSP: 2.290  P2600A: 1.160  TCC2: 1.4.2 |  |  |  |  |\r\n-| Q-SYS Core ([110f](https://www.qsys.com/products-solutions/q-sys/processing/core-110f/), [24f](https://www.qsys.com/products-solutions/q-sys/processing/core-24f/), [8 Flex](https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/), [Nano](https://www.qsys.com/products-solutions/q-sys/processing/core-nano/), or [NV-32-H](https://www.qsys.com/products-solutions/q-sys/processing/nv-32-h-core-capable/)) + Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://en-us.sennheiser.com/tcc2) or [AudioTechnica ATND1061](https://www.qsys.com/alliances-partnerships/audio-technica/?L=0) or [Shure MXA920](http://www.shure.com/mxa920)) +  Q-SYS Amplifier ([SPA series](https://www.qsys.com/products-solutions/power-amplifiers/installed/non-network/low-power-applications/spa-series/), [CX-Q series](https://www.qsys.com/products-solutions/power-amplifiers/installed/network/cx-q-series/) or [SPA-Q Series](http://www.qsys.com/spaq)) + [AcousticDesign Series Loudspeakers](https://www.qsys.com/products-solutions/loudspeakers/installed/passive/ceiling-mount/acousticdesign-series/) + Q-SYS Network Camera ([PTZ-IP 20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [PTZ-IP 12x72](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC 20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-110](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-110-conference-camera/)) optional + [Q-SYS I/O USB Bridge](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/io-usb-bridge/) optional | Q-SYS Designer 10.0.2  Sennheiser TCC2 Ceiling Microphone: TCC2 - 1.5.1  Dante 1.2.0  AudioTechnica ATND1061: 1.4.0  Shure MXA920: 6.6.0  Q-SYS Amplifiers: N/A  AcousticDesign Series Loudspeakers: N/A |  |  |  |  |\r\n+| Q-SYS Core ([110f](https://www.qsys.com/products-solutions/q-sys/processing/core-110f/), [24f](https://www.qsys.com/products-solutions/q-sys/processing/core-24f/), [8 Flex](https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/), [Nano](https://www.qsys.com/products-solutions/q-sys/processing/core-nano/), or [NV-32-H](https://www.qsys.com/products-solutions/q-sys/processing/nv-32-h-core-capable/)) + Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://en-us.sennheiser.com/tcc2) or [AudioTechnica ATND1061](https://www.qsys.com/alliances-partnerships/audio-technica/?L=0) or [Shure MXA920](http://www.shure.com/mxa920)) +  Q-SYS Amplifier ([SPA series](https://www.qsys.com/products-solutions/power-amplifiers/installed/non-network/low-power-applications/spa-series/), [CX-Q series](https://www.qsys.com/products-solutions/power-amplifiers/installed/network/cx-q-series/) or [SPA-Q Series](http://www.qsys.com/spaq)) + [AcousticDesign Series Loudspeakers](https://www.qsys.com/products-solutions/loudspeakers/installed/passive/ceiling-mount/acousticdesign-series/) + Q-SYS Network Camera ([PTZ-IP 20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [PTZ-IP 12x72](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC 20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-110](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-110-conference-camera/)) optional + [Q-SYS I/O USB Bridge](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/io-usb-bridge/) optional | Q-SYS Designer 10.0.2  Sennheiser TCC2 Ceiling Microphone: TCC2 - 1.5.1  Dante 1.2.0  AudioTechnica ATND1061: 1.4.1  Shure MXA920: 6.6.0  Q-SYS Amplifiers: N/A  AcousticDesign Series Loudspeakers: N/A |  |  |  |  |\r\n | Q-SYS Core ([110f](https://www.qsys.com/products-solutions/q-sys/processing/core-110f/), [24f](https://www.qsys.com/products-solutions/q-sys/processing/core-24f/), [8 Flex](https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/), [Nano](https://www.qsys.com/products-solutions/q-sys/processing/core-nano/), or [NV-32-H](https://www.qsys.com/products-solutions/q-sys/processing/nv-32-h-core-capable/)) + Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://en-us.sennheiser.com/tcc2) or [Shure MXA920](http://www.shure.com/mxa920)) +  Q-SYS Amplifier ([SPA series](https://www.qsys.com/products-solutions/power-amplifiers/installed/non-network/low-power-applications/spa-series/) or [SPA-Q Series](http://www.qsys.com/spaq)) + [AcousticDesign Wall Mount Series Loudspeakers](https://www.qsys.com/products-solutions/loudspeakers/installed/passive/column-surface-mount/acousticdesign-series/) + Q-SYS Network Camera ([PTZ-IP 20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [PTZ-IP 12x72](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC 20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-110](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-110-conference-camera/)) optional + [Q-SYS I/O USB Bridge](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/io-usb-bridge/) optional | Q-SYS Designer 10.0.2  Sennheiser TCC2 Ceiling Microphone: TCC2 - 1.5.1  Dante 1.2.0  Shure MXA920: 6.6.0  AcousticDesign Series Loudspeakers: N/A |  |  | ✔ |  |\r\n-| Q-SYS Core ([110f](https://www.qsys.com/products-solutions/q-sys/processing/core-110f/), [24f](https://www.qsys.com/products-solutions/q-sys/processing/core-24f/), [8 Flex](https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/), [Nano](https://www.qsys.com/products-solutions/q-sys/processing/core-nano/), or [NV-32-H](https://www.qsys.com/products-solutions/q-sys/processing/nv-32-h-core-capable/)) + Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://en-us.sennheiser.com/tcc2), [AudioTechnica ATND1061](https://www.audio-technica.com/atnd1061) or [Shure MXA920](http://www.shure.com/mxa920)) + Q-SYS [NL Series Loudspeakers](https://www.qsys.com/products-solutions/q-sys/audio-network-loudspeakers/nl-series/) + Q-SYS Network Camera ([NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-110](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-110-conference-camera/) optional + [Q-SYS I/O Bridge](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/io-usb-bridge/) optional | Q-SYS Designer 10.0.2  Sennheiser TCC2 Ceiling Microphone: TCC2 - 1.5.1 Dante 1.2.0  AudioTechnica ATND1061: 1.4.0  Shure MXA920: 6.6.0 |  |  |  |  |\r\n+| Q-SYS Core ([110f](https://www.qsys.com/products-solutions/q-sys/processing/core-110f/), [24f](https://www.qsys.com/products-solutions/q-sys/processing/core-24f/), [8 Flex](https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/), [Nano](https://www.qsys.com/products-solutions/q-sys/processing/core-nano/), or [NV-32-H](https://www.qsys.com/products-solutions/q-sys/processing/nv-32-h-core-capable/)) + Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://en-us.sennheiser.com/tcc2), [AudioTechnica ATND1061](https://www.audio-technica.com/atnd1061) or [Shure MXA920](http://www.shure.com/mxa920)) + Q-SYS [NL Series Loudspeakers](https://www.qsys.com/products-solutions/q-sys/audio-network-loudspeakers/nl-series/) + Q-SYS Network Camera ([NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-110](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-110-conference-camera/) optional + [Q-SYS I/O Bridge](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/io-usb-bridge/) optional | Q-SYS Designer 10.0.2  Sennheiser TCC2 Ceiling Microphone: TCC2 - 1.5.1 Dante 1.2.0  AudioTechnica ATND1061: 1.4.1  Shure MXA920: 6.6.0 |  |  |  |  |\r\n | Q-SYS Core ([110f](https://www.qsys.com/products-solutions/q-sys/processing/core-110f/), [24f](https://www.qsys.com/products-solutions/q-sys/processing/core-24f/), [8 Flex](https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/), [Nano](https://www.qsys.com/products-solutions/q-sys/processing/core-nano/), or [NV-32-H](https://www.qsys.com/products-solutions/q-sys/processing/nv-32-h-core-capable/)) + Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://en-us.sennheiser.com/tcc2) or [Shure MXA920](http://www.shure.com/mxa920)) + Q-SYS [NL-SB42](https://www.qsys.com/products-solutions/q-sys/audio-network-loudspeakers/nl-series/nl-sb42/) Loudspeaker + Q-SYS Network Camera ([NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-20x60](https://www.qsys.com/products-solutions/q-sys/video/ptz-ip-conference-cameras/), [NC-110](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-110-conference-camera/) optional + [Q-SYS I/O Bridge](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/io-usb-bridge/) optional | Q-SYS Designer 10.0.2  Sennheiser TCC2 Ceiling Microphone: TCC2 - 1.5.1 Dante 1.2.0  Shure MXA920: 6.6.0 |  |  | ✔ |  |\r\n | Q-SYS VisionSuite – Q-SYS Core ([110f](https://www.qsys.com/products-solutions/q-sys/processing/core-110f/), [24f](https://www.qsys.com/products-solutions/q-sys/processing/core-24f/), [8 Flex](https://www.qsys.com/products-solutions/q-sys/processing/core-8-flex/), [Nano](https://www.qsys.com/products-solutions/q-sys/processing/core-nano/), or [NV-32-H](https://www.qsys.com/products-solutions/q-sys/processing/nv-32-h-core-capable/)) +  Q-SYS Network Camera ([NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-series-ptz-conference-cameras/), [NC-20x60](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-series-ptz-conference-cameras/), [NC-110](https://www.qsys.com/products-solutions/q-sys/video/nc-series/nc-110-conference-camera/)) +  Q-SYS [VSA-100](https://www.qsys.com/products/q-sys/video/q-sys-visionsuite/vsa-100/) or Seervision AI Accelerator ([SVS1-2U, SVS4-2U](https://www.qsys.com/products/q-sys/video/seervision/?L=0)) +  Certified for Microsoft Teams Q-SYS Audio Solution with Ceiling Mic | VSA-100: Q-SYS Designer:10.0.2 +  VisionSuite Patch 90.0.6  Seervision AI Accelerator: Q-SYS Designer 9.10.1 +  Seervision v75.0.3 +  VisionSuite Plugin v75.0.3 |  |  |  |  |\r\n-| Q-SYS RoomSuite Modular System ([RMP-100](https://www.qsys.com/products/q-sys/roomsuite/roomsuite-modular-system/) +  Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://www.sennheiser.com/tcc2), [AudioTechnica ATND1061](https://www.audio-technica.com/atnd1061), or [Shure MXA920](http://www.shure.com/mxa920)) +  Q-SYS [NL Series Loudspeakers](https://www.qsys.com/products-solutions/q-sys/audio-network-loudspeakers/nl-series/) +  Q-SYS Network Camera ([NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/nc-series/), [NC-20x60](https://www.qsys.com/products-solutions/q-sys/video/nc-series/), [NC-90-G2](https://www.qsys.com/products/q-sys/video/nc-series/nc-90/)) | RoomSuite Designer: 1.0.4  Sennheiser TCC2: 1.5.1  Dante: 1.2.0  Shure MXA920: 6.6.0  AudioTechnica ATND1061: 1.4.0 |  |  |  |  |\r\n+| Q-SYS RoomSuite Modular System ([RMP-100](https://www.qsys.com/products/q-sys/roomsuite/roomsuite-modular-system/) +  Network Microphone ([Q-SYS NM-T1](https://www.qsys.com/products-solutions/q-sys/audio-io-peripherals/nm-t1/), [Sennheiser TCC2](https://www.sennheiser.com/tcc2), [AudioTechnica ATND1061](https://www.audio-technica.com/atnd1061), or [Shure MXA920](http://www.shure.com/mxa920)) +  Q-SYS [NL Series Loudspeakers](https://www.qsys.com/products-solutions/q-sys/audio-network-loudspeakers/nl-series/) +  Q-SYS Network Camera ([NC-12x80](https://www.qsys.com/products-solutions/q-sys/video/nc-series/), [NC-20x60](https://www.qsys.com/products-solutions/q-sys/video/nc-series/), [NC-90-G2](https://www.qsys.com/products/q-sys/video/nc-series/nc-90/)) | RoomSuite Designer: 1.0.4  Sennheiser TCC2: 1.5.1  Dante: 1.2.0  Shure MXA920: 6.6.0  AudioTechnica ATND1061: 1.4.1 |  |  |  |  |\r\n | [Vaddio IntelliSHOT-M](https://www.legrandav.com/products/cameras/hd_fixed_camera/intellishot-m-camera) | 1.0.0 |  |  |  |  |\r\n | [Vaddio RoboSHOT 30E-M HD PTZ Camera](https://www.legrandav.com/products/cameras/hd_ptz_camera/roboshot-30e-m) | 1.0.0 |  |  |  |  |\r\n | ViewSonic UMB202 | Video Firmware Version: V100-20240729-173849;  Audio Firmware Version: MUA\\_6MIC\\_Teams\\_RK3308\\_LiNUX\\_32BIT\\_20240531\\_150618\\_V0.0.3.0006 |  |  |  |  |\r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/certified-hardware",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/rooms/certified-hardware.md",
+      "firstSeenAt": "2026-11-21T09:57:47.381Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Q-SYS certified hardware links updated",
+        "summary": "The certified hardware documentation updates the Q-SYS Core and Q-SYS RoomSuite Modular System entries and their linked product information.",
+        "adminImpact": "Review the updated entries when evaluating certified room hardware; no administrator action is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/teams-devices-feature-comparison.md",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 10,
+      "changes": 20,
+      "patch": "diff --git a/Teams/rooms/teams-devices-feature-comparison.md b/Teams/rooms/teams-devices-feature-comparison.md\nindex 5427f2f..895af66 100644\n--- a/Teams/rooms/teams-devices-feature-comparison.md\n+++ b/Teams/rooms/teams-devices-feature-comparison.md\n@@ -12,7 +12,7 @@ author: MattSlomka\n ms.author: mattslomka\n manager: pamgreen\n ms.reviewer: mattslomka\n-ms.date: 2026-11-09T00:00:00.0000000Z\n+ms.date: 2026-11-20T00:00:00.0000000Z\n ms.topic: article\n audience: Admin\n ms.service: msteams\n@@ -86,7 +86,7 @@ To help guide you as to what features are available on different platforms, you\n |  | Live reactions | Available | Available |\r\n |  | PowerPoint Live | Available | Available |\r\n |  | Live closed captions | Available | Available |\r\n-|  | Participate in breakout rooms | Available | Not available |\r\n+|  | Participate in breakout rooms | Available | Available |\r\n |  | Teams Premium meeting protection policies | Available | Available |\r\n |  | End to End Encrypted Meetings | Available | Available |\r\n |  | Start meeting recording and transcription | Available | Available |\r\n@@ -106,8 +106,8 @@ To help guide you as to what features are available on different platforms, you\n |  | People Recognition (video) | Available | Not available |\r\n |  | Intelligent Speaker Recognition (voice) | Available | Available |\r\n |  | Room Capacity Notifications | Available | Available |\r\n-|  | User accessible device language change | Available | Not available |\r\n-|  | Rate my call report | Available | Not available |\r\n+|  | User accessible device language change | Available | Available |\r\n+|  | Rate my call report | Available | Available |\r\n |  | Net promoter score (NPS) at meeting end | Available | Available |\r\n |  | Meeting controls on touch enabled front of room displays | Not available | Available |\r\n |  | Smart Camera Controls | Available | Available |\r\n@@ -204,7 +204,7 @@ To help guide you as to what features are available on different platforms, you\n |  | Live reactions | Available | Available |\r\n |  | PowerPoint Live | Available | Available |\r\n |  | Live closed captions | Available | Available |\r\n-|  | Participate in breakout rooms | Available | Not available |\r\n+|  | Participate in breakout rooms | Available | Available |\r\n |  | Teams Premium meeting protection policies | Available | Available |\r\n |  | End to End Encrypted Meetings | Available | Available |\r\n |  | Start meeting recording and transcription | Available | Available |\r\n@@ -223,8 +223,8 @@ To help guide you as to what features are available on different platforms, you\n |  | People Recognition (video) | Not available | Not available |\r\n |  | Intelligent Speaker Recognition (voice) | Available | Available |\r\n |  | Room Capacity Notifications | Available | Available |\r\n-|  | User accessible device language change | Available | Not available |\r\n-|  | Rate my call report | Available | Not available |\r\n+|  | User accessible device language change | Available | Available |\r\n+|  | Rate my call report | Available | Available |\r\n |  | Net promoter score (NPS) at meeting end | Not available | Not available |\r\n |  | Meeting controls on touch enabled front of room displays | Not available | Available |\r\n |  | Smart Camera Controls | Available | Available |\r\n@@ -321,7 +321,7 @@ To help guide you as to what features are available on different platforms, you\n |  | Live reactions | Available | Available |\r\n |  | PowerPoint Live | Available | Available |\r\n |  | Live closed captions | Available | Available |\r\n-|  | Participate in breakout rooms | Available | Not available |\r\n+|  | Participate in breakout rooms | Available | Available |\r\n |  | Teams Premium meeting protection policies | Available | Available |\r\n |  | End to End Encrypted Meetings | Available | Available |\r\n |  | Start meeting recording and transcription | Available | Available |\r\n@@ -341,8 +341,8 @@ To help guide you as to what features are available on different platforms, you\n |  | People Recognition (video) | Not available | Not available |\r\n |  | Intelligent Speaker Recognition (voice) | Not available | Not available |\r\n |  | Room Capacity Notifications | Not available | Not available |\r\n-|  | User accessible device language change | Available | Not available |\r\n-|  | Rate my call report | Available | Not available |\r\n+|  | User accessible device language change | Available | Available |\r\n+|  | Rate my call report | Available | Available |\r\n |  | Net promoter score (NPS) at meeting end | Not available | Not available |\r\n |  | Meeting controls on touch enabled front of room displays | Not available | Available |\r\n |  | Smart Camera Controls | Available | Available |\r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/teams-devices-feature-comparison.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/teams-devices-feature-comparison",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/rooms/teams-devices-feature-comparison.md",
+      "firstSeenAt": "2026-11-21T09:57:47.387Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Three Teams Rooms capabilities are now marked available on additional device types",
+        "summary": "The feature comparison now lists breakout-room participation, user-accessible device language changes, and Rate My Call reports as available where they were previously marked unavailable.",
+        "adminImpact": "Review the updated comparison when evaluating device capabilities or making device-selection decisions; no administrator action is specified.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/teams-client-vdi-requirements-deploy.md",
+      "status": "modified",
+      "additions": 19,
+      "deletions": 9,
+      "changes": 28,
+      "patch": "diff --git a/Teams/teams-client-vdi-requirements-deploy.md b/Teams/teams-client-vdi-requirements-deploy.md\nindex 2b1d6ff..9c2d80b 100644\n--- a/Teams/teams-client-vdi-requirements-deploy.md\n+++ b/Teams/teams-client-vdi-requirements-deploy.md\n@@ -12,7 +12,7 @@ author: officedocspr5\n ms.author: odocspr\n manager: jtremper\n ms.topic: upgrade-and-migration-article\n-ms.date: 2026-08-25T00:00:00.0000000Z\n+ms.date: 2026-11-20T00:00:00.0000000Z\n ms.service: msteams\n ms.subservice: msteams-admin\n audience: admin\n@@ -284,7 +284,9 @@ Administrators can rely on the teamsbootstrapper.exe [error code](/en-us/windows\n \r\n For Windows Server 2019, the only supported installation method is:\r\n \r\n-```Command\r\n+```\r\n+\r\n+Command Line\r\n Dism /Online /Add-ProvisionedAppxPackage /PackagePath:<MSIX package path> /SkipLicense\r\n ```\r\n \r\n@@ -333,7 +335,9 @@ This command unregisters and deprovisions Teams for all users. Teams user profil\n \r\n To prevent Teams from autoupdating, use the following registry key on the virtual machine. Only Teams builds higher than 23306.3314.2555.9628 in VDI can process this registry key.\r\n \r\n-```Registry\r\n+```\r\n+\r\n+Registry editor\r\n Location: Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Teams\r\n Name: disableAutoUpdate\r\n Type: DWORD\r\n@@ -647,10 +651,12 @@ Learn more: [Manage accounts and organizations in Microsoft Teams](https://suppo\n \r\n ## Features currently not available and known issues in VDI with Teams\r\n \r\n-- AVD/W365 users optimized with WebRTC fail to see incoming video/screensharing if they are on a virtual desktop running Windows 11 24H2/25H2 (26100.6725 and 26200.6725 or higher) and User Account Control (UAC) is disabled. Current workaround for this issue requires Administrators to enabled UAC on the Windows virtual machine.\r\n+- Windows Server 2019 VM's might run into BSOD when running Teams 26288.x.x.x or higher (BugID 5996506). Teams 26276.x.x.x is not impacted. Windows Server 2019 is unsupported. Customers must migrate to Windows Server 2025.\r\n+- VD/W365 users optimized with WebRTC fail to see incoming video/screensharing if they are on a virtual desktop running Windows 11 24H2/25H2 (26100.6725 and 26200.6725 or higher) and User Account Control (UAC) is disabled. Current workaround for this issue requires Administrators to enabled UAC on the Windows virtual machine.\r\n - Microsoft Teams optimization isn't supported in nested or double hop scenarios (i.e. launching a second virtual desktop from another virtual desktop).\r\n - In some scenarios, Citrix RemotePC users might experience a Teams crash and restart loop when using VDA 2411 and accessing Teams locally (not via HDX). Check CTX585013 for more details.\r\n - Teams doesn't on-demand register during FSLogix profile creation (even with HotFix 4), and doesn't register during future sign-ins, despite being installed. A race condition between Process Lifetime Manager (PLM) service and AppxSvc causes this issue. causing a transient failure when updating the package with error 0x80004001 (E\\_NOTIMPL). If the PLM service isn't running, Teams registration fails.\r\n+\r\n     - (In MSIX, Registration occurs on a per-user basis and begins when a user logs on. The OS then loads the preinstalled packaged app, creating user-specific app data, FTAs, and app tiles in the Start menu. This action is done by the AppReadiness Service, which is aware of all preinstalled apps and requests the Appx Deployment Service (AppxSvc) deploy those packages.)\r\n     - Customers hitting this error, even with FSLogix Hotfix 4, must deploy these fixes:\r\n         - Windows 11 21H2 [KB5043067](https://support.microsoft.com/topic/september-10-2024-kb5043067-os-build-22000-3197-62287850-4f0d-4e4a-9fe8-b026bb1be994)\r\n@@ -658,24 +664,28 @@ Learn more: [Manage accounts and organizations in Microsoft Teams](https://suppo\n         - Windows Server 2019 [KB5043050](https://support.microsoft.com/topic/september-10-2024-kb5043050-os-build-17763-6293-66e9809a-1838-4474-a6a7-90d64f042f00)\r\n     - This bug is addressed with [KB5037849](https://support.microsoft.com/help/5037849) for Windows 10 (May 2024). The issue isn't present on Windows 11 22H2 or higher.\r\n - Teams fails to launch for users logging into single-user non-persistent Windows 10 virtual desktops, or the app isn't visible in the Start menu. But the app might become visible and launches successfully 15 minutes after logging in.\r\n+\r\n     - This issue is addressed in [KB5041582](https://support.microsoft.com/topic/august-29-2024-kb5041582-os-build-19045-4842-preview-f4c4d191-5457-475c-80ac-e1d43cf9c941)[KB5041587](https://support.microsoft.com/topic/august-27-2024-kb5041587-os-builds-22621-4112-and-22631-4112-preview-9706ea0e-6f72-430e-b08a-878963dafe08) for Windows 10/11, and Teams 24215.1007.3082.1590 (or higher) - both components are needed.\r\n-    - You might also need to exclude the following location from your roaming profile solution (for FSLogix customers, as an example, via redirections.xml): `AppData\\Local\\Packages\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\TempState`.\r\n-    - **NOTE** - The issue isn't seen in **multi-user** Windows 10 or 11. For Windows 2019. A fix to resolve this issue is available: [KB5044227](https://support.microsoft.com/topic/october-8-2024-kb5044277-os-build-17763-6414-edccc872-2f4e-4ac6-b224-50ca8f1acd4f).\r\n+    - You might also need to exclude the following location from your roaming profile solution (for FSLogix customers, as an example, via redirections.xml): `AppData\\Local\\Packages\\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\\TempState`. \r\n+        Note\r\n+\r\n+        The issue isn't seen in **multi-user** Windows 10 or 11. For Windows 2019. A fix to resolve this issue is available: [KB5044227](https://support.microsoft.com/topic/october-8-2024-kb5044277-os-build-17763-6414-edccc872-2f4e-4ac6-b224-50ca8f1acd4f).\r\n - Customers installing Teams on a golden image, which later undergoes a sysprep to generalize it, are failing to launch the app. This circumstance includes templates from Azure Image Gallery.\r\n+\r\n     - Users logging in to the provisioned virtual machines see the Teams icon greyed out in the start menu and clicking on it has no effect.\r\n     - The AppX log in the Event Viewer has the error 0x80073CF1.\r\n     - Running `Get-AppxPackage -name MsTeams -allusers` from an elevated PowerShell window shows that PackageUserInformation is in a **Paused state** for SID S-1-15-18 (LocalSystem). This error isn't seen on W11 22H2 or higher. Install [KB5039299](https://support.microsoft.com/topic/june-25-2024-kb5039299-os-build-19045-4598-preview-d4e3e815-fdd8-465e-8144-42afa165efed) for Windows 10 [KB5040437](https://support.microsoft.com/topic/july-9-2024-kb5040437-os-build-20348-2582-5b28d9b8-fcba-43bb-91e6-062f43c7ec7c) for WS2022, and [KB5040431](https://support.microsoft.com/topic/july-9-2024-kb5040431-os-build-22000-3079-346db750-842d-41b8-a55a-103cc04d175a) for W11 21H2.\r\n - Screen sharing from chat for Azure Virtual Desktops/Windows 365 (This issue is now fixed on RD Client 1.2.5105 and Redirector Service [1.50.2402.29001](/en-us/azure/virtual-desktop/whats-new-webrtc#updates-for-version-150240229001)).\r\n-- Screen sharing from chat for Citrix when using Workspace app 2311 only.\r\n - msteams\\_autostart.exe \"The parameter is incorrect\": In non-persistent environments that use FSLogix (any version before 2210 HotFix 4) or Citrix Profile Manager profile containers, when Teams attempts to autostart or a user tries to launch Teams from the Start menu, it throws the error: \"The parameter is incorrect.\" The frequency and reproducibility of the error varies depending on the environment and especially the antivirus software being used (SentinelOne, Palo Alto, Trend Micro, Bitdefender, CrowdStrike, and so on.) and exclusions in place. This issue is now fixed on FSLogix 2210 HotFix 4. Customers facing this issue with Citrix Profile Manager must upgrade to CPM 2402 or 2203 CU5.\r\n+\r\n     - \"The parameter is incorrect\" error can be caused by other file system drivers. Running fltmc from an elevated command window lists the drivers. Two Citrix drivers (UPMAction and upmjit) can cause the error, even if you're only using FSLogix HotFix 4 and don't have Citrix Profile Manager. This error happens because Citrix VDA installers typically install profilemgt\\_x64.msi by default for Citrix Director monitoring of logon time counters. Removing that MSI can fix \"the parameter is incorrect\" error.\r\n-- Teams fails to launch for users logging into non-persistent virtual desktops, or the app is **not**visible in the Start menu.\r\n+- Teams fails to launch for users logging into non-persistent virtual desktops, or the app is **not** visible in the Start menu.\r\n+\r\n     - Admins don't experience this issue - after installing Teams on the golden image they can launch it successfully.\r\n     - After you seal the golden image and deploying it at scale (with provisioning tools like Citrix MCS/PVS or Omnissa Instant-Clones), users log in to the virtual machines and select the Teams icon, but aren't able to launch the app. The issue is caused by a failed registration of the MSIX package at the user level with different profile management software (FSLogix before 2210 HotFix 4, Citrix CPM 2308 or 2311 **but not on 2402**, Ivanti UEM, and so on), even though the staging of the package was successful (the OS stored the package's contents on the disk in the %ProgramFiles%\\WindowsApps directory). This issue can be confirmed by running Get-AppxPackage -name MsTeams for the affected users. Running this code returns an empty output.\r\n     - If Get-AppxPackage -name MsTeams -allusers is run from an elevated PowerShell command window, the output shows that Teams is registered (see line PackageFullName) and the Status is **OK**.\r\n     - This issue is fixed in FSLogix 2210 HotFix 4.\r\n - When you use Azure Virtual Desktops or Windows 365, and the MAC Remote Desktop Client or Windows app, Microsoft Teams UI doesn't enumerate all the peripherals connected to the device. Instead, only the device selected at the macOS-level is shown in the Devices' drop-down menu of Microsoft Teams. The peripheral is labeled. \"MAC device name\" + \"Speakers\" is an example of this labeling.\r\n-- Teams meetings can't be launched when selecting a link from Outlook. There's an authentication prompt (Access to '{tenant}' tenant is denied) when users attempt to join an **external** meeting. This issue is fixed in Teams 24091.214.2846.1452.\r\n \r\n ## Teams for web in VDI\r\n \r\n",
+      "baseCommitSha": "37f57b00a3c26195685f2838d0b5fa9cd6436d2d",
+      "commitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitMessage": "Mirror Learn: 9 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-20 22:46:45 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/teams-client-vdi-requirements-deploy.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/teams-client-vdi-requirements-deploy",
+      "eventId": "teams-docs:8f8609febc090c0bb613fbe6e6cb46e9ca4af688:modified:Teams/teams-client-vdi-requirements-deploy.md",
+      "firstSeenAt": "2026-11-21T09:57:47.394Z",
+      "englishSummary": {
+        "category": "Retirement",
+        "headline": "Windows Server 2019 VMs require migration",
+        "summary": "The VDI documentation now reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later. Teams 26276.x.x.x is unaffected, and the page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025.",
+        "adminImpact": "Administrators running Teams on Windows Server 2019 must plan migration to Windows Server 2025 to avoid the documented issue.",
+        "actionRequired": true,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1562279",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-20",
+      "title": "Microsoft Teams: View files and conversations side by side",
+      "summary": "Microsoft Teams will enable side-by-side viewing of files (PDF, Markdown, HTML) and their related conversations, enhancing context during review. This feature will roll out worldwide from late December 2026 to early January 2027 on Windows, Mac, and web, requiring no admin action.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1562279/",
+      "originalUrl": "https://mc.merill.net/message/MC1562279",
+      "body": "<p><b><b>What and Why:</b></b></p><p>Microsoft Teams is introducing a side-by-side experience that helps users review shared files without losing conversation context. When users open a PDF, Markdown, or HTML file from a chat or channel message, the conversation appears alongside the file at the message where it was shared.</p><p>This update will be available in Microsoft Teams on Windows, Mac, and the web.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide, GCC, GCC High, DoD): We will begin rolling out in late December 2026 and expect to complete by early January 2027.</p><p><b><b>Impact on Your Organization:</b></b></p><p>When users open a supported file from a chat or channel message, a conversation pane opens alongside the file preview. Users can read the related discussion and send messages or replies without leaving the file preview. Files opened from a file list without an originating message will not show the conversation pane.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>No admin action is required. Consider notifying help desk staff and end users, and update internal guidance to explain how users can review files and respond to related conversations side by side.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact"
+      ],
+      "startDate": "2026-11-20T23:37:16Z",
+      "endDate": "2027-02-05T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-20T23:37:24.157Z",
+      "version": "2026-11-20T23:37:24.157Z",
+      "eventId": "message-center:MC1562279:2026-11-20T23:37:24.157Z",
+      "firstSeenAt": "2026-11-21T09:58:01.521Z"
+    },
+    {
+      "id": "MC1562278",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-20",
+      "title": "Microsoft Teams: Expanded Markdown support in the compose box",
+      "summary": "Microsoft Teams will launch an expanded Markdown compose experience in early December 2026, allowing users to write with visible Markdown syntax, use a dedicated toolbar, preview messages before sending, and switch between Markdown and rich text. No admin action is needed.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1562278/",
+      "originalUrl": "https://mc.merill.net/message/MC1562278",
+      "body": "<p><b><b>What and why</b></b></p><p><span>Microsoft Teams is introducing an updated Markdown compose experience with expanded formatting support. Users can write and edit with Markdown syntax intact, without formatting automatically rendering as they type. A dedicated Markdown toolbar helps users insert formatting syntax, preview the rendered message before sending, and switch between Markdown and rich text.</span></p><p></p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning in <b>early December 2026</b> and expected to complete by <b>mid-December 2026</b></li></ul><p></p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Teams users who compose messages in chats and channels on supported platforms</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams for Windows, Mac, and web</li></ul><p><i>What will happen</i></p><p><span>Users will be able to select Format in Markdown from the compose box’s </span><b><i>Actions and apps (+)</i></b><span> menu (Screenshot 1).</span></p><p></p><p><span>The updated experience includes:</span></p><ul><li><span>Markdown authoring without live rendering: Syntax remains visible and editable while users write.</span></li><li><span>A dedicated Markdown toolbar: Users can insert syntax for formatting (Screenshot 2).</span></li></ul><p></p><p></p><ul><li><span>Message preview: Users can turn on Preview message to see the rendered formatting before sending (Screenshot 3).</span></li></ul><p></p><ul><li><b>Switching between compose modes:</b><span> Users can select </span><b><i>Format in rich text</i></b><span> from the same menu to return to rich text authoring (Screenshot 4).</span><ul><li><span></span></li></ul></li></ul><p><span>Teams will remember the user’s selected compose mode and apply it across chats and channels until the user switches modes.</span></p><p></p><p><b>Learn more</b></p><ul><li><a href=\"https://support.microsoft.com/teams/chat/use-markdown-formatting-in-microsoft-teams#tabpanel_1_desktop\" rel=\"noopener noreferrer\">Use Markdown formatting in Microsoft Teams | Microsoft Support</a></li></ul><p></p><p><b><b>Action required and recommendations</b></b></p><p>No admin action is required to prepare for this feature.</p><p></p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-20T23:36:31Z",
+      "endDate": "2027-01-15T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-20T23:36:46.82Z",
+      "version": "2026-11-20T23:36:46.82Z",
+      "eventId": "message-center:MC1562278:2026-11-20T23:36:46.82Z",
+      "firstSeenAt": "2026-11-21T09:58:01.521Z"
+    },
+    {
+      "id": "MC1562277",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-20",
+      "title": "Microsoft Teams: Copilot in channels provides channel-wide context",
+      "summary": "Microsoft Teams is adding a channel-level Copilot feature allowing users to ask questions and summarize all posts and replies in a channel. Public preview starts December 2026 worldwide, with no action required. Copilot responses will include source citations and be available on Teams desktop and mobile.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "ai",
+        "name": "AI and Copilot",
+        "icon": "/assets/topics/ai.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1562277/",
+      "originalUrl": "https://mc.merill.net/message/MC1562277",
+      "body": "<p><b><b>What and why</b></b></p><p>We are introducing a channel-level entry point for Copilot in Microsoft Teams. This enhancement allows users to ask questions and summarize conversations across posts and replies within a channel, rather than a single thread. This enhancement will be available in Microsoft Teams and Teams mobile.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Public Preview (Worldwide):</b> Rollout will begin in early December 2026 and is expected to complete by the end of December 2026.</li><li><b>General Availability (Worldwide):</b> We will publish a separate announcement once we've determined a rollout schedule for General Availability.</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Users of Copilot in Microsoft Teams channels.</li></ul><p><i>Platforms and services</i></p><ul><li>Copilot</li><li>Microsoft Teams</li><li>Microsoft Teams mobile</li></ul><p><i>What will happen</i></p><ul><li>Users can open Copilot from the top-right corner of any Teams channel, ask questions, and generate summaries based on the most recent posts and replies in a channel, rather than a single thread.</li></ul><p></p><ul><li>Copilot responses will include citations that link directly to the source posts or replies.</li></ul><p><b><b>Action required and recommendations</b></b></p><p>No additional action is required.</p><p><b><b>Compliance considerations</b></b></p><p><i>Does the change provide end users any new way of interacting with generative AI?</i></p><ul><li><b>Yes.</b> This change introduces a new way for users to interact with generative AI in Microsoft Teams by allowing Copilot to answer questions and summarize the most recent posts and replies in a channel.&nbsp;</li></ul>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-20T23:35:54Z",
+      "endDate": "2027-02-05T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-20T23:36:02.983Z",
+      "version": "2026-11-20T23:36:02.983Z",
+      "eventId": "message-center:MC1562277:2026-11-20T23:36:02.983Z",
+      "firstSeenAt": "2026-11-21T09:58:01.521Z"
+    },
+    {
+      "id": "MC1559642",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-20",
+      "title": "Continuous interpreter visibility with pop out video in Teams",
+      "summary": "Microsoft Teams will allow users to pop out sign language interpreters' videos into a resizable, movable window for continuous visibility during meetings. Rolling out from December 2026 to January 2027 on Windows and Mac, this feature aids Deaf and hard-of-hearing users without affecting other participants' views.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1559642/",
+      "originalUrl": "https://mc.merill.net/message/MC1559642",
+      "body": "<p>Updated November 20, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Users who work with sign language interpreters in Microsoft Teams meetings will be able to pop out their paired interpreters' video into a separate window. The window can be resized and moved anywhere on the screen, including to another monitor. Interpreters stay in view while users multitask, share content, or change meeting layouts. This is designed for Deaf and hard-of-hearing (D/HH) users, for whom losing sight of an interpreter means losing access to the conversation.</p><p><b><b>Rollout Schedule:</b></b></p><p>Public preview (Worldwide): We will begin rolling out on early December 2026 and expect to complete by late December 2026.</p><p>General Availability (Worldwide): We will begin rolling out on mid January 2027 and expect to complete by late January 2027.</p><p><b><b>Impact on Your Organization:</b></b></p><p>This applies to Teams desktop on Windows and Mac. After this rollout, users can:</p><ul><li>Pop out their paired sign language interpreters' video into a dedicated window that stays on top of other apps.</li><li>Resize the window and move it anywhere on their screen or to another monitor.</li><li>Keep interpreters in view while presenting, viewing shared content, using chat or captions, or with the main meeting window minimized.</li></ul><p>The pop-out window only changes the user's own view, and interpreters stay in the main meeting gallery for everyone else. The window isn't visible to other participants when the user shares their screen.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>You don't need to do anything to prepare. Consider telling D/HH users and the interpreters who support them about this feature, and update your training and accessibility documentation as needed. To use the feature:</p><ol><li>In Teams Accessibility settings, turn on Sign language mode and select I am a Signer.</li><li>Select Manage interpreters and add the people who interpret for you.</li><li>Select View &gt; Pop out interpreters during a meeting.</li><li>Users open the pop-out window in each meeting. For faster access, they can pin the Pop out interpreters button to the meeting toolbar. There is no admin policy for this feature.</li></ol><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature"
+      ],
+      "startDate": "2026-11-18T23:41:22Z",
+      "endDate": "2027-03-15T07:00:00Z",
+      "lastModifiedDateTime": "2026-11-20T22:21:27.527Z",
+      "version": "2026-11-20T22:21:27.527Z",
+      "eventId": "message-center:MC1559642:2026-11-20T22:21:27.527Z",
+      "firstSeenAt": "2026-11-21T09:58:01.521Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 9,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 0 new, 9 updated, and 0 removed Microsoft Teams documentation files across 3 documentation areas.",
+    "groups": [
+      {
+        "category": "Feature update",
+        "title": "Microsoft Teams",
+        "summary": "Teams supports Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes aren't supported. The migration documentation now includes a screenshot showing the New dashboard toggle. The VDI documentation now reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later. Teams 26276.x.x.x is unaffected, and the page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025.",
+        "sourceFiles": [
+          "Teams/Exchange-Teams-interact.md",
+          "Teams/migration-from-teams.md",
+          "Teams/teams-client-vdi-requirements-deploy.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams devices",
+        "summary": "The table now lists eight Logitech devices with their AOSP, Teams client, Intune, Authenticator, and Admin Agent versions, plus November 19, 2026 dates. Firmware versions are included where available. The documentation now notes that changing the language on a Teams Rooms on Android device using version 1449/1.0.96.2026344105 may make the Settings menu unresponsive until the device is restarted. The documentation now lists Cisco Navigator, TAP Scheduler, DockFlex, and TAP Scheduler 2, including their AOSP, Teams client, Intune, Authenticator, Admin Agent versions, and November 18–19, 2026 dates. The certified hardware table now lists CCX350, CCX400, CCX500, CCX505, CCX600, and Trio C60 with ",
+        "sourceFiles": [
+          "Teams/devices/certified-hardware-android.md",
+          "Teams/devices/known-issues.md",
+          "Teams/devices/teams-panels-certified-hardware.md",
+          "Teams/devices/teams-phones-certified-hardware.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams Rooms",
+        "summary": "The certified hardware documentation updates the Q-SYS Core and Q-SYS RoomSuite Modular System entries and their linked product information. The feature comparison now lists breakout-room participation, user-accessible device language changes, and Rate My Call reports as available where they were previously marked unavailable.",
+        "sourceFiles": [
+          "Teams/rooms/certified-hardware.md",
+          "Teams/rooms/teams-devices-feature-comparison.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Feature update",
+        "headline": "Microsoft Teams",
+        "detail": "Teams supports Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes aren't supported. The migration documentation now includes a screenshot showing the New dashboard toggle. The VDI documentation now reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later. Teams 26276.x.x.x is unaffected, and the page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams devices",
+        "detail": "The table now lists eight Logitech devices with their AOSP, Teams client, Intune, Authenticator, and Admin Agent versions, plus November 19, 2026 dates. Firmware versions are included where available. The documentation now notes that changing the language on a Teams Rooms on Android device using version 1449/1.0.96.2026344105 may make the Settings menu unresponsive until the device is restarted. The documentation now lists Cisco Navigator, TAP Scheduler, DockFlex, and TAP Scheduler 2, including their AOSP, Teams client, Intune, Authenticator, Admin Agent versions, and November 18–19, 2026 dates. The certified hardware table now lists CCX350, CCX400, CCX500, CCX505, CCX600, and Trio C60 with "
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams Rooms",
+        "detail": "The certified hardware documentation updates the Q-SYS Core and Q-SYS RoomSuite Modular System entries and their linked product information. The feature comparison now lists breakout-room participation, user-accessible device language changes, and Rate My Call reports as available where they were previously marked unavailable."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

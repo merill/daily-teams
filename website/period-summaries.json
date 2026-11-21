@@ -592,48 +592,48 @@
     },
     "2026-11-21": {
       "headline": "Teams VDI guidance flags possible BSODs on unsupported Windows Server 2019",
-      "overview": "The most consequential update is a VDI warning: guidance now reports possible BSODs for Teams 26288.x.x.x and later on Windows Server 2019 VMs, identifies 26276.x.x.x as unaffected, and says customers must migrate to Windows Server 2025. Other targeted updates clarify Loop meeting-note limitations, document a Teams Rooms language-change issue, and refresh device capability and hardware tables.",
-      "adminImpact": "Administrators running Teams VDI on Windows Server 2019 should plan migration to Windows Server 2025. Set expectations that Loop-based notes with on-premises Exchange mailboxes apply to single-instance meetings, not recurring meetings. Restart a Teams Rooms on Android device if its Settings menu becomes unresponsive after a language change, and use the refreshed device tables when validating hardware capabilities and software versions.",
+      "overview": "The most consequential updates tighten Teams VDI and Teams Phone guidance: Windows Server 2019 VMs may encounter BSODs with Teams 26288.x.x.x or later, while personal voicemail AI triage licensing is now stated per voicemail receiver. Other meaningful changes define Loop meeting-note limits for on-premises Exchange mailboxes, document a Teams Rooms Android Settings failure, and add evaluation and Teams Queues availability detail for voicemail triage. Most remaining edits refresh certified-hardware tables, comparison data, or page structure.",
+      "adminImpact": "Prioritize migration planning for Windows Server 2019 VDI, which the guidance identifies as unsupported, and audit Microsoft 365 Copilot coverage for each voicemail receiver. Set expectations that recurring Loop meeting notes are unsupported for users with on-premises mailboxes, and use a restart to recover Settings after the documented Teams Rooms language-change issue. Teams Premium remains required for voicemail AI triage, with no configuration change specified for the stated Teams Queues availability update.",
       "keyChanges": [
         {
-          "title": "VDI guidance adds a Windows Server 2019 BSOD warning",
-          "detail": "The VDI page now reports possible BSODs on Windows Server 2019 virtual machines running Teams 26288.x.x.x or later. Teams 26276.x.x.x is identified as unaffected; the page also states that Windows Server 2019 is unsupported and requires migration to Windows Server 2025.",
+          "title": "Windows Server 2019 VDI now carries a documented BSOD risk",
+          "detail": "The VDI requirements guidance reports possible BSODs on Windows Server 2019 virtual machines running Teams 26288.x.x.x or later. Teams 26276.x.x.x is identified as unaffected; Windows Server 2019 is unsupported, and customers must migrate to Windows Server 2025.",
           "product": "Clients",
           "sourceId": "doc-2026-11-21-teams-client-vdi-requirements-deploy-09"
         },
         {
-          "title": "Loop meeting notes are limited to single-instance meetings on-premises",
-          "detail": "The Exchange and Teams guidance now documents Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes are not supported in that scenario.",
+          "title": "Personal voicemail AI triage licensing is specified per receiver",
+          "detail": "The billing guidance now requires a Microsoft 365 Copilot license for each voicemail receiver rather than each user. Administrators should check prerequisite coverage using the receiver as the licensing unit.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-21-personal-voicemail-ai-triage-billing-10"
+        },
+        {
+          "title": "Loop meeting notes have a defined on-premises Exchange limitation",
+          "detail": "The Exchange and Teams guidance says users with mailboxes hosted on Exchange on-premises can use Loop-based meeting notes for single-instance meetings. Recurring meeting notes aren't supported.",
           "product": "Teams",
           "sourceId": "doc-2026-11-21-exchange-teams-interact-01"
         },
         {
-          "title": "A Teams Rooms language change can make Settings unresponsive",
-          "detail": "The known-issues page now ties the problem to Teams Rooms on Android version 1449/1.0.96.2026344105: changing the device language may leave the Settings menu unresponsive until the device is restarted.",
+          "title": "A Teams Rooms Android language change can make Settings unresponsive",
+          "detail": "The known-issues guidance identifies version 1449/1.0.96.2026344105: changing the device language may make the Settings menu unresponsive. Restarting the affected device restores access to Settings.",
           "product": "Devices",
           "sourceId": "doc-2026-11-21-known-issues-03"
         },
         {
-          "title": "The device comparison now marks three capabilities as available",
-          "detail": "The Teams device comparison lists breakout-room participation, user-accessible device language changes, and Rate My Call reports as available where they were previously marked unavailable.",
-          "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-21-teams-devices-feature-comparison-08"
-        },
-        {
-          "title": "The Android certified-hardware table lists eight Logitech configurations",
-          "detail": "The table now lists eight Logitech devices with AOSP, Teams client, Intune, Authenticator, and Admin Agent versions, plus November 19, 2026 dates and firmware versions where available.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-21-certified-hardware-android-02"
+          "title": "Voicemail AI triage guidance adds evaluation and Queues timing",
+          "detail": "The overview now says a compliant evaluation model assesses generated triage insights and monitors triage. It also says shared-voicemail AI triage data will be available in the Teams Queues app soon, while Teams Premium remains required.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-21-voicemail-ai-triage-overview-12"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-21T09:58:01.822Z",
+      "generatedAt": "2026-11-21T20:35:50.118Z",
       "usage": {
-        "inputTokens": 1991,
-        "outputTokens": 2691,
-        "costUsd": 0.003627
+        "inputTokens": 2373,
+        "outputTokens": 3257,
+        "costUsd": 0.004383
       }
     }
   },
@@ -731,102 +731,102 @@
       }
     },
     "2026-11-16": {
-      "headline": "Teams Rooms migration nears deadline as meeting AI controls are split",
-      "overview": "The week’s strongest administrator signals are operational: Teams device management is moving from the Teams admin center to the Teams Rooms Pro Management Portal by November 2026, while the Copilot meeting policy is being replaced by MeetingAI and TranscriptionWithMeetingAI from December. Teams Phone guidance also details personal voicemail AI triage through the Frontier Program, with licensing, usage-based billing, spending policies, and voicemail-policy prerequisites.",
-      "adminImpact": "Prioritize the device-management cutover and plan the required migration of Teams VDI deployments from Windows Server 2019 to Windows Server 2025. Prepare users for the iOS/iPadOS 18 requirement for new Teams releases starting in mid-December. The meeting-policy split is automatically mapped; voicemail AI triage is optional and requires billing and policy controls before evaluation.",
+      "headline": "Teams device management hits November deadline as meeting AI controls split",
+      "overview": "Teams administrators face a near-term move from Teams admin center device management to the Teams Rooms Pro Management Portal by November 2026, requiring migration steps, software updates, and prerequisite checks. December rollouts will replace the Copilot meeting policy with separate MeetingAI and TranscriptionWithMeetingAI controls and add role-based recording and transcription permissions. The period also brings the iOS/iPadOS 17 support cutoff for new Teams releases and retires PowerPoint Live Translate slides on November 30. A new Teams Phone voicemail AI triage guide remains limited to the Microsoft Frontier Program.",
+      "adminImpact": "Prioritize the TAC-to-Teams Rooms Pro Management Portal migration and verify device prerequisites before the November 2026 deadline. Review the new meeting policy model and decide whether presenter recording should be restricted. Plan iOS/iPadOS 18 upgrades, notify users about the Translate slides retirement, and treat voicemail AI triage as an optional evaluation requiring licensing, usage-based billing, a spending policy, and a voicemail policy.",
       "keyChanges": [
         {
-          "title": "Teams device management moves from TAC to the Pro Management Portal",
-          "detail": "Teams device management in the Teams admin center is slated for deprecation by November 2026, moving to the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and meet device and cloud prerequisites to avoid management disruptions; timing varies by device type and cloud environment.",
+          "title": "Teams device management is moving out of TAC by November 2026",
+          "detail": "Microsoft will deprecate device management in the Teams admin center by November 2026 and transition it to the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and meet device-type and cloud-environment prerequisites to avoid management disruptions.",
           "product": "Teams device management",
           "sourceId": "MC1448373"
         },
         {
-          "title": "Copilot meeting policy is replaced by MeetingAI and TranscriptionWithMeetingAI",
-          "detail": "Beginning in December 2026, Teams will replace the Copilot meeting policy with separate MeetingAI and TranscriptionWithMeetingAI policies, alongside more granular meeting options for AI and transcription. Existing settings will be mapped automatically, so no migration action is required.",
+          "title": "Copilot meeting policy splits into separate AI and transcription controls",
+          "detail": "Beginning in December 2026, Microsoft will replace the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI, adding more granular controls for AI and transcription in meetings. Existing settings will be mapped automatically.",
           "product": "Teams meetings",
           "sourceId": "MC1532253"
         },
         {
-          "title": "Teams ends iOS 17 and iPadOS 17 support for new releases",
-          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing app versions will continue working without support, so Microsoft advises organizations to notify users, encourage operating-system upgrades, and update support guidance.",
+          "title": "Tenant policy adds role-level control over recording and transcription",
+          "detail": "A December 2026 rollout will let administrators set recording and transcription permissions for organizers, co-organizers, and presenters, with options to lock the settings or allow users to change them.",
+          "product": "Teams meetings",
+          "sourceId": "MC1560924"
+        },
+        {
+          "title": "Teams ends iOS 17 support for new releases in mid-December",
+          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 and later. Existing Teams versions will continue to work, but without support.",
           "product": "Teams clients",
           "sourceId": "MC1556088"
         },
         {
-          "title": "VDI guidance warns of possible BSODs on Windows Server 2019",
-          "detail": "Updated Teams VDI guidance reports possible blue-screen failures on Windows Server 2019 virtual machines running Teams 26288.x.x.x or later; Teams 26276.x.x.x is unaffected. The page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025.",
-          "product": "Teams VDI",
-          "sourceId": "doc-2026-11-21-teams-client-vdi-requirements-deploy-09"
-        },
-        {
-          "title": "New Teams Phone guidance covers Frontier-only personal voicemail AI triage",
-          "detail": "A new article describes AI analysis of voicemail transcripts, including summaries, categories, suggested actions, and urgency indicators, along with licensing, usage-based billing, security-group scoping, spending policies, limits, and alerts. The capability is available only through the Microsoft Frontier Program; evaluation requires both spending and voicemail-policy configuration.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
+          "title": "PowerPoint Live retires Translate slides on November 30",
+          "detail": "The Translate slides feature in PowerPoint Live during Teams meetings will be retired worldwide starting November 30, 2026. Attendees will see slides in their original language and will no longer be able to translate them.",
+          "product": "PowerPoint Live in Teams",
+          "sourceId": "MC1532259"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-21T09:58:01.822Z",
+      "generatedAt": "2026-11-21T20:35:50.118Z",
       "usage": {
-        "inputTokens": 9963,
-        "outputTokens": 6375,
-        "costUsd": 0.009643
+        "inputTokens": 9978,
+        "outputTokens": 7850,
+        "costUsd": 0.011416
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams device management shifts to PMP as meeting AI policies split",
-      "overview": "November’s strongest administrator signal is the Teams device-management cutover: management in the Teams admin center is being deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal, with migration steps, device software updates, and prerequisites required to avoid disruption. From December, the Copilot meeting policy becomes MeetingAI plus TranscriptionWithMeetingAI, while VDI guidance tells Windows Server 2019 customers to move to Server 2025 after flagging possible BSODs on Teams 26288.x.x.x or later. The month also sets a December retirement for off-network Teams Free invitations and documents a Frontier-only, usage-billed personal voicemail AI triage capability.",
-      "adminImpact": "Prioritize the PMP cutover and verify device software and prerequisites; the certified-device guidance identifies version 1.0.0.202610190119 (Admin Agent 901) as an unpausable update required for PMP management. No manual remapping is needed for the meeting-policy split, but review the two new policy scopes if AI and transcription require different controls. For VDI, schedule migration to Windows Server 2025 and treat Teams 26288.x.x.x or later on Server 2019 as the documented BSOD risk; 26276.x.x.x is unaffected. Update user guidance before off-network Teams Free invitations stop in December. Evaluate voicemail AI triage only with the required Copilot licensing, usage-based billing, spending policy, and voicemail policy; it is Frontier-only and has no announced GA timing.",
+      "headline": "Teams Rooms management shifts to PMP as iOS 17 support ends",
+      "overview": "November was update-heavy, but the consequential administrator work is clear: Teams device management is moving from the Teams admin center (TAC) to the Teams Rooms Pro Management Portal (PMP), while VDI guidance flags a possible Windows Server 2019 failure mode. Meeting governance is becoming more explicit, with separate MeetingAI and TranscriptionWithMeetingAI policies and a new tenant control for recording and transcription permissions by role. Teams will require iOS/iPadOS 18 for new releases from mid-December.",
+      "adminImpact": "Prioritize TAC-to-PMP migration, device software updates, and prerequisite checks against the November 2026 deprecation target. For VDI, inventory Windows Server 2019 and plan migration to Windows Server 2025; the guidance identifies Teams 26288.x.x.x or later as the affected range and 26276.x.x.x as unaffected. Existing Copilot meeting-policy settings will map automatically, so no migration is required, but use the new role-based recording control if restricting presenter recording is needed. Plan iOS/iPadOS 18 upgrades and update user and support guidance.",
       "keyChanges": [
         {
-          "title": "Teams device management moves from TAC to the Teams Rooms Pro portal",
-          "detail": "Teams device management in the Teams admin center is being deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal. Admins must complete migration steps, update device software, and meet prerequisites; requirements vary by device type and cloud environment, and gaps can cause management disruption.",
-          "product": "Teams",
+          "title": "Teams device management is moving from TAC to the PMP",
+          "detail": "TAC device management is slated for deprecation by November 2026. The transition to the Teams Rooms Pro Management Portal requires migration steps, device software updates, and prerequisite checks; timing varies by device type and cloud environment, and missing those requirements risks management disruption.",
+          "product": "Teams device management",
           "sourceId": "MC1448373"
         },
         {
-          "title": "Meeting AI administration splits into two policies",
-          "detail": "Beginning in December 2026, Microsoft will replace the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI. New meeting options provide more granular control over AI and transcription, while existing settings are mapped automatically.",
-          "product": "Teams",
-          "sourceId": "MC1532253"
-        },
-        {
           "title": "VDI guidance flags possible BSODs on Windows Server 2019",
-          "detail": "The updated VDI requirements page reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later; Teams 26276.x.x.x is unaffected. It also identifies Windows Server 2019 as unsupported and directs customers to migrate to Windows Server 2025.",
-          "product": "Clients",
+          "detail": "Updated Teams VDI guidance reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later; Teams 26276.x.x.x is unaffected. The guidance also states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025.",
+          "product": "Teams Client VDI",
           "sourceId": "doc-2026-11-21-teams-client-vdi-requirements-deploy-09"
         },
         {
-          "title": "Off-network invitations to Teams Free retire in December",
-          "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, but user guidance should be updated.",
-          "product": "Teams",
-          "sourceId": "MC1546409"
+          "title": "Copilot meeting controls split into MeetingAI and TranscriptionWithMeetingAI",
+          "detail": "Beginning in December 2026, Teams will replace the Copilot meeting policy with separate MeetingAI and TranscriptionWithMeetingAI policies. New meeting options provide more granular AI control, while existing settings will be mapped automatically.",
+          "product": "Teams meetings",
+          "sourceId": "MC1532253"
         },
         {
-          "title": "Frontier-only personal voicemail AI triage requires billing and policy controls",
-          "detail": "New Teams Phone guidance covers personal voicemail AI triage through the Microsoft Frontier Program. It specifies Copilot licensing, usage-based billing, security-group scoping, spending policies, limits and alerts, and voicemail-policy configuration; GA timing has not been announced.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
+          "title": "A tenant policy will assign recording and transcription rights by role",
+          "detail": "A new tenant policy will let administrators set recording and transcription permissions for organizers, co-organizers, and presenters, with options to lock the settings or allow changes. Rollout begins in December 2026.",
+          "product": "Teams meetings",
+          "sourceId": "MC1560924"
+        },
+        {
+          "title": "New Teams releases will require iOS and iPadOS 18",
+          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing Teams versions will continue working on iOS/iPadOS 17, but without support.",
+          "product": "Teams mobile",
+          "sourceId": "MC1556088"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-21T09:58:01.822Z",
+      "generatedAt": "2026-11-21T20:35:50.118Z",
       "usage": {
-        "inputTokens": 6288,
-        "outputTokens": 7189,
-        "costUsd": 0.009884
+        "inputTokens": 6327,
+        "outputTokens": 11031,
+        "costUsd": 0.014503
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-21T09:58:01.822Z",
+  "generatedAt": "2026-11-21T20:35:50.118Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -905,22 +905,22 @@
       "costUsd": 0.040097
     },
     "2026-11-21": {
-      "inputTokens": 18242,
-      "outputTokens": 16255,
-      "requests": 3,
-      "costUsd": 0.023154
+      "inputTokens": 36920,
+      "outputTokens": 38393,
+      "requests": 6,
+      "costUsd": 0.053455
     }
   },
   "lastRun": {
-    "inputTokens": 18242,
-    "outputTokens": 16255,
+    "inputTokens": 18678,
+    "outputTokens": 22138,
     "requests": 3,
-    "costUsd": 0.023154
+    "costUsd": 0.030301
   },
   "totalUsage": {
-    "inputTokens": 243828,
-    "outputTokens": 289475,
-    "requests": 60,
-    "costUsd": 0.396133
+    "inputTokens": 262506,
+    "outputTokens": 311613,
+    "requests": 63,
+    "costUsd": 0.426434
   }
 }

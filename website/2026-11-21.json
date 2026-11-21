@@ -234,6 +234,84 @@
         "generatedBy": "openai",
         "model": "gpt-5.6-luna"
       }
+    },
+    {
+      "filename": "Teams/personal-voicemail-ai-triage-billing.md",
+      "status": "modified",
+      "additions": 10,
+      "deletions": 10,
+      "changes": 20,
+      "patch": "diff --git a/Teams/personal-voicemail-ai-triage-billing.md b/Teams/personal-voicemail-ai-triage-billing.md\nindex d7ffdf2..b625ab9 100644\n--- a/Teams/personal-voicemail-ai-triage-billing.md\n+++ b/Teams/personal-voicemail-ai-triage-billing.md\n@@ -64,7 +64,7 @@ This feature is available only through the Microsoft Frontier Program. General a\n \r\n Personal voicemail AI triage requires:\r\n \r\n-- A Microsoft 365 Copilot license for each user.\r\n+- A Microsoft 365 Copilot license for each voicemail receiver.\r\n - Usage-based billing.\r\n \r\n ## Personal voicemail AI triage usage-based billing\r\n@@ -77,7 +77,7 @@ If you want to limit which users have personal voicemail AI triage enabled, crea\n \r\n Configuring a spending policy alone doesn't enable AI triage for users. AI triage must also be enabled in voicemail policy.\r\n \r\n-### For **Specific groups** option create a Microsoft 365 security group\r\n+#### For **Specific groups** option create a Microsoft 365 security group\r\n \r\n 1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), go to **Teams & groups** &gt; **Active teams and groups** &gt; **Security groups**.\r\n 2. Select **Add a security group**.\r\n@@ -89,24 +89,24 @@ and Add users to the group\n 2. Add owners.\r\n 3. Add users who should be included in this policy.\r\n \r\n-## Create a spending policy\r\n+### Create a spending policy\r\n \r\n These steps require the **AI Administrator** role.\r\n \r\n-### Add spending policy\r\n+#### Add spending policy\r\n \r\n 1. In the Microsoft 365 admin center, go to **Copilot** &gt; **Cost Management**.\r\n 2. Select the **Configuration** tab.\r\n 3. Select **+ Add spending policy**.\r\n \r\n-### Agents and services\r\n+#### Agents and services\r\n \r\n 1. Turn off **Allow new Agents and services as they become available**.\r\n 2. Select only **AI Triage for Personal Voicemail**.\r\n 3. Clear all other services.\r\n 4. Select **Next**.\r\n \r\n-### Access scope\r\n+#### Access scope\r\n \r\n 1. Name the policy.\r\n 2. Select one of the following:\r\n@@ -114,24 +114,24 @@ These steps require the **AI Administrator** role.\n     - **All users** to apply the policy to all eligible users.\r\n 3. Select **Next**.\r\n \r\n-### Set limits and alerts\r\n+#### Set limits and alerts\r\n \r\n 1. Configure monthly spending limits.\r\n 2. Optionally configure per-user limits.\r\n 3. Optionally configure policy-level and user-level alerts.\r\n 4. Select **Next**.\r\n \r\n-### Billing method\r\n+#### Billing method\r\n \r\n 1. Use the default spending policy billing method, or override it if you're a Global admin or Billing admin.\r\n 2. Select **Next**.\r\n \r\n-### Review and add the policy\r\n+#### Review and add the policy\r\n \r\n 1. Verify scope, services, billing method, limits, and alerts.\r\n 2. Select **Create spending policy**.\r\n \r\n-## Activation prerequisites and charging behavior\r\n+### Activation prerequisites and charging behavior\r\n \r\n Personal voicemail AI triage runs only when all of the following are true:\r\n \r\n",
+      "baseCommitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitSha": "d6ec7d413ba4afa04484736d08836bece96ef0da",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-21 12:55:00 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/personal-voicemail-ai-triage-billing.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/personal-voicemail-ai-triage-billing",
+      "eventId": "teams-docs:d6ec7d413ba4afa04484736d08836bece96ef0da:modified:Teams/personal-voicemail-ai-triage-billing.md",
+      "firstSeenAt": "2026-11-21T20:35:42.123Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Voicemail AI triage licensing requirement clarified",
+        "summary": "The documentation now specifies a Microsoft 365 Copilot license for each voicemail receiver instead of each user. It also updates the page’s heading hierarchy.",
+        "adminImpact": "Review licensing plans to ensure each voicemail receiver is covered by the documented prerequisite.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/shared-voicemail-ai-triage-billing.md",
+      "status": "modified",
+      "additions": 14,
+      "deletions": 14,
+      "changes": 28,
+      "patch": "diff --git a/Teams/shared-voicemail-ai-triage-billing.md b/Teams/shared-voicemail-ai-triage-billing.md\nindex 5e87bd8..10b68b4 100644\n--- a/Teams/shared-voicemail-ai-triage-billing.md\n+++ b/Teams/shared-voicemail-ai-triage-billing.md\n@@ -51,20 +51,20 @@ Important\n \r\n This feature is available only through the Microsoft Frontier Program. General availability (GA) timing hasn't been announced yet.\r\n \r\n-## Planning and licensing review\r\n+### Planning and licensing review\r\n \r\n-### Planning\r\n+#### Planning\r\n \r\n - [Usage-based billing](/en-us/copilot/implement/usage-based-billing-copilot-credits-setup)\r\n - [Configure billing methods](/en-us/copilot/implement/usage-based-billing-copilot-credits-setup#configure-billing-method)\r\n \r\n-### Licensing\r\n+#### Licensing\r\n \r\n - Shared voicemail AI triage requires usage-based billing.\r\n - A Microsoft 365 Copilot license isn't required for shared voicemail triage.\r\n - For Queues app scenarios, the Queues app has separate licensing requirements (Teams Premium).\r\n \r\n-## Shared voicemail AI triage usage-based billing\r\n+### Shared voicemail AI triage usage-based billing\r\n \r\n Each shared voicemail is charged once per processed voicemail, regardless of how many users receive it.\r\n \r\n@@ -74,7 +74,7 @@ If you want to limit which resource accounts have voicemail AI triage enabled, c\n \r\n Configuring a spending policy alone doesn't enable AI triage for resource accounts. AI triage must also be enabled in the specific Call Queue, Auto Attendant, and Teams Phone Agent templates.\r\n \r\n-### For \"Specific groups\" option create a Microsoft 365 security group\r\n+#### For \"Specific groups\" option create a Microsoft 365 security group\r\n \r\n 1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), go to **Teams & groups** &gt; **Active teams and groups** &gt; **Security groups**.\r\n 2. Select **Add a security group**.\r\n@@ -86,24 +86,24 @@ and add Call Queue, Auto Attendant, and Teams Phone Agent resource accounts to t\n 2. Add owners.\r\n 3. Add the resource accounts used by Auto Attendants, Call Queues, or Teams Phone Agents.\r\n \r\n-## Create a spending policy\r\n+### Create a spending policy\r\n \r\n These steps require the **AI Administrator** role.\r\n \r\n-### Add spending policy\r\n+#### Add spending policy\r\n \r\n 1. In the Microsoft 365 admin center, go to **Copilot** &gt; **Cost Management**.\r\n 2. Select the **Configuration** tab.\r\n 3. Select **+ Add spending policy**.\r\n \r\n-### Agents and services\r\n+#### Agents and services\r\n \r\n 1. Turn off **Allow new Agents and services as they become available**.\r\n 2. Select only **AI Triage for Shared Voicemail**.\r\n 3. Clear all other services.\r\n 4. Select **Next**.\r\n \r\n-### Access scope\r\n+#### Access scope\r\n \r\n 1. Name the policy.\r\n 2. Select one of the following:\r\n@@ -111,24 +111,24 @@ These steps require the **AI Administrator** role.\n     - **All users** to apply the policy to all resource accounts.\r\n 3. Select **Next**.\r\n \r\n-### Set limits and alerts\r\n+#### Set limits and alerts\r\n \r\n 1. Configure monthly spending limits.\r\n 2. Optionally configure per-resource-account limits.\r\n 3. Optionally configure policy-level and user-level alerts.\r\n 4. Select **Next**.\r\n \r\n-### Billing method\r\n+#### Billing method\r\n \r\n 1. Use the default spending policy billing method, or override it if you're a Global admin or Billing admin.\r\n 2. Select **Next**.\r\n \r\n-### Review and add the policy\r\n+#### Review and add the policy\r\n \r\n 1. Verify scope, services, billing method, limits, and alerts.\r\n 2. Select **Create spending policy**.\r\n \r\n-## Activation prerequisites and charging behavior\r\n+### Activation prerequisites and charging behavior\r\n \r\n Shared voicemail AI triage runs only when both are true:\r\n \r\n@@ -137,7 +137,7 @@ Shared voicemail AI triage runs only when both are true:\n \r\n If no template is selected, AI triage isn't performed and no usage-based billing charges are incurred, even when a spending policy is configured.\r\n \r\n-## Billing attribution\r\n+#### Billing attribution\r\n \r\n Shared voicemail AI triage is billed once per processed voicemail, regardless of how many users receive the voicemail.\r\n \r\n",
+      "baseCommitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitSha": "d6ec7d413ba4afa04484736d08836bece96ef0da",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-21 12:55:00 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/shared-voicemail-ai-triage-billing.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/shared-voicemail-ai-triage-billing",
+      "eventId": "teams-docs:d6ec7d413ba4afa04484736d08836bece96ef0da:modified:Teams/shared-voicemail-ai-triage-billing.md",
+      "firstSeenAt": "2026-11-21T20:35:42.134Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Shared voicemail AI triage billing headings reorganized",
+        "summary": "The documentation’s section headings were adjusted to create a more structured hierarchy, including planning, licensing, spending policy, activation, and billing attribution sections.",
+        "adminImpact": "No administrator action is required; the documented procedures and billing topics remain the same.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/voicemail-ai-triage-overview.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 2,
+      "changes": 4,
+      "patch": "diff --git a/Teams/voicemail-ai-triage-overview.md b/Teams/voicemail-ai-triage-overview.md\nindex b4ddc1f..34cc9f4 100644\n--- a/Teams/voicemail-ai-triage-overview.md\n+++ b/Teams/voicemail-ai-triage-overview.md\n@@ -71,7 +71,7 @@ The service analyzes the voicemail transcript and can generate these outputs:\n - **Suggested actions**: Recommended follow-up tasks derived from the voicemail content. System-defined action labels include callback, set appointment, reschedule appointment, cancel appointment, and email reply, followed by other requested actions generated from the transcript.\r\n - **Importance flag (urgency)**: A priority signal for time-critical messages, which can mark the voicemail as important in Outlook.\r\n \r\n-Generated triage insights are stored with the voicemail in Exchange and can be used by downstream automations such as Outlook rules, agent-based workflows, and other LLM-powered processes.\r\n+Generated triage insights are stored with the voicemail in Exchange and can be used by downstream automations such as Outlook rules, agent-based workflows, and other LLM-powered processes. A compliant evaluation model is used to assess the quality of the generated triage insights and monitor triage performance.\r\n \r\n If AI-generated content doesn't appear for a voicemail, audio or transcript clarity might be insufficient for reliable triage output.\r\n \r\n@@ -80,7 +80,7 @@ If AI-generated content doesn't appear for a voicemail, audio or transcript clar\n - **Shared voicemail triage** applies to missed calls handled by Auto Attendants, Call Queues, and Teams Phone Agents.\r\n - **Personal voicemail triage** applies to a user's personal Teams voicemail.\r\n \r\n-For shared voicemail, AI triage data is also shown in the Teams Queues app experience. This Queues app experience isn't generally available (GA) yet. The Queues app requires a Teams Premium license.\r\n+For shared voicemail, AI triage data will also be available in the Teams Queues app experience soon. The Queues app requires a Teams Premium license.\r\n \r\n ## Admin controls\r\n \r\n",
+      "baseCommitSha": "8f8609febc090c0bb613fbe6e6cb46e9ca4af688",
+      "commitSha": "d6ec7d413ba4afa04484736d08836bece96ef0da",
+      "commitMessage": "Mirror Learn: 3 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-21 12:55:00 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/voicemail-ai-triage-overview.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/voicemail-ai-triage-overview",
+      "eventId": "teams-docs:d6ec7d413ba4afa04484736d08836bece96ef0da:modified:Teams/voicemail-ai-triage-overview.md",
+      "firstSeenAt": "2026-11-21T20:35:42.144Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Voicemail AI triage documentation adds evaluation and Queues details",
+        "summary": "The page now states that a compliant evaluation model assesses generated triage insights and monitors triage. It also says shared-voicemail AI triage data will be available in the Teams Queues app soon; Teams Premium is still required.",
+        "adminImpact": "Admins should note the upcoming Queues app availability and the documented evaluation of triage insights. No configuration change is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
     }
   ],
   "deletedFiles": [],
@@ -394,23 +472,26 @@
     }
   ],
   "summary": {
-    "totalCommits": 1,
-    "totalFiles": 9,
+    "totalCommits": 2,
+    "totalFiles": 12,
     "authors": [
       "github-actions[bot]"
     ]
   },
   "englishSummary": {
-    "overview": "Today's report includes 0 new, 9 updated, and 0 removed Microsoft Teams documentation files across 3 documentation areas.",
+    "overview": "Today's report includes 0 new, 12 updated, and 0 removed Microsoft Teams documentation files across 3 documentation areas.",
     "groups": [
       {
         "category": "Feature update",
         "title": "Microsoft Teams",
-        "summary": "Teams supports Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes aren't supported. The migration documentation now includes a screenshot showing the New dashboard toggle. The VDI documentation now reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later. Teams 26276.x.x.x is unaffected, and the page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025.",
+        "summary": "Teams supports Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes aren't supported. The migration documentation now includes a screenshot showing the New dashboard toggle. The VDI documentation now reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later. Teams 26276.x.x.x is unaffected, and the page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025. The documentation now specifies a Microsoft 365 Copilot license for each voicemail receiver instead of each user. It also updates the page’s heading hierarchy. The documentation’s section h",
         "sourceFiles": [
           "Teams/Exchange-Teams-interact.md",
           "Teams/migration-from-teams.md",
-          "Teams/teams-client-vdi-requirements-deploy.md"
+          "Teams/teams-client-vdi-requirements-deploy.md",
+          "Teams/personal-voicemail-ai-triage-billing.md",
+          "Teams/shared-voicemail-ai-triage-billing.md",
+          "Teams/voicemail-ai-triage-overview.md"
         ]
       },
       {
@@ -438,7 +519,7 @@
       {
         "category": "Feature update",
         "headline": "Microsoft Teams",
-        "detail": "Teams supports Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes aren't supported. The migration documentation now includes a screenshot showing the New dashboard toggle. The VDI documentation now reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later. Teams 26276.x.x.x is unaffected, and the page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025."
+        "detail": "Teams supports Loop-based meeting notes for single-instance meetings when user mailboxes are hosted on Exchange on-premises. Recurring meeting notes aren't supported. The migration documentation now includes a screenshot showing the New dashboard toggle. The VDI documentation now reports possible BSODs on Windows Server 2019 VMs running Teams 26288.x.x.x or later. Teams 26276.x.x.x is unaffected, and the page states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025. The documentation now specifies a Microsoft 365 Copilot license for each voicemail receiver instead of each user. It also updates the page’s heading hierarchy. The documentation’s section h"
       },
       {
         "category": "Doc update",

@@ -1,0 +1,102 @@
+{
+  "newFiles": [],
+  "modifiedFiles": [
+    {
+      "filename": "Teams/teams-analytics-and-reports/view-analytics.md",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 1,
+      "changes": 6,
+      "patch": "diff --git a/Teams/teams-analytics-and-reports/view-analytics.md b/Teams/teams-analytics-and-reports/view-analytics.md\nindex 8add35c..788408d 100644\n--- a/Teams/teams-analytics-and-reports/view-analytics.md\n+++ b/Teams/teams-analytics-and-reports/view-analytics.md\n@@ -16,7 +16,7 @@ ms.topic: how-to\n ms.service: msteams\n ms.subservice: msteams-admin\n ms.reviewer: snchatur\n-ms.date: 2026-05-26T00:00:00.0000000Z\n+ms.date: 2026-11-18T00:00:00.0000000Z\n f1.keywords:\n - NOCSH\n ms.localizationpriority: medium\n@@ -60,6 +60,10 @@ In Microsoft Teams, users can view analytics for teams and channels that they're\n \r\n Users can filter any of these views to see data for a specified time period.\r\n \r\n+Note\r\n+\r\n+Team and channel analytics isn't supported in GCCH and DoD environments.\r\n+\r\n ## View cross-team analytics\r\n \r\n 1. In Teams, at the bottom of the teams list, next to **Join or create a team**, select **Manage teams**.\r\n",
+      "baseCommitSha": "56be976ef3dc61e91ec751ae41fabef43c59b19c",
+      "commitSha": "5031c0961a8b14b518ee8cb93d1d4d7000bb6fb2",
+      "commitMessage": "Mirror Learn: 1 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-23 15:08:57 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/teams-analytics-and-reports/view-analytics.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/teams-analytics-and-reports/view-analytics",
+      "eventId": "teams-docs:5031c0961a8b14b518ee8cb93d1d4d7000bb6fb2:modified:Teams/teams-analytics-and-reports/view-analytics.md",
+      "firstSeenAt": "2026-11-24T01:44:00.579Z",
+      "englishSummary": {
+        "category": "Feature update",
+        "headline": "Team and channel analytics unsupported in GCCH and DoD",
+        "summary": "The documentation now states that Team and channel analytics isn't supported in GCCH and DoD environments.",
+        "adminImpact": "Administrators in these environments should not expect this analytics capability to be available.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    }
+  ],
+  "deletedFiles": [],
+  "messageCenterItems": [
+    {
+      "id": "MC1557760",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-23",
+      "title": "Microsoft Teams: Registration capacity for town halls and webinars increases to 20,000",
+      "summary": "Starting December 2026, Microsoft Teams town halls and webinars registration capacity scales with attendee limits, up to 20,000 registrations per event. Teams Enterprise allows 3,000; Attendee Capacity Packs allow up to 20,000. Rollout occurs from mid-December 2026 to late January 2027. No action required.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1557760/",
+      "originalUrl": "https://mc.merill.net/message/MC1557760",
+      "body": "<p>Updated November 23, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>Starting in December, registration capacity for Microsoft Teams town halls and webinars scales with the event's attendee capacity, up to 20,000 registrations per event. Organizers with Teams Enterprise can allow up to 3,000 registrations. Organizers with Attendee Capacity Packs can allow up to 20,000. Organizers can use this to plan large-scale events with registration.</p><p></p><p><b><b>Rollout schedule</b></b></p><ul><li><b>Public Preview</b>: We will begin rolling out on <b>mid-December 2026</b> and expect to complete by<b> late December 2026</b>.</li><li><b>General Availability (Worldwide):</b> We will begin rolling out in <b>early January 2027</b> and expect to complete by<b> late January 2027</b>.</li></ul><p></p><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Organizers of Teams town halls and webinars that use registration</li><li>Admins who manage Teams events policies and Attendee Capacity Pack licenses</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams (town halls and webinars)</li></ul><p><i>What will happen</i></p><ul><li>Registration capacity scales with attendee capacity, up to 20,000 registrations per event.</li><li>Organizers with Teams Enterprise can allow up to 3,000 registrations.</li><li>Organizers with Attendee Capacity Packs can allow up to 20,000 registrations.</li><li>Large webinars with registration don't support broadcast-style streaming, which is available with town halls.</li><li>Organizers still need the right events policy. No new policy access is needed, only the right Attendee Capacity Pack where applicable.</li><li>Existing Teams events policies and admin controls don't change.</li><li>We plan to support more registrations per event in future releases.</li></ul><p></p><p><b><b>Action required and recommendations</b></b></p><p>No action is required. To prepare, you can:</p><ul><li>Tell organizers about the higher registration limits.</li><li>Make sure organizers who need more than 3,000 registrations per event have an Attendee Capacity Pack of the right size. Assign packs in the <i>Teams admin center</i> (<b>Add-on Licenses</b> &gt; <b>Teams Events</b>).</li><li>Update internal training and documentation that mention a 1,000-registration limit.</li><li>Review your Teams events policies in the <i>Teams admin center</i> (<b>Meetings</b> &gt; <b>Events policies</b>) to confirm they meet your organization's needs.</li></ul><p></p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "Feature update",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-17T19:13:20Z",
+      "endDate": "2027-03-01T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-23T17:14:18.75Z",
+      "version": "2026-11-23T17:14:18.75Z",
+      "eventId": "message-center:MC1557760:2026-11-23T17:14:18.75Z",
+      "firstSeenAt": "2026-11-24T01:44:05.634Z"
+    }
+  ],
+  "summary": {
+    "totalCommits": 1,
+    "totalFiles": 1,
+    "authors": [
+      "github-actions[bot]"
+    ]
+  },
+  "englishSummary": {
+    "overview": "Today's report includes 0 new, 1 updated, and 0 removed Microsoft Teams documentation files across 1 documentation area.",
+    "groups": [
+      {
+        "category": "Feature update",
+        "title": "Analytics and reports",
+        "summary": "The documentation now states that Team and channel analytics isn't supported in GCCH and DoD environments.",
+        "sourceFiles": [
+          "Teams/teams-analytics-and-reports/view-analytics.md"
+        ]
+      }
+    ],
+    "highlights": [
+      {
+        "category": "Feature update",
+        "headline": "Analytics and reports",
+        "detail": "The documentation now states that Team and channel analytics isn't supported in GCCH and DoD environments."
+      }
+    ],
+    "generatedBy": "fallback"
+  }
+}

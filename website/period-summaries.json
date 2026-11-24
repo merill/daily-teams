@@ -663,6 +663,28 @@
         "outputTokens": 804,
         "costUsd": 0.001193
       }
+    },
+    "2026-11-24": {
+      "headline": "Team and channel analytics unsupported in GCCH and DoD environments",
+      "overview": "The View Analytics guidance now states that Team and channel analytics isn't supported in GCCH and DoD environments, documenting an environment-specific limitation for the Analytics capability.",
+      "adminImpact": "Administrators in GCCH and DoD environments should not expect Team and channel analytics to be available.",
+      "keyChanges": [
+        {
+          "title": "View Analytics guidance adds a GCCH and DoD support limitation",
+          "detail": "The updated Analytics documentation explicitly says Team and channel analytics isn't supported in GCCH and DoD environments.",
+          "product": "Analytics",
+          "sourceId": "doc-2026-11-24-view-analytics-01"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-24T01:44:05.777Z",
+      "usage": {
+        "inputTokens": 992,
+        "outputTokens": 478,
+        "costUsd": 0.000772
+      }
     }
   },
   "weeks": {
@@ -803,58 +825,86 @@
         "outputTokens": 4855,
         "costUsd": 0.007824
       }
-    }
-  },
-  "months": {
-    "2026-11": {
-      "headline": "Teams Rooms management shifts to Pro portal as meeting AI controls split",
-      "overview": "November’s strongest administrator signals are a Teams Rooms management transition and a scheduled rewrite of meeting AI controls. TAC device management is slated for deprecation by November 2026 in favor of the Teams Rooms Pro Management Portal; in December, the Copilot meeting policy will be replaced by MeetingAI and TranscriptionWithMeetingAI. The month also surfaces a Windows Server 2019 VDI failure risk, documents Frontier-only personal voicemail AI triage billing, and sets a December retirement for off-network invitations to Teams Free.",
-      "adminImpact": "Prioritize the TAC-to-PMP migration by completing the required migration steps, updating device software, and verifying device and cloud-environment prerequisites. Existing meeting policy settings will map automatically, so no preparatory change is required for that rollout. For VDI, plan migration from unsupported Windows Server 2019 to Windows Server 2025; Teams 26288.x.x.x or later may produce BSODs, while 26276.x.x.x is identified as unaffected. Treat voicemail AI triage as a Frontier-only evaluation: validate Copilot licensing, usage-based billing, security-group scoping, a spending policy, and a voicemail policy. Update user guidance before the December Teams Free invitation retirement; existing Teams Free collaboration and federation remain unchanged.",
+    },
+    "2026-11-23": {
+      "headline": "Teams town hall and webinar registrations will scale to 20,000 by January",
+      "overview": "Microsoft announced a staged capacity increase for Teams town halls and webinars, while Analytics guidance records that Team and channel analytics is unsupported in GCCH and DoD environments.",
+      "adminImpact": "No action is required for the registration-capacity rollout. Administrators should account for the mid-December 2026 through late-January 2027 rollout window and should not expect Team and channel analytics to be available in GCCH or DoD.",
       "keyChanges": [
         {
-          "title": "Teams device management is moving from TAC to the Teams Rooms Pro portal",
-          "detail": "Teams Admin Center device management will be deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and verify prerequisites; the rollout varies by device type and cloud environment.",
-          "product": "Teams Rooms",
-          "sourceId": "MC1448373"
-        },
-        {
-          "title": "Copilot meeting controls split into MeetingAI and TranscriptionWithMeetingAI",
-          "detail": "A December 2026 rollout replaces the Copilot meeting policy with separate MeetingAI and TranscriptionWithMeetingAI policies and adds more granular meeting options for AI use. Existing settings will be mapped automatically, with no admin action required.",
+          "title": "Town hall and webinar registration limits will increase",
+          "detail": "Starting in December 2026, registration capacity will scale with each event’s attendee limit, reaching up to 20,000 registrations. Teams Enterprise supports up to 3,000 registrations, while Attendee Capacity Packs support up to 20,000. Rollout is scheduled from mid-December 2026 through late January 2027.",
           "product": "Teams",
-          "sourceId": "MC1532253"
+          "sourceId": "MC1557760"
         },
         {
-          "title": "Teams VDI guidance flags possible BSODs on Windows Server 2019",
-          "detail": "The updated VDI page reports possible BSODs on Windows Server 2019 virtual machines running Teams 26288.x.x.x or later; Teams 26276.x.x.x is unaffected. It also states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025.",
-          "product": "Clients",
-          "sourceId": "doc-2026-11-21-teams-client-vdi-requirements-deploy-09"
-        },
-        {
-          "title": "Frontier-only personal voicemail AI triage brings billing and policy planning",
-          "detail": "A new Teams Phone article documents personal voicemail AI triage as available only through the Microsoft Frontier Program. It covers Copilot licensing, usage-based billing, security-group scoping, spending policies, limits, and alerts; enabling the capability requires both a spending policy and a voicemail policy, and no GA timing is announced.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
-        },
-        {
-          "title": "Teams Free retires off-network invitations starting December 2026",
-          "detail": "Users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; no admin action is required, but user guidance should be updated.",
-          "product": "Teams",
-          "sourceId": "MC1546409"
+          "title": "Team and channel analytics is documented as unsupported in GCCH and DoD",
+          "detail": "The View Analytics guidance now states that Team and channel analytics isn't supported in GCCH and DoD environments. Administrators in those environments should not expect this capability to be available.",
+          "product": "Analytics",
+          "sourceId": "doc-2026-11-24-view-analytics-01"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-22T09:54:54.586Z",
+      "generatedAt": "2026-11-24T01:44:05.777Z",
       "usage": {
-        "inputTokens": 6361,
-        "outputTokens": 8095,
-        "costUsd": 0.010986
+        "inputTokens": 944,
+        "outputTokens": 807,
+        "costUsd": 0.001157
+      }
+    }
+  },
+  "months": {
+    "2026-11": {
+      "headline": "Teams Rooms administrators face November PMP migration as meeting AI controls split",
+      "overview": "November was update-heavy, but several changes carry direct planning consequences. Teams device management is moving from the Teams Admin Center to the Teams Rooms Pro Management Portal by November 2026; meeting AI administration is splitting into two policies for a December rollout; and Teams VDI guidance flags a Windows Server 2019 risk. Event recording access is also shifting to event-specific policies, while Teams support for iOS 17 and iPadOS 17 ends in December.",
+      "adminImpact": "Prioritize the TAC-to-PMP migration, including required device software updates and prerequisite checks. Existing meeting AI settings will be mapped automatically, but administrators should understand the new separation between AI and transcription controls. For affected estates, plan migration from Windows Server 2019 to Windows Server 2025 and prepare users to upgrade to iOS/iPadOS 18 before mid-December. When validating town hall or webinar access, use the event-specific recording policies rather than AllowCloudRecording.",
+      "keyChanges": [
+        {
+          "title": "Teams device management moves from TAC to the Teams Rooms Pro portal",
+          "detail": "Teams device management in the Teams Admin Center is slated for deprecation by November 2026. Administrators must complete migration steps, update device software, and verify prerequisites that vary by device type and cloud environment to avoid management disruption.",
+          "product": "Teams device management",
+          "sourceId": "MC1448373"
+        },
+        {
+          "title": "Teams splits meeting AI administration into MeetingAI and TranscriptionWithMeetingAI",
+          "detail": "Beginning in December 2026, Teams will replace the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI. New meeting options provide more granular control, while existing settings will be mapped automatically to the replacement policies.",
+          "product": "Teams meetings and AI",
+          "sourceId": "MC1532253"
+        },
+        {
+          "title": "Teams VDI guidance flags possible Windows Server 2019 BSODs",
+          "detail": "Updated VDI guidance reports possible blue-screen failures on Windows Server 2019 virtual machines running Teams 26288.x.x.x or later; Teams 26276.x.x.x is identified as unaffected. The guidance states that Windows Server 2019 is unsupported and customers must migrate to Windows Server 2025.",
+          "product": "Teams VDI",
+          "sourceId": "doc-2026-11-21-teams-client-vdi-requirements-deploy-09"
+        },
+        {
+          "title": "Town hall and webinar recording access now follows event-specific policies",
+          "detail": "The “Who has access to the recording or transcript” option for Events App town halls and webinars will depend on RecordingForTownhall or RecordingForWebinar instead of AllowCloudRecording. The behavior rolls out worldwide in early to mid-November 2026.",
+          "product": "Teams town halls and webinars",
+          "sourceId": "MC1550542"
+        },
+        {
+          "title": "Teams ends support for iOS 17 and iPadOS 17",
+          "detail": "Starting in mid-December 2026, new Teams releases will require iOS or iPadOS 18 or later. Existing Teams versions will continue working without support, so organizations should notify users, encourage operating-system upgrades, and update support documentation.",
+          "product": "Teams mobile",
+          "sourceId": "MC1556088"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-24T01:44:05.777Z",
+      "usage": {
+        "inputTokens": 6470,
+        "outputTokens": 5318,
+        "costUsd": 0.007676
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-22T09:54:54.586Z",
+  "generatedAt": "2026-11-24T01:44:05.777Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -943,18 +993,24 @@
       "outputTokens": 13754,
       "requests": 3,
       "costUsd": 0.020003
+    },
+    "2026-11-24": {
+      "inputTokens": 8406,
+      "outputTokens": 6603,
+      "requests": 3,
+      "costUsd": 0.009605
     }
   },
   "lastRun": {
-    "inputTokens": 17492,
-    "outputTokens": 13754,
+    "inputTokens": 8406,
+    "outputTokens": 6603,
     "requests": 3,
-    "costUsd": 0.020003
+    "costUsd": 0.009605
   },
   "totalUsage": {
-    "inputTokens": 279998,
-    "outputTokens": 325367,
-    "requests": 66,
-    "costUsd": 0.446437
+    "inputTokens": 288404,
+    "outputTokens": 331970,
+    "requests": 69,
+    "costUsd": 0.456042
   }
 }

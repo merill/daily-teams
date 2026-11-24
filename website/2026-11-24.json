@@ -26,6 +26,110 @@
         "generatedBy": "openai",
         "model": "gpt-5.6-luna"
       }
+    },
+    {
+      "filename": "Teams/devices/teams-panels-certified-hardware.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "patch": "diff --git a/Teams/devices/teams-panels-certified-hardware.md b/Teams/devices/teams-panels-certified-hardware.md\nindex 0463221..17d4b89 100644\n--- a/Teams/devices/teams-panels-certified-hardware.md\n+++ b/Teams/devices/teams-panels-certified-hardware.md\n@@ -185,7 +185,7 @@ Devices must be updated to newer application releases (when available) to remain\n | --- | --- | --- | --- | --- |\r\n | TAP Scheduler (VR0028) | ` 2.2.154 (AOSP)` | `2.1.328` | Teams client: `1449/1.0.97.2026286706` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n | DockFlex (VR0035) | `2.2.143 (AOSP)` | `2.1.168` | Teams client: `1449/1.0.97.2026286706` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n-| TAP Scheduler 2 (VR0054) | `2.1.112 (AOSP)` | `NA` | Teams client: `1449/1.0.97.2026286706` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n+| TAP Scheduler 2 (VR0054) | `2.2.112 (AOSP)` | `NA` | Teams client: `1449/1.0.97.2026286706` Microsoft Intune: `26.06.4` Authenticator: `6.2609.6407` Admin Agent: `1.0.0.202608280411.product (865)` | November 19, 2026 |\r\n | TAP Scheduler (VR0028) | ` 2.1.328 (AOSP)` | `2.1.303` | Teams client: `1449/1.0.97.2026181101` Microsoft Intune: `26.3.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | September 28, 2026 |\r\n | DockFlex (VR0035) | `2.1.168 (AOSP)` | `2.1.138` | Teams client: `1449/1.0.97.2026181101` Microsoft Intune: `26.3.1` Authenticator: `6.2606.4246` Admin Agent: `1.0.0.202607160723.product (856)` | September 28, 2026 |\r\n | TAP Scheduler (VR0028) | `2.1.303 (AOSP)` | `2.0.127` | Teams client: `1449/1.0.97.2026164101` Microsoft Intune: `25.02.1` Authenticator: `6.2605.3066` Admin Agent: `1.0.0.202604060507.product (820)` | August 10, 2026 |\r\n",
+      "baseCommitSha": "5031c0961a8b14b518ee8cb93d1d4d7000bb6fb2",
+      "commitSha": "884aaa19e729f782e861ee68b5ae9c5c42e6160f",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-24 03:01:17 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/teams-panels-certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/teams-panels-certified-hardware",
+      "eventId": "teams-docs:884aaa19e729f782e861ee68b5ae9c5c42e6160f:modified:Teams/devices/teams-panels-certified-hardware.md",
+      "firstSeenAt": "2026-11-24T12:38:06.040Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "TAP Scheduler 2 AOSP version updated",
+        "summary": "The certified hardware table now lists TAP Scheduler 2 (VR0054) with AOSP version 2.2.112 instead of 2.1.112. Other listed software versions and the certification date are unchanged.",
+        "adminImpact": "Administrators validating TAP Scheduler 2 hardware should use the updated AOSP version reference.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/devices/usb-devices.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "patch": "diff --git a/Teams/devices/usb-devices.md b/Teams/devices/usb-devices.md\nindex b7fc952..b56b5c5 100644\n--- a/Teams/devices/usb-devices.md\n+++ b/Teams/devices/usb-devices.md\n@@ -461,7 +461,7 @@ The date format is MM/DD/YYYY.\n \r\n Note\r\n \r\n-The date format is MM/DD/YYYY.\r\n+The date format is MM/DD/YYYY. Native Bluetooth devices - LE Audio are certified for both Bluetooth Classic Audio and LE Audio.\r\n \r\n | **Manufacturer** | **Model** | **Qualified** | **Certified Program** |\r\n | --- | --- | --- | --- |\r\n",
+      "baseCommitSha": "5031c0961a8b14b518ee8cb93d1d4d7000bb6fb2",
+      "commitSha": "884aaa19e729f782e861ee68b5ae9c5c42e6160f",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-24 03:01:17 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/devices/usb-devices.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/devices/usb-devices",
+      "eventId": "teams-docs:884aaa19e729f782e861ee68b5ae9c5c42e6160f:modified:Teams/devices/usb-devices.md",
+      "firstSeenAt": "2026-11-24T12:38:06.052Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "LE Audio certification is now documented",
+        "summary": "The USB devices documentation now states that Native Bluetooth devices with LE Audio are certified for both Bluetooth Classic Audio and LE Audio.",
+        "adminImpact": "Administrators can use this certification information when evaluating supported Bluetooth devices. No action is required.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/rooms/certified-hardware.md",
+      "status": "modified",
+      "additions": 2,
+      "deletions": 0,
+      "changes": 2,
+      "patch": "diff --git a/Teams/rooms/certified-hardware.md b/Teams/rooms/certified-hardware.md\nindex b15308f..a3334a2 100644\n--- a/Teams/rooms/certified-hardware.md\n+++ b/Teams/rooms/certified-hardware.md\n@@ -154,6 +154,7 @@ The following devices are Certified under the Microsoft Teams Rooms on Windows C\n | [Yealink MVC 800 II](https://www.yealink.com/product/microsoft-teams-room-system-mvc800II) | Core i5 | 8 GB | 128 GB |\r\n | [Yealink MVC 900 II](https://www.yealink.com/product/microsoft-teams-room-system-mvc900II) | Core i5 | 8 GB | 128 GB |\r\n | [Yealink MVC840](https://www.yealink.com/en/product-detail/microsoft-teams-rooms-mvc840-iii) | Core i5 | 8 GB | 128 GB |\r\n+| Yealink MVC860-C5U-000 E2 | Core Ultra 5 | 16 GB | 256 GB |\r\n | [Yealink MVC940](https://www.yealink.com/en/product-detail/microsoft-teams-rooms-mvc940-iii) | Core i5 | 8 GB | 128 GB |\r\n | [Yealink MVC940 Bundle with AV Hub](https://www.yealink.com/en/product-detail/microsoft-teams-rooms-mvc940-avhub) | Core i5 | 8 GB | 128 GB |\r\n | [Yealink MVC860](https://www.yealink.com/en/product-detail/microsoft-teams-rooms-mvc860-iii) | Core i5 | 8 GB | 128 GB |\r\n@@ -318,6 +319,7 @@ The following devices are certified under the Microsoft Teams Rooms peripherals\n | [Yealink UVC84](https://www.yealink.com/product/camera-uvc84) | 262.410.0.10 |  |  |  |  |\r\n | Yealink UVC85 | 299.410.0.130 |  |  |  |  |\r\n | [Yealink UVC86](https://www.yealink.com/product/camera-uvc86) | 151.410.0.5 |  |  |  |  |\r\n+| Yealink UVC86 E2 | 353.410.0.56 |  |  |  |  |\r\n | Yealink MSpeech | 136.410.0.19 |  |  |  | ✔ |\r\n | Yealink CM20 Ceiling Audio Kit | Yealink RoomConnect Software: 2.33.43.0  AVHub: 153.433.0.15  CM20: 294.410.0.35  CS10: 298.410.0.40 |  |  |  |  |\r\n | Yealink CM50 Premium Ceiling Audio Kit | AP08: 294.420.0.10  CM50: 294.420.0.10  CS10-D: 298.420.0.5 |  |  |  |  |\r\n",
+      "baseCommitSha": "5031c0961a8b14b518ee8cb93d1d4d7000bb6fb2",
+      "commitSha": "884aaa19e729f782e861ee68b5ae9c5c42e6160f",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-24 03:01:17 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/rooms/certified-hardware.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/rooms/certified-hardware",
+      "eventId": "teams-docs:884aaa19e729f782e861ee68b5ae9c5c42e6160f:modified:Teams/rooms/certified-hardware.md",
+      "firstSeenAt": "2026-11-24T12:38:06.060Z",
+      "englishSummary": {
+        "category": "Doc update",
+        "headline": "Two Yealink devices added to the certified hardware list",
+        "summary": "The documentation now lists the Yealink MVC860-C5U-000 E2 and Yealink UVC86 E2.",
+        "adminImpact": "Administrators can consider these devices when reviewing certified Teams Rooms hardware.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
+    },
+    {
+      "filename": "Teams/teams-silent-testing.md",
+      "status": "modified",
+      "additions": 7,
+      "deletions": 18,
+      "changes": 25,
+      "patch": "diff --git a/Teams/teams-silent-testing.md b/Teams/teams-silent-testing.md\nindex 9474deb..88bfc3a 100644\n--- a/Teams/teams-silent-testing.md\n+++ b/Teams/teams-silent-testing.md\n@@ -11,6 +11,7 @@ recommendations: true\n ms.author: guypaskar\n author: PeerDiego\n manager: hadarweiss\n+ms.reviewer: badarsadaf\n f1.keywords:\n - NOCSH\n audience: Admin\n@@ -22,7 +23,7 @@ ms.collection:\n - Ent_O365_Hybrid\n - Hybrid\n - M365-email-calendar\n-ms.date: 2026-07-06T00:00:00.0000000Z\n+ms.date: 2026-11-23T00:00:00.0000000Z\n description: Learn about Teams Silent Testing.\n locale: en-us\n document_id: 493603ae-dce3-4aa6-6ad1-2c596a17a399\n@@ -49,18 +50,6 @@ platformId: 880bff2b-a2cb-a7de-3c4e-e2bd531dc608\n \n # Teams Silent Testing - Microsoft Teams | Microsoft Learn\n \n-![Information icon.](media/info.png)**Some features described in this article require [Teams Premium](enhanced-teams-experience) for meetings and are included with Teams Enterprise for events.**\r\n-\r\n-Important\r\n-\r\n-**Licensing update for Teams Premium and Teams Enterprise**\r\n-\r\n-As of April 1, 2026, some features that were previously only available with Teams Premium are now included with Teams Enterprise. Teams Premium continues to offer advanced meeting protection, advanced communication (like the Queues app), branding and personalization, and intelligence capabilities. [Learn more](https://techcommunity.microsoft.com/blog/microsoftteamsblog/licensing-updates-extend-access-to-advanced-capabilities-in-microsoft-teams-and-/4488312).\r\n-\r\n-Customers who purchased Teams Premium licenses before April 1, 2026 will continue to have access to all the previously included Teams Premium features and product experiences included with these licenses until they expire.\r\n-\r\n-To manage Teams Premium features, your tenant must have at least one active [Teams Premium license](/en-us/microsoftteams/teams-add-on-licensing/licensing-enhance-teams).\r\n-\r\n ## Overview\r\n \r\n The **Teams Silent Testing** feature enables IT admins of Microsoft Teams to schedule and simulate tests between users of a subnet in their organization and Microsoft Calling Servers. Teams Silent Testing consists of two distinct test types:\r\n@@ -106,7 +95,11 @@ By integrating Teams Silent Testing into your operational routines, you can dete\n - Teams client must be installed and running.\r\n - Device must be powered ON.\r\n - User must not be on an active Teams call.\r\n-- Teams user signed in to the device must have a Teams Premium license for Silent Test Calls. Silent Test Town halls is included with Teams Enterprise.\r\n+\r\n+## Licensing requirements\r\n+\r\n+- Silent Test Calls (meetings): Requires Teams Premium.\r\n+- Silent Test Town halls: Currently in private preview for eligible customers without Teams Premium. Customers participating in private preview must have at least one Teams Premium license to start testing. Expected to become available to Teams Enterprise customers in early 2027.\r\n \r\n ## Networking requirements\r\n \r\n@@ -121,10 +114,6 @@ Important\n \r\n As part of the [Unified Domains](/en-us/microsoft-365/enterprise/cloud-microsoft-domain) initiative, domains are transitioning from `*.teams.microsoft.com` to `*.teams.cloud.microsoft`. Both domains are required during the transition period to ensure uninterrupted service.\r\n \r\n-## Licensing details\r\n-\r\n-- Silent Test Calls is a Teams Premium feature. Silent Test Town halls is included with Teams Enterprise.\r\n-\r\n ## How to schedule a Silent Test\r\n \r\n Teams Silent Tests can be scheduled via the **Teams Admin Center**.\r\n",
+      "baseCommitSha": "5031c0961a8b14b518ee8cb93d1d4d7000bb6fb2",
+      "commitSha": "884aaa19e729f782e861ee68b5ae9c5c42e6160f",
+      "commitMessage": "Mirror Learn: 4 changed",
+      "commitAuthor": "github-actions[bot]",
+      "commitDate": "2026-11-24 03:01:17 +0000",
+      "githubUrl": "https://github.com/merill/teams-docs-mirror/blob/main/Teams/teams-silent-testing.md",
+      "publicDocsUrl": "https://learn.microsoft.com/en-us/microsoftteams/teams-silent-testing",
+      "eventId": "teams-docs:884aaa19e729f782e861ee68b5ae9c5c42e6160f:modified:Teams/teams-silent-testing.md",
+      "firstSeenAt": "2026-11-24T12:38:06.066Z",
+      "englishSummary": {
+        "category": "Private preview",
+        "headline": "Silent Test licensing requirements clarified",
+        "summary": "Silent Test Calls requires Teams Premium. Silent Test Town halls is available to eligible customers without Teams Premium, but participants must have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027.",
+        "adminImpact": "Admins should verify Teams Premium licensing for participants and plan for the stated Teams Enterprise availability timeline.",
+        "actionRequired": false,
+        "generatedBy": "openai",
+        "model": "gpt-5.6-luna"
+      }
     }
   ],
   "deletedFiles": [],
@@ -69,17 +173,94 @@
       "version": "2026-11-23T17:14:18.75Z",
       "eventId": "message-center:MC1557760:2026-11-23T17:14:18.75Z",
       "firstSeenAt": "2026-11-24T01:44:05.634Z"
+    },
+    {
+      "id": "MC1565967",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-23",
+      "title": "New VDI solution for Omnissa on Mac",
+      "summary": "A new VDI optimization for Omnissa on Mac using a SlimCore-based media engine will enhance Microsoft Teams' quality, reliability, and performance. Rollout starts December 2026 to February 2027. Upgrade Horizon Client (2609.1+) and Teams (26304.1207.5384.858+) to benefit. No compliance issues noted.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1565967/",
+      "originalUrl": "https://mc.merill.net/message/MC1565967",
+      "body": "<p><b><b>What and Why:</b></b></p><p>New VDI optimization for Omnissa on Mac. This feature allows Mac endpoints to optimize Microsoft Teams in VDI environments with the new SlimCore-based media engine, providing an expanded feature set and multiple improvements in quality, reliability and performance.</p><p><b><b>Rollout Schedule:</b></b></p><p>Global: We will begin rolling out on early December 2026 and expect to complete by early February 2027.</p><p><b><b>Impact on Your Organization:</b></b></p><p>With this release, a new media engine delivers a better user experience that is aligned with the rich feature set and performance native Mac Teams users have.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>Upgrade your Horizon Client for Mac to an upcoming release (2609.1 or higher). Upgrade Teams to 26304.1207.5384.858 or higher.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified, review as appropriate for your organization.</p>",
+      "category": "planForChange",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-23T22:46:30Z",
+      "endDate": "2027-03-10T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-23T22:47:01.683Z",
+      "version": "2026-11-23T22:47:01.683Z",
+      "eventId": "message-center:MC1565967:2026-11-23T22:47:01.683Z",
+      "firstSeenAt": "2026-11-24T12:38:14.006Z"
+    },
+    {
+      "id": "MC1550542",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-23",
+      "title": "Microsoft Teams: Updated recording and transcript access setting behavior for town halls and webinars",
+      "summary": "Microsoft Teams is updating the \"Who has access to the recording or transcript\" option for Events App town halls and webinars. Starting mid-January 2027, access will depend on the RecordingForTownhall or RecordingForWebinar settings, not AllowCloudRecording. No action is required.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "policies",
+        "name": "Policies and settings",
+        "icon": "/assets/topics/policies.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1550542/",
+      "originalUrl": "https://mc.merill.net/message/MC1550542",
+      "body": "<p>Updated November 23, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>We are updating how the <b>Who has access to the recording or transcript</b> option appears for Microsoft Teams Events scheduling through the Events App including town halls and webinars. Currently, when <code>AllowCloudRecording</code> is set to false, this option does not appear for these events. After this change, the option will appear only when the applicable <code>RecordingForTownhall</code> or <code>RecordingForWebinar</code> setting in <code>CsTeamsEventsPolicy</code> is enabled.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide, GCC, GCC High, DoD):</b> Beginning in <b>mid-January 2027</b> (previously early-November 2026) and expected to complete by<b> late January 2027 </b>(previously mid-November 2026)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Microsoft Teams organizers of Events created via the Events App including town halls and webinars</li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft TeamsEvents created via the Events App including town halls and webinars</li></ul><p><i>What will happen</i></p><p>The <b>Who has access to the recording or transcript</b> option will be based on the applicable <code>RecordingForTownhall</code> or <code>RecordingForWebinar</code> setting. It will no longer be based on the <code>AllowCloudRecording</code> setting.</p><p><b><b>Action required and recommendations</b></b></p><p>No action is required to enable this change.</p><p>We recommend updating your internal documentation to reflect this change.</p><p><b><b>Compliance considerations</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "preventOrFixIssue",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-11-12T16:19:06Z",
+      "endDate": "2027-03-01T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-23T22:19:25.7Z",
+      "version": "2026-11-23T22:19:25.7Z",
+      "eventId": "message-center:MC1550542:2026-11-23T22:19:25.7Z",
+      "firstSeenAt": "2026-11-24T12:38:14.006Z"
     }
   ],
   "summary": {
-    "totalCommits": 1,
-    "totalFiles": 1,
+    "totalCommits": 2,
+    "totalFiles": 5,
     "authors": [
       "github-actions[bot]"
     ]
   },
   "englishSummary": {
-    "overview": "Today's report includes 0 new, 1 updated, and 0 removed Microsoft Teams documentation files across 1 documentation area.",
+    "overview": "Today's report includes 0 new, 5 updated, and 0 removed Microsoft Teams documentation files across 4 documentation areas.",
     "groups": [
       {
         "category": "Feature update",
@@ -88,6 +269,31 @@
         "sourceFiles": [
           "Teams/teams-analytics-and-reports/view-analytics.md"
         ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams devices",
+        "summary": "The certified hardware table now lists TAP Scheduler 2 (VR0054) with AOSP version 2.2.112 instead of 2.1.112. Other listed software versions and the certification date are unchanged. The USB devices documentation now states that Native Bluetooth devices with LE Audio are certified for both Bluetooth Classic Audio and LE Audio.",
+        "sourceFiles": [
+          "Teams/devices/teams-panels-certified-hardware.md",
+          "Teams/devices/usb-devices.md"
+        ]
+      },
+      {
+        "category": "Doc update",
+        "title": "Teams Rooms",
+        "summary": "The documentation now lists the Yealink MVC860-C5U-000 E2 and Yealink UVC86 E2.",
+        "sourceFiles": [
+          "Teams/rooms/certified-hardware.md"
+        ]
+      },
+      {
+        "category": "Private preview",
+        "title": "Microsoft Teams",
+        "summary": "Silent Test Calls requires Teams Premium. Silent Test Town halls is available to eligible customers without Teams Premium, but participants must have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027.",
+        "sourceFiles": [
+          "Teams/teams-silent-testing.md"
+        ]
       }
     ],
     "highlights": [
@@ -95,6 +301,21 @@
         "category": "Feature update",
         "headline": "Analytics and reports",
         "detail": "The documentation now states that Team and channel analytics isn't supported in GCCH and DoD environments."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams devices",
+        "detail": "The certified hardware table now lists TAP Scheduler 2 (VR0054) with AOSP version 2.2.112 instead of 2.1.112. Other listed software versions and the certification date are unchanged. The USB devices documentation now states that Native Bluetooth devices with LE Audio are certified for both Bluetooth Classic Audio and LE Audio."
+      },
+      {
+        "category": "Doc update",
+        "headline": "Teams Rooms",
+        "detail": "The documentation now lists the Yealink MVC860-C5U-000 E2 and Yealink UVC86 E2."
+      },
+      {
+        "category": "Private preview",
+        "headline": "Microsoft Teams",
+        "detail": "Silent Test Calls requires Teams Premium. Silent Test Town halls is available to eligible customers without Teams Premium, but participants must have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027."
       }
     ],
     "generatedBy": "fallback"

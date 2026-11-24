@@ -250,6 +250,84 @@
       "version": "2026-11-23T22:19:25.7Z",
       "eventId": "message-center:MC1550542:2026-11-23T22:19:25.7Z",
       "firstSeenAt": "2026-11-24T12:38:14.006Z"
+    },
+    {
+      "id": "MC1532242",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-24",
+      "title": "Microsoft Teams: Pinch to zoom in on shared screens",
+      "summary": "Microsoft Teams will add pinch-to-zoom on shared screens for easier viewing of details, rolling out worldwide from mid-November to late December 2026. This feature is enabled by default in all meetings, with no compliance issues identified. Organizations should update sharing policies and inform users.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1532242/",
+      "originalUrl": "https://mc.merill.net/message/MC1532242",
+      "body": "<p>Updated November 24, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and Why:</b></b></p><p>Get a closer look at shared content in Teams calls and meetings with pinch-to-zoom using your touchpad. Quickly zoom in to make small text and detailed visuals easier to see, then zoom back out for the full view. Existing zoom controls remain available.</p><p><b><b>Rollout Schedule:</b></b></p><p>General Availability (Worldwide): We will begin rolling out on late November 2026 and expect to complete by late December 2026 (previously late November).</p><p>Targeted Release (Worldwide): We will begin rolling out on mid-November 2026 and expect to complete by mid-November 2026.</p><p><b><b>Impact on Your Organization:</b></b></p><p>This capability will be enabled for all meetings by default, as an improvement to additional zooming controls.</p><p><b><b>Action Required/Recommendations:</b></b></p><p>Review your organization’s sharing policies and inform users and support teams about the addition to existing sharing experience.</p><p><b><b>Compliance considerations:</b></b></p><p>No compliance considerations identified. Review as appropriate for your organization.</p>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "New feature",
+        "User impact"
+      ],
+      "startDate": "2026-10-30T21:58:35Z",
+      "endDate": "2027-02-01T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-24T17:25:39.387Z",
+      "version": "2026-11-24T17:25:39.387Z",
+      "eventId": "message-center:MC1532242:2026-11-24T17:25:39.387Z",
+      "firstSeenAt": "2026-11-24T23:32:04.603Z"
+    },
+    {
+      "id": "MC1521613",
+      "source": "mc",
+      "sourceLabel": "Message Center",
+      "date": "2026-11-24",
+      "title": "Microsoft Teams: Streaming switchboard for NDI sources in meetings and events",
+      "summary": "Microsoft Teams will introduce a streaming switchboard for event producers to manage and stream up to eight NDI sources in meetings and events, rolling out worldwide from mid-November to mid-December 2026. Admins must enable NDI streaming, and users must activate production capabilities in Teams.",
+      "product": {
+        "slug": "teams",
+        "name": "Microsoft Teams",
+        "short": "Teams",
+        "learn": "https://learn.microsoft.com/en-us/microsoftteams/",
+        "icon": "teams.svg"
+      },
+      "topic": {
+        "slug": "general",
+        "name": "General",
+        "icon": "/assets/topics/general.svg"
+      },
+      "changeType": "Message",
+      "url": "/message-center/MC1521613/",
+      "originalUrl": "https://mc.merill.net/message/MC1521613",
+      "body": "<p>Updated November 24, 2026: We have updated the timeline. Thank you for your patience.&nbsp;</p><p><b><b>What and why</b></b></p><p>A new streaming switchboard in <i>Microsoft Teams</i> will allow event producers to more easily manage and send NDI® sources to production software during Teams meetings and events. Event producers can individually select and stream up to eight NDI sources directly from a Teams meeting or event.</p><p><b><b>Rollout schedule</b></b></p><ul><li><b>General Availability (Worldwide): </b>Beginning in <b>mid-November 2026</b> (previously early November) and expected to complete by <b>mid-December 2026</b> (previously mid-November)</li></ul><p><b><b>Impact on your organization</b></b></p><p><i>Who is affected</i></p><ul><li>Event producers who use NDI streaming in <i>Microsoft Teams meetings and events</i></li></ul><p><i>Platforms and services</i></p><ul><li>Microsoft Teams</li></ul><p><i>What will happen</i></p><ul><li>Event producers will be able to individually select and stream up to eight NDI sources from a Teams meeting or event.</li><li>To access the feature during a meeting or event, select <b><i>More actions</i></b>, then <b><i>Streaming &gt; Streaming switchboard</i></b>.</li><li>Admins must enable NDI streaming before users can use the feature.</li><li>Users must turn on production capabilities in Teams before using NDI broadcast production.&nbsp;</li></ul><p><b><b>Action required and recommendations</b></b></p><p>To prepare:</p><ul><li>Enable <code>AllowNDIStreaming</code> for the appropriate users through the <code>CsTeamsMeetingPolicy</code> cmdlet.</li><li>Instruct affected users to turn on production capabilities in <i>Teams</i>.</li></ul><p><b>Learn more</b></p><ul><li><a href=\"https://learn.microsoft.com/microsoftteams/use-ndi-in-meetings\" rel=\"noopener noreferrer\">Allow broadcast production in Teams meetings with NDI and SDI hardware - Microsoft Teams | Microsoft Learn</a></li></ul><p><b><b>Compliance considerations</b></b></p><table><tbody><tr><td>Question</td><td>Answer</td></tr><tr><td>Does the change add any integration to third-party software products, and if so, what?</td><td><b>Yes.</b> NDI® enables Microsoft Teams meeting content to be sent to production software.</td></tr><tr><td>Does the change include an admin control, and can it be controlled through Entra ID group membership?</td><td><b>Yes.</b> Admins can control NDI® streaming through the <code>AllowNDIStreaming</code> setting in <code>CsTeamsMeetingPolicy</code>. The provided source does not specify whether the control can be managed through Entra ID group membership.</td></tr><tr><td>Does the change allow a user to enable and disable the feature themselves?</td><td><b>Yes.</b> After an admin enables NDI streaming, users must turn on production capabilities in <i>Teams</i>.</td></tr></tbody></table>",
+      "category": "stayInformed",
+      "services": [
+        "Microsoft Teams"
+      ],
+      "tags": [
+        "Updated message",
+        "New feature",
+        "User impact",
+        "Admin impact"
+      ],
+      "startDate": "2026-10-22T23:16:21Z",
+      "endDate": "2027-01-25T08:00:00Z",
+      "lastModifiedDateTime": "2026-11-24T17:22:22.957Z",
+      "version": "2026-11-24T17:22:22.957Z",
+      "eventId": "message-center:MC1521613:2026-11-24T17:22:22.957Z",
+      "firstSeenAt": "2026-11-24T23:32:04.603Z"
     }
   ],
   "summary": {

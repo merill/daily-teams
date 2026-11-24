@@ -665,49 +665,43 @@
       }
     },
     "2026-11-24": {
-      "headline": "Silent Test guidance clarifies Premium licensing and early-2027 Enterprise timing",
-      "overview": "The most consequential update adds precise licensing and availability guidance for Teams Silent Testing. Other changes refine analytics support boundaries and refresh certified-device references, including two new Teams Rooms listings, a TAP Scheduler software version, and dual Bluetooth audio certification.",
-      "adminImpact": "Review Silent Test participant licensing and plan around the stated early-2027 Teams Enterprise timeline. Administrators in GCCH or DoD should account for the lack of Team and channel analytics support. Device teams should use the updated certified-hardware references when evaluating room, panel, or Bluetooth equipment.",
+      "headline": "Teams will roll out pinch-to-zoom and an up-to-eight-source NDI switchboard through December",
+      "overview": "Two Teams meeting and event capabilities lead the period. Pinch-to-zoom for shared screens is rolling out worldwide through late December 2026 and is enabled by default in all meetings, while an NDI streaming switchboard for producers will manage up to eight sources through mid-December. Documentation updates also clarify silent-testing licensing and state that Team and channel analytics is unsupported in GCCH and DoD. Lower-impact device edits list two Yealink Teams Rooms models, correct the TAP Scheduler 2 AOSP reference, and document Bluetooth Classic Audio and LE Audio certification for Native Bluetooth devices.",
+      "adminImpact": "Organizations should inform users about the shared-screen zoom default and follow the message guidance to update sharing policies. For the NDI switchboard, admins must enable NDI streaming and users must activate Teams production capabilities. Verify Teams Premium licensing for silent test calls and town halls, including the requirement that every town-hall participant have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027. Admins in GCCH and DoD should not expect Team and channel analytics. When validating TAP Scheduler 2, use AOSP version 2.2.112.",
       "keyChanges": [
         {
-          "title": "Silent Testing guidance adds licensing and availability conditions",
-          "detail": "The Teams Silent Testing page now states that Silent Test Calls requires Teams Premium. Silent Test Town halls is available to eligible customers without Teams Premium, but participants must have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027. Admins should verify participant licensing and plan for that timeline.",
+          "title": "Shared-screen pinch-to-zoom is enabled by default",
+          "detail": "The worldwide rollout runs from mid-November through late December 2026. Pinch-to-zoom applies in all meetings to make details on shared screens easier to view; the message reports no compliance issues identified.",
+          "product": "Teams",
+          "sourceId": "MC1532242"
+        },
+        {
+          "title": "NDI streaming switchboard supports up to eight sources",
+          "detail": "The worldwide rollout runs from mid-November through mid-December 2026 for meetings and events. Admins must enable NDI streaming, and users must activate production capabilities in Teams.",
+          "product": "Teams",
+          "sourceId": "MC1521613"
+        },
+        {
+          "title": "Silent testing has scenario-specific Teams Premium requirements",
+          "detail": "The updated guidance says Silent Test Calls requires Teams Premium. Silent Test Town halls is available to eligible customers without Teams Premium, but participants must have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027.",
           "product": "Teams",
           "sourceId": "doc-2026-11-24-teams-silent-testing-microsoft-teams-05"
         },
         {
-          "title": "Team and channel analytics are unsupported in GCCH and DoD",
-          "detail": "View Analytics now explicitly states that Team and channel analytics isn't supported in GCCH and DoD environments. Administrators in those environments should not expect the capability to be available.",
+          "title": "Team and channel analytics is unsupported in GCCH and DoD",
+          "detail": "The View Analytics documentation now explicitly states that Team and channel analytics isn't supported in GCCH and DoD environments.",
           "product": "Analytics",
           "sourceId": "doc-2026-11-24-view-analytics-01"
-        },
-        {
-          "title": "Two Yealink models join the certified Teams Rooms hardware list",
-          "detail": "The Certified Hardware page now lists the Yealink MVC860-C5U-000 E2 and Yealink UVC86 E2, giving administrators two additional devices to consider when reviewing certified Teams Rooms hardware.",
-          "product": "Teams Rooms",
-          "sourceId": "doc-2026-11-24-certified-hardware-04"
-        },
-        {
-          "title": "TAP Scheduler 2 certification reference moves to AOSP 2.2.112",
-          "detail": "The Teams Panels certified-hardware table now lists TAP Scheduler 2 (VR0054) with AOSP version 2.2.112 instead of 2.1.112. Other listed software versions and the certification date are unchanged.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-24-teams-panels-certified-hardware-02"
-        },
-        {
-          "title": "LE Audio devices are documented as certified for both audio modes",
-          "detail": "The USB devices guidance now says Native Bluetooth devices with LE Audio are certified for both Bluetooth Classic Audio and LE Audio. Administrators can use this distinction when evaluating supported Bluetooth devices; no action is required.",
-          "product": "Devices",
-          "sourceId": "doc-2026-11-24-usb-devices-03"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-24T12:38:14.293Z",
+      "generatedAt": "2026-11-24T23:32:04.829Z",
       "usage": {
-        "inputTokens": 1457,
-        "outputTokens": 1603,
-        "costUsd": 0.002215
+        "inputTokens": 1690,
+        "outputTokens": 5044,
+        "costUsd": 0.006391
       }
     }
   },
@@ -851,102 +845,102 @@
       }
     },
     "2026-11-23": {
-      "headline": "Town hall registrations rise to 20,000 as recording access rules shift in January",
-      "overview": "Teams town halls and webinars will gain registration capacity of up to 20,000 per event from December 2026, while recording and transcript access will begin following event-specific settings rather than AllowCloudRecording in January 2027. The period also brings a new Omnissa-on-Mac VDI optimization and documentation clarifications on silent-testing licenses and analytics support in government clouds.",
-      "adminImpact": "No action is required for the registration-capacity or recording-access rollouts. Administrators supporting Omnissa on Mac should use Horizon Client 2609.1 or later and Teams version 26304.1207.5384.858 or later to benefit. Teams admins should also verify Teams Premium licensing for silent-testing participants and account for the documented GCCH and DoD analytics limitation.",
+      "headline": "Teams town halls and webinars will support 20,000 registrations as access settings change",
+      "overview": "The week’s strongest Teams changes target events: registration capacity will scale with attendee limits to as many as 20,000 per town hall or webinar starting in December 2026, while Events App recording and transcript access will follow event-specific controls from mid-January 2027. Microsoft is also rolling out an Omnissa-on-Mac SlimCore VDI optimization and an NDI switchboard for up to eight sources. The remaining Learn updates are narrower, including a statement that Team and channel analytics is unsupported in GCCH and DoD.",
+      "adminImpact": "The registration expansion and recording-setting change are explicitly marked as requiring no action. Admins enabling NDI streaming must also have users activate Teams production capabilities. Organizations using Omnissa on Mac should plan the required Horizon Client 2609.1+ and Teams 26304.1207.5384.858+ upgrades to benefit. For Silent Test Town halls, verify that every participant has at least one Teams Premium license; GCCH and DoD administrators should not expect Team and channel analytics.",
       "keyChanges": [
         {
-          "title": "Town hall and webinar registration ceilings expand",
-          "detail": "Starting in December 2026, registration capacity will scale with the event attendee limit, reaching up to 20,000 registrations per event. Teams Enterprise supports 3,000 registrations, while Attendee Capacity Packs extend capacity to 20,000. Rollout is scheduled from mid-December 2026 through late January 2027, with no action required.",
+          "title": "Registration capacity rises with attendee limits",
+          "detail": "Starting in December 2026, town halls and webinars will scale registration capacity with the event attendee limit, up to 20,000 registrations. Teams Enterprise allows 3,000 registrations, while Attendee Capacity Packs allow up to 20,000; rollout is scheduled from mid-December 2026 through late January 2027. The notice says no action is required.",
           "product": "Teams",
           "sourceId": "MC1557760"
         },
         {
-          "title": "Event-specific settings take over recording and transcript access",
-          "detail": "From mid-January 2027, the “Who has access to the recording or transcript” behavior for Events App town halls and webinars will depend on RecordingForTownhall or RecordingForWebinar, rather than AllowCloudRecording. Microsoft says no administrator action is required.",
+          "title": "Recording access switches to event-specific settings",
+          "detail": "From mid-January 2027, the Events App “Who has access to the recording or transcript” option for town halls and webinars will depend on RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. The notice says no action is required.",
           "product": "Teams",
           "sourceId": "MC1550542"
         },
         {
-          "title": "Omnissa on Mac gets a SlimCore-based VDI optimization",
-          "detail": "A new Omnissa-on-Mac VDI optimization uses the SlimCore media engine to improve Teams quality, reliability, and performance. Rollout runs from December 2026 through February 2027; benefiting deployments need Horizon Client 2609.1 or later and Teams 26304.1207.5384.858 or later.",
+          "title": "NDI production gains an eight-source streaming switchboard",
+          "detail": "The new streaming switchboard will let event producers manage and stream up to eight NDI sources in meetings and events, with worldwide rollout from mid-November through mid-December 2026. Admins must enable NDI streaming, and users must activate production capabilities in Teams.",
+          "product": "Teams",
+          "sourceId": "MC1521613"
+        },
+        {
+          "title": "Omnissa on Mac gets SlimCore-based VDI optimization",
+          "detail": "A new Omnissa-on-Mac VDI optimization uses a SlimCore-based media engine to improve Teams quality, reliability, and performance. Rollout runs from December 2026 through February 2027; benefiting organizations must upgrade Horizon Client to 2609.1+ and Teams to 26304.1207.5384.858+.",
           "product": "Teams",
           "sourceId": "MC1565967"
         },
         {
-          "title": "Silent-testing guidance separates call and town-hall licensing",
-          "detail": "The updated guidance states that Silent Test Calls requires Teams Premium. Silent Test Town halls is available to eligible customers without Teams Premium, but participants must have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027.",
+          "title": "Silent Testing guidance distinguishes Premium licensing requirements",
+          "detail": "The updated Teams Silent Testing page says Silent Test Calls requires Teams Premium. Eligible customers can use Silent Test Town halls without Teams Premium, but participants must have at least one Teams Premium license; Teams Enterprise availability is expected in early 2027.",
           "product": "Teams",
           "sourceId": "doc-2026-11-24-teams-silent-testing-microsoft-teams-05"
-        },
-        {
-          "title": "Team and channel analytics is documented as unsupported in GCCH and DoD",
-          "detail": "The View Analytics guidance now states that Team and channel analytics is not supported in GCCH and DoD environments. Administrators in those clouds should not expect the capability to be available.",
-          "product": "Analytics",
-          "sourceId": "doc-2026-11-24-view-analytics-01"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-24T12:38:14.293Z",
+      "generatedAt": "2026-11-24T23:32:04.829Z",
       "usage": {
-        "inputTokens": 1654,
-        "outputTokens": 2188,
-        "costUsd": 0.002956
+        "inputTokens": 1887,
+        "outputTokens": 6331,
+        "costUsd": 0.007975
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams device management shifts to Teams Rooms Pro portal as meeting AI controls split",
-      "overview": "November’s strongest administrator signal is a transition in management and governance: Teams device management is moving from the Teams Admin Center to the Teams Rooms Pro Management Portal, with TAC deprecation scheduled by November 2026, while the Copilot meeting policy is being replaced by MeetingAI and TranscriptionWithMeetingAI for a December rollout. Updated VDI guidance puts Windows Server 2019 estates on a Windows Server 2025 migration path, and off-network invitations to Teams Free are scheduled to retire in December. Teams Phone also received new guidance on billing and policy controls for Frontier-only personal voicemail AI triage.",
-      "adminImpact": "Treat the TAC-to-PMP move as an operational deadline: complete migration steps, update device software, and verify device and cloud-environment prerequisites. For the December policy split, existing settings will map automatically, but administrators should validate the resulting AI and transcription controls. VDI administrators using Windows Server 2019 should plan migration to Windows Server 2025, particularly where Teams 26288.x.x.x or later is deployed. Update user guidance before Teams Free invitation retirement. Frontier voicemail triage requires Copilot licensing, usage-based billing, a spending policy, and a voicemail policy.",
+      "headline": "Teams device management moves from TAC to Teams Rooms Pro Management Portal",
+      "overview": "November was update-heavy, but several changes have clear operational consequences. Teams device management is moving from the Teams Admin Center to the Teams Rooms Pro Management Portal; meeting AI governance is splitting into two policies in December; and Teams Phone guidance details Frontier-only personal voicemail AI triage with usage-based billing. Near-term user-facing changes include the retirement of off-network invitations to Teams Free and the end of support for iOS 17 and iPadOS 17.",
+      "adminImpact": "Prioritize the TAC-to-Portal migration, including required device software updates and prerequisite checks, before the November 2026 deprecation. The meeting-policy transition will automatically map existing settings, so no migration action is required. Organizations evaluating personal voicemail AI triage should validate Copilot licensing, usage-based billing, security-group scope, spending and voicemail policies, limits, and alerts. Update user guidance for the Teams Free invitation retirement and notify users to upgrade to iOS/iPadOS 18 or later for new Teams releases.",
       "keyChanges": [
         {
-          "title": "Teams device management is moving from TAC to the Teams Rooms Pro portal",
-          "detail": "Microsoft plans to deprecate device management in the Teams Admin Center by November 2026. Administrators must complete the migration steps, update device software, and verify device and cloud-environment prerequisites to avoid management disruption.",
+          "title": "TAC device management is moving to the Teams Rooms Pro portal",
+          "detail": "Microsoft says Teams Admin Center device management will be deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal. Administrators must complete the migration steps, update device software, and verify prerequisites; timing varies by device type and cloud environment.",
           "product": "Teams",
           "sourceId": "MC1448373"
         },
         {
-          "title": "The Copilot meeting policy is splitting into two controls",
-          "detail": "Microsoft is replacing the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI, alongside new meeting options for more granular AI management. Rollout begins in December 2026, and existing settings will be automatically mapped.",
+          "title": "Meeting AI governance splits into MeetingAI and TranscriptionWithMeetingAI",
+          "detail": "Beginning in December 2026, Microsoft will replace the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI, alongside more granular meeting options for AI use. Existing settings will be mapped automatically, with no administrator migration action required.",
           "product": "Teams",
           "sourceId": "MC1532253"
         },
         {
-          "title": "Updated VDI guidance puts Windows Server 2019 on a migration path",
-          "detail": "The Teams Client VDI guidance reports possible BSODs on Windows Server 2019 virtual machines running Teams 26288.x.x.x or later; Teams 26276.x.x.x is unaffected. It also identifies Windows Server 2019 as unsupported and says customers must migrate to Windows Server 2025.",
-          "product": "Clients",
-          "sourceId": "doc-2026-11-21-teams-client-vdi-requirements-deploy-09"
+          "title": "Frontier-only personal voicemail AI triage brings licensing and billing controls",
+          "detail": "A new Teams Phone article documents personal voicemail AI triage, which is available only through the Microsoft Frontier Program. Planning requires attention to Copilot licensing, usage-based billing, security-group scoping, spending policies, voicemail policies, limits, and alerts; no general-availability timing is announced.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
         },
         {
-          "title": "Off-network invitations to Teams Free will retire in December",
+          "title": "Off-network invitations to Teams Free will end in December",
           "detail": "Starting in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, but organizations should update user guidance.",
           "product": "Teams",
           "sourceId": "MC1546409"
         },
         {
-          "title": "Frontier-only voicemail AI triage receives billing and policy guidance",
-          "detail": "A new Teams Phone article sets out Copilot licensing, usage-based billing, security-group scoping, spending policies, limits, alerts, and the required voicemail policy for personal voicemail AI triage. The capability is available only through the Microsoft Frontier Program, with no GA timing announced.",
-          "product": "Teams Phone",
-          "sourceId": "doc-2026-11-18-personal-voicemail-ai-triage-billing-microsoft-teams-02"
+          "title": "New Teams releases will require iOS 18 or later",
+          "detail": "Teams will end support for iOS 17 and iPadOS 17 starting in mid-December 2026. Existing app versions will continue working without support, while new releases will require iOS/iPadOS 18 or later; organizations should notify users and revise support guidance.",
+          "product": "Teams",
+          "sourceId": "MC1556088"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-24T12:38:14.293Z",
+      "generatedAt": "2026-11-24T23:32:04.829Z",
       "usage": {
-        "inputTokens": 6539,
-        "outputTokens": 7739,
-        "costUsd": 0.010595
+        "inputTokens": 6587,
+        "outputTokens": 7104,
+        "costUsd": 0.009842
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-24T12:38:14.293Z",
+  "generatedAt": "2026-11-24T23:32:04.829Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -1037,22 +1031,22 @@
       "costUsd": 0.020003
     },
     "2026-11-24": {
-      "inputTokens": 18056,
-      "outputTokens": 18133,
-      "requests": 6,
-      "costUsd": 0.025371
+      "inputTokens": 28220,
+      "outputTokens": 36612,
+      "requests": 9,
+      "costUsd": 0.049579
     }
   },
   "lastRun": {
-    "inputTokens": 9650,
-    "outputTokens": 11530,
+    "inputTokens": 10164,
+    "outputTokens": 18479,
     "requests": 3,
-    "costUsd": 0.015766
+    "costUsd": 0.024208
   },
   "totalUsage": {
-    "inputTokens": 298054,
-    "outputTokens": 343500,
-    "requests": 72,
-    "costUsd": 0.471808
+    "inputTokens": 308218,
+    "outputTokens": 361979,
+    "requests": 75,
+    "costUsd": 0.496016
   }
 }

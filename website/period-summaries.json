@@ -709,6 +709,52 @@
         "outputTokens": 2161,
         "costUsd": 0.002959
       }
+    },
+    "2026-11-25": {
+      "headline": "Teams expands compose-box Markdown support with a mid-December preview",
+      "overview": "Microsoft lists expanded Markdown support for the Teams compose box in public preview from mid-December 2026, with general availability beginning in mid-January 2027. Other meaningful updates refine external-bot controls, synthetic-media provider certification, and Teams Phone guidance around voice applications and click-to-call capacity; many remaining Teams Phone edits standardize terminology and improve setup documentation.",
+      "adminImpact": "No administrator action is listed for the Markdown expansion. Review Meetings > Meeting policies > Meeting join & lobby for external-bot approval or blocking controls, and check Teams apps > Manage apps when evaluating synthetic audio and video detection providers. For Teams Phone, use the broader voice-application terminology and plan click-to-call traffic against the documented tenant-wide limit.",
+      "keyChanges": [
+        {
+          "title": "Markdown adds visible syntax, toolbar, preview, and rich-text switching",
+          "detail": "Microsoft Teams will let users write with visible Markdown syntax, use a Markdown toolbar, preview messages, and switch between Markdown and rich text. Public preview starts in mid-December 2026, followed by general availability in mid-January 2027.",
+          "product": "Teams",
+          "sourceId": "MC1562278"
+        },
+        {
+          "title": "External-bot guidance documents registration status and lobby policy paths",
+          "detail": "The updated guidance distinguishes registered and unverified bots, explains their lobby placement, and describes policies that require approval or automatically block detected bots. Configuration is documented under Meetings > Meeting policies > Meeting join & lobby; with approval enabled, lobby settings can limit admission to organizers and co-organizers.",
+          "product": "External access",
+          "sourceId": "doc-2026-11-25-manage-external-bots-49"
+        },
+        {
+          "title": "Synthetic-media guidance lists Pindrop as certified and two partners in progress",
+          "detail": "The meetings guidance now lists Pindrop as certified, while GetReal Security and Reality Defender are still completing certification. It also names their Teams apps and directs admins to Teams apps > Manage apps when locating them.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-25-third-party-synthetic-audio-video-detection-meetings-51"
+        },
+        {
+          "title": "Teams Phone getting-started guidance shifts to “voice applications”",
+          "detail": "The reference now replaces specific references to Teams Phone Agents, auto attendants, and call queues with “voice applications” across planning, setup, service numbers, creation, and authorized-user guidance. Administrators should use that broader terminology when following the setup material.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-25-reference-getting-started-microsoft-teams-24"
+        },
+        {
+          "title": "Click-to-call guidance now states a 40-per-minute tenant-wide maximum",
+          "detail": "The limits page now documents a maximum of 40 click-to-call calls per minute across all voice applications. Administrators should account for the broader tenant-wide scope when planning click-to-call traffic.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-25-aa-cq-reference-limits-supported-configurations-25"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-25T23:10:59.216Z",
+      "usage": {
+        "inputTokens": 5719,
+        "outputTokens": 4773,
+        "costUsd": 0.006871
+      }
     }
   },
   "weeks": {
@@ -851,37 +897,37 @@
       }
     },
     "2026-11-23": {
-      "headline": "Teams mobile users must update by April 2027 to retain file access",
-      "overview": "The week’s biggest operational change is a mobile file-access deadline: older Android and iOS Teams builds will lose file functionality as Microsoft shifts from pre-authenticated URLs to Microsoft Entra ID authentication. Event administration also changes, with event-specific recording controls and registration capacity scaling to 20,000. Specialized rollouts add Omnissa-on-Mac VDI optimization and an NDI production switchboard.",
-      "adminImpact": "Prioritize mobile app updates before April 1, 2027. Administrators supporting Omnissa on Mac should plan the required Horizon Client and Teams versions. Organizations using NDI must enable NDI streaming and have users activate production capabilities. The event recording change requires awareness of the named event-specific settings, while the registration-capacity increase requires no action.",
+      "headline": "Teams mobile file access now requires newer app builds before April 2027",
+      "overview": "The week’s most consequential Teams changes are a mandatory mobile app update, a future shift in town hall and webinar recording permissions, expanded event-registration capacity, a new Omnissa Mac VDI optimization, and an eight-source NDI production switchboard. Most of the accompanying Learn updates are lower-impact Teams Phone documentation work: terminology is being broadened from auto attendants and call queues to voice applications, alongside refreshed screenshots, metadata, and examples. Meaningful reference exceptions include the stated lack of Team and channel analytics support in GCCH and DoD environments and a documented 40-click-to-call-per-minute tenant-wide limit across voice applications.",
+      "adminImpact": "Prioritize Teams mobile updates before April 1, 2027: Android must reach version 1416/1.0.0.2026151302 and iOS version 8.19.0 to preserve file access. For Omnissa Mac VDI, the documented benefit requires Horizon Client 2609.1 or later and Teams 26304.1207.5384.858 or later. NDI streaming requires admin enablement, followed by user activation of production capabilities. The registration-capacity and recording-access changes require no action according to the supplied Message Center notices, although administrators should understand that recording access will later be governed by the event-specific settings rather than AllowCloudRecording.",
       "keyChanges": [
         {
-          "title": "Mobile file access gets a hard app-version deadline",
-          "detail": "Teams Android users must reach version 1416/1.0.0.2026151302 and iOS users version 8.19.0 by April 1, 2027, to maintain file access. Older builds will lose file functionality as authentication moves from pre-authenticated URLs to Microsoft Entra ID.",
+          "title": "Mobile file access gets a firm version deadline",
+          "detail": "By April 1, 2027, Android users need Teams version 1416/1.0.0.2026151302 and iOS users need version 8.19.0 to retain file access. Older versions will lose file functionality as Teams replaces pre-authenticated URLs with Microsoft Entra ID authentication.",
           "product": "Teams",
           "sourceId": "MC1567258"
         },
         {
-          "title": "Town hall and webinar recording access switches to event-specific controls",
-          "detail": "Beginning in mid-January 2027, the Events App’s “Who has access to the recording or transcript” behavior will depend on RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. Microsoft says no action is required.",
+          "title": "Town hall and webinar recording access changes setting behavior",
+          "detail": "Starting in mid-January 2027, the “Who has access to the recording or transcript” option for Events App town halls and webinars will depend on RecordingForTownhall or RecordingForWebinar, rather than AllowCloudRecording. The notice says no action is required.",
           "product": "Teams",
           "sourceId": "MC1550542"
         },
         {
-          "title": "Town hall and webinar registration capacity expands to 20,000",
-          "detail": "Starting in December 2026, registration capacity will scale with event attendee limits: Teams Enterprise supports up to 3,000 registrations, while Attendee Capacity Packs can support up to 20,000. Rollout runs from mid-December 2026 through late January 2027.",
+          "title": "Event registration capacity scales to 20,000",
+          "detail": "Beginning in December 2026, town halls and webinars will support registration limits tied to attendee capacity: Teams Enterprise supports 3,000 registrations, while Attendee Capacity Packs can support up to 20,000. Rollout is scheduled from mid-December 2026 through late January 2027.",
           "product": "Teams",
           "sourceId": "MC1557760"
         },
         {
-          "title": "Omnissa on Mac receives SlimCore-based VDI optimization",
-          "detail": "A new Omnissa-on-Mac VDI optimization will use the SlimCore media engine to improve Teams quality, reliability, and performance. Rollout runs from December 2026 through February 2027; benefiting deployments need Horizon Client 2609.1 or later and Teams 26304.1207.5384.858 or later.",
+          "title": "Omnissa Mac VDI receives a SlimCore optimization",
+          "detail": "A new Omnissa-on-Mac VDI optimization using the SlimCore media engine is scheduled to roll out from December 2026 through February 2027. Organizations need Horizon Client 2609.1 or later and Teams 26304.1207.5384.858 or later to benefit.",
           "product": "Teams",
           "sourceId": "MC1565967"
         },
         {
-          "title": "NDI production gains a switchboard for up to eight sources",
-          "detail": "Teams is adding a streaming switchboard that lets event producers manage and stream up to eight NDI sources in meetings and events. The worldwide rollout runs from mid-November through mid-December 2026; administrators must enable NDI streaming, and users must activate production capabilities in Teams.",
+          "title": "NDI production adds an eight-source streaming switchboard",
+          "detail": "Teams is introducing a switchboard for event producers to manage and stream up to eight NDI sources in meetings and events, with worldwide rollout from mid-November through mid-December 2026. Administrators must enable NDI streaming, and users must activate production capabilities in Teams.",
           "product": "Teams",
           "sourceId": "MC1521613"
         }
@@ -889,64 +935,64 @@
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-25T11:28:03.262Z",
+      "generatedAt": "2026-11-25T23:10:59.216Z",
       "usage": {
-        "inputTokens": 2027,
-        "outputTokens": 3097,
-        "costUsd": 0.004122
+        "inputTokens": 8127,
+        "outputTokens": 3325,
+        "costUsd": 0.005615
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "TAC-to-PMP migration and mobile file-access deadline reshape Teams administration",
-      "overview": "November’s consequential changes center on administration and access: Teams device management is moving from the Teams Admin Center to the Teams Rooms Pro Management Portal by November 2026, older mobile clients will lose file functionality after April 1, 2027, and meeting AI controls will split into two policies in December. Microsoft is also retiring off-network Teams Free invitations and scheduling Facilitator for February 2027, making device migration, client updates, policy review, and targeted user guidance the main planning tasks.",
-      "adminImpact": "Prioritize the TAC-to-PMP migration, including required device software updates and prerequisite checks. Identify mobile clients below the required versions before April 1, 2027, and review the new MeetingAI and TranscriptionWithMeetingAI policy assignments after rollout. No tenant-wide change is required for the Teams Free retirement, but user guidance should be refreshed. Organizations considering Facilitator should plan for Microsoft 365 Copilot (Premium) licensing and manual enablement.",
+      "headline": "Teams mobile file access needs new builds by April 1, 2027",
+      "overview": "November’s clearest operational story is preparation for deadlines: Teams mobile builds must be updated by April 1, 2027, while device management is moving from the Teams Admin Center to the Teams Rooms Pro Management Portal by November 2026. December also brings separate meeting AI policies and tenant controls for recording and transcription. Teams will retire off-network invitations to Teams Free, making user communication important even where no tenant-wide action is required.",
+      "adminImpact": "Prioritize the mobile build requirement and the TAC-to-PMP migration. Deploy Android version 1416/1.0.0.2026151302 or iOS version 8.19.0 by April 1, 2027 to preserve file access. For PMP, complete the migration steps, update device software, and verify device and cloud prerequisites. Existing meeting AI settings will map automatically, while administrators should determine whether presenters need recording or transcription restrictions under the new tenant policy. Update user guidance before Teams Free invitations are retired.",
       "keyChanges": [
         {
-          "title": "Teams device management moves from TAC to the Teams Rooms Pro portal",
-          "detail": "Microsoft will deprecate device management in the Teams Admin Center by November 2026 and transition it to the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and meet device and cloud-environment prerequisites to avoid management disruption.",
-          "product": "Teams",
-          "sourceId": "MC1448373"
-        },
-        {
-          "title": "Mobile Teams builds need updates to preserve file access",
-          "detail": "Teams requires Android version 1416/1.0.0.2026151302 or iOS version 8.19.0 by April 1, 2027 to maintain file access. Older apps will lose file functionality as Teams replaces pre-authenticated URLs with Microsoft Entra ID authentication.",
+          "title": "Mobile app versions become a file-access requirement",
+          "detail": "Teams mobile users must reach Android version 1416/1.0.0.2026151302 or iOS version 8.19.0 by April 1, 2027 to maintain file access. Older builds will lose file functionality as Microsoft replaces pre-authenticated URLs with Microsoft Entra ID authentication.",
           "product": "Teams",
           "sourceId": "MC1567258"
         },
         {
-          "title": "Meeting AI controls split into separate policies",
-          "detail": "Beginning in December 2026, Teams will replace the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI, alongside more granular meeting options for AI and transcription. Existing settings will map automatically, but administrators should review the resulting controls.",
+          "title": "TAC device management transitions to the Teams Rooms Pro portal",
+          "detail": "Teams device management in the Teams Admin Center is being deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and satisfy device and cloud prerequisites to avoid management disruptions; timing varies by device type and environment.",
+          "product": "Teams",
+          "sourceId": "MC1448373"
+        },
+        {
+          "title": "Copilot meeting policy splits into two AI controls",
+          "detail": "Microsoft Teams is replacing the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI, alongside more granular meeting options for AI use. Rollout begins in December 2026, and existing settings will be mapped automatically.",
           "product": "Teams",
           "sourceId": "MC1532253"
         },
         {
-          "title": "Off-network Teams Free invitations retire in December",
-          "detail": "Starting December 2026, users will no longer be able to invite people outside the network by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; the practical administrator task is updating user guidance.",
+          "title": "Tenant policy adds role-based recording and transcription controls",
+          "detail": "Starting in December 2026, administrators can control recording and transcription permissions for organizers, co-organizers, and presenters, with options to lock settings or allow changes. No action is required unless the tenant needs to restrict presenter recording.",
           "product": "Teams",
-          "sourceId": "MC1546409"
+          "sourceId": "MC1560924"
         },
         {
-          "title": "Facilitator is scheduled to answer meeting knowledge gaps",
-          "detail": "Facilitator is planned for February 2027 and will detect knowledge gaps, then provide relevant web-search answers in meeting chat. It requires Microsoft 365 Copilot (Premium), manual enablement, administrator controls, and user opt-out support.",
+          "title": "Off-network invitations to Teams Free retire in December",
+          "detail": "Beginning in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, but user guidance should be updated.",
           "product": "Teams",
-          "sourceId": "MC1409304"
+          "sourceId": "MC1546409"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-25T11:28:03.262Z",
+      "generatedAt": "2026-11-25T23:10:59.216Z",
       "usage": {
-        "inputTokens": 6549,
-        "outputTokens": 5796,
-        "costUsd": 0.008265
+        "inputTokens": 6713,
+        "outputTokens": 5799,
+        "costUsd": 0.008301
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-25T11:28:03.262Z",
+  "generatedAt": "2026-11-25T23:10:59.216Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -1043,22 +1089,22 @@
       "costUsd": 0.049579
     },
     "2026-11-25": {
-      "inputTokens": 10406,
-      "outputTokens": 11054,
-      "requests": 3,
-      "costUsd": 0.015346
+      "inputTokens": 30965,
+      "outputTokens": 24951,
+      "requests": 6,
+      "costUsd": 0.036134
     }
   },
   "lastRun": {
-    "inputTokens": 10406,
-    "outputTokens": 11054,
+    "inputTokens": 20559,
+    "outputTokens": 13897,
     "requests": 3,
-    "costUsd": 0.015346
+    "costUsd": 0.020788
   },
   "totalUsage": {
-    "inputTokens": 318624,
-    "outputTokens": 373033,
-    "requests": 78,
-    "costUsd": 0.511362
+    "inputTokens": 339183,
+    "outputTokens": 386930,
+    "requests": 81,
+    "costUsd": 0.53215
   }
 }

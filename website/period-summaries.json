@@ -755,6 +755,52 @@
         "outputTokens": 4773,
         "costUsd": 0.006871
       }
+    },
+    "2026-11-26": {
+      "headline": "New guidance documents granular Conditional Access for Teams meeting enforcement",
+      "overview": "Microsoft published guidance for Granular Conditional Access in Teams meetings, covering authentication contexts, Teams publication, and meeting-level enforcement for MFA, device compliance, trusted networks, and identity verification. Other substantive updates clarify Copilot data retention and Teams Rooms security and provisioning practices; a Teams Phone Agent page mainly refreshed licensing references.",
+      "adminImpact": "Administrators can configure authentication-context policies in the Microsoft Entra admin center and publish approved contexts through the Teams admin center. Compliance teams should account for possible retention of Copilot prompts and responses under Microsoft Purview policies, including when recording and transcription are disabled. Teams Rooms administrators should review resource-account access controls and plan wired connectivity for initial deployment.",
+      "keyChanges": [
+        {
+          "title": "Granular Conditional Access guidance covers meeting-level authentication enforcement",
+          "detail": "The new Meetings and events article documents authentication contexts, policy configuration, Teams publication, and meeting-level enforcement for MFA, device compliance, trusted networks, and identity verification. Administrators can configure the policies in Microsoft Entra and publish approved contexts in the Teams admin center.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-26-use-conditional-access-to-protect-microsoft-teams-meetings-microsoft-teams-01"
+        },
+        {
+          "title": "Copilot prompts and responses may be retained despite disabled recording",
+          "detail": "Updated Copilot transcription guidance says Microsoft Purview policies may retain Copilot prompts and responses in Commercial, GCC, GCC High, and DoD environments even when recording and transcription are disabled. Administrators should account for that possibility in compliance planning.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-26-copilot-teams-transcription-03"
+        },
+        {
+          "title": "Teams Rooms resource-account guidance adds SharePoint restriction details",
+          "detail": "The resource-account guidance now specifies setting SharePoint Online’s `-RestrictResourceAccountAccess` parameter to `true` to restrict file and recording access. It also states that PMP sets Entra ID’s `isResourceAccount` attribute to `true` and adds validation guidance.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-26-set-as-resource-account-for-shared-teams-devices-05"
+        },
+        {
+          "title": "Teams Rooms deployment guidance prioritizes wired initial provisioning",
+          "detail": "The updated Rooms Prep guidance recommends using a wired internet connection for initial device provisioning and deployment. All-in-one board devices may use Wi-Fi by exception, but wired connectivity is recommended if deployment issues occur.",
+          "product": "Teams Rooms",
+          "sourceId": "doc-2026-11-26-rooms-prep-04"
+        },
+        {
+          "title": "Teams Phone Agent guidance refreshes Copilot credit references",
+          "detail": "The Teams Phone Agent page now links to the Copilot Credits Guide, uses an updated Copilot Credit Estimator URL, and adds two ontology references. The change gives administrators updated links for reviewing licensing and costs.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-26-aa-cq-plan-teams-phone-agent-ubb-02"
+        }
+      ],
+      "generatedBy": "openai",
+      "model": "gpt-5.6-luna",
+      "reasoningEffort": "xhigh",
+      "generatedAt": "2026-11-26T11:03:59.783Z",
+      "usage": {
+        "inputTokens": 1572,
+        "outputTokens": 1662,
+        "costUsd": 0.002309
+      }
     }
   },
   "weeks": {
@@ -897,102 +943,102 @@
       }
     },
     "2026-11-23": {
-      "headline": "Teams mobile file access now requires newer app builds before April 2027",
-      "overview": "The week’s most consequential Teams changes are a mandatory mobile app update, a future shift in town hall and webinar recording permissions, expanded event-registration capacity, a new Omnissa Mac VDI optimization, and an eight-source NDI production switchboard. Most of the accompanying Learn updates are lower-impact Teams Phone documentation work: terminology is being broadened from auto attendants and call queues to voice applications, alongside refreshed screenshots, metadata, and examples. Meaningful reference exceptions include the stated lack of Team and channel analytics support in GCCH and DoD environments and a documented 40-click-to-call-per-minute tenant-wide limit across voice applications.",
-      "adminImpact": "Prioritize Teams mobile updates before April 1, 2027: Android must reach version 1416/1.0.0.2026151302 and iOS version 8.19.0 to preserve file access. For Omnissa Mac VDI, the documented benefit requires Horizon Client 2609.1 or later and Teams 26304.1207.5384.858 or later. NDI streaming requires admin enablement, followed by user activation of production capabilities. The registration-capacity and recording-access changes require no action according to the supplied Message Center notices, although administrators should understand that recording access will later be governed by the event-specific settings rather than AllowCloudRecording.",
+      "headline": "Teams mobile users must update before April 1, 2027 to retain file access",
+      "overview": "The week’s clearest administrator outcomes are a firm mobile-client compatibility deadline and a forthcoming change to town hall and webinar recording access. New or sharpened guidance covers meeting-level Conditional Access and Copilot data retention, while Teams Phone documentation clarifies a tenant-wide click-to-call limit across all voice applications.",
+      "adminImpact": "Begin updating Teams mobile clients now: Android must reach 1416/1.0.0.2026151302 or iOS 8.19.0 by April 1, 2027. For events, account for the mid-January 2027 change to recording and transcript access settings. Administrators in GCC High and DoD should include possible Copilot prompt and response retention in compliance planning. The Conditional Access article provides configuration guidance but states no required action or deadline.",
       "keyChanges": [
         {
-          "title": "Mobile file access gets a firm version deadline",
-          "detail": "By April 1, 2027, Android users need Teams version 1416/1.0.0.2026151302 and iOS users need version 8.19.0 to retain file access. Older versions will lose file functionality as Teams replaces pre-authenticated URLs with Microsoft Entra ID authentication.",
+          "title": "Mobile Teams file access will require current app versions by April 1, 2027",
+          "detail": "The Message Center notice requires Android version 1416/1.0.0.2026151302 or iOS version 8.19.0 by April 1, 2027. Older versions will lose file functionality as Teams replaces pre-authenticated URLs with Microsoft Entra ID authentication.",
           "product": "Teams",
           "sourceId": "MC1567258"
         },
         {
-          "title": "Town hall and webinar recording access changes setting behavior",
-          "detail": "Starting in mid-January 2027, the “Who has access to the recording or transcript” option for Events App town halls and webinars will depend on RecordingForTownhall or RecordingForWebinar, rather than AllowCloudRecording. The notice says no action is required.",
+          "title": "Town hall and webinar recording access will use event-specific settings",
+          "detail": "Starting in mid-January 2027, the Events App setting “Who has access to the recording or transcript” will depend on RecordingForTownhall or RecordingForWebinar rather than AllowCloudRecording. The notice says no administrator action is required.",
           "product": "Teams",
           "sourceId": "MC1550542"
         },
         {
-          "title": "Event registration capacity scales to 20,000",
-          "detail": "Beginning in December 2026, town halls and webinars will support registration limits tied to attendee capacity: Teams Enterprise supports 3,000 registrations, while Attendee Capacity Packs can support up to 20,000. Rollout is scheduled from mid-December 2026 through late January 2027.",
-          "product": "Teams",
-          "sourceId": "MC1557760"
+          "title": "New guidance maps granular Conditional Access enforcement for Teams meetings",
+          "detail": "The new article documents authentication contexts, policy configuration in the Microsoft Entra admin center, publication through the Teams admin center, and meeting-level enforcement for MFA, device compliance, trusted networks, and identity verification.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-26-use-conditional-access-to-protect-microsoft-teams-meetings-microsoft-teams-01"
         },
         {
-          "title": "Omnissa Mac VDI receives a SlimCore optimization",
-          "detail": "A new Omnissa-on-Mac VDI optimization using the SlimCore media engine is scheduled to roll out from December 2026 through February 2027. Organizations need Horizon Client 2609.1 or later and Teams 26304.1207.5384.858 or later to benefit.",
-          "product": "Teams",
-          "sourceId": "MC1565967"
+          "title": "Updated guidance says Copilot data may be retained despite disabled recording",
+          "detail": "The article now states that Copilot prompts and responses may be retained under Microsoft Purview policies in Commercial, GCC, GCC High, and DoD environments even when recording and transcription are disabled.",
+          "product": "Meetings and events",
+          "sourceId": "doc-2026-11-26-copilot-teams-transcription-03"
         },
         {
-          "title": "NDI production adds an eight-source streaming switchboard",
-          "detail": "Teams is introducing a switchboard for event producers to manage and stream up to eight NDI sources in meetings and events, with worldwide rollout from mid-November through mid-December 2026. Administrators must enable NDI streaming, and users must activate production capabilities in Teams.",
-          "product": "Teams",
-          "sourceId": "MC1521613"
+          "title": "Teams Phone guidance documents a tenant-wide 40-call-per-minute limit",
+          "detail": "The reference page now states a maximum of 40 click-to-call calls per minute across all voice applications, replacing wording that scoped the limit specifically to auto attendants and call queues.",
+          "product": "Teams Phone",
+          "sourceId": "doc-2026-11-25-aa-cq-reference-limits-supported-configurations-25"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-25T23:10:59.216Z",
+      "generatedAt": "2026-11-26T11:03:59.783Z",
       "usage": {
-        "inputTokens": 8127,
-        "outputTokens": 3325,
-        "costUsd": 0.005615
+        "inputTokens": 8780,
+        "outputTokens": 6099,
+        "costUsd": 0.009075
       }
     }
   },
   "months": {
     "2026-11": {
-      "headline": "Teams mobile file access needs new builds by April 1, 2027",
-      "overview": "November’s clearest operational story is preparation for deadlines: Teams mobile builds must be updated by April 1, 2027, while device management is moving from the Teams Admin Center to the Teams Rooms Pro Management Portal by November 2026. December also brings separate meeting AI policies and tenant controls for recording and transcription. Teams will retire off-network invitations to Teams Free, making user communication important even where no tenant-wide action is required.",
-      "adminImpact": "Prioritize the mobile build requirement and the TAC-to-PMP migration. Deploy Android version 1416/1.0.0.2026151302 or iOS version 8.19.0 by April 1, 2027 to preserve file access. For PMP, complete the migration steps, update device software, and verify device and cloud prerequisites. Existing meeting AI settings will map automatically, while administrators should determine whether presenters need recording or transcription restrictions under the new tenant policy. Update user guidance before Teams Free invitations are retired.",
+      "headline": "Teams TAC-to-PMP migration and April mobile file-access deadline lead November changes",
+      "overview": "November’s consequential Teams changes center on administration and compatibility: device management is moving from the Teams Admin Center (TAC) to the Teams Rooms Pro Management Portal, while older mobile clients will lose file functionality after April 1, 2027. Meeting AI governance is splitting into MeetingAI and TranscriptionWithMeetingAI in December, and Facilitator is scheduled for February 2027 with Microsoft 365 Copilot (Premium) and manual-enablement requirements. The period also brings the December retirement of off-network invitations to Teams Free; existing Teams Free collaboration and federation remain unchanged. Additional guidance covers Frontier-only voicemail AI-triage billing and Granular Conditional Access for Teams meetings.",
+      "adminImpact": "Prioritize the TAC-to-PMP migration by completing the required steps, updating device software, and verifying prerequisites before management is deprecated. Begin Teams mobile updates now and ensure Android 1416/1.0.0.2026151302 or iOS 8.19.0 is deployed by April 1, 2027 where file access must be retained. Existing meeting policy settings will map automatically during the AI-policy split, while Facilitator requires Microsoft 365 Copilot (Premium) and manual enablement. Update user guidance before off-network Teams Free invitations retire in December. For Frontier voicemail AI triage, review Copilot licensing and usage-based billing, then configure spending and voicemail policies.",
       "keyChanges": [
         {
-          "title": "Mobile app versions become a file-access requirement",
-          "detail": "Teams mobile users must reach Android version 1416/1.0.0.2026151302 or iOS version 8.19.0 by April 1, 2027 to maintain file access. Older builds will lose file functionality as Microsoft replaces pre-authenticated URLs with Microsoft Entra ID authentication.",
-          "product": "Teams",
-          "sourceId": "MC1567258"
-        },
-        {
-          "title": "TAC device management transitions to the Teams Rooms Pro portal",
-          "detail": "Teams device management in the Teams Admin Center is being deprecated by November 2026 in favor of the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and satisfy device and cloud prerequisites to avoid management disruptions; timing varies by device type and environment.",
-          "product": "Teams",
+          "title": "Teams device management is moving to the Teams Rooms Pro Management Portal",
+          "detail": "Teams Admin Center device management is slated for deprecation by November 2026 in favor of the Teams Rooms Pro Management Portal. Administrators must complete migration steps, update device software, and meet prerequisites; timing varies by device type and cloud environment to avoid management disruption.",
+          "product": "Teams Rooms",
           "sourceId": "MC1448373"
         },
         {
-          "title": "Copilot meeting policy splits into two AI controls",
-          "detail": "Microsoft Teams is replacing the Copilot meeting policy with MeetingAI and TranscriptionWithMeetingAI, alongside more granular meeting options for AI use. Rollout begins in December 2026, and existing settings will be mapped automatically.",
-          "product": "Teams",
+          "title": "Teams mobile file access gets an April 1, 2027 client deadline",
+          "detail": "To retain file access, update Android Teams to 1416/1.0.0.2026151302 or iOS to 8.19.0 by April 1, 2027. Older versions will lose file functionality as Teams moves from pre-authenticated URLs to Microsoft Entra ID authentication.",
+          "product": "Teams mobile",
+          "sourceId": "MC1567258"
+        },
+        {
+          "title": "Meeting AI governance splits into MeetingAI and TranscriptionWithMeetingAI",
+          "detail": "Starting in December 2026, Teams will replace the Copilot meeting policy with two policies and add more granular meeting options for AI and transcription. Existing settings will be mapped automatically, so no administrator remapping is required.",
+          "product": "Teams meetings",
           "sourceId": "MC1532253"
         },
         {
-          "title": "Tenant policy adds role-based recording and transcription controls",
-          "detail": "Starting in December 2026, administrators can control recording and transcription permissions for organizers, co-organizers, and presenters, with options to lock settings or allow changes. No action is required unless the tenant needs to restrict presenter recording.",
+          "title": "Facilitator will answer meeting knowledge gaps through web search",
+          "detail": "Facilitator is scheduled to become available from February 2027, detecting knowledge gaps and providing relevant web-search answers in meeting chat. It requires Microsoft 365 Copilot (Premium), manual enablement, and supports administrator controls plus user opt-out.",
           "product": "Teams",
-          "sourceId": "MC1560924"
+          "sourceId": "MC1409304"
         },
         {
           "title": "Off-network invitations to Teams Free retire in December",
-          "detail": "Beginning in December 2026, users will no longer be able to invite external people by email or chat link to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged, but user guidance should be updated.",
-          "product": "Teams",
+          "detail": "Starting December 2026, users will no longer be able to invite external people by email or chat links to create Teams Free accounts. Existing Teams Free collaboration and federation remain unchanged; Microsoft says no administrator action is required, but user guidance should be updated.",
+          "product": "Teams Free",
           "sourceId": "MC1546409"
         }
       ],
       "generatedBy": "openai",
       "model": "gpt-5.6-luna",
       "reasoningEffort": "xhigh",
-      "generatedAt": "2026-11-25T23:10:59.216Z",
+      "generatedAt": "2026-11-26T11:03:59.783Z",
       "usage": {
-        "inputTokens": 6713,
-        "outputTokens": 5799,
-        "costUsd": 0.008301
+        "inputTokens": 6621,
+        "outputTokens": 7135,
+        "costUsd": 0.009886
       }
     }
   },
   "version": 3,
-  "generatedAt": "2026-11-25T23:10:59.216Z",
+  "generatedAt": "2026-11-26T11:03:59.783Z",
   "generator": {
     "model": "gpt-5.6-luna",
     "reasoningEffort": "xhigh"
@@ -1093,18 +1139,24 @@
       "outputTokens": 24951,
       "requests": 6,
       "costUsd": 0.036134
+    },
+    "2026-11-26": {
+      "inputTokens": 16973,
+      "outputTokens": 14896,
+      "requests": 3,
+      "costUsd": 0.02127
     }
   },
   "lastRun": {
-    "inputTokens": 20559,
-    "outputTokens": 13897,
+    "inputTokens": 16973,
+    "outputTokens": 14896,
     "requests": 3,
-    "costUsd": 0.020788
+    "costUsd": 0.02127
   },
   "totalUsage": {
-    "inputTokens": 339183,
-    "outputTokens": 386930,
-    "requests": 81,
-    "costUsd": 0.53215
+    "inputTokens": 356156,
+    "outputTokens": 401826,
+    "requests": 84,
+    "costUsd": 0.55342
   }
 }
